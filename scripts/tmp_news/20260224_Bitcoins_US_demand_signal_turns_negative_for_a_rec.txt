@@ -1,0 +1,23 @@
+Title: Bitcoin’s U.S. demand signal turns negative for a record 40 days
+Source: https://www.coindesk.com/markets/2026/02/24/bitcoin-s-u-s-demand-signal-turns-negative-for-a-record-40-days
+
+Bitcoin’s U.S. demand signal turns negative for a record 40 days
+The indicator last printed positive on Jan. 15. Its failure to fully recover after a Feb. 5 rebound suggests U.S. demand remains structurally absent rather than temporarily paused.
+What to know:
+- The Coinbase Bitcoin Premium Index has stayed negative for 40 straight days, its longest sub-zero streak since 2023, signaling persistent weakness in U.S. demand.
+- While bitcoin has rebounded about 15 percent from its Feb. 5 low and climbed back above $62,000, the U.S.-focused premium has not recovered, implying the recent buying came largely from outside American trading hours and venues.
+- The premium has inched higher from about -0.22 percent to near -0.05 percent, but remains below the positive levels historically associated with sustained accumulation, as U.S. investors show rising skepticism reflected in record domestic Google searches for “bitcoin zero.”
+The well-followed Coinbase Bitcoin Premium Index briefly looked like it was recovering after the Feb. 5 crash. It wasn't.
+The premium has now been negative for 40 consecutive days, according to Coinglass data, setting the longest streak of sub-zero readings since 2023. The current reading sits at -0.0467%, barely changed from two weeks ago, when a sharp narrowing from -0.22% suggested U.S. buyers had stepped in near the lows.
+The index measures the price gap between bitcoin on Coinbase and the global market average. Coinbase is widely used as a proxy for U.S. institutional and dollar-denominated flows, so a persistent negative reading means American investors are consistently paying less than the rest of the world — either selling more aggressively or simply not showing up.
+The previous record was roughly 30 days of continuous negative premium during the October 2025 drawdown. That streak broke when a sharp bounce brought U.S. buyers back into the market. This time, the bounce came, as bitcoin recovered as much as 15% from its Feb. 5 intraday low. But the premium never followed.
+That divergence shows that while price recovered, the composition of demand didn't. Whatever buying drove bitcoin back above $62,000 came from outside U.S. hours, outside Coinbase's order books, or both.
+The one constructive read is that the premium has been gradually less negative since early February, creeping from -0.22% back toward -0.05%. It's improving, just not fast enough to flip positive, a threshold that historically coincides with sustained accumulation phases rather than relief rallies.
+Interestingly, Google searches for "bitcoin zero" in the U.S. hit record highs earlier this month, as CoinDesk reported, even as global search interest for the term remained flat.
+Both signals point to American investors specifically losing conviction at a pace that hasn't shown up elsewhere.
+More For You
+'If you’re not accumulating bitcoin at this stage, then when,' asks prominent analyst
+Time, not price, is probably going to be more frustrating for bulls from here, wrote James Check, but bitcoin has been mostly de-risked at this point.
+What to know:
+- Bitcoin appears to be bottoming based on any number of indicators, wrote James Check.
+- As in 2022, it could be several months of bouncing around before the actual cycle low is in place.

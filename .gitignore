@@ -1,0 +1,30 @@
+# Next.js
+system_ui/.next/
+system_ui/out/
+system_ui/node_modules/
+system_ui/.env*.local
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+scripts/seen_urls.txt
+scripts/tmp_news/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gemini / CLI
+.gemini/logs/
+
+# KinamonKB Temporary Data
+kinamon_kb/03_opinion_gate/_pending/*
+!kinamon_kb/03_opinion_gate/_pending/.gitkeep
+kinamon_kb/03_opinion_gate/_held/*
+!kinamon_kb/03_opinion_gate/_held/.gitkeep
+kinamon_kb/03_opinion_gate/_decided/*
+!kinamon_kb/03_opinion_gate/_decided/.gitkeep
+kinamon_kb/03_opinion_gate/_post_pool/*
+!kinamon_kb/03_opinion_gate/_post_pool/.gitkeep

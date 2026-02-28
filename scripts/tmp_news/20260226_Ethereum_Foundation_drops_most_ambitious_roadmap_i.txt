@@ -1,0 +1,40 @@
+Title: Ethereum Foundation drops most ambitious roadmap in years, targets finality in seconds by 2029
+Source: https://www.coindesk.com/tech/2026/02/26/ethereum-foundation-drops-most-ambitious-roadmap-in-years-targets-finality-in-seconds-by-2029
+
+Ethereum Foundation drops most ambitious roadmap in years, targets finality in seconds by 2029
+The "strawmap" outlines seven forks through the end of the decade, including post-quantum cryptography, shielded transfers, and a 480x reduction in transaction finality time.
+What to know:
+- The Ethereum Foundation has released a long-term “strawmap” roadmap outlining seven hard forks through 2029 aimed at overhauling the network.
+- The plan targets faster base-layer performance, including cutting transaction finality from about 16 minutes to potentially 8 seconds via a new Minimmit consensus and shorter block slot times.
+- Ethereum’s roadmap also prioritizes massive throughput gains for L1 and L2, post-quantum cryptography, and privacy features such as shielded ETH transfers, even as market sentiment toward ether remains subdued.
+Ethereum Foundation just published a roadmap that reads like it's building for the next decade, not surviving the current quarter.
+The document, called the "strawmap" and released Wednesday by EF researcher Justin Drake, lays out a plan for seven hard forks through 2029. Hard forks are network-wide software upgrades where every node must update or get left behind, making them the highest-stakes type of change Ethereum can make.
+Introducing strawmap, a strawman roadmap by EF Protocol.
+— Justin Drake (@drakefjustin) February 25, 2026
+Believe in something. Believe in an Ethereum strawmap.
+Who is this for?
+The document, available at strawmap[.]org, is intended for advanced readers. It is a dense and technical resource primarily for researchers,… pic.twitter.com/gIZh5I8Not
+The plan is organized around five goals the team describes as “north stars.” These include a faster Layer 1 with transaction finality in seconds; dramatically higher Layer 1 throughput capable of around 10,000 transactions per second (referred to as “gigagas” scale); Layer 2 networks reaching “teragas” levels of throughput, or roughly 10 million TPS; post-quantum cryptography; and built-in privacy through shielded ETH transfers.
+L1 refers to Ethereum’s base layer — the main blockchain itself. L2s are networks such as Arbitrum and Optimism that run on top of Ethereum, processing transactions more cheaply before settling them back to L1. “Gigagas” and “teragas” describe throughput targets measured in gas, Ethereum’s unit of computational work.
+Think of gas like fuel. Right now the network burns a limited amount per second. The roadmap wants to increase that by orders of magnitude, pushing L1 to handle 10,000 transactions per second and giving L2s the data bandwidth to hit 10 million.
+Finality is where things get most tangible. When a transaction is "final" on Ethereum, it means the network has collectively agreed it happened and it can't be reversed.
+Today, that process takes roughly 16 minutes. The roadmap envisions compressing that to as low as 8 seconds through a new consensus mechanism called Minimmit, a type of algorithm that reaches agreement in a single round of voting rather than the multiple rounds used today.
+Ethereum co-founder Vitalik Buterin called the document "very important" and walked through the finality improvements in detail.
+Ethereum's slot time, the fixed interval at which the network produces new blocks, currently sits at 12 seconds. The plan would reduce that step by step through 8, 6, 4, and potentially down to 2 seconds, with each reduction gated by confidence in network safety.
+Buterin compared the approach to how Ethereum already adjusts other network parameters, treating slot time as a dial to turn rather than a fixed number.
+A very important document. Let's walk through this one "goal" at a time. We'll start with fast slots and fast finality.
+— vitalik.eth (@VitalikButerin) February 25, 2026
+I expect that we'll reduce slot time in an incremental fashion, eg. I like the "sqrt(2) at a time" formula (12 -> 8 -> 6 -> 4 -> 3 -> 2, though the last two… https://t.co/ni9wIF2BgJ
+The overall architecture change, Buterin said, amounts to a "ship of Theseus" style rebuild where individual components of Ethereum's consensus get replaced one by one until the whole system is new, without any single upgrade being too disruptive.
+Quantum considerations and privacy-first infra
+The post-quantum push stands out given the timing. Post-quantum cryptography means replacing the math that secures the network today with schemes that would remain unbreakable even if quantum computers reach sufficient scale. Strategy's Michael Saylor dismissed quantum threats to bitcoin earlier this month as more than a decade away.
+Ethereum's roadmap treats it as a concrete engineering problem with a specific fork target, not a hypothetical. The plan would introduce hash-based signatures, a cryptographic approach that doesn't rely on the mathematical problems quantum computers are expected to crack.
+Shielded transfers, the privacy goal, would allow ETH to be sent without the transaction details being publicly visible on the blockchain. Today, every transfer on Ethereum is fully transparent, meaning anyone can see how much was sent, from where, and to whom. That's a feature for auditors but a problem for users who don't want their financial activity exposed.
+The disconnect between the ambition on display and the market's current read on ether couldn't be wider. Whether that gap closes from the roadmap pulling price up or the price dragging sentiment down further is the open question heading into the second half of 2026.
+More For You
+Bitwise's Hunter Horsley says AI Is ‘unstoppable freight train’ for crypto, while Haun’s Monica urges caution
+As artificial intelligence races ahead, some crypto executives believe it could become the force that finally pushes blockchain infrastructure into widespread use. Others aren’t convinced the leap is so straightforward.
+What to know:
+- As artificial intelligence races ahead, some crypto executives believe it could become the force that finally pushes blockchain infrastructure into widespread use. Others aren’t convinced the leap is so straightforward.
+- In a recent panel discussion at NEARCON 2026, Bitwise CEO Hunter Horsley described AI as “an unstoppable freight train,” arguing that its pace of development is unlike anything crypto has experienced.
+- Diogo Monica, general partner at Haun Ventures and co-founder of Anchorage Digital, pushed back on the assumption that agentic commerce automatically requires new rails.

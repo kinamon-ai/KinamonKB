@@ -1,0 +1,27 @@
+Title: Kraken rolls out crypto-style, 24/7 perpetuals trading for tokenized U.S. stocks
+Source: https://www.coindesk.com/business/2026/02/24/kraken-rolls-out-crypto-style-24-7-perpetuals-trading-for-tokenized-u-s-stocks
+
+Kraken rolls out crypto-style, 24/7 perpetuals trading for tokenized U.S. stocks
+The crypto exchange is bringing U.S. stocks closer to the crypto world, letting users trade derivatives of tokenized stocks around-the-clock and with 20x leverage.
+What to know:
+- Kraken claims to be the first to launch regulated perpetual futures for tokenized stocks
+- Move extends crypto’s fast-growing and dominant derivatives model to traditional equities.
+- The contracts trade 24/7 with up to 20x leverage, giving non-U.S. investors capital-efficient exposure, Kraken said.
+Crypto exchange Kraken is launching what it calls the first regulated perpetual futures contracts based on tokenized stocks, the firm told CoinDesk.
+The products, available to eligible non-U.S. users in more than 110 countries, track digital versions of major U.S. stocks, indices and a gold ETF, building on the tokenized equities offering of xStocks that Kraken acquired in December.
+Initial listings include tokenized versions of the S&P 500, the Nasdaq 100, Apple, Nvidia, Tesla and SPDR's gold ETF (GLD), the firm said.
+Kraken's launch matters because perpetuals trading has enjoyed a rapid growth, dominating crypto derivatives trading. Blockchain-based decentralized exchanges processed over $600 billion in perps trading volume in January, with Hyperliquid claiming the biggest market share with $200 billion monthly volume, data by The Block shows.
+Unlike traditional futures contracts, perps do not expire and trade 24/7 and allow users to trade with high leverage. Investors favor them for continuous access, capital efficiency and the ability to take long or short positions at any time.
+With Kraken's move, that structure now is expanded to other asset classes like equities. The underlying xStocks tokens are fully collateralized and backed 1:1 by the referenced assets, according to the company. That provides a pricing anchor even when U.S. exchanges are closed. The tokenized stocks trade around the clock and support leverage of up to 20x.
+"This is what it looks like when traditional markets are rebuilt for a crypto-native, always-on world, not a moment too soon given the volatility that all markets are exhibiting," Mark Greenberg, Kraken’s global head of consumer, said in a statement.
+"Regulated tokenized equities as perpetual futures represent a new chapter for global capital markets, one where equities, indices, and commodities trade with the same speed, accessibility, and flexibility as crypto via tokenization, delivering a more robust risk management experience," he added.
+Kraken said it plans to expand the lineup with more tokenized stocks and ETFs in the coming months.
+Rival tokenization firm Ondo Finance earlier this month also announced plans to launch perps trading with its tokenized stocks.
+Read more: Kraken’s co-CEO could trust AI with 100% of his crypto — Dragonfly’s Haseeb Qureshi isn’t convinced
+More For You
+Wall Street’s big blockchain win: SEC gives WisdomTree the green light for instant, around-the-clock trading
+The move adds momentum to the $10 billion large tokenized Treasury market led by BlackRock, Circle and others.
+What to know:
+- The Securities and Exchange Commission approved WisdomTree’s request to let its Treasury Money Market Digital Fund (WTGXX) trade at a fixed $1 intraday price with a dealer, rather than only at end-of-day net asset value.
+- Under the new structure, a broker-dealer will trade from its own inventory on a 24/7 basis with instant blockchain settlement, while the mutual fund’s primary structure and regulation remain intact.
+- The move positions WisdomTree among a growing group of firms tokenizing traditional assets like U.S. Treasury money market funds, a market that now exceeds $10 billion in tokenized Treasuries.

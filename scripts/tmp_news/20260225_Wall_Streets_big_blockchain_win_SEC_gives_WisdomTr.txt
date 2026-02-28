@@ -1,0 +1,26 @@
+Title: Wall Street’s big blockchain win: SEC gives WisdomTree the green light for instant, around-the-clock trading
+Source: https://www.coindesk.com/business/2026/02/24/sec-approves-wisdomtree-plan-for-24-7-trading-of-tokenized-money-market-fund
+
+Wall Street’s big blockchain win: SEC gives WisdomTree the green light for instant, around-the-clock trading
+The move adds momentum to the $10 billion large tokenized Treasury market led by BlackRock, Circle and others.
+What to know:
+- The Securities and Exchange Commission approved WisdomTree’s request to let its Treasury Money Market Digital Fund (WTGXX) trade at a fixed $1 intraday price with a dealer, rather than only at end-of-day net asset value.
+- Under the new structure, a broker-dealer will trade from its own inventory on a 24/7 basis with instant blockchain settlement, while the mutual fund’s primary structure and regulation remain intact.
+- The move positions WisdomTree among a growing group of firms tokenizing traditional assets like U.S. Treasury money market funds, a market that now exceeds $10 billion in tokenized Treasuries.
+The U.S. Securities and Exchange Commission (SEC) has approved a special request from asset manager WisdomTree allowing shares of its Treasury Money Market Digital Fund to trade at $1 with a dealer on an intraday basis, regardless of the fund’s end-of-day net asset value.
+Until now, investors in the fund, which trades under the ticker WTGXX, had to transact at the end of the day at the fund’s NAV, as is standard for traditional mutual funds. The new structure allows trades to occur around the clock through a broker-dealer acting as principal, with instant settlement on blockchain rails.
+WisdomTree said the approval required exemptive relief from the SEC and regulatory clearance from FINRA to expand the activities of its broker-dealer subsidiary. Under the new model, trades occur against the dealer’s inventory rather than directly with the fund, enabling 24/7 liquidity while keeping the fund’s primary structure intact.
+“This is a true innovation and improvement in the investor experience, and it demonstrates how blockchain can serve as a new set of rails for capital markets,” Will Peck, WisdomTree’s head of digital assets, said in a statement on Tuesday.
+WisdomTree also introduced continuous dividend accrual for the fund, allocating interest based on how long each wallet held shares throughout the day. The feature tracks wallet activity onchain, ensuring that even mid-day transfers don’t miss a share of the yield.
+The firm plans on making the functionality available to institutions first via its Connect platform, with potential retail access later through its Prime app.
+The change marks a step in the broader push to tokenize parts of capital markets. Several large banks and asset managers have piloted blockchain-based systems to issue and settle traditional assets, aiming to cut settlement times and reduce operational friction. Tokenization refers to representing financial instruments as digital tokens on a blockchain, allowing ownership to move in near real time.
+Money market funds backed by U.S. Treasuries have become a key test case. More than $10 billion worth of tokenized U.S. Treasuries are now in circulation, according to data provider rwa.xyz.
+At the forefront is BlackRock and Securitize’s BUIDL fund, which holds over $2 billion in total value locked, a metric that reflects the dollar value of assets committed to the product onchain. Other offerings include products from stablecoin issuer Circle (CRCL) and Ondo Finance.
+With the SEC’s approval, WisdomTree joins a growing group of firms seeking to bring traditional cash management tools onto blockchain infrastructure while staying within the existing regulatory framework.
+More For You
+Mark Zuckerberg's Meta is planning stablecoin comeback in the second half of this year
+The Facebook owner’s stablecoin integration involves planning a third party vendor to help administer stablecoin-based payments and a new wallet to be implemented, sources said.
+What to know:
+- Meta sent out a request for product (RFP) to third-party firms to help administer stablecoin-based payments, according to sources.
+- Stripe, which acquired stablecoin firm Bridge last year, was mentioned by one source as a likely candidate for piloting Meta’s stablecoin.
+- Meta famously tried to introduce the Libra stablecoin, later renamed Diem, in 2019, only to be shut down amid regulatory scrutiny.
