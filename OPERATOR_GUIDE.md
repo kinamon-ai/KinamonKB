@@ -80,7 +80,15 @@ npm run dev
 ### スマホから操作する (Cloudflare Tunnel)
 PCで起動している UI を、家の外（スマホなど）からセキュアに操作する手順です。コードを書き換える必要はありません。
 
-1. **cloudflared をインストール**: [Cloudflare 公式](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/setup/) から OS に合わせてインストールします。
+1. **cloudflared をインストール**: 以下のコマンドで CLI 版を直接インストールするのが最も簡単です（Linux x64 の場合）。
+   ```bash
+   # 実行ファイルをダウンロード
+   curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
+   # 実行権限を付与
+   chmod +x cloudflared
+   # パスの通った場所へ移動
+   sudo mv cloudflared /usr/local/bin/
+   ```
 2. **トンネル起動**:
    ```bash
    cloudflared tunnel --url http://localhost:3000

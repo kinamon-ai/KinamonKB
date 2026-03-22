@@ -1,0 +1,83 @@
+Title: The Download：OpenAIが完全自動の研究者を開発中、サイケデリック治験の盲点
+Evaluation: B
+Reason: 「完全自動のリサーチャー」というエージェントの北極星は、最も注目すべき未来の進化である。
+Original Title: The Download: OpenAI is building a fully automated researcher, and a psychedelic trial blind spot
+Source: https://www.technologyreview.com/2026/03/20/1134448/the-download-openai-building-fully-automated-researcher-psychedelic-drug-trial/
+
+The Download: OpenAI is building a fully automated researcher, and a psychedelic trial blind spot
+Plus: OpenAI is also creating a "super app."
+This is today's edition of The Download, our weekday newsletter that provides a daily dose of what's going on in the world of technology.
+OpenAI is throwing everything into building a fully automated researcher
+OpenAI has a new grand challenge: building an AI researcher—a fully automated agent-based system capable of tackling large, complex problems by itself. The San Francisco firm said the new goal will be its “north star” for the next few years.
+By September, the company plans to build “an autonomous AI research intern” that can take on a small number of specific research problems. The intern will be the precursor to the fully automated multi-agent system, which is slated to debut in 2028.
+In an exclusive interview this week, OpenAI’s chief scientist, Jakub Pachocki, talked me through the plans. Find out what I discovered.
+—Will Douglas Heaven
+Mind-altering substances are (still) falling short in clinical trials
+Over the last decade, we’ve seen scientific interest in psychedelic drugs explode. Compounds like psilocybin—which is found in magic mushrooms—are being explored for all sorts of health applications, including treatments for depression, PTSD, addiction, and even obesity. But two studies out earlier this week demonstrate just how difficult it is to study these drugs.
+For me, they show just how overhyped these substances have become. Find out why here.
+—Jessica Hamzelou
+This story first appeared in The Checkup, MIT Technology Review’s weekly biotech newsletter. Sign up to receive it in your inbox every Wednesday.
+Read more: What do psychedelic drugs do to our brains? AI could help us find out
+The must-reads
+I’ve combed the internet to find you today’s most fun/important/scary/fascinating stories about technology.
+1 OpenAI is building a “super app”
+It’s merging ChatGPT, a web browser, and a coding tool into a single app. (The Verge)
++ It’s also buying coding startup Astral to enhance its Codex model. (Ars Technica)
++ The moves come amid a cutback on side projects. (WSJ $)
++ OpenAI has lost ground to Anthropic in the enterprise market. (Axios)
+2 The US has charged Super Micro’s co-founder with smuggling AI tech to China
+Super Micro is third on Fortune’s list of the fastest-growing companies. (Reuters)
++ GenAI is learning to spy for the US military. (MIT Technology Review)
++ The compute competition is shaping the China-US rivalry. (Politico)
+3 The DoJ has taken down botnets behind the largest-ever DDoS attack
+They had infected more than 3 million devices. (Wired $)
++ The DoJ has also seized domains tied to Iranian “hacktivists.” (Axios)
+4 The Pentagon says Anthropic’s foreign workers are a security risk
+It cited Chinese employees as a particular concern. (Axios)
++ Anthropic’s moral boundaries have incensed the DoD. (MIT Technology Review)
+5 High oil prices could wreck the AI boom, the WTO has warned
+Fears are growing of a prolonged energy shock. (The Guardian)
++ We did the math on AI’s energy footprint. (MIT Technology Review)
+6 Jeff Bezos is trying to raise $100 billion to use AI in manufacturing
+The funds would buy manufacturing firms and infuse them with AI. (WSJ $)
++ Here’s how to fine-tune AI for prosperity. (MIT Technology Review)
+7 Signal’s creator is helping to encrypt Meta’s AI
+Moxie Marlinspike is integrating his encrypted chatbot, Confer. (Wired $)
++ Meta is also ditching human moderators for AI again. (CNBC)
++ AI is making online crimes easier. (MIT Technology Review)
+8 Prediction market Kalshi has raised $1 billion at a $22 billion valuation
+That’s double its valuation from December. (Bloomberg $)
++ Arizona’s AG has charged the company with “illegal gambling.” (NPR)
+9 Meta isn’t killing Horizon Worlds for VR after all
+It’s canceled plans to dump the metaverse app (for now). (CNBC)
+10 A US startup is recruiting an “AI bully”
+The successful candidate must test the patience of leading chatbots. (The Guardian)
+Quote of the day
+“Imagine a sports bar… but just for situation monitoring — live X feeds, flight radar, Bloomberg terminals, and Polymarket screens.”
+—Kalshi rival Polymarket unveils its hellish vision for a new bar.
+One More Thing
+How gamification took over the world
+It’s a thought that occurs to every video-game player at some point: what if the weird, hyper-focused state I enter in virtual worlds could somehow be applied to the real one?
+For a handful of consultants, startup gurus, and game designers in the late 2000s, this state of “blissful productivity” became the key to unlocking our true human potential. Their vision became the global phenomenon of gamification—but it didn’t live up to the hype.
+Instead of liberating us, gamification became a tool for coercion, distraction, and control. Find out why we fell for it—and how we can recover.
+—Bryan Gardiner
+We can still have nice things
+A place for comfort, fun and distraction to brighten up your day. (Got any ideas? Drop me a line.)
++ In a landmark legal win for trolling, Afroman has won his diss track case against the police.
++ This LEGO artist remixes standard sets into completely different iconic objects.
++ Ease your search for aliens with these interactive estimates of advanced civilizations.
++ A rare superbloom in Death Valley has been caught on camera.
+Deep Dive
+The Download
+The Download: AI-enhanced cybercrime, and secure AI assistants
+Plus: Instagram's CEO Adam Mosseri has denied claims that social media is “clinically addictive”
+The Download: 10 things that matter in AI, plus Anthropic’s plan to sue the Pentagon
+Plus: The US DoD has been secretly testing OpenAI models for years
+The Download: protesting AI, and what’s floating in space
+Plus: The US government wanted to use Anthropic's AI to analyze bulk data collected from Americans
+The Download: the future of nuclear power plants, and social media-fueled AI hype
+Plus: more European countries are considering banning social media for under-16s
+Stay connected
+Get the latest updates from
+MIT Technology Review
+Discover special offers, top stories, upcoming events, and more.

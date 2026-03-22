@@ -7,7 +7,7 @@ set -e
 SCRIPT_DIR="$(dirname "$0")"
 PROJECT_ROOT="$SCRIPT_DIR/.."
 PYTHON="$PROJECT_ROOT/venv/bin/python"
-PROCESS_NEWS="$SCRIPT_DIR/process_news.sh"
+GENERATE_OPINION="$SCRIPT_DIR/generate_opinion.sh"
 
 echo "=== Starting KinamonKB Auto Patrol: $(date) ==="
 
@@ -22,13 +22,22 @@ while IFS= read -r line; do
         FILE_PATH="${line#FILE_PATH:}"
         echo "Processing collected file: $FILE_PATH"
         
-        # Step 7 のパイプラインを実行
+        # 判定結果 (A/B/C) をテキストファイルから読み取る
         if [ -f "$FILE_PATH" ]; then
-            "$PROCESS_NEWS" "$FILE_PATH"
-            # 処理が終わったら一時ファイルを削除
-            rm "$FILE_PATH"
-            echo "Sleeping 10s before next article..."
-            sleep 10
+            EVAL=$(grep "^Evaluation: " "$FILE_PATH" | sed 's/Evaluation: //')
+            
+            if [ "$EVAL" = "A" ]; then
+                echo "AI Evaluation: A (Accept). Generating opinions..."
+                "$GENERATE_OPINION" "$FILE_PATH"
+                rm "$FILE_PATH"
+                echo "Sleeping 10s before next article..."
+                sleep 10
+            elif [ "$EVAL" = "C" ]; then
+                echo "AI Evaluation: C (Delete). Removing article."
+                rm "$FILE_PATH"
+            else
+                echo "AI Evaluation: ${EVAL:-B} (Hold). Keeping file in inbox."
+            fi
         fi
     fi
 done <<< "$FETCH_OUTPUT"

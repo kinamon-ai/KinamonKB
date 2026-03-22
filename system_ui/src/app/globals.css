@@ -38,6 +38,7 @@ body {
 .gradient-text {
   background: linear-gradient(135deg, #818cf8, #c084fc);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
 }
@@ -67,10 +68,28 @@ button:hover {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease forwards;
+}
+
+/* Base Mobile Helper Classes */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }

@@ -1,12 +1,14 @@
 'use client';
 
 import { Task } from '@/lib/actions';
-import { Calendar, Bot, ChevronRight } from 'lucide-react';
+import { ChevronRight, ChevronUp, Calendar, Bot } from 'lucide-react';
+import React from 'react';
 
-export default function TaskList({ tasks, onSelect, selectedId }: {
+export default function TaskList({ tasks, onSelect, selectedId, renderDetail }: {
   tasks: Task[],
-  onSelect: (task: Task) => void,
-  selectedId?: string
+  onSelect: (task: Task | null) => void,
+  selectedId?: string,
+  renderDetail?: (task: Task) => React.ReactNode
 }) {
   return (
     <div className="task-list">
@@ -16,21 +18,27 @@ export default function TaskList({ tasks, onSelect, selectedId }: {
         </div>
       )}
       {tasks.map((task) => (
-        <div
-          key={task.id}
-          className={`task-card glass ${selectedId === task.id ? 'active' : ''}`}
-          onClick={() => onSelect(task)}
-        >
-          <div className="task-header">
-            <span className="priority-dot urgent"></span>
-            <h3>{task.title}</h3>
+        <React.Fragment key={task.id}>
+          <div
+            className={`task-card glass ${selectedId === task.id ? 'active' : ''}`}
+            onClick={() => onSelect(selectedId === task.id ? null : task)}
+          >
+            <div className="task-header">
+              <span className="priority-dot urgent"></span>
+              <h3>{task.title}</h3>
+            </div>
+            <div className="task-meta">
+              <span><Calendar size={14} /> {task.date}</span>
+              <span><Bot size={14} /> {task.bot}</span>
+            </div>
+            {selectedId === task.id ? <ChevronUp className="chevron active-chevron" size={20} /> : <ChevronRight className="chevron" size={20} />}
           </div>
-          <div className="task-meta">
-            <span><Calendar size={14} /> {task.date}</span>
-            <span><Bot size={14} /> {task.bot}</span>
-          </div>
-          <ChevronRight className="chevron" size={20} />
-        </div>
+          {selectedId === task.id && renderDetail && (
+            <div className="mobile-detail-wrapper">
+              {renderDetail(task)}
+            </div>
+          )}
+        </React.Fragment>
       ))}
 
       <style jsx>{`
@@ -96,7 +104,7 @@ export default function TaskList({ tasks, onSelect, selectedId }: {
           opacity: 0;
           transition: opacity 0.3s;
         }
-        .task-card:hover .chevron {
+        .task-card:hover .chevron, .chevron.active-chevron {
           opacity: 1;
         }
         .empty-state {
@@ -104,6 +112,25 @@ export default function TaskList({ tasks, onSelect, selectedId }: {
           padding: 2rem;
           color: var(--muted);
           font-size: 0.9rem;
+        }
+        .mobile-detail-wrapper {
+          display: none;
+        }
+        @media (max-width: 768px) {
+          .mobile-detail-wrapper {
+            display: block;
+            margin-top: -0.25rem;
+            margin-bottom: 1rem;
+            animation: slide-down 0.2s ease-out;
+          }
+          .task-card.active {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        @keyframes slide-down {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>
