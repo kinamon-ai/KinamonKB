@@ -1,0 +1,21 @@
+Title: エリザベス・ウォーレン氏、ペンタゴンによるAnthropic排除の決定を報復と非難
+Evaluation: B
+Reason: Anthropicと国防省の対立は、AIの軍事利用制限と倫理的境界を巡る構造的変化を象徴している。
+Original Title: Elizabeth Warren calls Pentagon’s decision to bar Anthropic ‘retaliation’
+Source: https://techcrunch.com/2026/03/23/elizabeth-warren-anthropic-pentagon-defense-supply-chain-risk-retaliation/
+
+Anthropic is attracting an increasing number of supporters in its fight against the U.S. Department of Defense, which last month designated the AI lab as a supply-chain risk after it refused to make concessions on how its AI could be used by the military.
+In a letter to Defense Secretary Pete Hegseth, U.S. Senator Elizabeth Warren (D-MA) equated the DoD’s decision with “retaliation,” arguing that the Pentagon could simply have terminated its contract with the AI lab, CNBC reports.
+“I am particularly concerned that the DoD is trying to strong-arm American companies into providing the Department with the tools to spy on American citizens and deploy fully autonomous weapons without adequate safeguards,” Warren wrote, per the report, adding that the barring of Anthropic “appears to be retaliation.”
+Warren’s words echo many other organizations that have spoken out against the Defense Department’s treatment of Anthropic. Several tech companies and employees — including from OpenAI, Google and Microsoft — as well as legal rights groups, have filed amicus briefs in support of Anthropic and denouncing the designation, which is usually applied to foreign adversaries and not U.S. firms.
+The dispute arose after Anthropic told the Pentagon that it did not want its AI systems to be used for mass surveillance of Americans, and that the technology wasn’t ready for use in targeting or firing decisions of lethal autonomous weapons without human intervention. The Pentagon contested that a private company shouldn’t dictate how the military uses technology, and soon after designated the company as a “supply-chain risk.” The label requires any company or agency that does work with the Pentagon to certify that it doesn’t use the designated company’s products or services — effectively barring the company from work with any company that also works with the U.S. government.
+The letter from Warren comes a day before a hearing in San Francisco on Tuesday, when District Judge Rita Lin will decide whether to grant Anthropic a preliminary injunction that seeks to preserve the status quo while its case against the DoD is litigated.
+While Anthropic is suing the DOD of infringing on its First Amendment rights and punishing the company based on ideological grounds, the Defense Department has maintained that Anthropic’s refusal to allow all lawful military uses of its technology was a business decision, not protected speech, and that the designation was a straightforward national security call and not punishment for the company’s views.
+Disrupt 2026: The tech ecosystem, all in one room
+Your next round. Your next hire. Your next breakout opportunity. Find it at TechCrunch Disrupt 2026, where 10,000+ founders, investors, and tech leaders gather for three days of 250+ tactical sessions, powerful introductions, and market-defining innovation. Register now to save up to $400.
+Save up to $300 or 30% to TechCrunch Founder Summit
+1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately
+Offer ends March 13.
+The AI lab last week submitted two declarations to the court that claim the government’s logic is flawed as they depend on technical misunderstandings as well as points of concern that were not raised during the company’s negotiations with the DoD.
+Warren has also written to OpenAI CEO Sam Altman, asking for details of the company’s agreement with the DoD, which came just a day after the Pentagon blacklisted Anthropic.
+Anthropic and the Defense Department did not immediately respond to requests for comment.

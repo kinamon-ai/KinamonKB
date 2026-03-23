@@ -1,0 +1,26 @@
+Title: 製薬会社がステーブルコインへ転換、SKY供給量の約9％を保有
+Evaluation: B
+Reason: 製薬会社から仮想通貨企業への極端な転換であり、持続可能性や信頼性に乏しい。
+Original Title: Pharmaceutical firm pivots to stablecoins, holds nearly 9% of SKY's supply
+Source: https://www.coindesk.com/business/2026/03/23/pharmaceutical-firm-pivots-to-stablecoins-holds-nearly-9-of-sky-s-supply
+
+Pharmaceutical firm pivots to stablecoins, holds nearly 9% of SKY's supply
+Nanocap NovaBay Pharmaceuticals changed its name to Stablecoin Development Corporation.
+What to know:
+- NovaBay Pharmaceuticals is renaming itself Stablecoin Development Corporation and changing its ticker from NBY to SDEV, marking a full shift from healthcare to crypto, following a $134 million private placement.
+- The company is using the proceeds of a private placement to build a large position in SKY, the governance token of the Sky protocol, and now holds around 2.06 billion tokens.
+- The firm has begun staking its SKY holdings to earn rewards, and reports earning around 26.6 million SKY tokens so far, as it prepares for its new focus on crypto and stablecoin development.
+NovaBay Pharmaceuticals (NBY) — a nanocap with a market capitalization of about $30 million — has renamed itself Stablecoin Development Corporation and changed its ticker to SDEV, marking a full shift from healthcare to crypto.
+This follows a $134 million private placement backed by firms including Framework Ventures and Tether Investments, the company said.
+The firm is using those funds to build a large position in SKY, the governance token tied to the Sky protocol, a decentralized finance protocol that issues the cryptocurrency-backed dollar-pegged stablecoin USDS..
+The company currently holds about 2.06 billion SKY tokens, roughly 8.78% of the total supply, worth around $147 million. It acquired over half of that on the open market at an average price near $0.065. The rest came as part of the financing deal, which included cash and stablecoins.
+The firm has also begun staking its holdings to earn rewards. It reports earning about 26.6 million SKY tokens so far, with these rewards varying based on network rules and participation.
+CoinDesk has reached out to Stablecoin Development Corp for comments, but hasn’t heard back at the time of writing.
+Sky, which evolved from MakerDAO, currently has a SKY staking rate of over 10%, according to the protocol’s website. The token’s value is down around 1.45% over the last 24 hours, while the broader crypto market rose 4% over the same period, as measured by the CoinDesk 20 (CD20) index.
+NBY is higher by 5% on Monday.
+More For You
+Backpack launches BP token on Solana with 25% airdrop, no insider allocation
+The remaining tokens are subject to long-term lockups tied to company milestones and a potential IPO.
+What to know:
+- Backpack launched its BP token on Solana with 25% of the 1 billion supply distributed to users via an airdrop, with no allocation to insiders at inception.
+- The remaining tokens are subject to long-term lockups tied to company milestones and a potential IPO, with a provision allowing long-term stakers to convert tokens into equity.

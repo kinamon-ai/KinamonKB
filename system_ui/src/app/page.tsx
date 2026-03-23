@@ -5,10 +5,12 @@ import { Task, getTasks, runPatrol, getDecisionCount, generateIdentityProposal }
 import TaskList from '@/components/TaskList';
 import TaskDetail from '@/components/TaskDetail';
 import IdentityView from '@/components/IdentityView';
+import HistoryView from '@/components/HistoryView';
+import SystemHealth from '@/components/SystemHealth';
 import NewsFeed from '@/components/NewsFeed';
 import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles } from 'lucide-react';
 
-type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'identity';
+type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity';
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -27,7 +29,7 @@ export default function Home() {
   const [analyzeMsg, setAnalyzeMsg] = useState<string | null>(null);
 
   const fetchTasks = async (mode: ViewMode = viewMode) => {
-    if (mode === 'identity') {
+    if (mode === 'identity' || mode === 'history' || mode === 'health') {
       setIsLoading(false);
       return;
     }
@@ -102,7 +104,7 @@ export default function Home() {
     setTimeout(() => setAnalyzeMsg(null), 6000);
   };
 
-  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : 'Approval Gate';
+  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : 'Approval Gate';
   const modeSubtitle = viewMode === 'feed'
     ? 'Stage 1: Browse RSS news and pick the most relevant ones to process.'
     : viewMode === 'held'
@@ -111,7 +113,11 @@ export default function Home() {
         ? 'Ready to fly. Final verification before the post goes live.'
         : viewMode === 'identity'
           ? 'Review and approve proposed updates to Kina Fox\'s persona.'
-          : 'Identify the pulse. Shape the persona.';
+          : viewMode === 'history'
+            ? 'Browse completed posts and trashed items.'
+            : viewMode === 'health'
+              ? 'Real-time telemetry and resource usage.'
+              : 'Identify the pulse. Shape the persona.';
 
   return (
     <main className={`dashboard ${isSidebarOpen ? 'sidebar-open' : ''}`}>
@@ -165,8 +171,18 @@ export default function Home() {
               <span className="badge-count queue-badge">{queueCount}</span>
             )}
           </div>
-          <div className="nav-item disabled"><CheckCircle size={16} /> History</div>
-          <div className="nav-item disabled"><LayoutDashboard size={16} /> System Health</div>
+          <div
+            className={`nav-item ${viewMode === 'history' ? 'active history-active' : ''}`}
+            onClick={() => switchMode('history')}
+          >
+            <CheckCircle size={16} /> History
+          </div>
+          <div
+            className={`nav-item ${viewMode === 'health' ? 'active health-active' : ''}`}
+            onClick={() => switchMode('health')}
+          >
+            <LayoutDashboard size={16} /> System Health
+          </div>
 
           {/* Bot Identity section */}
           <div className="nav-divider" />
@@ -232,6 +248,14 @@ export default function Home() {
           ) : viewMode === 'identity' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
               <IdentityView />
+            </section>
+          ) : viewMode === 'history' ? (
+            <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
+              <HistoryView />
+            </section>
+          ) : viewMode === 'health' ? (
+            <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
+              <SystemHealth />
             </section>
           ) : (
             <>
@@ -460,6 +484,14 @@ export default function Home() {
         .nav-item.identity-active {
           background: rgba(168, 85, 247, 0.1);
           color: #a855f7;
+        }
+        .nav-item.history-active {
+          background: rgba(139, 92, 246, 0.08);
+          color: #8b5cf6;
+        }
+        .nav-item.health-active {
+          background: rgba(236, 72, 153, 0.08);
+          color: #ec4899;
         }
         .analyze-btn {
           display: flex;

@@ -33,3 +33,5 @@
 | 2026-03-18 | 2026-03-19_20260317_Institutions_had_diamond_hands_during_bitcoins_50_ | B |  |
 | 2026-03-20 | 2026-03-20_20260320_OpenClaw_developers_targeted_in_GitHub_phishing_sc | B | 冷静は視点で見れば、AIエージェントのリスクを超高速で浮き彫りにした事で、この分野の進捗が一気に加速する。OpenClawの登場タイミングとしては、今この時点ですでにAIがAIを自ら修復し、超進化出来るフェーズだからこそ進化可能な絶妙のタイミングだったと言える
  |
+| 2026-03-22 | 2026-03-22_20260322_Grayscale_Keeps_Choosing_Sui_Heres_Why | B |  |
+| 2026-03-23 | 2026-03-16_20260316_Lawyer_behind_AI_psychosis_cases_warns_of_mass_cas | A |  |

@@ -2,6 +2,7 @@
 
 import fs from 'fs/promises';
 import path from 'path';
+import os from 'os';
 import matter from 'gray-matter';
 import { postTweet } from './twitter';
 
@@ -91,7 +92,7 @@ export async function decideTask(taskId: string, choice: 'A' | 'B', feedback: st
     await fs.writeFile(logPath, updatedLog);
 
     // Generate feedback knowledge asynchronously (fire-and-forget)
-    generateFeedback(content, choice, feedback).catch(console.error);
+    generateFeedback(content, choice, feedback, postContent).catch(console.error);
 
     return { success: true };
 }
@@ -132,7 +133,179 @@ export async function holdTask(taskId: string, source: 'pending' | 'held' | 'que
     return { success: true };
 }
 
-async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeedback: string) {
+export async function trashTask(taskId: string, source: 'pending' | 'held' | 'queue' = 'pending') {
+    let sourceDir = '_pending';
+    if (source === 'held') sourceDir = '_held';
+    if (source === 'queue') sourceDir = '_post_pool';
+
+    const sourcePath = path.join(KB_ROOT, '03_opinion_gate', sourceDir, taskId);
+    const trashDir = path.join(KB_ROOT, '03_opinion_gate/_trash');
+    await fs.mkdir(trashDir, { recursive: true });
+    const targetPath = path.join(trashDir, taskId);
+
+    const content = await fs.readFile(sourcePath, 'utf-8');
+    const trashedContent = `${content}\n\n<!-- trashed: true | trashed_from: ${sourceDir} | trashed_at: ${new Date().toLocaleString()} -->`;
+    await fs.writeFile(targetPath, trashedContent);
+    await fs.unlink(sourcePath);
+    return { success: true };
+}
+
+// ──────────────────────────────────────────────
+// History System
+// ──────────────────────────────────────────────
+
+export type HistoryItem = {
+    id: string;
+    title: string;
+    date: string;
+    bot: string;
+    sourceUrl: string;
+    choice: string;
+    finalPost: string;
+    feedback: string;
+    approvedAt: string;
+    tweetId: string;
+    postedAt: string;
+    type: 'decided' | 'trash';
+    trashedFrom: string;
+};
+
+export async function getHistory(filter: 'decided' | 'trash' | 'all' = 'all'): Promise<HistoryItem[]> {
+    const items: HistoryItem[] = [];
+
+    const readDir = async (dir: string, type: 'decided' | 'trash') => {
+        let files: string[] = [];
+        try { files = await fs.readdir(dir); } catch { return; }
+
+        for (const file of files) {
+            if (!file.endsWith('.md')) continue;
+            const filePath = path.join(dir, file);
+            const raw = await fs.readFile(filePath, 'utf-8');
+
+            const title = raw.split('\n')[0]?.replace(/^# /, '') || file;
+            const date = raw.match(/\*\*日付\*\*: (.*)/)?.[1] || file.slice(0, 10);
+            const bot = raw.match(/\*\*担当ボット\*\*: (.*)/)?.[1] || '';
+            const sourceUrl = raw.match(/\*\*ソースURL\*\*: `?(https?:\/\/[^\s`]+)`?/)?.[1] || '';
+            const choice = raw.match(/- \*\*選択\*\*: ([AB])/)?.[1] || '';
+            const postMatch = raw.match(/- \*\*最終ポスト\*\*: \n([\s\S]*?)(?=\n- \*\*コメント\*\*)/);
+            const finalPost = postMatch?.[1]?.split('\n').map(l => l.replace(/^> /, '')).join('\n').trim() || '';
+            const feedback = raw.match(/- \*\*コメント\*\*: (.*)/)?.[1] || '';
+            const approvedAt = raw.match(/- \*\*承認日時\*\*: (.*)/)?.[1] || '';
+            const tweetId = raw.match(/tweet_id: (\d+)/)?.[1] || '';
+            const postedAt = raw.match(/posted_at: ([^-\s>][^>]*?)(?:\s*-->)/)?.[1]?.trim() || '';
+            const trashedFrom = raw.match(/trashed_from: (\S+)/)?.[1] || '';
+
+            items.push({
+                id: file,
+                title: title.trim(),
+                date,
+                bot,
+                sourceUrl,
+                choice,
+                finalPost,
+                feedback,
+                approvedAt,
+                tweetId,
+                postedAt,
+                type,
+                trashedFrom,
+            });
+        }
+    };
+
+    if (filter === 'all' || filter === 'decided') {
+        await readDir(path.join(KB_ROOT, '03_opinion_gate/_decided'), 'decided');
+    }
+    if (filter === 'all' || filter === 'trash') {
+        await readDir(path.join(KB_ROOT, '03_opinion_gate/_trash'), 'trash');
+    }
+
+    items.sort((a, b) => b.date.localeCompare(a.date));
+    return items;
+}
+
+export async function restoreFromTrash(itemId: string): Promise<{ success: boolean }> {
+    const trashDir = path.join(KB_ROOT, '03_opinion_gate/_trash');
+    const sourcePath = path.join(trashDir, itemId);
+    const raw = await fs.readFile(sourcePath, 'utf-8');
+
+    // Determine original location from metadata
+    const fromMatch = raw.match(/trashed_from: (\S+)/);
+    const targetDir = fromMatch?.[1] || '_pending';
+    const targetPath = path.join(KB_ROOT, '03_opinion_gate', targetDir, itemId);
+
+    // Remove trash metadata
+    const markerIndex = raw.lastIndexOf('\n\n<!-- trashed:');
+    const restored = markerIndex >= 0 ? raw.slice(0, markerIndex) : raw;
+
+    await fs.writeFile(targetPath, restored);
+    await fs.unlink(sourcePath);
+    return { success: true };
+}
+
+export async function deleteFromTrash(itemId: string): Promise<{ success: boolean }> {
+    const trashDir = path.join(KB_ROOT, '03_opinion_gate/_trash');
+    await fs.unlink(path.join(trashDir, itemId));
+    return { success: true };
+}
+
+// ──────────────────────────────────────────────
+// System Health Status
+// ──────────────────────────────────────────────
+
+export type SystemHealthData = {
+    os: {
+        platform: string;
+        uptime: number;
+        totalMem: number;
+        freeMem: number;
+        loadAvg: number[];
+        hostname: string;
+    };
+    storage: {
+        candidates: number;
+        pending: number;
+        held: number;
+        queue: number;
+        decided: number;
+        trash: number;
+        proposals: number;
+    };
+    lastPatrol?: string; // We can parse this from growth_log.md or files
+};
+
+export async function getSystemHealth(): Promise<SystemHealthData> {
+    const safeReadDirCount = async (dirPath: string) => {
+        try {
+            const files = await fs.readdir(dirPath);
+            return files.filter(f => !f.startsWith('.')).length;
+        } catch { return 0; }
+    };
+
+    const candidates = await safeReadDirCount(path.join(KB_ROOT, '01_bots/bot_01_observer/_news_candidates'));
+    const pending = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_pending'));
+    const held = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_held'));
+    const queue = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_post_pool'));
+    const decided = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_decided'));
+    const trash = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_trash'));
+    const proposals = await safeReadDirCount(path.join(KB_ROOT, '01_bots/bot_01_observer/_identity_proposals'));
+
+    return {
+        os: {
+            platform: os.platform(),
+            uptime: os.uptime(),
+            totalMem: os.totalmem(),
+            freeMem: os.freemem(),
+            loadAvg: os.loadavg(),
+            hostname: os.hostname(),
+        },
+        storage: {
+            candidates, pending, held, queue, decided, trash, proposals
+        }
+    };
+}
+
+async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeedback: string, postContent: string) {
     const { exec } = require('child_process');
     const projectRoot = path.resolve(process.cwd(), '..');
     const feedbackKnowledgePath = path.join(KB_ROOT, '01_bots/bot_01_observer/feedback_knowledge.md');
@@ -142,6 +315,7 @@ async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeed
         taskContent,
         '---',
         `kinamonの選択: ${choice}案`,
+        `kinamonの修正後最終ポスト: ${postContent}`,
         `kinamonのフィードバック: ${userFeedback || '(コメントなし)'}`,
     ].join('\n');
 

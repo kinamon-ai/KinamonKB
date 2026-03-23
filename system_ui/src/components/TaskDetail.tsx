@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Task, decideTask, holdTask, postToX } from '@/lib/actions';
-import { Send, Clock, Edit3, Pause, RotateCcw, Share2 } from 'lucide-react';
+import { Task, decideTask, holdTask, trashTask, postToX } from '@/lib/actions';
+import { Send, Clock, Edit3, Pause, RotateCcw, Share2, Trash2 } from 'lucide-react';
 
 export default function TaskDetail({ task, onComplete, fromHeld = false, fromQueue = false }: { task: Task, onComplete: () => void, fromHeld?: boolean, fromQueue?: boolean }) {
   const [choice, setChoice] = useState<'A' | 'B' | null>(null);
@@ -14,6 +14,7 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
   const [loading, setLoading] = useState(false);
   const [holding, setHolding] = useState(false);
   const [posting, setPosting] = useState(false);
+  const [trashing, setTrashing] = useState(false);
   const [postResult, setPostResult] = useState<{ tweetId?: string; error?: string } | null>(null);
 
   const extractChoice = (id: 'A' | 'B') => {
@@ -135,6 +136,17 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
 
     await holdTask(task.id, source);
     setHolding(false);
+    onComplete();
+  };
+
+  const handleTrash = async () => {
+    if (!confirm('この記事をゴミ箱に移動しますか？')) return;
+    setTrashing(true);
+    let source: 'pending' | 'held' | 'queue' = 'pending';
+    if (fromHeld) source = 'held';
+    if (fromQueue) source = 'queue';
+    await trashTask(task.id, source);
+    setTrashing(false);
     onComplete();
   };
 
@@ -276,6 +288,13 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
           </div>
 
           <div className="actions">
+            <button
+              className="btn-trash"
+              onClick={handleTrash}
+              disabled={trashing}
+            >
+              <Trash2 size={16} /> {trashing ? 'Moving...' : 'Trash'}
+            </button>
             <button
               className="btn-secondary glass"
               onClick={handleHold}
@@ -500,6 +519,27 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
           padding: 0.8rem 2.5rem;
           color: var(--muted);
           font-size: 1rem;
+        }
+        .btn-trash {
+          padding: 0.8rem 1.5rem;
+          color: #f87171;
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          border: 1px solid rgba(248, 113, 113, 0.2);
+          border-radius: 8px;
+          background: rgba(248, 113, 113, 0.05);
+          margin-right: auto;
+          transition: all 0.2s;
+        }
+        .btn-trash:hover:not(:disabled) {
+          background: rgba(248, 113, 113, 0.12);
+          border-color: rgba(248, 113, 113, 0.4);
+        }
+        .btn-trash:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
         }
         .post-result {
           margin-top: 0.75rem;
