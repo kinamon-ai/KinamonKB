@@ -35,3 +35,10 @@
  |
 | 2026-03-22 | 2026-03-22_20260322_Grayscale_Keeps_Choosing_Sui_Heres_Why | B |  |
 | 2026-03-23 | 2026-03-16_20260316_Lawyer_behind_AI_psychosis_cases_warns_of_mass_cas | A |  |
+| 2026-03-24 | 2026-03-24_20260324_Strategy_tops_up_capitalraising_plans_bringing_po | B |  |
+| 2026-03-24 | 2026-03-20_20260320_New_Sui_VM_Bug_Bounty_Now_Open | A |  |
+| 2026-03-24 | 2026-03-16_20260316_Fed_headlines_central_bank_rate_decisions_Gemini_e | B |  |
+| 2026-03-24 | 2026-03-24_20260324_What_Happens_If_AI_Makes_Things_Too_Easy_for_Us | A |  |
+| 2026-03-25 | 2026-03-25_20260325_Anthropic_hands_Claude_Code_more_control_but_keeps | A |  |
+| 2026-03-25 | 2026-03-25_20260325_The_Download_tracing_AIfueled_delusions_and_OpenA | A |  |
+| 2026-03-25 | 2026-03-20_20260320_Meta_rolls_out_new_AI_content_enforcement_systems_ | A |  |

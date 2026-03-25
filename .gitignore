@@ -4,6 +4,18 @@ system_ui/out/
 system_ui/node_modules/
 system_ui/.env*.local
 
+# x_api_tester
+x_api_tester/.next/
+x_api_tester/out/
+x_api_tester/node_modules/
+x_api_tester/.env*.local
+
+# ai_local_tester
+ai_local_tester/.next/
+ai_local_tester/out/
+ai_local_tester/node_modules/
+ai_local_tester/.env*.local
+
 # Python
 venv/
 __pycache__/
