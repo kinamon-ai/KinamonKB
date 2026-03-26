@@ -102,9 +102,21 @@ def evaluate_articles_batch(articles_data):
         combined_input = "\n\n".join(input_texts)
         
         env = os.environ.copy()
-        # Set the system prompt path
-        system_md_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".gemini", "filter-system.md")
-        env['GEMINI_SYSTEM_MD'] = system_md_path
+        
+        # Combine system prompts (Shared + Specific)
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        shared_kb = os.path.join(base_dir, "kinamon_kb", "01_bots", "common", "shared_knowledge.md")
+        shared_persona = os.path.join(base_dir, "kinamon_kb", "01_bots", "common", "shared_persona.md")
+        filter_system = os.path.join(base_dir, ".gemini", "filter-system.md")
+        
+        combined_system_path = "/tmp/combined_filter_system.md"
+        with open(combined_system_path, "w", encoding="utf-8") as f_out:
+            for p in [shared_kb, shared_persona, filter_system]:
+                if os.path.exists(p):
+                    with open(p, "r", encoding="utf-8") as f_in:
+                        f_out.write(f_in.read() + "\n\n---\n\n")
+        
+        env['GEMINI_SYSTEM_MD'] = combined_system_path
         
         prompt = "Evaluate the following articles according to the system instructions. For each article, output the result wrapped in <result id='N'> tags containing EXACTLY a JSON object with 'evaluation' (A, B, or C) and 'reason' (Japanese string). Example: <result id='0'>{\"evaluation\": \"A\", \"reason\": \"...\"}</result>"
         

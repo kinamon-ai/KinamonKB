@@ -13,10 +13,18 @@ fi
 # 1. 記事情報を読み込み
 CONTENT=$(cat "$INPUT_FILE")
 
-# 2. Gemini CLI で2択MDを生成 (JSON経由でクリーンに取得)
-# --yolo で確認を自動承認、jq で reponse フィールドのみ抽出
+# 2. Gemini CLI で2択MDを生成 (レイヤー構造の統合)
 echo "Generating opinion for: $(basename "$INPUT_FILE")..."
-RESPONSE_JSON=$(echo "$CONTENT" | GEMINI_SYSTEM_MD=.gemini/bot01-system.md gemini -p "この記事について2択を生成してください。Markdownフォーマット厳守。" --output-format json --yolo)
+
+# システムプロンプトを統合 (Shared + Specific)
+TMP_SYSTEM_MD="/tmp/combined_system_bot01.md"
+cat "kinamon_kb/01_bots/common/shared_knowledge.md" > "$TMP_SYSTEM_MD"
+echo -e "\n---\n" >> "$TMP_SYSTEM_MD"
+cat "kinamon_kb/01_bots/common/shared_persona.md" >> "$TMP_SYSTEM_MD"
+echo -e "\n---\n" >> "$TMP_SYSTEM_MD"
+cat ".gemini/bot01-system.md" >> "$TMP_SYSTEM_MD"
+
+RESPONSE_JSON=$(echo "$CONTENT" | GEMINI_SYSTEM_MD="$TMP_SYSTEM_MD" gemini -p "この記事について2択を生成してください。Markdownフォーマット厳守。" --output-format json --yolo)
 
 # jq で .response を取得
 RAW_MD=$(echo "$RESPONSE_JSON" | jq -r '.response')

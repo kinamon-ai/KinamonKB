@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       prompt = "以下の内容を日本語に翻訳してください。結果のみ出力してください。";
       sysPrompt = ""; // Clean system prompt for simple translation
     } else if (task === 'SUMMARIZE') {
-      prompt = "以下の内容を3行で簡潔に要約してください。";
+      prompt = "Summarize the following content in 3 concise lines. Keep the language same as input.";
       sysPrompt = ""; // Clean system prompt for simple summary
     } else {
       // Default to OPINION (bot01)

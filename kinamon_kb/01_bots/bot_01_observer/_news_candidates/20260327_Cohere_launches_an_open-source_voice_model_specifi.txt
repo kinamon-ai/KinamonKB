@@ -1,0 +1,19 @@
+Title: Cohere、文字起こしに特化したオープンソースの音声モデルをリリース
+Evaluation: B
+Reason: 高性能なオープンソース音声認識モデルの登場は、ローカル環境での自動化とエージェント構築を加速させるため。
+Original Title: Cohere launches an open-source voice model specifically for transcription
+Source: https://techcrunch.com/2026/03/26/cohere-launches-an-open-source-voice-model-specifically-for-transcription/
+
+Enterprise AI company Cohere on Thursday launched its first voice model: Transcribe is an open-source automatic speech recognition model that can be used for tasks like note-taking and speech analysis.
+Relatively light at just 2 billion parameters, the model is meant for use with consumer-grade GPUs for those who want to self-host it. It currently supports 14 languages: English, French, German, Italian, Spanish, Portuguese, Greek, Dutch, Polish, Chinese, Japanese, Korean, Vietnamese and Arabic.
+Cohere says Transcribe beats models such as Zoom Scribe v1, IBM Granite 4.0 1B, ElevenLabs Scribe v2, and Qwen3-ASR-1.7B Speech on the Hugging Face Open ASR leaderboard, achieving an average word error rate (WER) of 5.42, lower than any other model on the benchmark.
+The company claims Transcribe had an average win rate of 61% over other models when human evaluators assessed its transcriptions for accuracy, coherence and usability. However, the model fell behind its rivals when it had to transcribe Portuguese, German and Spanish.
+Cohere says Transcribe can process 525 minutes of audio in a minute, which is high for its class of model.
+The company is planning to integrate Transcribe into its enterprise agent orchestration platform, North, and is making the model available through its API for free. The model will also be available on Model Vault, Cohere’s managed inference platform.
+Speech recognition models are growing increasingly popular as demand grows for note-taking and dictation apps like Granola and Wispr Flow.
+Disrupt 2026: The tech ecosystem, all in one room
+Your next round. Your next hire. Your next breakout opportunity. Find it at TechCrunch Disrupt 2026, where 10,000+ founders, investors, and tech leaders gather for three days of 250+ tactical sessions, powerful introductions, and market-defining innovation. Register now to save up to $400.
+Save up to $300 or 30% to TechCrunch Founder Summit
+1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately
+Offer ends March 13.
+Earlier this year, Cohere reportedly told investors that it was generating annual recurring revenue of $240 million in 2025, and its CEO, Aidan Gomez, was cited as saying that the startup may go public “soon”.

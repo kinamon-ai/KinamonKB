@@ -542,9 +542,9 @@ export default function NewsFeed() {
                 .card-content h3 {
                     font-size: 1rem;
                     margin-bottom: 0.4rem;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    white-space: normal;
+                    overflow: visible;
+                    line-height: 1.4;
                 }
                 .card-meta {
                     display: flex;

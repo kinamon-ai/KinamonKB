@@ -1,0 +1,83 @@
+Title: The Download：バッテリーからAIへのピボット、そして数学の書き換え
+Evaluation: B
+Reason: AIによる数学的パターンの発見や新素材探索は、人類の知の拡張と科学的進歩を加速させる本質的進化であるため。
+Original Title: The Download: a battery pivot to AI, and rewriting math
+Source: https://www.technologyreview.com/2026/03/26/1134697/the-download-battery-ai-pivot-new-ai-tool-math/
+
+The Download: a battery pivot to AI, and rewriting math
+Plus: a new fine for Meta and YouTube is set to reshape legal protections for Big Tech.
+This is today's edition of The Download, our weekday newsletter that provides a daily dose of what's going on in the world of technology.
+Why this battery company is pivoting to AI
+Qichao Hu doesn’t mince words about the state of the battery industry. “Almost every Western battery company has either died or is going to die. It’s kind of the reality,” he says.
+Hu is the CEO of SES AI, a Massachusetts-based battery company. It previously developed advanced lithium batteries for major industries, but is now shifting to AI materials discovery. Read our story to find out why.
+—Casey Crownhart
+This startup wants to change how mathematicians do math
+Axiom Math, a California startup, has released a free AI tool with a big ambition: discovering mathematical patterns that could unlock solutions to long-standing problems.
+Most of the successes with AI tools have involved finding solutions to existing problems. But that’s not all they could do. There are lots of problems in math that require new ideas nobody has ever had, which could come from spotting patterns that have never been spotted before.
+Axiom Math’s new tool aims to find these hidden links. Read the full story to discover their plans—and how AI in general could change mathematics.
+—Will Douglas Heaven
+Are high gas prices good news for EVs? It’s complicated.
+As the conflict in Iran has escalated, fossil-fuel prices have been on a roller-coaster—and some EV owners are celebrating.
+They believe the volatility will create an opportunity for electric vehicles to make headway. But even the carless among us should be concerned about a sustained rise in fossil-fuel prices.
+To find out why, read the full story.
+—Casey Crownhart
+This article is from The Spark, our weekly climate newsletter. Sign up to receive it in your inbox every Wednesday.
+The must-reads
+I’ve combed the internet to find you today’s most fun/important/scary/fascinating stories about technology.
+1 Meta and YouTube have been fined for designing addictive products
+They must pay damages of $6 million for harming young people. (Guardian)
++ The verdicts will reshape legal protections for Big Tech. (WSJ $)
++ They could also ripple through social media markets worldwide. (Rest of World)
++ Juries have started taking the lead in the push for child online safety. (NYT)
+2 SpaceX aims to file for IPO as soon as this week
+It’s hoping to raise more than $75 billion. (The Information)
++ Rocket stocks soared on the report. (BBC)
++ But rivals are challenging SpaceX’s dominance. (MIT Technology Review)
+3 A new AI safety bill would halt data center construction
+It was introduced by Bernie Sanders. (Wired)
++ Nobody wants a data center in their backyard. (MIT Technology Review
++ One solution: launch them into space. (MIT Technology Review)
+4 Meta has laid off 700 employees
+After raising compensation for top earners. (NYT $)
+5 Elon Musk wants a Delaware judge to recuse herself over an emoji
+She liked a LinkedIn post criticizing him. (CNBC)
++ The case had ruled Musk misled investors during the Twitter purchase. (Reuters)
+6 Reddit will require “fishy” accounts to verify that a human runs them
+The process aims to combat the deluge of bots. (Ars Technica)
+7 Uber and Pony AI aim to launch Europe’s first robotaxi service in Croatia
+Pony AI is also running trials in Luxembourg, while Uber is testing in London. (The Verge)
+8 Google says quantum computers could break all cryptographic security by 2029
+It’s set a timeline to secure the quantum era. (Gizmodo)
++ Quantum computers could soon solve health care problems. (MIT Technology Review)
+9 New research shows cloning doesn’t produce perfect copies
+Clones have lots of extra, potentially dangerous mutations. (New Scientist)
+10 The landmark AI Scientist has just completed peer review
+It’s billed as the first AI tool built to fully automate the scientific process. (Nature)
+Quote of the day
+“For years, social media companies have profited from targeting children while concealing their addictive and dangerous design features. Today’s verdict is a referendum—from a jury, to an entire industry.”
+—Attorney Rachel Lanier offers her view on yesterday’s fines for Meta and YouTube, the Washington Post reports.
+One More Thing
+Longevity enthusiasts want to create their own independent state. They’re eyeing Rhode Island.
+It’s incredibly difficult and expensive to study innovative ways to slow or reverse aging. In response, longevity enthusiasts have devised an ambitious plan: establish an independent state for life-extension experiments.
+They envision a jurisdiction that slashes red tape, encourages self-experimentation with unproven treatments, and eliminates laws that limit how companies develop drugs.
+Exactly where their longevity state might emerge is still being worked out—but one appealing location is Rhode Island. Read the full story to learn more about the plans.
+—Jessica Hamzelou
+We can still have nice things
+A place for comfort, fun and distraction to brighten up your day. (Got any ideas? Drop me a line.)
++ These gleaming photos of ancient insects in amber are time capsules of the dinosaur age.
++ Paint with pixels across a world map at this unique digital canvas.
++ Hands have a new shield against hammers: a nail holder that protects your fingers.
++ This new audio player uses cartridges to give digital music a soul.
+Deep Dive
+The Download
+The Download: AI-enhanced cybercrime, and secure AI assistants
+Plus: Instagram's CEO Adam Mosseri has denied claims that social media is “clinically addictive”
+The Download: 10 things that matter in AI, plus Anthropic’s plan to sue the Pentagon
+Plus: The US DoD has been secretly testing OpenAI models for years
+The Download: protesting AI, and what’s floating in space
+Plus: The US government wanted to use Anthropic's AI to analyze bulk data collected from Americans
+The Download: Quantum computing for health, and why the world doesn’t recycle more nuclear waste
+Stay connected
+Get the latest updates from
+MIT Technology Review
+Discover special offers, top stories, upcoming events, and more.

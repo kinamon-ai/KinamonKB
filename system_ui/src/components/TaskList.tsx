@@ -72,9 +72,9 @@ export default function TaskList({ tasks, onSelect, selectedId, renderDetail }: 
         }
         .task-header h3 {
           font-size: 0.95rem;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          white-space: normal;
+          overflow: visible;
+          line-height: 1.4;
         }
         .priority-dot {
           width: 6px;

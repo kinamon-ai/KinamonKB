@@ -310,8 +310,23 @@ async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeed
     const projectRoot = path.resolve(process.cwd(), '..');
     const feedbackKnowledgePath = path.join(KB_ROOT, '01_bots/bot_01_observer/feedback_knowledge.md');
 
+    const sharedKnowledgePath = path.join(KB_ROOT, '01_bots/common/shared_knowledge.md');
+    const sharedPersonaPath = path.join(KB_ROOT, '01_bots/common/shared_persona.md');
+
+    const [sharedKnowledge, sharedPersona] = await Promise.all([
+        fs.readFile(sharedKnowledgePath, 'utf-8').catch(() => ''),
+        fs.readFile(sharedPersonaPath, 'utf-8').catch(() => ''),
+    ]);
+
     // Build analysis input
     const analysisInput = [
+        '## Shared Knowledge (Org Level)',
+        sharedKnowledge,
+        '---',
+        '## Shared Persona (Org Level)',
+        sharedPersona,
+        '---',
+        '## Current Conversation Context',
         taskContent,
         '---',
         `kinamonの選択: ${choice}案`,
@@ -422,18 +437,31 @@ export async function generateIdentityProposal(): Promise<{ success: boolean; me
     const proposalsDir = path.join(KB_ROOT, '01_bots/bot_01_observer/_identity_proposals');
     const logPath = path.join(KB_ROOT, '01_bots/bot_01_observer/growth_log.md');
 
-    const personaContent = await fs.readFile(personaPath, 'utf-8');
-    const feedbackContent = await fs.readFile(feedbackPath, 'utf-8');
-    const logContent = await fs.readFile(logPath, 'utf-8');
+    const sharedKnowledgePath = path.join(KB_ROOT, '01_bots/common/shared_knowledge.md');
+    const sharedPersonaPath = path.join(KB_ROOT, '01_bots/common/shared_persona.md');
+
+    const [personaContent, feedbackContent, logContent, sharedKnowledge, sharedPersona] = await Promise.all([
+        fs.readFile(personaPath, 'utf-8'),
+        fs.readFile(feedbackPath, 'utf-8'),
+        fs.readFile(logPath, 'utf-8'),
+        fs.readFile(sharedKnowledgePath, 'utf-8').catch(() => ''),
+        fs.readFile(sharedPersonaPath, 'utf-8').catch(() => ''),
+    ]);
 
     // Count total decisions for context
     const decisionLines = logContent.match(/^\| \d{4}-\d{2}-\d{2}/gm) || [];
 
     const analysisInput = [
-        '## 現在の persona.md',
+        '## Shared Knowledge (Org Level)',
+        sharedKnowledge,
+        '---',
+        '## Shared Persona (Org Level)',
+        sharedPersona,
+        '---',
+        '## Bot-Specific persona.md',
         personaContent,
         '---',
-        '## 蓄積された feedback_knowledge.md',
+        '## Bot-Specific feedback_knowledge.md',
         feedbackContent,
         '---',
         `## 分析対象: 合計 ${decisionLines.length} 件の選択記録`,

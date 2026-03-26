@@ -147,6 +147,7 @@ export default function IdentityView() {
                                         <button
                                             className={`action-btn approve ${itemStates[idx] === 'approved' ? 'active' : ''}`}
                                             onClick={e => { e.stopPropagation(); handleApprove(idx); }}
+                                            disabled={applied || selectedProposal.id.startsWith('applied_')}
                                             title="承認"
                                         >
                                             <CheckCircle size={20} />
@@ -154,6 +155,7 @@ export default function IdentityView() {
                                         <button
                                             className={`action-btn reject ${itemStates[idx] === 'rejected' ? 'active' : ''}`}
                                             onClick={e => { e.stopPropagation(); handleReject(idx); }}
+                                            disabled={applied || selectedProposal.id.startsWith('applied_')}
                                             title="棄却"
                                         >
                                             <XCircle size={20} />
