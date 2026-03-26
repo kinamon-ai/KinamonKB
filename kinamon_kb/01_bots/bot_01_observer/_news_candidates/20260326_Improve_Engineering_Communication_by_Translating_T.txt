@@ -1,0 +1,56 @@
+Title: Improve Engineering Communication by Translating Technical Detail
+Evaluation: C
+Reason: エンジニアのコミュニケーション術という普遍的かつ平凡なトピックであり、AIの活用法としても目新しさに欠ける。
+Original Title: Improve Engineering Communication by Translating Technical Detail
+Source: https://spectrum.ieee.org/engineering-communication
+
+This article is crossposted from IEEE Spectrum’s careers newsletter. Sign up now to get insider tips, expert advice, and practical strategies, written in partnership with tech career development company Parsity and delivered to your inbox for free!
+Engineers Aren’t Bad at Communication. They’re Just Speaking to the Wrong Audience.
+There’s a persistent myth that engineers are bad communicators. In my experience, that’s not true.
+Engineers are often excellent communicators—inside their domain. We’re precise. We’re logical. We structure arguments clearly. We define terms. We reason from constraints.
+The breakdown happens when the audience changes.
+We’re used to speaking in highly technical language, surrounded by people who share our vocabulary. In that environment, shorthand and jargon are efficient. But outside that bubble, when talking to executives, product managers, marketing teams, or customers, that same precision can be confusing.
+The problem isn’t that we can’t communicate. It’s that we forget to translate.
+If you’ve ever explained a critical issue or error to a non-technical stakeholder, you’ve probably experienced this: You give a technically accurate explanation. They leave either more confused than before, or more alarmed than necessary.
+Suddenly you’re spending more time clarifying your explanation than fixing the issue.
+Under pressure, we default to what we know best—technical detail. But detail without context creates cognitive overload. The listener can’t tell what matters, what’s normal, and what’s dangerous.
+That’s when the “engineers can’t communicate” narrative shows up.
+In reality, we just skipped the translation step.
+The Writing Shortcut
+One of the simplest ways to improve written communication today is surprisingly easy: Run your explanation through an AI model and ask, “would this make sense to a non-technical audience? Where would someone get confused?”
+You can also say:
+- “Rewrite this for an executive audience.”
+- “What analogy would help explain this?”
+- “Simplify this without losing accuracy.”
+Large language models are particularly good at identifying jargon and offering alternative framings. They’re essentially translation assistants.
+Analogies are especially powerful. If you’re explaining system latency, compare it to traffic congestion. If you’re describing technical debt, compare it to skipping maintenance on a house. If you’re explaining distributed systems, try using supply chain examples.
+The goal isn’t to “dumb it down.” It’s to map the unfamiliar onto something familiar.
+Before sending an email or report, ask yourself:
+- Does this audience need to understand the mechanism, or just impact?
+- Does this explanation help them make a decision?
+- Have I defined terms they might not know?
+Translation When Speaking
+When speaking—especially in meetings or presentations—most engineers have one predictable habit: We speak too fast.
+Nerves speed us up. Speed causes filler words. Filler words dilute authority.
+To prevent that, follow a simple rule: Speak 10 to 15 percent slower than feels natural.
+Slowing down cuts down the number of times you say “um” and “uh”, gives you time to think, makes you sound more confident, and gives the listener time to process.
+Another rule: Say only what the audience needs to move forward.
+Explain just enough for the person to make a decision. If you overload someone with implementation details when they only need tradeoffs, you’ve made their job harder.
+The Real Skill
+The key skill in communication is audience awareness.
+The same engineer who can clearly explain a concurrency bug to a peer can absolutely explain system risk to an executive. The difference is framing, vocabulary, and context. Not intelligence.
+In the age of AI, where code generation is increasingly commoditized, the ability to translate complexity into clarity is becoming a defining advantage.
+Engineers aren’t bad communicators. We just have to remember that outside our bubble, translation is part of the job.
+—Brian
+How Robert Goddard’s Self-Reliance Crashed His Dreams
+Robert Goddard launched the first liquid-fueled rocket 100 years ago, but his legacy still has relevant lessons for today’s engineers. Although Goddard’s headstrong confidence in his ideas helped bring about the breakthrough, it later became an obstacle in what systems engineer Guru Madhavan calls “the alpha trap.” Madhavan writes: “We love to celebrate the lone genius, yet we depend on teams to bring the flame of genius to the people.”
+Redefining the Software Engineering Profession for AI
+For Communications of the ACM, two Microsoft engineers propose a model for software engineering in the age of AI: Making the growth of early-in-career developers an explicit organizational goal. Without hiring early-career workers, the profession’s talent pipeline will eventually dry up. So, they argue, companies must hire them and develop talent, even if that comes with a short-term dip in productivity.
+IEEE Launches Global Virtual Career Fairs
+Looking for a job? Last year, IEEE Industry Engagement hosted its first virtual career fair to connect recruiters and young professionals. Several more career fairs are now planned, including two upcoming regional events and a global career fair in June. At these fairs, you can participate in interactive sessions, chat with recruiters, and experience video interviews.
+- Is English Your Second Language? Polish Your Skills With a New IEEE Course ›
+- IEEE Course Improves Engineers’ Writing Skills ›
+- Why Communications Skills Are Critical To Engineers ›
+Brian Jenney is the owner of Parsity, an online education platform that helps people break into AI and modern software roles through project-based learning and one-on-one mentorship with senior developers. Parsity helps career changers transition into software by focusing on practical skills, real-world systems, and the kind of experience companies actually look for.
+Outside Parsity, Brian works a senior software engineer in the SF Bay Area.
+Brian is also a father of three, and when he’s not working with students or building programs, you might catch him running around Lake Merritt in Oakland, California.
