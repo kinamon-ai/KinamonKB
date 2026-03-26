@@ -24,6 +24,7 @@ interface TestResult {
   input: string;
   output: string;
   timestamp: string;
+  duration: number;
   success: boolean;
 }
 
@@ -32,29 +33,42 @@ export default function Home() {
   const [input, setInput] = useState('');
   const [systemPrompt, setSystemPrompt] = useState('');
   const [loading, setLoading] = useState(false);
+  const [loadingGemini, setLoadingGemini] = useState(false);
   const [results, setResults] = useState<TestResult[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const runTest = async () => {
+  const runTest = async (isGemini = false) => {
     if (!input.trim()) return;
     
-    setLoading(true);
+    if (isGemini) setLoadingGemini(true);
+    else setLoading(true);
+
+    const startTime = performance.now();
     try {
-      const res = await fetch('/api/test-ai', {
+      const endpoint = isGemini ? '/api/test-gemini' : '/api/test-ai';
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ task, content: input, systemPrompt }),
+        body: JSON.stringify({ 
+          task, 
+          content: input, 
+          systemPrompt: !isGemini ? systemPrompt : undefined,
+          systemPromptPath: isGemini ? (task === 'OPINION' ? '.gemini/bot01-system.md' : undefined) : undefined
+        }),
       });
       
       const data = await res.json();
+      const endTime = performance.now();
+      const duration = Math.round(endTime - startTime);
       
       if (data.success) {
         const newResult: TestResult = {
           id: Date.now().toString(),
-          task,
+          task: isGemini ? (`GEMINI_${task}` as any) : task,
           input,
           output: data.result,
           timestamp: new Date().toLocaleTimeString(),
+          duration,
           success: true
         };
         setResults([newResult, ...results]);
@@ -62,17 +76,20 @@ export default function Home() {
         throw new Error(data.error);
       }
     } catch (err: any) {
+      const duration = Math.round(performance.now() - startTime);
       const errorResult: TestResult = {
         id: Date.now().toString(),
-        task,
+        task: isGemini ? (`GEMINI_${task}` as any) : task,
         input,
         output: err.message || 'Unknown error occurred',
         timestamp: new Date().toLocaleTimeString(),
+        duration,
         success: false
       };
       setResults([errorResult, ...results]);
     } finally {
-      setLoading(false);
+      if (isGemini) setLoadingGemini(false);
+      else setLoading(false);
     }
   };
 
@@ -193,10 +210,10 @@ export default function Home() {
                 className="w-full bg-slate-950 border border-slate-700 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 min-h-[180px] shadow-inner"
               />
               
-              <div className="mt-4 flex gap-4">
+              <div className="mt-4 flex flex-col gap-3">
                 <button
-                  onClick={runTest}
-                  disabled={loading || !input.trim()}
+                  onClick={() => runTest(false)}
+                  disabled={loading || loadingGemini || !input.trim()}
                   className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-50 text-white font-bold py-3 rounded-xl transition-all active:scale-[0.98] shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
                 >
                   {loading ? (
@@ -207,17 +224,37 @@ export default function Home() {
                   ) : (
                     <>
                       <Play size={18} />
-                      Execute Performance Test
+                      Execute Local AI Test
                     </>
                   )}
                 </button>
-                <button
-                  onClick={() => setInput('')}
-                  className="bg-slate-800 hover:bg-slate-700 p-3 rounded-xl border border-slate-700 transition-colors"
-                  title="Clear Input"
-                >
-                  <RefreshCw size={18} className="text-slate-400" />
-                </button>
+                
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => runTest(true)}
+                    disabled={loading || loadingGemini || !input.trim()}
+                    className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl border border-slate-700 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                  >
+                    {loadingGemini ? (
+                      <>
+                        <Loader2 className="animate-spin" size={18} />
+                        Gemini CLI...
+                      </>
+                    ) : (
+                      <>
+                        <Terminal size={18} className="text-blue-400" />
+                        Compare with Gemini CLI
+                      </>
+                    )}
+                  </button>
+                  <button
+                    onClick={() => setInput('')}
+                    className="bg-slate-800 hover:bg-slate-700 px-4 rounded-xl border border-slate-700 transition-colors"
+                    title="Clear Input"
+                  >
+                    <RefreshCw size={18} className="text-slate-400" />
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -257,6 +294,9 @@ export default function Home() {
                           )}
                           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{res.task}</span>
                           <span className="text-[10px] text-slate-600 font-mono">{res.timestamp}</span>
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-slate-950/50 text-blue-400 font-mono border border-blue-500/10">
+                            {res.duration}ms
+                          </span>
                         </div>
                         <button 
                           onClick={() => copyToClipboard(res.output)}
