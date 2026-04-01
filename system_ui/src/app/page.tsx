@@ -8,9 +8,11 @@ import IdentityView from '@/components/IdentityView';
 import HistoryView from '@/components/HistoryView';
 import SystemHealth from '@/components/SystemHealth';
 import NewsFeed from '@/components/NewsFeed';
-import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles } from 'lucide-react';
+import BotsView from '@/components/BotsView';
+import AIToggle from '@/components/AIToggle';
+import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles, Users } from 'lucide-react';
 
-type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity';
+type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity' | 'bots';
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -29,7 +31,7 @@ export default function Home() {
   const [analyzeMsg, setAnalyzeMsg] = useState<string | null>(null);
 
   const fetchTasks = async (mode: ViewMode = viewMode) => {
-    if (mode === 'identity' || mode === 'history' || mode === 'health') {
+    if (mode === 'identity' || mode === 'history' || mode === 'health' || mode === 'bots') {
       setIsLoading(false);
       return;
     }
@@ -104,7 +106,7 @@ export default function Home() {
     setTimeout(() => setAnalyzeMsg(null), 6000);
   };
 
-  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : 'Approval Gate';
+  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : viewMode === 'bots' ? 'Bots Status' : 'Approval Gate';
   const modeSubtitle = viewMode === 'feed'
     ? 'Stage 1: Browse RSS news and pick the most relevant ones to process.'
     : viewMode === 'held'
@@ -117,7 +119,9 @@ export default function Home() {
             ? 'Browse completed posts and trashed items.'
             : viewMode === 'health'
               ? 'Real-time telemetry and resource usage.'
-              : 'Identify the pulse. Shape the persona.';
+              : viewMode === 'bots'
+                ? 'Manage and monitor all active bot personalities.'
+                : 'Identify the pulse. Shape the persona.';
 
   return (
     <main className={`dashboard ${isSidebarOpen ? 'sidebar-open' : ''}`}>
@@ -184,6 +188,13 @@ export default function Home() {
             <LayoutDashboard size={16} /> System Health
           </div>
 
+          <div
+            className={`nav-item ${viewMode === 'bots' ? 'active bots-active' : ''}`}
+            onClick={() => switchMode('bots')}
+          >
+            <Users size={16} /> Bots Status
+          </div>
+
           {/* Bot Identity section */}
           <div className="nav-divider" />
           <div
@@ -197,6 +208,9 @@ export default function Home() {
           </div>
         </div>
         <div className="sidebar-bottom">
+          {/* AI Source Toggle */}
+          <AIToggle />
+
           <button
             className="patrol-btn"
             onClick={handlePatrol}
@@ -232,6 +246,7 @@ export default function Home() {
               <span className={`title-count 
                  ${viewMode === 'held' ? 'held-count' : ''} 
                  ${viewMode === 'queue' ? 'queue-title-count' : ''}
+                 ${viewMode === 'bots' || viewMode === 'identity' || viewMode === 'history' || viewMode === 'health' || viewMode === 'feed' ? 'hide' : ''}
                `}>
                 {isLoading ? '…' : tasks.length}
               </span>
@@ -256,6 +271,10 @@ export default function Home() {
           ) : viewMode === 'health' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
               <SystemHealth />
+            </section>
+          ) : viewMode === 'bots' ? (
+            <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
+              <BotsView />
             </section>
           ) : (
             <>
@@ -493,6 +512,10 @@ export default function Home() {
           background: rgba(236, 72, 153, 0.08);
           color: #ec4899;
         }
+        .nav-item.bots-active {
+          background: rgba(20, 184, 166, 0.1);
+          color: #14b8a6;
+        }
         .analyze-btn {
           display: flex;
           align-items: center;
@@ -520,6 +543,7 @@ export default function Home() {
         }
         .analyze-btn.ready:hover:not(:disabled) {
           background: rgba(249, 115, 22, 0.15);
+          box-shadow: 0 0 12px rgba(249, 115, 22, 0.3);
         }
         .analyze-btn:disabled { opacity: 0.6; cursor: wait; }
         .content {
@@ -538,20 +562,25 @@ export default function Home() {
           gap: 1rem;
         }
         header h1 {
-           font-size: 2rem;
+           font-size: 2.2rem;
+           font-weight: 800;
+           letter-spacing: -0.025em;
            margin-bottom: 0.1rem;
            display: flex;
            align-items: center;
            gap: 0.75rem;
+           color: white;
         }
         .title-count {
           font-size: 0.9rem;
           background: var(--primary);
           color: white;
-          padding: 0.1rem 0.5rem;
-          border-radius: 12px;
+          padding: 0.1rem 0.6rem;
+          border-radius: 10px;
           vertical-align: middle;
+          font-weight: 700;
         }
+        .title-count.hide { display: none; }
         .title-count.held-count {
           background: rgba(245, 158, 11, 0.2);
           color: #f59e0b;
@@ -562,12 +591,17 @@ export default function Home() {
           color: #10b981;
           border: 1px solid rgba(16, 185, 129, 0.3);
         }
-        .subtitle { font-size: 0.85rem; color: var(--muted); }
-
+        .subtitle { 
+          font-size: 0.95rem; 
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 500;
+          margin-top: 0.25rem;
+        }
+ 
         .layout-grid {
           display: grid;
           grid-template-columns: 320px 1fr;
-          gap: 2rem;
+          gap: 2.5rem;
           align-items: start;
           flex: 1;
         }
@@ -575,23 +609,34 @@ export default function Home() {
           min-width: 0;
         }
         .empty-selection {
-          height: 400px;
+          height: 480px;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           text-align: center;
-          gap: 1rem;
+          gap: 1.25rem;
+          border: 1px dashed rgba(255, 255, 255, 0.1);
         }
-        .success-icon { color: #10b981; margin-bottom: 1rem; }
-
+        .success-icon { color: #10b981; margin-bottom: 1rem; opacity: 0.8; }
+        .empty-selection h2 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: white;
+        }
+        .empty-selection p {
+          color: rgba(255, 255, 255, 0.5);
+          max-width: 320px;
+          line-height: 1.6;
+        }
+ 
         @media (max-width: 1024px) {
            .layout-grid {
              grid-template-columns: 280px 1fr;
-             gap: 1rem;
+             gap: 1.5rem;
            }
         }
-
+ 
         @media (max-width: 768px) {
           .dashboard {
              flex-direction: column;
@@ -610,9 +655,9 @@ export default function Home() {
             transform: translateX(0);
           }
           .content {
-            padding: 1rem;
+            padding: 1.5rem;
           }
-          header h1 { font-size: 1.5rem; }
+          header h1 { font-size: 1.75rem; }
           .layout-grid {
             display: block;
           }

@@ -334,42 +334,31 @@ async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeed
         `kinamonのフィードバック: ${userFeedback || '(コメントなし)'}`,
     ].join('\n');
 
-    return new Promise<void>((resolve, reject) => {
-        const cmd = `echo ${JSON.stringify(analysisInput)} | GEMINI_SYSTEM_MD=.gemini/feedback-system.md gemini -p "選択を分析してフィードバックを生成" --output-format json --yolo`;
+    try {
+        const stdout = await callAI(analysisInput, '.gemini/feedback-system.md', 'feedback');
+        const parsed = JSON.parse(stdout);
+        let rawResponse = parsed.response || '';
+        // Strip markdown backticks if present
+        rawResponse = rawResponse.replace(/^```[a-z]*\n?/i, '').replace(/\n?```$/i, '');
 
-        exec(cmd, { cwd: projectRoot, timeout: 120000 }, async (error: Error | null, stdout: string) => {
-            if (error) {
-                console.error('Feedback generation failed:', error.message);
-                return reject(error);
+        if (rawResponse.trim()) {
+            const existing = await fs.readFile(feedbackKnowledgePath, 'utf-8');
+            const updated = existing.replace(
+                '### Success Patterns\n(まだ記録なし)',
+                `### Success Patterns\n${rawResponse}`
+            );
+            // If already has content, just append
+            if (updated === existing) {
+                await fs.writeFile(feedbackKnowledgePath, existing + '\n\n' + rawResponse);
+            } else {
+                await fs.writeFile(feedbackKnowledgePath, updated);
             }
-
-            try {
-                const parsed = JSON.parse(stdout);
-                let rawResponse = parsed.response || '';
-                // Strip markdown backticks if present
-                rawResponse = rawResponse.replace(/^```[a-z]*\n?/i, '').replace(/\n?```$/i, '');
-
-                if (rawResponse.trim()) {
-                    const existing = await fs.readFile(feedbackKnowledgePath, 'utf-8');
-                    const updated = existing.replace(
-                        '### Success Patterns\n(まだ記録なし)',
-                        `### Success Patterns\n${rawResponse}`
-                    );
-                    // If already has content, just append
-                    if (updated === existing) {
-                        await fs.writeFile(feedbackKnowledgePath, existing + '\n\n' + rawResponse);
-                    } else {
-                        await fs.writeFile(feedbackKnowledgePath, updated);
-                    }
-                    console.log('Feedback knowledge updated successfully.');
-                }
-                resolve();
-            } catch (parseErr) {
-                console.error('Failed to parse feedback JSON:', parseErr);
-                reject(parseErr);
-            }
-        });
-    });
+            console.log('Feedback knowledge updated successfully.');
+        }
+    } catch (error: any) {
+        console.error('Feedback generation failed:', error.message);
+        throw error;
+    }
 }
 
 export async function runPatrol(): Promise<{ success: boolean; message: string }> {
@@ -467,31 +456,23 @@ export async function generateIdentityProposal(): Promise<{ success: boolean; me
         `## 分析対象: 合計 ${decisionLines.length} 件の選択記録`,
     ].join('\n');
 
-    return new Promise((resolve) => {
-        const cmd = `echo ${JSON.stringify(analysisInput)} | GEMINI_SYSTEM_MD=.gemini/identity-system.md gemini -p "persona.mdへの更新提案を生成してください" --output-format json --yolo`;
+    try {
+        const stdout = await callAI(analysisInput, '.gemini/identity-system.md', 'identity');
+        const parsed = JSON.parse(stdout);
+        let rawResponse = parsed.response || '';
+        rawResponse = rawResponse.replace(/^```[a-z]*\n?/i, '').replace(/\n?```$/i, '').trim();
 
-        exec(cmd, { cwd: projectRoot, timeout: 180000 }, async (error: Error | null, stdout: string) => {
-            if (error) {
-                return resolve({ success: false, message: `Error: ${error.message}` });
-            }
-            try {
-                const parsed = JSON.parse(stdout);
-                let rawResponse = parsed.response || '';
-                rawResponse = rawResponse.replace(/^```[a-z]*\n?/i, '').replace(/\n?```$/i, '').trim();
+        if (!rawResponse) {
+            return { success: false, message: 'Empty response from AI' };
+        }
 
-                if (!rawResponse) {
-                    return resolve({ success: false, message: 'Empty response from Gemini' });
-                }
-
-                const dateStr = new Date().toISOString().split('T')[0];
-                const filename = `${dateStr}_proposal.md`;
-                await fs.writeFile(path.join(proposalsDir, filename), rawResponse);
-                resolve({ success: true, message: filename });
-            } catch (e: unknown) {
-                resolve({ success: false, message: `Parse error: ${String(e)}` });
-            }
-        });
-    });
+        const dateStr = new Date().toISOString().split('T')[0];
+        const filename = `${dateStr}_proposal.md`;
+        await fs.writeFile(path.join(proposalsDir, filename), rawResponse);
+        return { success: true, message: filename };
+    } catch (error: any) {
+        return { success: false, message: `AI call failed: ${error.message}` };
+    }
 }
 
 /** 保存された提案ファイル一覧を読み込んで返す */
@@ -713,4 +694,211 @@ export async function processCandidates(decisions: {id: string, decision: 'A'|'B
     }
 
     return results;
+}
+
+export async function getAISettings() {
+    const settingsPath = path.join(KB_ROOT, 'ai_settings.json');
+    try {
+        const data = await fs.readFile(settingsPath, 'utf-8');
+        return JSON.parse(data);
+    } catch {
+        // Default if file doesn't exist
+        return {
+            active_provider: 'gemini',
+            lmstudio_url: 'http://localhost:1234/v1/chat/completions',
+            lmstudio_model: 'gemma-2-2b-it'
+        };
+    }
+}
+
+export async function updateAISettings(settings: any) {
+    const settingsPath = path.join(KB_ROOT, 'ai_settings.json');
+    await fs.writeFile(settingsPath, JSON.stringify(settings, null, 2));
+    return { success: true };
+}
+
+export async function checkLocalAIServer() {
+    try {
+        const res = await fetch('http://localhost:1234/v1/models', {
+            next: { revalidate: 0 },
+            signal: AbortSignal.timeout(2000)
+        } as any);
+        return { online: res.ok };
+    } catch {
+        return { online: false };
+    }
+}
+
+/** 
+ * Centralized AI Caller that branches based on active_provider.
+ * Supporting granular settings per actionKey.
+ */
+async function callAI(prompt: string, systemMdPath?: string, actionKey?: string): Promise<string> {
+    const settings = await getAISettings();
+    
+    // Determine provider: granular first, then global active_provider, then gemini default
+    let provider = settings.active_provider || 'gemini';
+    if (actionKey && settings.providers && settings.providers[actionKey]) {
+        provider = settings.providers[actionKey];
+    }
+
+    if (provider === 'gemini') {
+        const { exec } = require('child_process');
+        const envPart = systemMdPath ? `GEMINI_SYSTEM_MD=${systemMdPath} ` : '';
+        const projectRoot = path.resolve(process.cwd(), '..');
+        
+        // Use the same prompt structure as CLI calls for consistency
+        const cmd = `echo ${JSON.stringify(prompt)} | ${envPart}gemini -p "Analyze and generate response" --output-format json --yolo`;
+        
+        return new Promise((resolve, reject) => {
+            exec(cmd, { cwd: projectRoot, timeout: 180000 }, (error: any, stdout: string) => {
+                if (error) reject(error);
+                else resolve(stdout);
+            });
+        });
+    } else {
+        const url = settings.lmstudio_url || 'http://localhost:1234/v1/chat/completions';
+        const model = settings.lmstudio_model || 'gemma-2-2b-it';
+        
+        const projectRoot = path.resolve(process.cwd(), '..');
+        let systemContent = '';
+        if (systemMdPath) {
+            const fullPath = path.join(projectRoot, systemMdPath);
+            systemContent = await fs.readFile(fullPath, 'utf-8').catch(() => '');
+        }
+
+        const messages: any[] = [];
+        if (systemContent) messages.push({ role: 'system', content: systemContent });
+        messages.push({ role: 'user', content: prompt });
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model,
+                messages,
+                temperature: 0.3
+            }),
+            next: { revalidate: 0 }
+        });
+
+        if (!response.ok) {
+            const errBody = await response.text();
+            throw new Error(`AI API failed (${response.status}): ${errBody}`);
+        }
+        
+        const data = await response.json();
+        const content = data.choices[0].message.content;
+        
+        // Return wrapped in a JSON structure that matches original CLI behavior
+        return JSON.stringify({ response: content });
+    }
+}
+
+// ──────────────────────────────────────────────
+// Bots Status Management
+// ──────────────────────────────────────────────
+
+export type SNSAccount = {
+    platform: string;
+    handle: string;
+    url: string;
+};
+
+export type BotAttributes = {
+    name: string;
+    color: string;
+    character: string;
+    hobby: string;
+    role: string;
+    google_account: string;
+    sns: SNSAccount[];
+    pfp_path: string;
+    tone_comments?: {
+        style?: string;
+        voice?: string;
+        excerpts?: string;
+        likes?: string;
+        dislikes?: string;
+    };
+};
+
+const BOT_DIRS = [
+    'bot_01_observer',
+    'bot_02_trader',
+    'bot_03_creator',
+    'bot_04_auditor',
+    'bot_05_wolf'
+];
+
+export async function getBotsData() {
+    const bots = await Promise.all(BOT_DIRS.map(async (dir, index) => {
+        const botPath = path.join(KB_ROOT, '01_bots', dir);
+        const attrPath = path.join(botPath, 'attributes.json');
+        
+        let attributes: BotAttributes = {
+            name: dir,
+            color: '#4f46e5',
+            character: '',
+            hobby: '',
+            role: '',
+            google_account: '',
+            sns: [],
+            pfp_path: '',
+            tone_comments: { style: '', voice: '', excerpts: '', likes: '', dislikes: '' }
+        };
+
+        try {
+            const attrData = await fs.readFile(attrPath, 'utf-8');
+            attributes = JSON.parse(attrData);
+        } catch (e) {
+            console.warn(`Could not read attributes.json for ${dir}, using defaults.`);
+        }
+
+        const persona = await fs.readFile(path.join(botPath, 'persona.md'), 'utf-8').catch(() => '');
+        const memory = await fs.readFile(path.join(botPath, 'memory.md'), 'utf-8').catch(() => '');
+        const toneVoice = await fs.readFile(path.join(botPath, 'tone_and_voice.md'), 'utf-8').catch(() => '');
+        
+        return {
+            id: dir,
+            index: index + 1,
+            attributes,
+            persona,
+            memory,
+            toneVoice
+        };
+    }));
+
+    return { bots };
+}
+
+export async function updateBotAttributes(botId: string, attributes: BotAttributes) {
+    const attrPath = path.join(KB_ROOT, '01_bots', botId, 'attributes.json');
+    await fs.writeFile(attrPath, JSON.stringify(attributes, null, 2));
+    return { success: true };
+}
+
+export async function uploadBotPFP(botId: string, formData: FormData) {
+    const file = formData.get('image') as File;
+    if (!file) return { success: false, message: 'No file uploaded' };
+
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const ext = path.extname(file.name) || '.png';
+    const filename = `${botId}_${Date.now()}${ext}`;
+    const uploadDir = path.join(process.cwd(), 'public/uploads/bots');
+    await fs.mkdir(uploadDir, { recursive: true });
+    
+    const filePath = path.join(uploadDir, filename);
+    await fs.writeFile(filePath, buffer);
+
+    const publicPath = `/uploads/bots/${filename}`;
+    
+    // Update attributes.json
+    const attrPath = path.join(KB_ROOT, '01_bots', botId, 'attributes.json');
+    const attrData = await fs.readFile(attrPath, 'utf-8');
+    const attributes = JSON.parse(attrData);
+    attributes.pfp_path = publicPath;
+    await fs.writeFile(attrPath, JSON.stringify(attributes, null, 2));
+
+    return { success: true, path: publicPath };
 }

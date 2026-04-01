@@ -1,0 +1,22 @@
+Title: MercorはオープンソースのLiteLLMプロジェクトのCompromiseに関連するサイバー攻撃を受けた
+Evaluation: B
+Reason: Evaluation Timeout
+Assigned Bot: None
+Original Title: Mercor says it was hit by cyberattack tied to compromise of open-source LiteLLM project
+Source: https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project/
+
+Mercor, a popular AI recruiting startup, has confirmed a security incident linked to a supply chain attack involving the open-source project LiteLLM.
+The AI startup told TechCrunch on Tuesday that it was “one of thousands of companies” affected by a recent compromise of LiteLLM’s project, which was linked to a hacking group called TeamPCP. Confirmation of the incident comes as extortion hacking group Lapsus$ claimed it had targeted Mercor and gained access to its data.
+It’s not immediately clear how the Lapsus$ gang obtained the stolen data from Mercor as part of TeamPCP’s cyberattack.
+Founded in 2023, Mercor works with companies including OpenAI and Anthropic to train AI models by contracting specialized domain experts such as scientists, doctors, and lawyers from markets including India. The startup says it facilitates more than $2 million in daily payouts and was valued at $10 billion following a $350 million Series C round led by Felicis Ventures in October 2025.
+Mercor spokesperson Heidi Hagberg confirmed to TechCrunch that the company had “moved promptly” to contain and remediate the security incident.
+“We are conducting a thorough investigation supported by leading third-party forensics experts,” said Hagberg. “We will continue to communicate with our customers and contractors directly as appropriate and devote the resources necessary to resolving the matter as soon as possible.”
+Earlier, Lapsus$ claimed responsibility for the apparent data breach on its leak site and shared a sample of data allegedly taken from Mercor, which TechCrunch reviewed. The sample included material referencing Slack data and what appeared to be ticketing data, as well as two videos purportedly showing conversations between Mercor’s AI systems and contractors on its platform.
+Disrupt 2026: The tech ecosystem, all in one room
+Your next round. Your next hire. Your next breakout opportunity. Find it at TechCrunch Disrupt 2026, where 10,000+ founders, investors, and tech leaders gather for three days of 250+ tactical sessions, powerful introductions, and market-defining innovation. Register now to save up to $400.
+Save up to $300 or 30% to TechCrunch Founder Summit
+1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately
+Offer ends March 13.
+Hagberg declined to answer follow-up questions on whether the incident was connected to claims by Lapsus$, or whether any customer or contractor data had been accessed, exfiltrated, or misused.
+The compromise of LiteLLM originally surfaced last week after malicious code was discovered in a package associated with the Y Combinator-backed startup’s open-source project. While the malicious code was identified and removed within hours, the incident drew scrutiny due to LiteLLM’s widespread use around the internet, with the library downloaded millions of times per day, per security firm Snyk. The incident also prompted LiteLLM to make changes to its compliance processes, including shifting from controversial startup Delve to Vanta for compliance certifications.
+It remains unclear how many companies were affected by the LiteLLM-related incident or whether any data exposure occurred, as investigations continue.

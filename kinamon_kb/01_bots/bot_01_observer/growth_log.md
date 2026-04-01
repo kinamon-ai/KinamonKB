@@ -42,3 +42,6 @@
 | 2026-03-25 | 2026-03-25_20260325_Anthropic_hands_Claude_Code_more_control_but_keeps | A |  |
 | 2026-03-25 | 2026-03-25_20260325_The_Download_tracing_AIfueled_delusions_and_OpenA | A |  |
 | 2026-03-25 | 2026-03-20_20260320_Meta_rolls_out_new_AI_content_enforcement_systems_ | A |  |
+| 2026-03-26 | 2026-03-27_20260327_The_privacy_paradox_regulating_zeroknowledge_fina | A |  |
+| 2026-03-30 | 2026-03-26_20260326_Mercor_competitor_Deccan_AI_raises_25M_sources_exp | A |  |
+| 2026-04-01 | 2026-03-26_20260326_The_AI_skills_gap_is_here_says_AI_company_and_powe | A |  |

@@ -1,0 +1,38 @@
+Title: 安定コインの利回りの合意に誰も満足していない：Cryptoの状態
+Evaluation: B
+Reason: ステーブルコインの規制に関する不透明な政治的進捗のまとめであり、具体的技術や市場データに乏しく「ニュースのまとめ」の域を出ないため。
+Assigned Bot: None
+Original Title: No one is 100% happy with the stablecoin yield agreement: State of Crypto
+Source: https://www.coindesk.com/policy/2026/03/29/no-one-is-100-happy-with-the-stablecoin-yield-agreement-state-of-crypto
+
+No one is 100% happy with the stablecoin yield agreement: State of Crypto
+The crypto and banking industries saw Senators Alsobrooks and Tillis' agreement-in-principle for stablecoin yield.
+Industry representatives saw the crypto market structure bill's proposed yield language on March 23 and 24. The internet — at least X (formerly Twitter) — was unhappy, but it may not matter much.
+You’re reading State of Crypto, a CoinDesk newsletter looking at the intersection of cryptocurrency and government. Click here to sign up for future editions.
+Are we there yet?
+The narrative
+We* have new language outlining how the crypto market structure bill could address stablecoin yield.
+*Only some people have seen the language, though it should be released for public consumption and review next.
+Why it matters
+Senator Cynthia Lummis (R-Wyo.) said earlier this month that she expected a market structure bill markup — the hearing where lawmakers debate amendments and language before voting on a bill — in the second half of April. Lawmakers have taken the first step toward that markup with an agreement on crypto market structure legislation.
+Breaking it down
+Crypto and banking industry representatives saw the proposed "agreement-in-principle" announced last week by Senators Angela Alsobrooks (D-Md.) and Thom Tillis (R-N.C.) at the start of this past week, with crypto representatives meeting with legislative staffers on Monday and banking representatives meeting with staffers on Tuesday.
+No one appears to be particularly happy with the agreement. The language has not yet been released publicly, though it should come out this upcoming week. Concerns range from the possibility that the proposed language will call for regulators to draft new rules around permissible activity to how it might restrict stablecoin yield balances.
+It's unlikely that the language will see major revisions, though one person familiar said they expected there could be some minor changes. Many of the necessary changes are just technical tweaks, they said.
+Still, industry interests appear headed toward presenting some sort of counterproposal on the language. It remains to be seen how far that goes.
+This week
+This week
+- Congress is expected to be on its two-week Easter recess, though the ongoing fight over funding the Department of Homeland Security might change things.
+If you’ve got thoughts or questions on what I should discuss next week or any other feedback you’d like to share, feel free to email me at [email protected] or find me on Bluesky @nikhileshde.bsky.social.
+You can also join the group conversation on Telegram.
+See ya’ll next week!
+More For You
+As stablecoins evolve into core financial infrastructure, North America leads. This report maps the regulation, market shifts, and players driving adoption.
+Why it matters:
+Stablecoins are entering their third phase of evolution - the institutionalization era - becoming increasingly embedded into core financial infrastructure. As institutions prioritize transparency and compliance, regulated issuers like USDC, RLUSD, and PYUSD are steadily gaining share with RLUSD surpassing $1B in market cap within its first year. North America, leading in regulatory frameworks and institutional distribution, is at the center of it all.
+More For You
+The Washington state attorney general alleged Kalshi offers "gambling products" products dressed up as prediction markets in a lawsuit Friday.
+What to know:
+- Washington state has become the latest to sue prediction market provider Kalshi, alleging the company violated state regulations.
+- The filing came a week after Nevada won a temporary restraining order ordering Kalshi to stop offering sports, election and entertainment products in that state.
+- Nevada also secured a preliminary injunction against...

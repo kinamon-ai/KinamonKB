@@ -1,0 +1,12 @@
+{
+  "active_provider": "gemini",
+  "providers": {
+    "translation": "lmstudio",
+    "evaluation": "gemini",
+    "opinion": "lmstudio",
+    "feedback": "gemini",
+    "identity": "gemini"
+  },
+  "lmstudio_url": "http://localhost:1234/v1/chat/completions",
+  "lmstudio_model": "gemma-2-2b-it"
+}
