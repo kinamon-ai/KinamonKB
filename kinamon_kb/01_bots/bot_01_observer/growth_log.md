@@ -45,3 +45,6 @@
 | 2026-03-26 | 2026-03-27_20260327_The_privacy_paradox_regulating_zeroknowledge_fina | A |  |
 | 2026-03-30 | 2026-03-26_20260326_Mercor_competitor_Deccan_AI_raises_25M_sources_exp | A |  |
 | 2026-04-01 | 2026-03-26_20260326_The_AI_skills_gap_is_here_says_AI_company_and_powe | A |  |
+| 2026-04-02 | 2026-03-26_20260326_The_least_surprising_chapter_of_the_Manus_story_is | A |  |
+| 2026-04-02 | 2026-03-25_20260325_Exclusive_eBook_Are_we_ready_to_hand_AI_agents_the | B |  |
+| 2026-04-02 | 2026-03-25_20260325_BlackRock_sees_AI_driving_cryptos_next_bull_phase_ | A |  |

@@ -24,10 +24,16 @@ import {
     FileText,
     Settings,
     Trash2,
-    Languages
+    Languages,
+    Bot,
+    Sparkles,
+    Monitor,
+    AlertCircle,
+    CheckCircle,
+    Terminal
 } from 'lucide-react';
 
-export default function NewsFeed() {
+export default function NewsFeed({ onBusyChange }: { onBusyChange?: (busy: boolean) => void }) {
     const [candidates, setCandidates] = useState<NewsCandidate[]>([]);
     const [rssFeeds, setRssFeeds] = useState<string[]>([]);
     const [decisions, setDecisions] = useState<Record<string, 'A'|'B'|'C'>>({});
@@ -38,6 +44,7 @@ export default function NewsFeed() {
     // UI states
     const [showManual, setShowManual] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
+    const [processResult, setProcessResult] = useState<{success: number, fail: number, errors: string[]} | null>(null);
 
     // Manual form
     const [manualTitle, setManualTitle] = useState('');
@@ -67,9 +74,11 @@ export default function NewsFeed() {
 
     const handleFetchRSS = async () => {
         setFetching(true);
+        if (onBusyChange) onBusyChange(true);
         await fetchRSSAction();
         await loadData();
         setFetching(false);
+        if (onBusyChange) onBusyChange(false);
     };
 
     const handleAddRss = async (e: React.FormEvent) => {
@@ -105,10 +114,25 @@ export default function NewsFeed() {
     const handleProcess = async () => {
         if (candidates.length === 0) return;
         setProcessing(true);
+        if (onBusyChange) onBusyChange(true);
+        setProcessResult(null);
+        
         const decisionsArray = Object.entries(decisions).map(([id, decision]) => ({ id, decision }));
-        await processCandidates(decisionsArray);
+        const results = await processCandidates(decisionsArray);
+        
+        const success = results.filter(r => r.success).length;
+        const fail = results.filter(r => !r.success).length;
+        const errors = results.filter(r => r.error).map(r => r.error as string);
+        
+        setProcessResult({ success, fail, errors });
         await loadData();
         setProcessing(false);
+        if (onBusyChange) onBusyChange(false);
+        
+        // Auto-hide success after 5s, but keep if there are errors
+        if (fail === 0) {
+            setTimeout(() => setProcessResult(null), 5000);
+        }
     };
 
     return (
@@ -214,6 +238,29 @@ export default function NewsFeed() {
                 </form>
             )}
 
+            {processResult && (
+                <div className={`process-alert glass animate-fade-in ${processResult.fail > 0 ? 'alert-danger' : 'alert-success'}`}>
+                    <div className="alert-content">
+                        {processResult.fail > 0 ? <AlertCircle size={20} /> : <CheckCircle size={20} />}
+                        <div className="alert-text">
+                            <strong>{processResult.fail > 0 ? 'Processing Completed with Errors' : 'Processing Completed'}</strong>
+                            <p>
+                                {processResult.success} articles moved. 
+                                {processResult.fail > 0 && ` ${processResult.fail} articles failed to process.`}
+                            </p>
+                        </div>
+                    </div>
+                    {processResult.fail > 0 && (
+                        <div className="alert-actions">
+                            <button className="btn-view-logs" onClick={() => window.location.hash = '#activity'}>
+                                <Terminal size={14} /> View Logs
+                            </button>
+                            <button className="btn-close-alert" onClick={() => setProcessResult(null)}>Close</button>
+                        </div>
+                    )}
+                </div>
+            )}
+
             <div className="feed-controls glass">
                 <div className="control-left">
                     <span className="selected-count">Total Candidates: {candidates.length}</span>
@@ -253,6 +300,18 @@ export default function NewsFeed() {
                             </div>
                             <div className="card-content">
                                 <h3>{candidate.title}</h3>
+                                <div className="card-badges">
+                                    <span className={`provider-badge ${candidate.aiProvider === 'gemini' ? 'provider-gemini' : candidate.aiProvider === 'lmstudio' ? 'provider-local' : 'provider-unknown'}`}>
+                                        {candidate.aiProvider === 'gemini' ? <Sparkles size={10} /> : candidate.aiProvider === 'lmstudio' ? <Monitor size={10} /> : null}
+                                        {candidate.aiProvider === 'gemini' ? 'Gemini' : candidate.aiProvider === 'lmstudio' ? 'Local' : candidate.aiProvider || '?'}
+                                    </span>
+                                    {candidate.assignedBot && candidate.assignedBot !== 'None' && (
+                                        <span className="bot-badge">
+                                            <Bot size={10} />
+                                            {candidate.assignedBot}
+                                        </span>
+                                    )}
+                                </div>
                                 {candidate.reason && (
                                     <p className="ai-reason"><span className="ai-badge">AI</span>{candidate.reason}</p>
                                 )}
@@ -439,6 +498,56 @@ export default function NewsFeed() {
                     font-weight: 600;
                 }
 
+                .process-alert {
+                    margin-bottom: 1rem;
+                    padding: 1rem 1.25rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 12px;
+                    border-left-width: 4px;
+                    background: rgba(15, 23, 42, 0.4);
+                }
+                .alert-success {
+                    border-left-color: #10b981;
+                }
+                .alert-danger {
+                    border-left-color: #ef4444;
+                }
+                .alert-content {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                }
+                .alert-text strong { display: block; font-size: 0.9rem; margin-bottom: 0.1rem; }
+                .alert-text p { margin: 0; font-size: 0.8rem; color: var(--muted); }
+                .alert-actions { display: flex; gap: 0.75rem; align-items: center; }
+                .btn-view-logs {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    background: var(--primary);
+                    color: white;
+                    border: none;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 6px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+                .btn-view-logs:hover { background: #5a52ff; transform: translateY(-1px); }
+                .btn-close-alert {
+                    background: transparent;
+                    color: var(--muted);
+                    border: 1px solid var(--border);
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 6px;
+                    font-size: 0.75rem;
+                    cursor: pointer;
+                }
+                .btn-close-alert:hover { color: white; background: rgba(255,255,255,0.05); }
+
                 .feed-controls {
                     display: flex;
                     justify-content: space-between;
@@ -545,6 +654,49 @@ export default function NewsFeed() {
                     white-space: normal;
                     overflow: visible;
                     line-height: 1.4;
+                }
+                .card-badges {
+                    display: flex;
+                    gap: 0.5rem;
+                    margin-bottom: 0.4rem;
+                    flex-wrap: wrap;
+                }
+                .provider-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                    font-size: 0.65rem;
+                    font-weight: 700;
+                    padding: 0.15rem 0.5rem;
+                    border-radius: 4px;
+                    letter-spacing: 0.02em;
+                }
+                .provider-gemini {
+                    background: rgba(79, 70, 229, 0.15);
+                    color: #818cf8;
+                    border: 1px solid rgba(79, 70, 229, 0.3);
+                }
+                .provider-local {
+                    background: rgba(139, 92, 246, 0.15);
+                    color: #a78bfa;
+                    border: 1px solid rgba(139, 92, 246, 0.3);
+                }
+                .provider-unknown {
+                    background: rgba(100, 116, 139, 0.15);
+                    color: #94a3b8;
+                    border: 1px solid rgba(100, 116, 139, 0.3);
+                }
+                .bot-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                    font-size: 0.65rem;
+                    font-weight: 600;
+                    padding: 0.15rem 0.5rem;
+                    border-radius: 4px;
+                    background: rgba(16, 185, 129, 0.1);
+                    color: #34d399;
+                    border: 1px solid rgba(16, 185, 129, 0.2);
                 }
                 .card-meta {
                     display: flex;

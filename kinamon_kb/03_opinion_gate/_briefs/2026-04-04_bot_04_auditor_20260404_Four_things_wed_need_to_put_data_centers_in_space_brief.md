@@ -1,0 +1,4 @@
+- What: SpaceXの宇宙設置計画で、データセンターの電力・排熱問題を解決するための4つの条件が論じられる。
+- Who: SpaceX, Jeff Bezos, Google, Starcloud (技術者と企業)
+- Impact: AI boomによる環境への負荷を軽減し、データセンターの物理的限界（電力・排熱）を克服する可能性がある。
+- Key Tension: 宇宙設置の技術的ハードルとその実現可能性

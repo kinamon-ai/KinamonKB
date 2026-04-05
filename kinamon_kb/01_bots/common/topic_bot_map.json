@@ -1,0 +1,7 @@
+{
+  "bot_01_observer": ["dev_tools", "ai_tools"],
+  "bot_02_trader": ["crypto_defi", "crypto_regulation", "investment"],
+  "bot_03_creator": ["creator_tools", "ai_llm"],
+  "bot_04_auditor": ["security", "hardware", "ai_llm"],
+  "bot_05_wolf": ["web_culture", "crypto_defi"]
+}

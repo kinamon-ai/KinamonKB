@@ -4,13 +4,14 @@ import os
 import hashlib
 import json
 import subprocess
+import re
 from datetime import datetime
 import requests
 
 # --- Configuration ---
 RSS_FEEDS_FILE = os.path.join(os.path.dirname(__file__), "rss_feeds.json")
 SEEN_URLS_FILE = os.path.join(os.path.dirname(__file__), "seen_urls.txt")
-KB_CANDIDATES_DIR = os.path.join(os.path.dirname(__file__), "../kinamon_kb/01_bots/bot_01_observer/_news_candidates")
+KB_CANDIDATES_DIR = os.path.join(os.path.dirname(__file__), "../kinamon_kb/02_news_candidates")
 TMP_DIR = KB_CANDIDATES_DIR
 AI_SETTINGS_FILE = os.path.join(os.path.dirname(__file__), "../kinamon_kb/ai_settings.json")
 
@@ -21,6 +22,7 @@ def load_ai_settings():
     return {"active_provider": "gemini"}
 
 def call_llm(prompt, system_content=None, timeout=120, action_key=None):
+    """Call LLM and return a tuple of (response_text, provider_used)."""
     settings = load_ai_settings()
     
     # 決定方法: 
@@ -49,10 +51,10 @@ def call_llm(prompt, system_content=None, timeout=120, action_key=None):
             timeout=timeout
         )
         if result.returncode == 0:
-            return result.stdout
+            return (result.stdout, "gemini")
         else:
             print(f"❌ Gemini CLI failed: {result.stderr}")
-            return None
+            return (None, "gemini")
             
     elif provider == "lmstudio":
         url = settings.get("lmstudio_url", "http://localhost:1234/v1/chat/completions")
@@ -73,12 +75,12 @@ def call_llm(prompt, system_content=None, timeout=120, action_key=None):
             response = requests.post(url, json=payload, timeout=timeout)
             response.raise_for_status()
             data = response.json()
-            return data['choices'][0]['message']['content']
+            return (data['choices'][0]['message']['content'], "lmstudio")
         except Exception as e:
             print(f"❌ LMStudio API failed: {e}")
-            return None
+            return (None, "lmstudio")
     
-    return None
+    return (None, provider)
 
 def load_rss_feeds():
     if not os.path.exists(RSS_FEEDS_FILE):
@@ -97,15 +99,16 @@ def save_seen_url(url):
         f.write(url + '\n')
 
 def translate_titles_batch(titles):
-    """Translate multiple titles to Japanese using LLM"""
+    """Translate multiple titles to Japanese using LLM.
+    Returns a tuple of (translated_titles, provider_used)."""
     if not titles:
-        return []
+        return ([], "unknown")
     
     # Pass as a numbered list
     numbered_titles = "\n".join(f"{i+1}. {t}" for i, t in enumerate(titles))
     prompt = f"Translate the following news headlines into natural Japanese. Wrap each translated headline in <t> and </t> tags in the exact same order. Do not output any other explanations or formatting.\n\n{numbered_titles}"
     
-    output = call_llm(prompt, timeout=60, action_key="translation")
+    output, provider_used = call_llm(prompt, timeout=60, action_key="translation")
     if output:
         import re
         # Extract everything between <t> and </t> using regex
@@ -116,115 +119,140 @@ def translate_titles_batch(titles):
             translated = [t.strip().replace('"', '').replace('「', '').replace('」', '') for t in matches]
             
             if len(translated) == len(titles):
-                return translated
+                return (translated, provider_used)
             else:
                 print(f"⚠️ Batch translation returned {len(translated)} items instead of {len(titles)}. Falling back to original titles for missing items.")
                 while len(translated) < len(titles):
                     translated.append(titles[len(translated)])
-                return translated[:len(titles)]
+                return (translated[:len(titles)], provider_used)
         else:
             print("⚠️ No <t> tags found in batch translation output. Falling back to original titles.")
-            return titles
+            return (titles, provider_used)
     else:
-        return titles
+        return (titles, provider_used)
 
-def evaluate_articles_batch(articles_data):
-    """Evaluate multiple articles in a single Gemini call to save time and tokens"""
-    if not articles_data:
-        return []
-    
-    # 10-12 articles at a time is a safe batch size
-    batch_size = 12
-    all_evals = []
-    
-    for i in range(0, len(articles_data), batch_size):
-        batch = articles_data[i: i + batch_size]
-        
-        # Prepare the combined input
-        input_texts = []
-        for idx, item in enumerate(batch):
-            jp_title = item['jp_title']
-            content = item['content'][:3000] # Slightly shorter to fit more in batch
-            input_texts.append(f"<article id='{idx}'>\nTitle: {jp_title}\n\nContent:\n{content}\n</article>")
-        
-        combined_input = "\n\n".join(input_texts)
-        
-        # Combine system prompts (Shared + Specific)
-        base_dir = os.path.dirname(os.path.dirname(__file__))
-        shared_kb = os.path.join(base_dir, "kinamon_kb", "01_bots", "common", "shared_knowledge.md")
-        shared_persona = os.path.join(base_dir, "kinamon_kb", "01_bots", "common", "shared_persona.md")
-        filter_system = os.path.join(base_dir, ".gemini", "filter-system.md")
-        
-        system_content = ""
-        
-        # Build dynamic bot hobbies prompt
-        bots_dir = os.path.join(base_dir, "kinamon_kb", "01_bots")
-        bot_hobbies_prompt = "### Bot Interests (Hobby)\nIf an article correlates with any of the hobbies below, evaluate it as 'A' and assign the corresponding bot id to 'assigned_bot'.\n"
-        try:
-            for bot_id in sorted(os.listdir(bots_dir)):
-                if bot_id.startswith("bot_"):
-                    attr_path = os.path.join(bots_dir, bot_id, "attributes.json")
-                    if os.path.exists(attr_path):
-                        with open(attr_path, "r", encoding="utf-8") as bf:
-                            hobby_str = json.load(bf).get("hobby", "")
-                            if hobby_str:
-                                bot_hobbies_prompt += f"- {bot_id}: {hobby_str}\n"
-        except Exception as e:
-            print(f"Warning: Failed to load bot hobbies: {e}")
-            
-        system_content += bot_hobbies_prompt + "\n\n---\n\n"
+# ──────────────────────────────────────────────
+# Step 3a: Topic Classification [🤖 AI・軽量]
+# ──────────────────────────────────────────────
 
-        for p in [shared_kb, shared_persona, filter_system]:
-            if os.path.exists(p):
-                with open(p, "r", encoding="utf-8") as f_in:
-                    system_content += f_in.read() + "\n\n---\n\n"
-        
-        prompt = "Evaluate the following articles according to the system instructions. For each article, output the result wrapped in <result id='N'> tags containing EXACTLY a JSON object with 'evaluation' (A, B, or C), 'reason' (Japanese string), and 'assigned_bot' (matching bot_id or null). Example: <result id='0'>{\"evaluation\": \"A\", \"reason\": \"...\", \"assigned_bot\": \"bot_01_observer\"}</result>\n\n" + combined_input
-        
+TOPIC_CLASSIFY_SYSTEM = """あなたは記事のトピック分類器です。タイトルと冒頭を読み、該当するトピックタグを1〜3個選んでください。
+
+## トピック候補
+- ai_llm: LLM・生成AI・プロンプト技術・基盤モデル
+- ai_tools: AI搭載ツール・開発支援・コーディングAI
+- crypto_defi: DeFi・DEX・プロトコル・ブロックチェーン技術
+- crypto_regulation: 暗号資産の規制・法律・コンプライアンス
+- security: サイバーセキュリティ・ハッキング・脆弱性
+- dev_tools: 開発環境・エディタ・OS・CLI
+- investment: 投資・マーケット分析・経済指標
+- creator_tools: 音楽生成・動画生成・クリエイティブAI
+- hardware: ハードウェア・量子コンピュータ・データセンター・半導体
+- web_culture: web文化・SNS・メディア論・コンテンツ戦略
+
+## 出力（厳守）
+JSON形式のみ。余計な説明不要。
+{"topics": ["ai_llm", "security"], "summary_jp": "記事の一行要約（日本語）"}"""
+
+def classify_topic(title_jp, content_snippet):
+    """Step 3a: Classify article into topic tags. Lightweight AI call."""
+    settings = load_ai_settings()
+    ctx_len = settings.get("context_lengths", {}).get("classify", 1000)
+    
+    snippet = content_snippet[:ctx_len]
+    prompt = f"Title: {title_jp}\n\nContent (first {ctx_len} chars):\n{snippet}"
+    
+    output, provider = call_llm(prompt, system_content=TOPIC_CLASSIFY_SYSTEM, timeout=30, action_key="evaluation")
+    
+    topics = []
+    summary_jp = title_jp  # fallback
+    if output:
         try:
-            output = call_llm(prompt, system_content=system_content, timeout=180, action_key="evaluation")
-                
-            if output:
-                import re
-                for idx in range(len(batch)):
-                        # Extract JSON from <result id='idx'>...</result>
-                        pattern = rf"<result id=['\"]?{idx}['\"]?>(.*?)</result>"
-                        match = re.search(pattern, output, re.DOTALL)
-                        
-                        if match:
-                            json_str = match.group(1).strip()
-                            try:
-                                # Clean up potential markdown formatting within tags
-                                if json_str.startswith('```json'): json_str = json_str[7:]
-                                elif json_str.startswith('```'): json_str = json_str[3:]
-                                if json_str.endswith('```'): json_str = json_str[:-3]
-                                
-                                eval_data = json.loads(json_str.strip())
-                                evaluation = eval_data.get('evaluation', 'B')
-                                reason = eval_data.get('reason', 'Automatic fallback (Parse error)')
-                                assigned_bot = eval_data.get('assigned_bot')
-                                all_evals.append((evaluation, reason, assigned_bot))
-                            except Exception as e:
-                                print(f"⚠️ Failed to parse evaluation JSON for article {idx}: {e}")
-                                all_evals.append(('B', "Evaluation parse error", None))
-                        else:
-                            print(f"⚠️ Result tag not found for article {idx}")
-                            all_evals.append(('B', "Evaluation tag not found", None))
-            else:
-                print(f"⚠️ Batch evaluation failed (no output)")
-                while len(all_evals) < i + len(batch):
-                    all_evals.append(('B', "Gemini Error", None))
-                    
-        except subprocess.TimeoutExpired:
-            print(f"⚠️ Batch evaluation timed out for batch {i // batch_size + 1}")
-            while len(all_evals) < i + len(batch):
-                all_evals.append(('B', "Evaluation Timeout", None))
+            json_str = output.strip()
+            if json_str.startswith('```json'): json_str = json_str[7:]
+            elif json_str.startswith('```'): json_str = json_str[3:]
+            if json_str.endswith('```'): json_str = json_str[:-3]
+            match = re.search(r'\{.*\}', json_str, re.DOTALL)
+            if match:
+                data = json.loads(match.group(0))
+                topics = data.get('topics', [])
+                summary_jp = data.get('summary_jp', title_jp)
         except Exception as e:
-            print(f"⚠️ Batch evaluation failed: {e}")
-            while len(all_evals) < i + len(batch):
-                all_evals.append(('B', f"Error: {e}", None))
-            
-    return all_evals
+            print(f"  ⚠️ Topic classification parse error: {e}")
+    return topics, summary_jp, provider
+
+
+# ──────────────────────────────────────────────
+# Step 3b: Bot Matching [⚙️ コード処理・AI不要]
+# ──────────────────────────────────────────────
+
+def load_topic_bot_map():
+    """Load topic-to-bot mapping from config file."""
+    map_path = os.path.join(os.path.dirname(__file__), "../kinamon_kb/01_bots/common/topic_bot_map.json")
+    try:
+        with open(map_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except:
+        return {"bot_01_observer": ["dev_tools", "ai_tools"]}
+
+def match_bot(topics):
+    """Step 3b: Match topics to bot. Pure code logic, no AI needed."""
+    topic_map = load_topic_bot_map()
+    scores = {}
+    for bot_id, bot_topics in topic_map.items():
+        scores[bot_id] = len(set(topics) & set(bot_topics))
+    if not scores:
+        return "bot_01_observer"
+    best = max(scores, key=scores.get)
+    return best if scores[best] > 0 else "bot_01_observer"
+
+
+# ──────────────────────────────────────────────
+# Step 3c: Relevance Evaluation [🤖 AI・焦点絞り]
+# ──────────────────────────────────────────────
+
+RELEVANCE_EVAL_SYSTEM = """あなたは kinamon の情報フィルターです。3点チェック基準で記事を判定してください。
+
+## 3点チェック
+1. 面白いか？: 知的好奇心を刺激するか
+2. 役に立つか？: 効率化・問題解決に寄与するか
+3. 未来に続くか？: 持続可能な進化か
+
+## 判定ルール
+- A (採用): 専門的な深掘り・独自の視点がある
+- B (保留): 真に判断不可能な場合のみ（原則禁止）
+- C (削除): 初心者向け・一般論・焼き増し
+
+## 出力（厳守）
+JSON形式のみ。余計な説明不要。
+{"evaluation": "A", "reason": "判定理由（日本語・1行）"}"""
+
+def evaluate_relevance(title_jp, content_snippet):
+    """Step 3c: Evaluate article relevance (A/B/C)."""
+    settings = load_ai_settings()
+    ctx_len = settings.get("context_lengths", {}).get("evaluate", 1500)
+    
+    snippet = content_snippet[:ctx_len]
+    prompt = f"Title: {title_jp}\n\nContent:\n{snippet}"
+    
+    output, provider = call_llm(prompt, system_content=RELEVANCE_EVAL_SYSTEM, timeout=60, action_key="evaluation")
+    
+    evaluation = 'B'
+    reason = 'Evaluation failed'
+    if output:
+        try:
+            json_str = output.strip()
+            if json_str.startswith('```json'): json_str = json_str[7:]
+            elif json_str.startswith('```'): json_str = json_str[3:]
+            if json_str.endswith('```'): json_str = json_str[:-3]
+            match = re.search(r'\{.*\}', json_str, re.DOTALL)
+            if match:
+                data = json.loads(match.group(0))
+                evaluation = data.get('evaluation', 'B')
+                reason = data.get('reason', 'Parse error')
+        except Exception as e:
+            print(f"  ⚠️ Relevance evaluation parse error: {e}")
+            reason = f"Parse error: {e}"
+    return evaluation, reason, provider
 def fetch_and_extract():
     seen_urls = load_seen_urls()
     os.makedirs(TMP_DIR, exist_ok=True)
@@ -282,35 +310,55 @@ def fetch_and_extract():
         return []
 
     # Phase 2: Translate titles in batch (fast)
+    translation_provider = "unknown"
     if collected:
         print(f"Batch translating {len(collected)} titles...")
-        jp_titles = translate_titles_batch([article['title'] for article in collected])
+        jp_titles, translation_provider = translate_titles_batch([article['title'] for article in collected])
         
-        # Phase 3: Evaluate articles in batch (fast)
-        articles_to_eval = []
+        # Phase 3: 3-Step Pipeline (Topic → Bot → Relevance)
+        print(f"\n--- Phase 3: Processing {len(collected)} articles through pipeline ---")
+        pipeline_results = []
+        
         for article, jp_title in zip(collected, jp_titles):
-            articles_to_eval.append({
+            print(f"\n  📰 {jp_title}")
+            
+            # Step 3a: Topic Classification [🤖 AI・軽量]
+            topics, summary_jp, classify_provider = classify_topic(jp_title, article['content'])
+            print(f"    3a Topics: {topics} [{classify_provider}]")
+            
+            # Step 3b: Bot Matching [⚙️ コード処理]
+            assigned_bot = match_bot(topics)
+            print(f"    3b Bot: {assigned_bot}")
+            
+            # Step 3c: Relevance Evaluation [🤖 AI・焦点絞り]
+            evaluation, reason, eval_provider = evaluate_relevance(jp_title, article['content'])
+            print(f"    3c Eval: {evaluation} - {reason[:50]}... [{eval_provider}]")
+            
+            pipeline_results.append({
+                'article': article,
                 'jp_title': jp_title,
-                'content': article['content'],
-                'article_ref': article # Keep reference for Phase 4
+                'topics': topics,
+                'summary_jp': summary_jp,
+                'assigned_bot': assigned_bot,
+                'evaluation': evaluation,
+                'reason': reason,
+                'classify_provider': classify_provider,
+                'eval_provider': eval_provider,
+                'translation_provider': translation_provider,
             })
-        
-        eval_results = evaluate_articles_batch(articles_to_eval)
     else:
         jp_titles = []
-        eval_results = []
+        pipeline_results = []
 
     # Phase 4: Save articles
     new_articles = []
-    for (article_data, (evaluation, reason, assigned_bot)) in zip(articles_to_eval, eval_results):
-        article = article_data['article_ref']
-        jp_title = article_data['jp_title']
+    for result in pipeline_results:
+        article = result['article']
+        jp_title = result['jp_title']
         
-        print(f"Title: {article['title']}")
-        print(f"  → {jp_title}")
-        print(f"  → AI: {evaluation} ({reason[:50]}...) [Bot: {assigned_bot}]")
+        print(f"\nSaving: {article['title']}")
+        print(f"  → {jp_title} [{result['evaluation']}] [Bot: {result['assigned_bot']}]")
 
-        # Create a filename
         title_slug = "".join(x for x in article['title'] if x.isalnum() or x in " -_").strip().replace(" ", "_")
         if not title_slug:
             title_slug = hashlib.md5(article['url'].encode()).hexdigest()
@@ -320,9 +368,14 @@ def fetch_and_extract():
         
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(f"Title: {jp_title}\n")
-            f.write(f"Evaluation: {evaluation}\n")
-            f.write(f"Reason: {reason}\n")
-            f.write(f"Assigned Bot: {assigned_bot or 'None'}\n")
+            f.write(f"Evaluation: {result['evaluation']}\n")
+            f.write(f"Reason: {result['reason']}\n")
+            f.write(f"Assigned Bot: {result['assigned_bot']}\n")
+            f.write(f"Topics: {', '.join(result['topics'])}\n")
+            f.write(f"Summary: {result['summary_jp']}\n")
+            f.write(f"AI Provider (Translation): {result['translation_provider']}\n")
+            f.write(f"AI Provider (Classification): {result['classify_provider']}\n")
+            f.write(f"AI Provider (Evaluation): {result['eval_provider']}\n")
             f.write(f"Original Title: {article['title']}\n")
             f.write(f"Source: {article['url']}\n\n")
             f.write(article['content'])

@@ -1,0 +1,47 @@
+Title: Display V2：Suiオブジェクトは世界にどう映し出されるのか
+Evaluation: B
+Reason: Suiのオブジェクト表示システム(Display V2)への技術的進化と、gRPC/GraphQL等への基盤対応に関する詳細な解説であり、bot_02_traderの関心領域であるSUIに直接合致するため。
+Assigned Bot: bot_02_trader
+AI Provider (Translation): gemini
+AI Provider (Evaluation): gemini
+Original Title: Display V2: How Sui Objects Present Themselves to the World
+Source: https://blog.sui.io/display-v2-mainnet/
+
+Display V2: How Sui Objects Present Themselves to the World
+Sui's object display system gets a meaningful upgrade, bringing consistent rendering across gRPC, JSON-RPC, and GraphQL
+Main Takeaways:
+- Display V2 makes every object type’s visual identity unique, consistent, and instantly findable. No event scanning, no ambiguity.
+- Existing V1 displays were migrated automatically, but V1 support ends alongside JSON-RPC in July 2026.
+- A richer templating model and native compatibility with Sui's gRPC and GraphQL infrastructure make complex object descriptions possible without offchain workarounds.
+Overview
+On most networks, how an NFT or onchain object looks depends on offchain infrastructure, metadata APIs, third-party services, or conventions that vary by platform. Display is a native primitive that lets builders define how any object renders directly at the protocol level, no external service required.
+With Sui v1.68, Display gets a significant upgrade. Display V2 replaces the original system with a stricter, more predictable model that improves how objects are discovered and rendered across wallets, explorers, and marketplaces.
+The update also brings Display in line with Sui’s broader data infrastructure. The new deterministic lookup model is built for compatibility with Sui’s evolving data stack, including gRPC and GraphQL, where the old event-scanning approach used by V1 displays simply doesn’t hold up at scale. With this update and the system migration, gRPC now has full display rendering capabilities for the first time.
+What Display does
+Display allows builders to create onchain object defining how objects of a specific type are rendered visually. If you're building an NFT collection, a game item, or a capability object, you define a Display<T> that maps your object’s fields to human-readable templates like name, description, image_url, and project_url. When a wallet or explorer fetches an object, it resolves those templates against the object’s onchain data and renders the result.
+This is what makes Display useful: the presentation lives onchain, controlled by the type owner, and requires no external metadata service to function. An NFT doesn’t need a separate API to tell a wallet or explorer what image to show. It’s defined with the object's type.
+What was limiting about V1
+The original Display system was flexible by design, but also somewhat unpredictable. Builders could use JavaScript-style string interpolation to construct their templates, and multiple Display objects could coexist for the same type. That flexibility came with costs.
+For indexers and RPC infrastructure, resolving a type’s Display required scanning historical events to find the right object — not a scalable approach, especially as Sui’s infrastructure evolves toward gRPC and GraphQL. The unpredictability also made consistent rendering harder to guarantee across different clients.
+The templating model had limits, too. Builders couldn’t reference collections, dynamic fields, or related objects inside their templates, which meant workarounds for anything beyond basic metadata.
+What V2 changes
+Display V2 replaces the flexible model with a stricter one that makes object representation more reliable and infrastructure more sustainable. The core changes:
+One display per type. In V1, any number of Display<T> objects could exist for a given type, and clients had to resolve which one applied. V2 enforces exactly one per type, with a deterministic ID derived from a global registry. Clients can compute the right display ID offline without querying events or scanning network history.
+Better tooling. Mysten Labs has built an interactive display editor where builders can construct and preview V2 templates before deploying. The Object Display Templates docs page includes the same interactive interface.
+A richer templating model
+V1 templates were limited to basic string interpolation against an object's top-level fields. That worked for simple metadata but broke down quickly for anything more complex.
+V2 expands what templates can actually express in two meaningful ways.
+First, templates can now access individual elements within collections. Vectors, sets, and maps stored on an object are traversable within the template, meaning a single Display can reference specific values from structured data rather than rendering the entire collection. An NFT with a list of traits, a game item with a set of attributes, a token with a map of properties: templates can now reach into these and surface exactly what's needed.
+Second, templates can now reach beyond the object itself. Builders can access dynamic fields attached to an object and load related objects as part of display resolution. This means a Display can pull in data from child objects or associated state that lives elsewhere onchain, making it possible to describe complex object relationships without offchain workarounds.
+Third, templates now support default values. If a field is missing or unset on a particular object, a fallback can be defined directly in the template, for example {{image_url}} | <default_image>. This means display definitions are more resilient by design, without requiring additional logic to handle missing data.
+Together, these make Display V2 meaningfully more expressive than V1, and remove a category of workarounds that builders previously had to build and maintain themselves.
+The migration
+All existing V1 displays were migrated to V2 through a system snapshot — nothing broke for end users, and no immediate action was required from ecosystem projects. Post-migration, each type now has a V2 Display object that was automatically generated for it. For most projects, nothing more needs to be done.
+If you have a pre-existing display and want to update it, claim your DisplayCap<T> using either a Publisher object or your legacy V1 Display, which gets consumed in the process. From there, you can update fields using the V2 APIs as needed.
+If you're creating a display for a new package, use sui::display_registry rather than sui::display. If you previously created a display using V1 APIs, there's a v1_to_v2 endpoint in sui::display_registry you can call directly.
+After July 31, 2026, the sui::display::new APIs will no longer be callable. This only affects you if you are actively creating new displays or updating existing ones.
+For builders starting fresh
+Display has always been one of Sui’s more distinctive infrastructure choices; the idea that how an object presents itself is something the network should have an opinion about, not leave to offchain convention. V2 extends that logic further.
+With deterministic lookup and richer templates, Display V2 sets the foundation for objects that are expressive and maintainable by design. Any client can resolve and render them without additional plumbing.
+As more of Sui’s RPC surface moves to gRPC and GraphQL, having display resolution that works natively with those systems matters more, not less.
+Full documentation: What is Object Display? / Creating Displays

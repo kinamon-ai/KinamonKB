@@ -1,12 +1,17 @@
 {
-  "active_provider": "gemini",
+  "active_provider": "lmstudio",
   "providers": {
     "translation": "lmstudio",
-    "evaluation": "gemini",
+    "evaluation": "lmstudio",
     "opinion": "lmstudio",
-    "feedback": "gemini",
-    "identity": "gemini"
+    "feedback": "lmstudio",
+    "identity": "lmstudio"
   },
   "lmstudio_url": "http://localhost:1234/v1/chat/completions",
-  "lmstudio_model": "gemma-2-2b-it"
+  "lmstudio_model": "gemma-2-2b-it",
+  "context_lengths": {
+    "classify": 1000,
+    "evaluate": 1500,
+    "brief": 3000
+  }
 }

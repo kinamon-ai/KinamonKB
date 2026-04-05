@@ -1,0 +1,38 @@
+Title: Elon MuskのXは、最初のクリプト発言者を自動ロックする詐欺殺しスイッチを導入
+Evaluation: A
+Reason: この記事は、Solanaの便利機能が不正に利用された事例を解説しており、Bot_02_trader の関心領域であるインデックス投資（オルカン/S&P500）に関連する情報が含まれているため、A判定。
+Assigned Bot: bot_02_trader
+AI Provider (Translation): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Elon Musk's X to deploy scam kill switch by auto-locking first-time crypto mentioners
+Source: https://www.coindesk.com/web3/2026/04/02/elon-musk-s-x-to-deploy-scam-kill-switch-by-auto-locking-first-time-crypto-mentioners
+
+Elon Musk's X to deploy scam kill switch by auto-locking first-time crypto mentioners
+The move comes in response to a wave of phishing attacks using fake copyright emails and is the latest in an attempt to shut down crypto-linked scams on the platform.
+What to know:
+- X will auto-lock accounts posting about crypto for the first time to reduce scam activity, according to its Head of Product Nikita Bier.
+- The move comes in response to a wave of phishing attacks using fake copyright emails and is the latest in an attempt to shut down crypto-linked scams on the platform.
+- Bier criticized Google for allowing phishing emails through Gmail, failing to protect users on its side.
+Social media platform X is preparing a new security measure aimed at shutting down a widespread form of crypto phishing that leverages hijacked accounts to promote scam tokens.
+The company will soon auto-lock any account that mentions cryptocurrency for the first time in its history, according to the company’s Head of Product Nikita Bier. Users will need to go through additional verification before being allowed to post again.
+Bier said the feature targets the core incentive behind these attacks. “This should kill 99% of the incentive,” he wrote, referring to the current wave of phishing that tricks users into giving up their credentials, then uses their accounts to push crypto scams.
+The change was unveiled in response to a detailed firsthand account from an X user who lost control of their account after falling for a phishing email disguised as a copyright violation notice.
+The attacker, the user said, used a pixel-perfect fake login page to harvest two-factor codes, then locked the user out and began promoting fraudulent crypto projects from their account.
+Crypto scams on X
+These types of attacks have been extremely common on X, an inheritance from before it was acquired by Elon Musk and was still called Twitter.
+One of the most common tactics is the "double your money" scam, in which users are told to send cryptocurrency in exchange for a promise of more. Others push fake memecoins or fraudulent airdrops, often using hijacked accounts to lend credibility.
+Impersonation is one of the most powerful tools. Spoofed accounts impersonating major personalities have repeatedly tricked followers into clicking malicious links that mimic legitimate crypto platforms.
+Cryptocurrency transactions are irreversible, so once a user falls for such an attack, their funds are gone.
+The most infamous example came in 2020, when hackers accessed Twitter’s internal systems and took control of major accounts, including those of Apple, Barack Obama, and Elon Musk.
+They used those accounts to promote a fake bitcoin giveaway, netting over $100,000 before the posts were removed. That breach, carried out through social engineering against Twitter employees, resulted in the hacker receiving a 5-year sentence.
+X has made several attempts to bolster security. These have included bot purges, API restrictions, and behavioral detection. The latest move to auto-lock accounts that post about crypto for the first time builds on those efforts, aiming to cut off the tactic at its root: by making hijacked accounts useless for scams.
+Bier also called out Google for failing to stop phishing emails at the email level, pointing the finger at the tech giant’s share of the responsibility for failing to protect its users from phishing attacks.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+あなたへの
+The conflict centered on a proposal to fund product development and expansion, which ACI opposed due to concerns over self-voting and lack of transparency.
+知っておくべきこと:
+- The Aave Chan Initiative (ACI) is shutting down due to a dispute with Aave Labs over transparency and voting power related to a record budget request.
+- The conflict centered on a proposal to fund product development and expansion, which ACI opposed due to concerns over self-voting and lack of transparency.

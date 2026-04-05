@@ -1,0 +1,48 @@
+Title: Circleに批判、2.85億ドルのDriftハッキング被害で盗まれたUSDCの凍結見送りを巡り
+Evaluation: B
+Reason: Driftの巨額ハッキング被害を契機とした、ステーブルコイン発行体の凍結権限と法的責任の境界線に関する専門的な考察であり、サイバーセキュリティと構造的リスクの観点から極めて重要。 
+Assigned Bot: bot_04_auditor
+AI Provider (Translation): gemini
+AI Provider (Evaluation): gemini
+Original Title: Circle under fire after $285 million Drift hack over inaction to freeze stolen USDC
+Source: https://www.coindesk.com/business/2026/04/03/circle-under-fire-after-usd285-million-drift-hack-over-inaction-to-freeze-stolen-usdc
+
+Circle under fire after $285 million Drift hack over inaction to freeze stolen USDC
+Prominent blockchain sleuth ZachXBT alleged faster action by Circle could have limited crypto losses, but freezing asset without legal authorization carries legal risks.
+What to know:
+- After exploiting crypto protocol Drift, the attacker moved about $232 million in USDC from Solana to Ethereum using Circle’s cross-chain transfer protocol.
+- Critics like blockchain investigator ZachXBT said Circle could have moved faster to blacklist wallets and freeze funds. But freezing assets without authorization could carry legal liability, Plume general counsel said.
+- Circle said it freezes assets when legally required, highlighting a growing tension for regulated issuers between acting quickly to curb illicit flows and avoiding overreach without court or law enforcement orders.
+After the $285 million Drift hack, the focus is shifting to Circle (CRCL) and whether it could have done more to stop the money.
+The attacker siphoned off roughly $71 million in USDC as part of the exploit Wednesday, according to blockchain security firm PeckShield. After converting most of the rest of the stolen assets to USDC, the hacker used Circle’s cross-chain transfer protocol, CCTP, to bridge about $232 million in USDC from Solana to Ethereum, making recovery efforts more difficult.
+That movement has drawn criticism from parts of the crypto community, including prominent blockchain investigator ZachXBT, who argued Circle could have acted faster to limit the damage.
+"Why should crypto businesses continue to build on Circle when a project with 9 fig[ure] TVL [total value locked] could not get support during a major incident?," he said in an X post following the attack.
+To freeze or not to freeze
+The company had tools at its disposal, ZachXBT pointed out. Under its own terms, Circle reserves the right to blacklist addresses and freeze USDC tied to any suspicious activity.
+Preemptively freezing wallets linked to the exploit could have slowed or stopped the attacker’s ability to move funds, one stablecoin infrastructure firm founder told CoinDesk.
+However, acting without a court order or law enforcement request might expose Circle to legal risk, the person added.
+Salman Banei, general counsel of tokenized asset network Plume, said freezing assets without formal authorization could expose issuers to liability if done incorrectly. He argued regulators should address that legal gap.
+"Lawmakers should provide a safe harbor from civil liability if digital asset issuers freeze assets when, in their reasonable judgment, there is strong basis to believe that illicit transfers have occurred," Banei said.
+That constraint was central to the company’s response.
+"Circle is a regulated company that complies with sanctions, law enforcement orders, and court-mandated requirements," a spokesperson said in an email to CoinDesk. "We freeze assets when legally required, consistent with the rule of law and with strong protections for user rights and privacy."
+'Gray zone'
+The episode highlights a deeper tension that’s drawing increasing scrutiny as stablecoins grow.
+Tokens like USDC are becoming a core part of global money flows, especially for cross-border payments and trading. At the same time, they are also used in illicit activity, putting issuers under pressure to act quickly when things go wrong.
+According to TRM Labs, roughly $141 billion in stablecoin transactions in 2025 were linked to illicit activity, including sanctions evasion and money laundering.
+Blockchain security firms pointed to North Korean hackers as likely being behind the Drift exploit.
+Stablecoins issued by centralized, regulated entities like Circle's USDC are designed to be programmable and controllable, a feature that can help stop illicit flows but could also raise concerns about overreach and due process.
+In the Drift exploit's case, the situation isn't that clear-cut, said Ben Levit, founder and CEO of stablecoin ratings agency Bluechip.
+"I think people are framing this too simplistically as 'Circle should’ve frozen,'" he said. "This wasn't a clean hack, it was more of a market/oracle exploit, which puts it in a gray zone."
+"So any action by Circle becomes a judgment call, not just a compliance decision," he added.
+To him, the bigger issue is consistency. "USDC can't be positioned as neutral infrastructure while also allowing discretionary intervention without clear rules," Levit said. "Markets can handle strict policies or no intervention, but ambiguity is much harder to price."
+That leaves issuers in a difficult position. Moving too slowly risks criticism that they are enabling bad actors, while acting too quickly without legal backing raises concerns about overreach.
+And in fast-moving exploits, that trade-off becomes especially stark, with the window to act often measured in minutes rather than weeks or months of legal processes.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+The financial services giant with almost $12 trillion in client assets is moving closer to direct crypto trading, offering subscription for early access to the Schwab Crypto account.
+What to know:
+- Charles Schwab plans to launch spot cryptocurrency trading for bitcoin and ether in the first half of 2026 through its Charles Schwab Premier Bank unit.
+- The firm has opened a wait list for its new Schwab Crypto account, which will let clients buy and sell the two largest cryptocurrencies alongside...

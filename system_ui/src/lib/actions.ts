@@ -1,6 +1,7 @@
 'use server';
 
 import fs from 'fs/promises';
+import { createWriteStream } from 'fs';
 import path from 'path';
 import os from 'os';
 import matter from 'gray-matter';
@@ -15,6 +16,7 @@ export type Task = {
     title: string;
     date: string;
     bot: string;
+    provider: string;
     content: string;
     filePath: string;
     priority: 'urgent' | 'normal' | 'someday';
@@ -41,6 +43,7 @@ async function readTasksFromDir(dir: string, status: TaskStatus): Promise<Task[]
             title: title.trim(),
             date: (body.match(/\*\*日付\*\*: (.*)/)?.[1]) || new Date().toISOString().split('T')[0],
             bot: (body.match(/\*\*担当ボット\*\*: (.*)/)?.[1]) || 'Unknown',
+            provider: (body.match(/\*\*生成モデル\*\*: (.*)/)?.[1]) || 'Unknown',
             content: body,
             filePath,
             priority: 'urgent',
@@ -81,9 +84,19 @@ export async function decideTask(taskId: string, choice: 'A' | 'B', feedback: st
     await fs.writeFile(targetPath, updatedContent);
     await fs.unlink(sourcePath);
 
-    // Update growth_log.md
-    const logPath = path.join(KB_ROOT, '01_bots/bot_01_observer/growth_log.md');
-    const logContent = await fs.readFile(logPath, 'utf-8');
+    // Update growth_log.md based on assigned bot
+    const botMatch = content.match(/\*\*担当ボット\*\*: (.*)/);
+    const assignedBot = botMatch && botMatch[1].trim() !== 'Unknown' ? botMatch[1].trim() : 'bot_01_observer';
+
+    const logPath = path.join(KB_ROOT, `01_bots/${assignedBot}/growth_log.md`);
+    let logContent = '';
+    try {
+        logContent = await fs.readFile(logPath, 'utf-8');
+    } catch {
+        // If file doesn't exist yet, we can create a basic one or fallback
+        logContent = `| No | 日付 | 記事タイトル | 選択 | コメント |\n|---|---|---|---|---|\n`;
+    }
+
     const newsTitle = taskId.replace('.md', '');
     const updatedLog = logContent.includes('| - |')
         ? logContent.replace('| - | _(記録なし)_ | | | |', `| 1 | ${new Date().toISOString().split('T')[0]} | ${newsTitle} | ${choice} | ${feedback} |`)
@@ -92,7 +105,7 @@ export async function decideTask(taskId: string, choice: 'A' | 'B', feedback: st
     await fs.writeFile(logPath, updatedLog);
 
     // Generate feedback knowledge asynchronously (fire-and-forget)
-    generateFeedback(content, choice, feedback, postContent).catch(console.error);
+    generateFeedback(content, choice, feedback, postContent, assignedBot).catch(console.error);
 
     return { success: true };
 }
@@ -282,7 +295,7 @@ export async function getSystemHealth(): Promise<SystemHealthData> {
         } catch { return 0; }
     };
 
-    const candidates = await safeReadDirCount(path.join(KB_ROOT, '01_bots/bot_01_observer/_news_candidates'));
+    const candidates = await safeReadDirCount(path.join(KB_ROOT, '02_news_candidates'));
     const pending = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_pending'));
     const held = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_held'));
     const queue = await safeReadDirCount(path.join(KB_ROOT, '03_opinion_gate/_post_pool'));
@@ -305,10 +318,10 @@ export async function getSystemHealth(): Promise<SystemHealthData> {
     };
 }
 
-async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeedback: string, postContent: string) {
+async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeedback: string, postContent: string, botId: string = 'bot_01_observer') {
     const { exec } = require('child_process');
     const projectRoot = path.resolve(process.cwd(), '..');
-    const feedbackKnowledgePath = path.join(KB_ROOT, '01_bots/bot_01_observer/feedback_knowledge.md');
+    const feedbackKnowledgePath = path.join(KB_ROOT, `01_bots/${botId}/feedback_knowledge.md`);
 
     const sharedKnowledgePath = path.join(KB_ROOT, '01_bots/common/shared_knowledge.md');
     const sharedPersonaPath = path.join(KB_ROOT, '01_bots/common/shared_persona.md');
@@ -388,10 +401,10 @@ export type IdentityProposal = {
 };
 
 /** growth_log.md の行数から前回の提案以降の Decide 件数を返す */
-export async function getDecisionCount(): Promise<{ count: number; threshold: number }> {
+export async function getDecisionCount(botId: string = 'bot_01_observer'): Promise<{ count: number; threshold: number }> {
     const threshold = 10;
-    const logPath = path.join(KB_ROOT, '01_bots/bot_01_observer/growth_log.md');
-    const proposalsDir = path.join(KB_ROOT, '01_bots/bot_01_observer/_identity_proposals');
+    const logPath = path.join(KB_ROOT, '01_bots', botId, 'growth_log.md');
+    const proposalsDir = path.join(KB_ROOT, '01_bots', botId, '_identity_proposals');
 
     let logContent = '';
     try { logContent = await fs.readFile(logPath, 'utf-8'); } catch { return { count: 0, threshold }; }
@@ -418,13 +431,16 @@ export async function getDecisionCount(): Promise<{ count: number; threshold: nu
 }
 
 /** Gemini で persona.md の更新提案を生成し _identity_proposals/ に保存する */
-export async function generateIdentityProposal(): Promise<{ success: boolean; message: string }> {
+export async function generateIdentityProposal(botId: string = 'bot_01_observer'): Promise<{ success: boolean; message: string }> {
     const { exec } = require('child_process');
     const projectRoot = path.resolve(process.cwd(), '..');
-    const personaPath = path.join(KB_ROOT, '01_bots/bot_01_observer/persona.md');
-    const feedbackPath = path.join(KB_ROOT, '01_bots/bot_01_observer/feedback_knowledge.md');
-    const proposalsDir = path.join(KB_ROOT, '01_bots/bot_01_observer/_identity_proposals');
-    const logPath = path.join(KB_ROOT, '01_bots/bot_01_observer/growth_log.md');
+    const personaPath = path.join(KB_ROOT, '01_bots', botId, 'persona.md');
+    const feedbackPath = path.join(KB_ROOT, '01_bots', botId, 'feedback_knowledge.md');
+    const proposalsDir = path.join(KB_ROOT, '01_bots', botId, '_identity_proposals');
+    const logPath = path.join(KB_ROOT, '01_bots', botId, 'growth_log.md');
+    
+    // Ensure proposals dir exists
+    await fs.mkdir(proposalsDir, { recursive: true });
 
     const sharedKnowledgePath = path.join(KB_ROOT, '01_bots/common/shared_knowledge.md');
     const sharedPersonaPath = path.join(KB_ROOT, '01_bots/common/shared_persona.md');
@@ -476,8 +492,8 @@ export async function generateIdentityProposal(): Promise<{ success: boolean; me
 }
 
 /** 保存された提案ファイル一覧を読み込んで返す */
-export async function getIdentityProposals(): Promise<IdentityProposal[]> {
-    const proposalsDir = path.join(KB_ROOT, '01_bots/bot_01_observer/_identity_proposals');
+export async function getIdentityProposals(botId: string = 'bot_01_observer'): Promise<IdentityProposal[]> {
+    const proposalsDir = path.join(KB_ROOT, '01_bots', botId, '_identity_proposals');
     let files: string[] = [];
     try { files = await fs.readdir(proposalsDir); } catch { return []; }
 
@@ -499,10 +515,11 @@ export async function getIdentityProposals(): Promise<IdentityProposal[]> {
 /** 承認された提案内容を persona.md に追記する */
 export async function applyProposalToPersona(
     proposalId: string,
-    acceptedTexts: string[]   // 承認された提案の文言リスト
+    acceptedTexts: string[],
+    botId: string = 'bot_01_observer'
 ): Promise<{ success: boolean }> {
-    const personaPath = path.join(KB_ROOT, '01_bots/bot_01_observer/persona.md');
-    const proposalsDir = path.join(KB_ROOT, '01_bots/bot_01_observer/_identity_proposals');
+    const personaPath = path.join(KB_ROOT, '01_bots', botId, 'persona.md');
+    const proposalsDir = path.join(KB_ROOT, '01_bots', botId, '_identity_proposals');
 
     const currentPersona = await fs.readFile(personaPath, 'utf-8');
     const timestamp = new Date().toLocaleString('ja-JP');
@@ -565,6 +582,8 @@ export type NewsCandidate = {
     date: string;
     evaluation: 'A' | 'B' | 'C';
     reason: string;
+    assignedBot: string;
+    aiProvider: string;
 };
 
 export async function fetchRSSAction() {
@@ -584,7 +603,7 @@ export async function fetchRSSAction() {
 }
 
 export async function getCandidates(): Promise<NewsCandidate[]> {
-    const dir = path.join(KB_ROOT, '01_bots/bot_01_observer/_news_candidates');
+    const dir = path.join(KB_ROOT, '02_news_candidates');
     let files: string[] = [];
     try {
         files = await fs.readdir(dir);
@@ -598,11 +617,15 @@ export async function getCandidates(): Promise<NewsCandidate[]> {
         const filePath = path.join(dir, file);
         const raw = await fs.readFile(filePath, 'utf-8');
 
-        const title = raw.match(/^Title: (.*)/)?.[1] || file;
-        const evaluationStr = raw.match(/^Evaluation: (.*)/)?.[1]?.trim() || 'B';
+        const title = raw.match(/^Title: (.*)/m)?.[1] || file;
+        const evaluationStr = raw.match(/^Evaluation: (.*)/m)?.[1]?.trim() || 'B';
         const evaluation = (['A', 'B', 'C'].includes(evaluationStr) ? evaluationStr : 'B') as 'A'|'B'|'C';
-        const reason = raw.match(/^Reason: (.*)/)?.[1]?.trim() || '';
-        const url = raw.match(/^Source: (.*)/)?.[1] || '';
+        const reason = raw.match(/^Reason: (.*)/m)?.[1]?.trim() || '';
+        const url = raw.match(/^Source: (.*)/m)?.[1] || '';
+        const assignedBot = raw.match(/^Assigned Bot: (.*)/m)?.[1]?.trim() || 'None';
+        const aiProviderEval = raw.match(/^AI Provider \(Evaluation\): (.*)/m)?.[1]?.trim() || '';
+        const aiProviderTrans = raw.match(/^AI Provider \(Translation\): (.*)/m)?.[1]?.trim() || '';
+        const aiProvider = aiProviderEval || aiProviderTrans || 'unknown';
         
         const bodyMatch = raw.split('\n\n');
         const body = bodyMatch.length > 1 ? bodyMatch.slice(1).join('\n\n') : '';
@@ -615,6 +638,8 @@ export async function getCandidates(): Promise<NewsCandidate[]> {
             date: file.slice(0, 8), // Assuming YYYYMMDD prefix
             evaluation,
             reason,
+            assignedBot,
+            aiProvider,
         });
     }
 
@@ -622,7 +647,7 @@ export async function getCandidates(): Promise<NewsCandidate[]> {
 }
 
 export async function addManualNews(title: string, url: string, content: string) {
-    const dir = path.join(KB_ROOT, '01_bots/bot_01_observer/_news_candidates');
+    const dir = path.join(KB_ROOT, '02_news_candidates');
     const dateStr = new Date().toISOString().split('T')[0].replace(/-/g, '');
     const filename = `${dateStr}_manual_${Date.now()}.txt`;
     const filePath = path.join(dir, filename);
@@ -658,42 +683,101 @@ export async function removeRSSFeed(url: string) {
 }
 
 export async function processCandidates(decisions: {id: string, decision: 'A'|'B'|'C'}[]) {
-    const { exec } = require('child_process');
+    const { spawn } = require('child_process');
     const scriptPath = path.resolve(process.cwd(), '../scripts/generate_opinion.sh');
-    const candidatesDir = path.join(KB_ROOT, '01_bots/bot_01_observer/_news_candidates');
+    const candidatesDir = path.join(KB_ROOT, '02_news_candidates');
+    const logPath = path.join(KB_ROOT, 'system.log');
 
-    const results = [];
+    const results: { id: string; success: boolean; error?: string }[] = [];
+    if (decisions.length === 0) return results;
+
+    const logStream = createWriteStream(logPath, { flags: 'a' });
+    const log = (msg: string) => logStream.write(`[${new Date().toLocaleString()}] ${msg}\n`);
+
+    log(`--- Start Processing Queue (${decisions.length} items) ---`);
+
     for (const {id, decision} of decisions) {
         const filePath = path.join(candidatesDir, id);
 
+        // Sync decision to disk first (prevents "reverting to B" if script fails)
+        try {
+            const raw = await fs.readFile(filePath, 'utf-8');
+            const currentEvalMatch = raw.match(/^Evaluation: (.*)$/m);
+            const currentEval = currentEvalMatch ? currentEvalMatch[1] : null;
+
+            if (currentEval !== decision) {
+                const updated = raw.replace(/^Evaluation: .*$/m, `Evaluation: ${decision}`);
+                await fs.writeFile(filePath, updated);
+            }
+        } catch (e) {
+            log(`Failed to sync decision for ${id}: ${e}`);
+        }
+
         if (decision === 'A') {
-            const promise = new Promise<{ id: string; success: boolean }>((resolve) => {
-                exec(`"${scriptPath}" "${filePath}"`, { cwd: path.resolve(process.cwd(), '..'), timeout: 180000 }, async (error: Error | null) => {
-                    if (!error) {
-                        try { await fs.unlink(filePath); } catch { }
+            log(`ACTION [A]: ${id} -> Starting Pipeline`);
+            const promise = new Promise<{ id: string; success: boolean; error?: string }>((resolve) => {
+                const child = spawn('bash', [scriptPath, filePath], { 
+                    cwd: path.resolve(process.cwd(), '..'),
+                    env: { ...process.env, PATH: process.env.PATH + ':/usr/local/bin' }
+                });
+
+                let errorOutput = '';
+                child.stdout.on('data', (data: Buffer | string) => logStream.write(`${data}`));
+                child.stderr.on('data', (data: Buffer | string) => {
+                    const str = data.toString();
+                    errorOutput += str;
+                    logStream.write(`[ERROR] ${str}`);
+                });
+
+                child.on('close', async (code: number) => {
+                    if (code === 0) {
+                        log(`DONE: ${id} processed successfully.`);
+                        // Move to _processed instead of delete
+                        try { 
+                            const processedDir = path.join(KB_ROOT, '02_news_candidates/_processed');
+                            await fs.mkdir(processedDir, { recursive: true }); 
+                            await fs.rename(filePath, path.join(processedDir, id));
+                        } catch (e) {
+                            log(`Failed to move article to _processed: ${e}`);
+                        }
                         resolve({ id, success: true });
                     } else {
-                        resolve({ id, success: false });
+                        log(`FAIL: ${id} failed with code ${code}.`);
+                        resolve({ id, success: false, error: errorOutput.trim() || `Exit code ${code}` });
                     }
                 });
             });
             results.push(await promise);
         } else if (decision === 'C') {
+            log(`ACTION [C]: ${id} -> DeletingCandidate`);
             try { await fs.unlink(filePath); } catch { }
             results.push({ id, success: true });
         } else if (decision === 'B') {
-            try {
-                const raw = await fs.readFile(filePath, 'utf-8');
-                if (!raw.includes(`Evaluation: ${decision}`)) {
-                    const updated = raw.replace(/^Evaluation: .*$/m, `Evaluation: ${decision}`);
-                    await fs.writeFile(filePath, updated);
-                }
-            } catch { }
+            log(`ACTION [B]: ${id} -> Remaining in candidates`);
             results.push({ id, success: true });
         }
     }
 
+    log(`--- Queue Processing Completed ---\n`);
+    logStream.end();
     return results;
+}
+
+export async function getSystemLogs(limit: number = 100) {
+    const logPath = path.join(KB_ROOT, 'system.log');
+    try {
+        const data = await fs.readFile(logPath, 'utf-8');
+        const lines = data.trim().split('\n');
+        return lines.slice(-limit).join('\n');
+    } catch {
+        return 'No logs found.';
+    }
+}
+
+export async function clearSystemLogs() {
+    const logPath = path.join(KB_ROOT, 'system.log');
+    await fs.writeFile(logPath, '');
+    return { success: true };
 }
 
 export async function getAISettings() {
@@ -742,6 +826,15 @@ async function callAI(prompt: string, systemMdPath?: string, actionKey?: string)
         provider = settings.providers[actionKey];
     }
 
+    const logPath = path.join(KB_ROOT, 'system.log');
+    const log = async (msg: string) => {
+        try {
+            await fs.appendFile(logPath, `[${new Date().toLocaleString()}] [AI_CALL:${actionKey || 'direct'}] ${msg}\n`);
+        } catch {}
+    };
+
+    await log(`-> Starting AI call using [${provider}] provider.`);
+
     if (provider === 'gemini') {
         const { exec } = require('child_process');
         const envPart = systemMdPath ? `GEMINI_SYSTEM_MD=${systemMdPath} ` : '';
@@ -751,9 +844,14 @@ async function callAI(prompt: string, systemMdPath?: string, actionKey?: string)
         const cmd = `echo ${JSON.stringify(prompt)} | ${envPart}gemini -p "Analyze and generate response" --output-format json --yolo`;
         
         return new Promise((resolve, reject) => {
-            exec(cmd, { cwd: projectRoot, timeout: 180000 }, (error: any, stdout: string) => {
-                if (error) reject(error);
-                else resolve(stdout);
+            exec(cmd, { cwd: projectRoot, timeout: 180000 }, async (error: any, stdout: string) => {
+                if (error) {
+                    await log(`[ERROR] Gemini call failed: ${error.message}`);
+                    reject(error);
+                } else {
+                    await log(`<- Gemini call completed successfully (${stdout.length} chars).`);
+                    resolve(stdout);
+                }
             });
         });
     } else {
@@ -771,27 +869,35 @@ async function callAI(prompt: string, systemMdPath?: string, actionKey?: string)
         if (systemContent) messages.push({ role: 'system', content: systemContent });
         messages.push({ role: 'user', content: prompt });
 
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                model,
-                messages,
-                temperature: 0.3
-            }),
-            next: { revalidate: 0 }
-        });
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    model,
+                    messages,
+                    temperature: 0.3
+                }),
+                next: { revalidate: 0 }
+            });
 
-        if (!response.ok) {
-            const errBody = await response.text();
-            throw new Error(`AI API failed (${response.status}): ${errBody}`);
+            if (!response.ok) {
+                const errBody = await response.text();
+                await log(`[ERROR] AI API failed (${response.status}): ${errBody}`);
+                throw new Error(`AI API failed (${response.status}): ${errBody}`);
+            }
+            
+            const data = await response.json();
+            const content = data.choices[0].message.content;
+            
+            await log(`<- AI call completed successfully (${content.length} chars).`);
+            
+            // Return wrapped in a JSON structure that matches original CLI behavior
+            return JSON.stringify({ response: content });
+        } catch (error: any) {
+            await log(`[ERROR] AI API fetch failed: ${error.message}`);
+            throw error;
         }
-        
-        const data = await response.json();
-        const content = data.choices[0].message.content;
-        
-        // Return wrapped in a JSON structure that matches original CLI behavior
-        return JSON.stringify({ response: content });
     }
 }
 
@@ -902,3 +1008,91 @@ export async function uploadBotPFP(botId: string, formData: FormData) {
 
     return { success: true, path: publicPath };
 }
+
+/** 
+ * Pending Task を再生成する
+ * _pending 内のファイルから SOURCE_FILE を特定し、scripts/generate_opinion.sh を再実行する
+ */
+export async function regenerateTask(taskId: string, forcedProvider?: 'gemini' | 'lmstudio'): Promise<{ success: boolean; error?: string }> {
+    const pendingDir = path.join(KB_ROOT, '03_opinion_gate/_pending');
+    const taskPath = path.join(pendingDir, taskId);
+    
+    try {
+        const content = await fs.readFile(taskPath, 'utf-8');
+        const sourceMatch = content.match(/<!-- SOURCE_FILE: (.*) -->/);
+        let sourceFile = sourceMatch ? sourceMatch[1] : null;
+
+        // Legacy compatibility: If not metadata exists, try to reconstruct from slug
+        if (!sourceFile) {
+            // Task: 2026-04-03_bot_01_observer_SlugName.md
+            const parts = taskId.split('_');
+            if (parts.length >= 4) {
+                const slugPart = parts.slice(3).join('_').replace('.md', '');
+                // Find in _processed
+                const processedDir = path.join(KB_ROOT, '02_news_candidates/_processed');
+                const files = await fs.readdir(processedDir).catch(() => []);
+                const matchFound = files.find(f => f.includes(slugPart));
+                if (matchFound) sourceFile = matchFound;
+            }
+        }
+
+        if (!sourceFile) {
+            return { success: false, error: "Original source article not found for this task." };
+        }
+
+        const sourcePath = path.join(KB_ROOT, '02_news_candidates/_processed', sourceFile);
+        if (!(await fs.access(sourcePath).then(() => true).catch(() => false))) {
+            return { success: false, error: `Processed source file missing: ${sourceFile}` };
+        }
+
+        const scriptPath = path.resolve(process.cwd(), '../scripts/generate_opinion.sh');
+        
+        return new Promise((resolve) => {
+            const { spawn } = require('child_process');
+            const env: any = { ...process.env };
+            if (forcedProvider) {
+                env.FORCED_PROVIDER = forcedProvider;
+            }
+
+            const child = spawn('bash', [scriptPath, sourcePath], {
+                cwd: path.resolve(process.cwd(), '..'),
+                env
+            });
+
+            let err = '';
+            child.stdout.on('data', (d: any) => console.log(d.toString()));
+            child.stderr.on('data', (d: any) => err += d.toString());
+
+            child.on('close', async (code: number) => {
+                if (code === 0) {
+                    // Regeneration succeeded. We now check if the old file still exists.
+                    // If the script generated a NEW filename (e.g. today's date),
+                    // the old file (taskPath) might still be there.
+                    try {
+                        const filesAfter = await fs.readdir(pendingDir);
+                        // If we are sure it succeeded and we have new content, the old one can go
+                        if (filesAfter.length > 0) {
+                            // Find the 'most likely' new filename based on slug?
+                            // For simplicity, let's just delete the old taskPath if it's still there.
+                            // If it WAS overwritten, unlink might fail (or it might have same name).
+                            // But unlink is safer AFTER checking success.
+                            if (await fs.access(taskPath).then(() => true).catch(() => false)) {
+                                // If the old file exists, check if its content is still the old one?
+                                // Let's just delete it to be sure we only have one task for this link.
+                                await fs.unlink(taskPath).catch(() => {});
+                            }
+                        }
+                    } catch (e) {}
+
+                    resolve({ success: true });
+                } else {
+                    resolve({ success: false, error: err.trim() || `Regeneration failed with code ${code}` });
+                }
+            });
+        });
+
+    } catch (e: any) {
+        return { success: false, error: e.message };
+    }
+}
+

@@ -1,0 +1,30 @@
+Title: シュワブ、2026年上半期にビットコインとイーサの現物取引開始を計画
+Evaluation: B
+Reason: インデックス投資の巨人であるチャールズ・シュワブによる仮想通貨現物取引参入は、伝統金融とデジタル資産の融合という構造的変化を示す重要ニュースであるため。
+Assigned Bot: bot_02_trader
+AI Provider (Translation): gemini
+AI Provider (Evaluation): gemini
+Original Title: Schwab plans spot bitcoin, ether trading launch in first half of 2026
+Source: https://www.coindesk.com/business/2026/04/03/schwab-plans-spot-bitcoin-ether-trading-launch-in-first-half-of-2026
+
+Schwab plans spot bitcoin, ether trading launch in first half of 2026
+The financial services giant with almost $12 trillion in client assets is moving closer to direct crypto trading, offering subscription for early access to the Schwab Crypto account.
+What to know:
+- Charles Schwab plans to launch spot cryptocurrency trading for bitcoin and ether in the first half of 2026 through its Charles Schwab Premier Bank unit.
+- The firm has opened a wait list for its new Schwab Crypto account, which will let clients buy and sell the two largest cryptocurrencies alongside their traditional investments.
+- Schwab is leveraging its $11.9 trillion in client assets to compete with established crypto exchanges.
+Brokerage services giant Charles Schwab plans to roll out spot cryptocurrency trading in the first half of 2026, pushing it deeper into digital assets.
+"We remain on track to launch our spot crypto offer in the first half of 2026, starting with bitcoin
+The firm has opened a waitlist for clients seeking early access to what it calls a "Schwab Crypto" account, which will allow users to buy and sell the two largest cryptocurrencies. The firm will offer the service via Charles Schwab Premier Bank, SSB.
+The move builds on comments from CEO Rick Wurster, who said last July that Schwab aimed to introduce crypto trading "sometime soon" in response to client demand. He framed the effort as a way to bring digital assets into the same account view as stocks and bonds in a push toward a more unified investment platform.
+Schwab's scale could give it an edge as it enters a market long dominated by crypto-native exchanges. The firm reported $11.9 trillion in client assets in 2025, offering a built-in base of retail and institutional investors who may prefer trading crypto within a familiar brokerage environment rather than using standalone platforms.
+The firm already allows clients to invest in ETFs linked to cryptocurrencies and trade bitcoin futures on its platform. It also launched the Schwab Crypto Thematic Index (STCE), an ETF that tracks the performance of companies linked to the digital asset sector.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+Prominent blockchain sleuth ZachXBT alleged faster action by Circle could have limited crypto losses, but freezing asset without legal authorization carries legal risks.
+What to know:
+- After exploiting crypto protocol Drift, the attacker moved about $232 million in USDC from Solana to Ethereum using Circle’s cross-chain transfer protocol.
+- Critics like blockchain investigator ZachXBT said Circle could have moved faster to blacklist wallets and freeze funds. But freezing assets without authorization could carry legal liability, Plume general...

@@ -1,0 +1,4 @@
+- What: デジタル資産の財務部門が投資家に資本管理と経済的利益を示す必要がある。
+- Who: Kiernan、DLA Piper、AMINA Bank Research、SEC、Bitmine Immersion Technologies、EigenCloud
+- Impact: 投資家の期待が高まり、デジタル資産の財務部門は存在価値を証明するための戦略が必要となる。
+- Key Tension: デジタル資産の財務部門が単に資産を保有するだけでは足りず、投資家が見込める経済的利益と資本管理を見せることが求められている。

@@ -9,10 +9,12 @@ import HistoryView from '@/components/HistoryView';
 import SystemHealth from '@/components/SystemHealth';
 import NewsFeed from '@/components/NewsFeed';
 import BotsView from '@/components/BotsView';
+import AISettingsView from '@/components/AISettingsView';
+import SystemActivityView from '@/components/SystemActivityView';
 import AIToggle from '@/components/AIToggle';
-import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles, Users } from 'lucide-react';
+import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles, Users, Settings, Terminal } from 'lucide-react';
 
-type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity' | 'bots';
+type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity' | 'bots' | 'settings' | 'activity';
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -29,9 +31,24 @@ export default function Home() {
   const [decisionCount, setDecisionCount] = useState(0);
   const [analyzing, setAnalyzing] = useState(false);
   const [analyzeMsg, setAnalyzeMsg] = useState<string | null>(null);
+  const [activeBotId, setActiveBotId] = useState('bot_01_observer');
+  const [isBusy, setIsBusy] = useState(false);
+  const availableBots = ['bot_01_observer', 'bot_02_trader', 'bot_03_creator', 'bot_04_auditor', 'bot_05_wolf'];
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (['feed', 'pending', 'held', 'queue', 'history', 'health', 'identity', 'bots', 'settings', 'activity'].includes(hash)) {
+        setViewMode(hash as ViewMode);
+      }
+    };
+    window.addEventListener('hashchange', handleHash);
+    handleHash(); // Check initial hash
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   const fetchTasks = async (mode: ViewMode = viewMode) => {
-    if (mode === 'identity' || mode === 'history' || mode === 'health' || mode === 'bots') {
+    if (mode === 'identity' || mode === 'history' || mode === 'health' || mode === 'bots' || mode === 'settings' || mode === 'activity') {
       setIsLoading(false);
       return;
     }
@@ -57,15 +74,16 @@ export default function Home() {
     setQueueCount(queue.length);
 
     // Refresh decision count for identity badge
-    const dc = await getDecisionCount();
+    const dc = await getDecisionCount(activeBotId);
     setDecisionCount(dc.count);
   };
 
   useEffect(() => {
     fetchTasks(viewMode);
-  }, [viewMode]);
+  }, [viewMode, activeBotId]);
 
   const switchMode = (mode: ViewMode) => {
+    if (isBusy && mode !== 'activity') return;
     if (mode === viewMode) return;
     setViewMode(mode);
     setSelectedTask(null);
@@ -91,7 +109,7 @@ export default function Home() {
     setAnalyzing(true);
     setAnalyzeMsg(null);
     try {
-      const result = await generateIdentityProposal();
+      const result = await generateIdentityProposal(activeBotId);
       if (result.success) {
         setAnalyzeMsg('✅ Proposal generated!');
         setDecisionCount(0); // Reset count after analysis
@@ -106,7 +124,7 @@ export default function Home() {
     setTimeout(() => setAnalyzeMsg(null), 6000);
   };
 
-  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : viewMode === 'bots' ? 'Bots Status' : 'Approval Gate';
+  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : viewMode === 'bots' ? 'Bots Status' : viewMode === 'settings' ? 'AI Configuration' : viewMode === 'activity' ? 'Runtime Activity' : 'Approval Gate';
   const modeSubtitle = viewMode === 'feed'
     ? 'Stage 1: Browse RSS news and pick the most relevant ones to process.'
     : viewMode === 'held'
@@ -121,7 +139,11 @@ export default function Home() {
               ? 'Real-time telemetry and resource usage.'
               : viewMode === 'bots'
                 ? 'Manage and monitor all active bot personalities.'
-                : 'Identify the pulse. Shape the persona.';
+                : viewMode === 'settings'
+                  ? 'Fine-tune AI processing depth and LLM routing.'
+                  : viewMode === 'activity'
+                    ? 'Watch the pulse in real-time. Script logs and AI payloads.'
+                    : 'Identify the pulse. Shape the persona.';
 
   return (
     <main className={`dashboard ${isSidebarOpen ? 'sidebar-open' : ''}`}>
@@ -133,7 +155,7 @@ export default function Home() {
         <div style={{ width: 24 }} /> {/* Spacer */}
       </div>
 
-      <nav className={`sidebar glass ${isSidebarOpen ? 'active' : ''}`}>
+      <nav className={`sidebar glass ${isSidebarOpen ? 'active' : ''} ${isBusy ? 'busy-lock' : ''}`}>
         <div className="sidebar-header desktop-only">
           <div className="logo gradient-text">KinamonKB</div>
         </div>
@@ -189,10 +211,24 @@ export default function Home() {
           </div>
 
           <div
+            className={`nav-item ${viewMode === 'activity' ? 'active activity-active' : ''}`}
+            onClick={() => switchMode('activity')}
+          >
+            <Terminal size={16} /> Runtime Activity
+          </div>
+
+          <div
             className={`nav-item ${viewMode === 'bots' ? 'active bots-active' : ''}`}
             onClick={() => switchMode('bots')}
           >
             <Users size={16} /> Bots Status
+          </div>
+
+          <div
+            className={`nav-item ${viewMode === 'settings' ? 'active settings-active' : ''}`}
+            onClick={() => switchMode('settings')}
+          >
+            <Settings size={16} /> Advanced Settings
           </div>
 
           {/* Bot Identity section */}
@@ -213,13 +249,26 @@ export default function Home() {
 
           <button
             className="patrol-btn"
-            onClick={handlePatrol}
-            disabled={patrolling}
+            onClick={async () => {
+                setIsBusy(true);
+                setViewMode('activity');
+                await handlePatrol();
+                setIsBusy(false);
+            }}
+            disabled={patrolling || isBusy}
           >
             <Radar size={16} className={patrolling ? 'spin' : ''} />
             {patrolling ? 'Patrolling...' : 'Run Patrol'}
           </button>
           {patrolMsg && <div className="patrol-msg">{patrolMsg}</div>}
+
+          <select 
+            className="bot-selector"
+            value={activeBotId}
+            onChange={(e) => setActiveBotId(e.target.value)}
+          >
+            {availableBots.map(b => <option key={b} value={b}>{b.replace(/bot_\d+_/, '')}</option>)}
+          </select>
 
           {/* Analyze button */}
           <button
@@ -258,11 +307,16 @@ export default function Home() {
         <div className="layout-grid">
           {viewMode === 'feed' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
-              <NewsFeed />
+              <NewsFeed 
+                onBusyChange={(busy: boolean) => {
+                  setIsBusy(busy);
+                  if (busy) setViewMode('activity');
+                }} 
+              />
             </section>
           ) : viewMode === 'identity' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
-              <IdentityView />
+              <IdentityView botId={activeBotId} />
             </section>
           ) : viewMode === 'history' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
@@ -275,6 +329,14 @@ export default function Home() {
           ) : viewMode === 'bots' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
               <BotsView />
+            </section>
+          ) : viewMode === 'activity' ? (
+            <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
+              <SystemActivityView isBusy={isBusy} />
+            </section>
+          ) : viewMode === 'settings' ? (
+            <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
+              <AISettingsView />
             </section>
           ) : (
             <>
@@ -293,6 +355,10 @@ export default function Home() {
                         setSelectedTask(null);
                         fetchTasks(viewMode);
                       }}
+                      onBusyChange={(busy: boolean) => {
+                        setIsBusy(busy);
+                        if (busy) setViewMode('activity');
+                      }}
                     />
                   )}
                 />
@@ -308,6 +374,10 @@ export default function Home() {
                     onComplete={() => {
                       setSelectedTask(null);
                       fetchTasks(viewMode);
+                    }}
+                    onBusyChange={(busy: boolean) => {
+                      setIsBusy(busy);
+                      if (busy) setViewMode('activity');
                     }}
                   />
                 ) : (
@@ -380,6 +450,17 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
+        }
+        .bot-selector {
+          background: rgba(0,0,0,0.2);
+          border: 1px solid var(--border);
+          color: white;
+          padding: 0.4rem;
+          border-radius: 6px;
+          font-size: 0.8rem;
+          margin-bottom: 0.25rem;
+          width: 100%;
+          outline: none;
         }
         .patrol-btn {
           display: flex;
@@ -515,6 +596,15 @@ export default function Home() {
         .nav-item.bots-active {
           background: rgba(20, 184, 166, 0.1);
           color: #14b8a6;
+        }
+        .nav-item.activity-active {
+          background: rgba(14, 165, 233, 0.1);
+          color: #0ea5e9;
+          border-left: 3px solid #0ea5e9;
+        }
+        .nav-item.settings-active {
+          background: rgba(148, 163, 184, 0.1);
+          color: #94a3b8;
         }
         .analyze-btn {
           display: flex;

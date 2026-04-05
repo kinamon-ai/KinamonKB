@@ -1,0 +1,13 @@
+Title: Anthropic、バイオテック新興のCoefficient Bioを4億ドルで買収との報道
+Evaluation: B
+Reason: Evaluation Timeout (unknown)
+Assigned Bot: None
+AI Provider (Translation): gemini
+AI Provider (Evaluation): unknown
+Original Title: Anthropic buys biotech startup Coefficient Bio in $400M deal: Reports
+Source: https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/
+
+Anthropic has purchased the stealth biotech AI startup Coefficient Bio in a $400 million stock deal, according to The Information and Eric Newcomer. Sources close to the deal confirmed to TechCrunch that it closed, though declined to comment on the amount.
+The deal comes as Anthropic continues its push into healthcare and life sciences, following its October announcement of Claude for Life Sciences, a tool that aims to help scientific researchers make discoveries.
+Coefficient Bio’s founders, Samuel Stanton and Nathan C. Frey, launched the startup eight months ago, having both worked in computational drug discovery at Genentech’s Prescient Design. Coefficient Bio was using AI to help make drug discovery and other forms of biological research more efficient.
+The team, consisting of around 10 people, is expected to join Anthropic’s health and life science team.

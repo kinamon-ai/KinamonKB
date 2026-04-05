@@ -1,7 +1,7 @@
 'use client';
 
 import { Task } from '@/lib/actions';
-import { ChevronRight, ChevronUp, Calendar, Bot } from 'lucide-react';
+import { ChevronRight, ChevronUp, Calendar, Bot, Sparkles, Monitor } from 'lucide-react';
 import React from 'react';
 
 export default function TaskList({ tasks, onSelect, selectedId, renderDetail }: {
@@ -30,6 +30,10 @@ export default function TaskList({ tasks, onSelect, selectedId, renderDetail }: 
             <div className="task-meta">
               <span><Calendar size={14} /> {task.date}</span>
               <span><Bot size={14} /> {task.bot}</span>
+              <span className={`task-provider-badge ${task.provider?.includes('gemini') ? 'tp-gemini' : task.provider?.includes('local') || task.provider?.includes('lmstudio') ? 'tp-local' : 'tp-unknown'}`}>
+                {task.provider?.includes('gemini') ? <Sparkles size={10} /> : task.provider?.includes('local') || task.provider?.includes('lmstudio') ? <Monitor size={10} /> : null}
+                {task.provider || '?'}
+              </span>
             </div>
             {selectedId === task.id ? <ChevronUp className="chevron active-chevron" size={20} /> : <ChevronRight className="chevron" size={20} />}
           </div>
@@ -112,6 +116,31 @@ export default function TaskList({ tasks, onSelect, selectedId, renderDetail }: 
           padding: 2rem;
           color: var(--muted);
           font-size: 0.9rem;
+        }
+        .task-provider-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.2rem;
+          font-size: 0.65rem;
+          font-weight: 700;
+          padding: 0.1rem 0.4rem;
+          border-radius: 4px;
+          letter-spacing: 0.02em;
+        }
+        .tp-gemini {
+          background: rgba(79, 70, 229, 0.15);
+          color: #818cf8;
+          border: 1px solid rgba(79, 70, 229, 0.3);
+        }
+        .tp-local {
+          background: rgba(139, 92, 246, 0.15);
+          color: #a78bfa;
+          border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        .tp-unknown {
+          background: rgba(100, 116, 139, 0.15);
+          color: #94a3b8;
+          border: 1px solid rgba(100, 116, 139, 0.3);
         }
         .mobile-detail-wrapper {
           display: none;

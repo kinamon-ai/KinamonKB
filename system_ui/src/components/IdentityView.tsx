@@ -14,7 +14,7 @@ function parseProposalItems(content: string): { title: string; body: string }[] 
     }));
 }
 
-export default function IdentityView() {
+export default function IdentityView({ botId }: { botId: string }) {
     const [proposals, setProposals] = useState<IdentityProposal[]>([]);
     const [loading, setLoading] = useState(true);
     const [selectedProposal, setSelectedProposal] = useState<IdentityProposal | null>(null);
@@ -24,12 +24,14 @@ export default function IdentityView() {
     const [applied, setApplied] = useState(false);
 
     useEffect(() => {
-        getIdentityProposals().then(data => {
+        setLoading(true);
+        getIdentityProposals(botId).then(data => {
             setProposals(data);
             if (data.length > 0) setSelectedProposal(data[0]);
+            else setSelectedProposal(null);
             setLoading(false);
         });
-    }, []);
+    }, [botId]);
 
     // Reset states when proposal changes
     useEffect(() => {
@@ -67,11 +69,11 @@ export default function IdentityView() {
         if (approvedTexts.length === 0) return;
 
         setApplying(true);
-        await applyProposalToPersona(selectedProposal.id, approvedTexts);
+        await applyProposalToPersona(selectedProposal.id, approvedTexts, botId);
         setApplying(false);
         setApplied(true);
         // Refresh proposal list
-        const fresh = await getIdentityProposals();
+        const fresh = await getIdentityProposals(botId);
         setProposals(fresh);
         setSelectedProposal(fresh[0] ?? null);
     };

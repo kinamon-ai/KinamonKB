@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Task, decideTask, holdTask, trashTask, postToX } from '@/lib/actions';
-import { Send, Clock, Edit3, Pause, RotateCcw, Share2, Trash2 } from 'lucide-react';
+import { Task, decideTask, holdTask, trashTask, postToX, regenerateTask } from '@/lib/actions';
+import { Send, Clock, Edit3, Pause, RotateCcw, Share2, Trash2, Sparkles, Monitor } from 'lucide-react';
 
-export default function TaskDetail({ task, onComplete, fromHeld = false, fromQueue = false }: { task: Task, onComplete: () => void, fromHeld?: boolean, fromQueue?: boolean }) {
+export default function TaskDetail({ task, onComplete, fromHeld = false, fromQueue = false, onBusyChange }: { task: Task, onComplete: () => void, fromHeld?: boolean, fromQueue?: boolean, onBusyChange?: (busy: boolean) => void }) {
   const [choice, setChoice] = useState<'A' | 'B' | null>(null);
   const [feedback, setFeedback] = useState('');
   const [postEdit, setPostEdit] = useState('');
@@ -15,6 +15,7 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
   const [holding, setHolding] = useState(false);
   const [posting, setPosting] = useState(false);
   const [trashing, setTrashing] = useState(false);
+  const [regenerating, setRegenerating] = useState<string | null>(null); // 'gemini' | 'lmstudio' | null
   const [postResult, setPostResult] = useState<{ tweetId?: string; error?: string } | null>(null);
 
   const extractChoice = (id: 'A' | 'B') => {
@@ -32,7 +33,9 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
 
   // Extract source URL from the header
   const getSourceUrl = () => {
-    const match = task.content.match(/\*\*ソースURL\*\*: `?(https?:\/\/[^\s`]+)`?/);
+    // Look for link next to "ソースURL" or in brackets
+    const match = task.content.match(/\*\*ソースURL\*\*:\s*`?(https?:\/\/[^\s`]+)`?/i) 
+               || task.content.match(/\[Source ↗\]\((https?:\/\/[^\s\)]+)\)/i);
     return match ? match[1] : '';
   };
 
@@ -164,12 +167,32 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
     }
   };
 
+  const handleRegenerate = async (provider: 'gemini' | 'lmstudio') => {
+    if (loading || regenerating) return;
+    setRegenerating(provider);
+    if (onBusyChange) onBusyChange(true);
+    const res = await regenerateTask(task.id, provider);
+    setRegenerating(null);
+    if (onBusyChange) onBusyChange(false);
+    if (res.success) {
+      onComplete(); // Refresh parent to reload the overwritten file
+    } else {
+      alert(`Regeneration failed: ${res.error}`);
+    }
+  };
+
   return (
     <div className="task-detail animate-fade-in">
       <div className="detail-header">
         <h2 className="gradient-text">{task.title}</h2>
-        <div className={`status-badge ${fromQueue ? 'queue-badge-status' : ''}`}>
-          {fromQueue ? 'READY TO POST' : (fromHeld ? 'ON HOLD' : 'PENDING APPROVAL')}
+        <div className="header-badges">
+          <div className={`detail-provider-badge ${task.provider?.includes('gemini') ? 'dpb-gemini' : task.provider?.includes('local') || task.provider?.includes('lmstudio') ? 'dpb-local' : 'dpb-unknown'}`}>
+            {task.provider?.includes('gemini') ? <Sparkles size={12} /> : task.provider?.includes('local') || task.provider?.includes('lmstudio') ? <Monitor size={12} /> : null}
+            {task.provider || 'Unknown AI'}
+          </div>
+          <div className={`status-badge ${fromQueue ? 'queue-badge-status' : ''}`}>
+            {fromQueue ? 'READY TO POST' : (fromHeld ? 'ON HOLD' : 'PENDING APPROVAL')}
+          </div>
         </div>
       </div>
 
@@ -291,10 +314,33 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
             <button
               className="btn-trash"
               onClick={handleTrash}
-              disabled={trashing}
+              disabled={trashing || regenerating !== null}
             >
               <Trash2 size={16} /> {trashing ? 'Moving...' : 'Trash'}
             </button>
+
+            {!fromQueue && !fromHeld && (
+              <>
+                <button
+                  className="btn-regen btn-regen-local"
+                  onClick={() => handleRegenerate('lmstudio')}
+                  disabled={loading || regenerating !== null}
+                  title="Retry with Local AI"
+                >
+                  <Monitor size={16} className={regenerating === 'lmstudio' ? 'spin' : ''} />
+                  {regenerating === 'lmstudio' ? 'Regen...' : 'Regen (Local)'}
+                </button>
+                <button
+                  className="btn-regen btn-regen-gemini"
+                  onClick={() => handleRegenerate('gemini')}
+                  disabled={loading || regenerating !== null}
+                  title="Retry with Gemini"
+                >
+                  <Sparkles size={16} className={regenerating === 'gemini' ? 'spin' : ''} />
+                  {regenerating === 'gemini' ? 'Regen...' : 'Regen (Gemini)'}
+                </button>
+              </>
+            )}
             <button
               className="btn-secondary glass"
               onClick={handleHold}
@@ -309,7 +355,7 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
             </button>
             <button
               className="btn-primary"
-              disabled={fromQueue ? (!postEdit || posting) : (!choice || loading)}
+              disabled={fromQueue ? (!postEdit || posting) : (!choice || loading || regenerating !== null)}
               onClick={fromQueue ? handlePost : handleDecide}
               style={fromQueue ? { background: '#1da1f2', borderColor: '#1da1f2' } : {}}
             >
@@ -338,6 +384,36 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
           justify-content: space-between;
           align-items: center;
           margin-bottom: 0.5rem;
+        }
+        .header-badges {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          flex-shrink: 0;
+        }
+        .detail-provider-badge {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.7rem;
+          font-weight: 700;
+        }
+        .dpb-gemini {
+          background: rgba(79, 70, 229, 0.1);
+          color: #818cf8;
+          border: 1px solid rgba(79, 70, 229, 0.3);
+        }
+        .dpb-local {
+          background: rgba(139, 92, 246, 0.1);
+          color: #a78bfa;
+          border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        .dpb-unknown {
+          background: rgba(100, 116, 139, 0.1);
+          color: #94a3b8;
+          border: 1px solid rgba(100, 116, 139, 0.3);
         }
         .status-badge {
           background: rgba(245, 158, 11, 0.1);
@@ -541,6 +617,41 @@ export default function TaskDetail({ task, onComplete, fromHeld = false, fromQue
           opacity: 0.5;
           cursor: not-allowed;
         }
+        .btn-regen {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.8rem 1rem;
+          border-radius: 8px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          transition: all 0.2s;
+          border: 1px solid transparent;
+          cursor: pointer;
+        }
+        .btn-regen-local {
+          background: rgba(139, 92, 246, 0.05);
+          color: #a78bfa;
+          border-color: rgba(139, 92, 246, 0.2);
+        }
+        .btn-regen-local:hover:not(:disabled) {
+          background: rgba(139, 92, 246, 0.12);
+          border-color: rgba(139, 92, 246, 0.4);
+        }
+        .btn-regen-gemini {
+          background: rgba(79, 70, 229, 0.05);
+          color: #818cf8;
+          border-color: rgba(79, 70, 229, 0.2);
+        }
+        .btn-regen-gemini:hover:not(:disabled) {
+          background: rgba(79, 70, 229, 0.12);
+          border-color: rgba(79, 70, 229, 0.4);
+        }
+        .btn-regen:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
         .post-result {
           margin-top: 0.75rem;
           padding: 0.6rem 1rem;
