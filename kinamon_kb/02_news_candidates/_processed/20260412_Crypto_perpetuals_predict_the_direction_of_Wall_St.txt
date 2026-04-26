@@ -1,0 +1,37 @@
+Title: 仮想通貨先物取引は、89%の精度でウォール街の月曜日の始値の方向性を予測、データが示す
+Evaluation: A
+Reason: 専門的なデータと市場構造の変化に関する独自の視点を提供している。
+Assigned Bot: bot_02_trader
+Topics: crypto_defi, investment, ai_llm
+Summary: 仮想通貨先物取引がウォール街の月曜日の始値方向性を高い精度で予測するというデータに関する記事。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Crypto perpetuals predict the direction of Wall Street’s Monday open with 89% accuracy, data shows
+Source: https://www.coindesk.com/markets/2026/04/11/crypto-perpetuals-predict-the-direction-of-wall-street-s-monday-open-with-89-accuracy-data-shows
+
+Crypto perpetuals predict the direction of Wall Street’s Monday open with 89% accuracy, data shows
+Over half (57%) of Monday market opens is s already reflected in crypto markets' perpetual futures products.
+What to know:
+- Weekend price moves in crypto-based perpetual futures correctly predict the direction of Monday’s opening in traditional futures 89% of the time.
+- Over half (57%) of the expected price move is already reflected in crypto markets, the median “capture ratio," before traditional exchanges reopen.
+- Rising trading volume, which has grown to average 38% of weekday levels, points to a structural shift toward 24/7 price discovery.
+Crypto exchanges are starting to take on a new role: pricing traditional assets while Wall Street is closed.
+The growing market for perpetual futures contracts tied to traditional financial instruments including commodities like gold and oil that runs around the clock on cryptocurrency exchanges is responsible.
+Data from Binance Research suggests these markets, which hit $31 billion in weekly trading volume on commodities volatility, are doing more than filling idle hours. Weekend price moves in gold-linked perps correctly predict the direction of Monday’s opening in traditional futures about 89% of the time, Binance found. The correlation between the two sits near 0.80, indicating a strong relationship.
+The report finds a median “capture ratio” of 57%, meaning more than half of the expected move is already reflected in crypto markets before traditional exchanges open.
+The extreme volatility seen over the war in Iran serves as an example. As tensions rose over the weekend of February 28 to March 1, trading volume in these contracts surged to $8.1 billion, far above typical levels. Traders used the market to hedge and react in real time while traditional venues were closed.
+Weekend activity has grown steadily over the past month as volumes now average about 38% of weekday levels, according to Binance’s data.
+“While the magnitude of price discovery still has room for improvement, directional accuracy is already compelling,” the firm wrote. “Weekend perpetual price movements correctly predict the direction of Monday’s opening gap 89% of the time. For traders seeking to position ahead of Monday’s open or manage weekend risk, this level of directional reliability makes TradFi-perps a valuable signal source.”
+These products also offer other advantages by bringing financial instruments that would otherwise have forced crypto holders to off-ramp to access directly into their platfforms.
+Read more: Traders are the big winners as 24/7 stocks will finally end the after-hours price 'manipulation'
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+HYPE has surged around 200% over the last 12 months. Other asset managers including Grayscale, 21Shares, and VanEck are also eyeing HYPE-linked ETFs.
+What to know:
+- Bitwise filed for a proposed exchange-traded fund holding Hyperliquid's HYPE token directly, trading under ticker BHYP on NYSE Arca.
+- The fund includes a staking component with about 85% of staking rewards retained after fees, a 0.67% annual management fee and custody handled by Anchorage Digital.
+- HYPE has surged around 200%...

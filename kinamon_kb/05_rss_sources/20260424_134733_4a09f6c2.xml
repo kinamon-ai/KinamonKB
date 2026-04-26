@@ -1,0 +1,811 @@
+<!-- Source: https://www.technologyreview.com/feed/ -->
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MIT Technology Review</title>
+	<atom:link href="https://www.technologyreview.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.technologyreview.com</link>
+	<description></description>
+	<lastBuildDate>Thu, 23 Apr 2026 11:56:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9.4</generator>
+
+<image>
+	<url>https://wp.technologyreview.com/wp-content/uploads/2024/09/cropped-TR-Logo-Block-Centered-R.png?w=32</url>
+	<title>MIT Technology Review</title>
+	<link>https://www.technologyreview.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">172986898</site>	<item>
+		<title>The Download: introducing the Nature issue</title>
+		<link>https://www.technologyreview.com/2026/04/23/1136346/the-download-introducing-nature-issue/</link>
+		
+		<dc:creator><![CDATA[Thomas Macaulay]]></dc:creator>
+		<pubDate>Thu, 23 Apr 2026 12:10:00 +0000</pubDate>
+				<category><![CDATA[The Download]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1136346</guid>
+
+					<description><![CDATA[This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Introducing: the Nature issue When we talk about “nature,” we usually mean something untouched by humans. But little of that world exists today.&#160; From microplastics in rainforest wildlife to artificial light&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><em>This is today&#8217;s edition of </em><a href="https://forms.technologyreview.com/newsletters/briefing-the-download/?_ga=2.179569122.736533416.1649661040-405833893.1649413289"><em>The Download</em></a>,<em> our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology.</em><br></p>
+
+
+
+<h3 class="wp-block-heading"><strong>Introducing: the Nature issue</strong></h3>
+
+
+
+<p>When we talk about “nature,” we usually mean something untouched by humans. But little of that world exists today.&nbsp;</p>
+
+
+
+<p>From microplastics in rainforest wildlife to artificial light in the Arctic Ocean, human influence now reaches every corner of Earth. In this context, what even is nature? And should we employ technology to try to make the world more “natural”?&nbsp;&nbsp;</p>
+
+
+
+<p>In our <a href="https://www.technologyreview.com/magazines/the-nature-issue/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">new Nature issue,</a> <em>MIT Technology Review</em> grapples with these questions. We investigate birds that <a href="https://www.technologyreview.com/2026/04/16/1135179/anthropogenic-noise-hurting-animals/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">can’t sing,</a> wolves that <a href="https://www.technologyreview.com/2026/04/20/1135222/red-wolves-colossal-biosciences-clones/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">aren’t wolves</a>, and grass <a href="https://www.technologyreview.com/2026/04/09/1135092/astroturf-fake-grass-artificial-heated-debates/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">that isn’t grass</a>. We look for the meaning of life <a href="https://www.technologyreview.com/2026/04/21/1135231/digging-for-truth-north-pole-past-seabed/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">under Arctic ice</a>, within ourselves, and in the far future on a distant world, courtesy of <a href="https://www.technologyreview.com/2026/04/10/1135106/jeff-vandermeer-constellations-science-fiction/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">new fiction</a> by the renowned author Jeff VanderMeer.&nbsp;</p>
+
+
+
+<p>Together, these stories examine how technology has altered our planet—and how it might be used to repair it. <a href="https://www.technologyreview.com/subscribe?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Subscribe now to read the full print issue</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>What’s next for large language models?</strong></h3>
+
+
+
+<p>After ChatGPT launched in late 2022, the OpenAI chatbot became an everyday everything app for hundreds of millions of people. It led to LLMs being heralded as the new future. The entire tech industry was consumed by the inferno, with companies racing to spin up rival products.</p>
+
+
+
+<p>But what’s the next big thing after LLMs? More LLMs—but better. Let’s call them LLMs+. <a href="https://www.technologyreview.com/2026/04/21/1135645/llm-large-language-models-ai/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Find out how they’re set to become cheaper, more efficient, and more powerful</a>.</p>
+
+
+
+<p><em>—Will Douglas Heaven</em></p>
+
+
+
+<p><strong>LLMs+ is on our list of the </strong><a href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*"><strong>10 Things That Matter in AI Right Now</strong></a><strong>, MIT Technology Review’s guide to what’s really worth your attention in the busy, buzzy world of AI. We’ll be unpacking one item from the list each day here in The Download, so stay tuned.</strong></p>
+
+
+
+<h3 class="wp-block-heading"><strong>Will fusion power get cheap? Don’t count on it.</strong></h3>
+
+
+
+<p>Fusion power could provide a steady, zero-emissions source of electricity in the future—if companies can get plants built and running. But a new study published in <em>Nature Energy</em> suggests that even if that future arrives, it might not come cheap.</p>
+
+
+
+<p>The research team aimed to improve predictions of fusion’s future price by estimating the technology’s experience rate—the percentage by which its cost declines every time capacity doubles. Their findings offer new clues on the technology’s path to deployment. <a href="https://www.technologyreview.com/2026/04/23/1136329/fusion-power-cost/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Read the full story</a>.</p>
+
+
+
+<p><em>—Casey Crownhart</em></p>
+
+
+
+<p><strong>This </strong><a href="https://www.technologyreview.com/2026/04/23/1136329/fusion-power-cost/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*"><strong>story</strong></a><strong> is from The Spark, our weekly climate newsletter. </strong><a href="https://forms.technologyreview.com/newsletters/climate-energy-the-spark/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*"><strong>Sign up</strong></a> <strong>to receive it in your inbox every Wednesday.</strong></p>
+
+
+
+<p class="has-medium-font-size"><strong>The must-reads</strong></p>
+
+
+
+<p><em>I’ve combed the internet to find you today’s most fun/important/scary/fascinating stories about technology.</em></p>
+
+
+
+<p><strong>1 Trump signaled he’s open to reversing the Anthropic ban</strong><br>What that really means in practice remains to be seen. (<a href="https://www.reuters.com/legal/government/trump-says-anthropic-is-shaping-up-open-deal-with-pentagon-2026-04-21/">Reuters</a> $)<br>+ <em>Anthropic says there’s no “kill switch” for its AI. </em>(<a href="https://www.axios.com/2026/04/22/anthropic-no-kill-switch-ai-classified-settings">Axios</a>)<br><em>+ “Humans in the loop” in AI warfare is an illusion.</em> (<a href="https://www.technologyreview.com/2026/04/16/1136029/humans-in-the-loop-ai-war-illusion/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)</p>
+
+
+
+<p><strong>2 SpaceX plans to manufacture its own GPUs<br></strong>To support the company’s growing AI ambitions. (<a href="https://www.reuters.com/business/autos-transportation/spacex-targets-in-house-gpus-it-warns-investors-chip-supply-costs-2026-04-23/">Reuters</a> $)<br><em>+ Musk is shifting SpaceX’s focus from Mars to AI ahead of its IPO.</em> (<a href="https://www.nytimes.com/2026/04/22/technology/elon-musk-spacex-ipo-goals.html">NYT</a> $)<br><em>+ SpaceX and Tesla may be on a collision course. </em>(<a href="https://www.ft.com/content/6ca9125f-f6fa-47ed-9a3b-5202757c02e9">FT</a> $)<br><br><strong>3 Chinese tech giant Tencent has unveiled its first flagship AI model<br></strong>A former OpenAI researcher is at the helm. (<a href="https://www.scmp.com/tech/big-tech/article/3351101/tencent-unveils-first-flagship-ai-model-former-openai-researcher-helm?utm_source=feedly_feed">SCMP</a>)<br><em>+ Chinese open models are spreading fast.</em> (<a href="https://www.technologyreview.com/2026/02/12/1132811/whats-next-for-chinese-open-source-ai/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)<br><br><strong>4 High earners are racing ahead on AI, deepening workplace divides</strong><br>The division in adoption risks widening inequality. (<a href="https://www.ft.com/content/0873e3cb-cb02-4b47-941f-14da74149670">FT</a> $)<br><em>+ Startups are bragging they spend more on AI than staff</em>. (<a href="https://www.404media.co/startups-brag-they-spend-more-money-on-ai-than-human-employees/">404 Media</a>)<br><br><strong>5 Thousands of Samsung workers are demanding a new share of AI profits</strong><br>Chip-division employees want 15% of the operating profit. (<a href="https://www.bloomberg.com/news/articles/2026-04-23/samsung-rally-draws-30-000-to-demand-greater-share-of-ai-profits">Bloomberg</a> $)<br><em>+ Here’s why opinion on AI is so divided.</em> (<a href="https://www.technologyreview.com/2026/04/13/1135720/why-opinion-on-ai-is-so-divided/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)<br><br><strong>6 AI is helping mediocre Korean hackers steal millions</strong><br>They’re vibe coding their malware. (<a href="https://www.wired.com/story/ai-tools-are-helping-mediocre-north-korean-hackers-steal-millions/">Wired</a> $)<br><em>+ AI is making online crimes easier.</em> (<a href="https://www.technologyreview.com/2026/02/12/1132386/ai-already-making-online-swindles-easier/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)<br><br><strong>7 Kalshi suspended three political candidates for betting on their own races</strong><br>Including a Democrat and a Republican running for Congress. (<a href="https://edition.cnn.com/2026/04/22/politics/kalshi-prediction-site-suspend-political-candidates">CNN</a>)<br><em>+ And an independent candidate who said he did it to make a point.</em> (<a href="https://gizmodo.com/reality-tv-star-senate-candidate-claims-he-intentionally-got-caught-insider-trading-on-kalshi-to-make-a-point-2000749825">Gizmodo</a>)<br><em>+ Lawmakers argue that prediction markets are a loophole for gambling.</em> (<a href="https://www.npr.org/2026/01/30/nx-s1-5691837/lawsets-prediction-market-kalshi">NPR</a>)<br><br><strong>8 A ping-pong robot is beating elite human players for the first time</strong><br>The Sony AI system was trained with reinforcement learning. (<a href="https://www.newscientist.com/article/2523918-table-tennis-playing-robot-on-track-to-becoming-world-champion/">New Scientist</a>)<br><em>+ Just days earlier, a humanoid smashed the human half-marathon record.</em> (<a href="https://apnews.com/article/humanoid-robots-half-marathon-beijing-302d0c4781bab20100d6a0bb4e77b629">AP</a>)<br><br><strong>9 Crypto scammers are luring ships into the Strait of Hormuz</strong><br>By falsely promising safe passage. (<a href="https://arstechnica.com/security/2026/04/crypto-scam-lures-ships-into-strait-of-hormuz-falsely-promising-safe-passage/">Ars Technica</a>)<br><br><strong>10 ‘Age tech’ could help us grow old comfortably at home<br></strong>Apps, wearables, and remote monitoring could fill caregiving gaps. (<a href="https://www.nytimes.com/2026/04/22/business/seniors-home-care-tech.html">NYT</a> $)<br><br>&nbsp;</p>
+
+
+
+<p class="has-medium-font-size"><strong>Quote of the day</strong></p>
+
+
+
+<h2 class="wp-block-heading"><strong>“It’s a hallucinogenic business plan.”</strong></h2>
+
+
+
+<p><strong><br><br></strong>—Ross Gerber, the chief executive of Gerber Kawasaki, an investment firm that owns SpaceX shares, tells <a href="https://www.nytimes.com/2026/04/22/technology/elon-musk-spacex-ipo-goals.html">the New York Times</a> that he’s unimpressed by Musk’s changing goals for the aerospace company.&nbsp;</p>
+
+
+
+<p class="has-medium-font-size"><strong>One More Thing</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="3000" height="1688" src="https://wp.technologyreview.com/wp-content/uploads/2024/05/AP24106836358581-social.jpg?w=3000" alt="Photos of victims are displayed under white crosses at a memorial for the August 2023 wildfire victims" class="wp-image-1092529" srcset="https://wp.technologyreview.com/wp-content/uploads/2024/05/AP24106836358581-social.jpg 3000w, https://wp.technologyreview.com/wp-content/uploads/2024/05/AP24106836358581-social.jpg?resize=300,169 300w, https://wp.technologyreview.com/wp-content/uploads/2024/05/AP24106836358581-social.jpg?resize=768,432 768w, https://wp.technologyreview.com/wp-content/uploads/2024/05/AP24106836358581-social.jpg?resize=1536,864 1536w, https://wp.technologyreview.com/wp-content/uploads/2024/05/AP24106836358581-social.jpg?resize=2048,1152 2048w" sizes="(max-width: 3000px) 100vw, 3000px" /><div class="image-credit">AP PHOTO/LINDSEY WASSON</div>
+</figure>
+</div>
+
+
+<h4 class="wp-block-heading"><strong><br></strong><strong>This grim but revolutionary DNA technology is changing how we respond to mass disasters</strong></h4>
+
+
+
+<p>After hundreds went missing in Maui’s deadly fires, victims were identified with rapid DNA analysis—an increasingly vital tool for putting names to the dead in mass-casualty events.</p>
+
+
+
+<p>The technology helped identify victims within just a few hours and bring families some closure more quickly than ever before. But it also previews a dark future marked by the rising frequency of catastrophic events.</p>
+
+
+
+<p><a href="https://www.technologyreview.com/2024/05/16/1092484/rapid-dna-analysis-ande-mass-disaster-victim-identification-maui/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Find out how this forensic breakthrough is preparing us for a more volatile world</a>.</p>
+
+
+
+<p><strong><br></strong><em>—Erika Hayasaki</em></p>
+
+
+
+<p class="has-medium-font-size"><strong>We can still have nice things</strong></p>
+
+
+
+<p><em>A place for comfort, fun and distraction to brighten up your day. (Got any ideas? </em><a href="mailto:thomas.macaulay@technologyreview.com"><em>Drop me a line</em></a><em>.)</em><br><br>+ This fascinating <a href="https://theconversation.com/what-was-the-very-first-plant-in-the-world-271828">dive into botanical history</a> reveals the origins of the first true plants.<br>+ Here’s how to use <a href="https://cardcatalogforlife.substack.com/p/google-has-a-secret-reference-desk">Google’s reference desk</a> to find what ordinary search engines miss.<br>+ Watch <a href="https://www.youtube.com/watch?v=E-F2QQuZZGk">duct tape get deconstructed</a> to reveal the physics behind its legendary stickiness.<br>+ When <a href="https://www.youtube.com/watch?v=cedNya7e8Uc">Radiohead covers Joy Division</a>, the result is a beautiful intersection of two legendary musical eras.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1136346</post-id>	</item>
+		<item>
+		<title>Will fusion power get cheap? Don’t count on it.</title>
+		<link>https://www.technologyreview.com/2026/04/23/1136329/fusion-power-cost/</link>
+		
+		<dc:creator><![CDATA[Casey Crownhart]]></dc:creator>
+		<pubDate>Thu, 23 Apr 2026 10:00:00 +0000</pubDate>
+				<category><![CDATA[Climate change and energy]]></category>
+		<category><![CDATA[App]]></category>
+		<category><![CDATA[The Spark]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1136329</guid>
+
+					<description><![CDATA[Fusion power could provide a steady, zero-emissions source of electricity in the future—if companies can get plants built and running. But a new study suggests that even if that future arrives, it might not come cheap. Technologies tend to get less expensive over time. Lithium-ion batteries are now about 90% cheaper than they were in&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Fusion power could provide a steady, zero-emissions source of electricity in the future—if companies can get plants built and running. But a new study suggests that even if that future arrives, it might not come cheap.</p>
+
+
+
+<p>Technologies tend to get less expensive over time. Lithium-ion batteries are now about <a href="https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/">90% cheaper</a> than they were in 2013. But historically, different technologies tend to go through this curve at different rates. And the cost of fusion might not sink as quickly as the prices of batteries or solar.</p>
+
+
+
+<p>It’s tricky to make any predictions about the cost of a technology that doesn’t exist yet. But when there’s billions of dollars of public and private funding on the line, it’s worth considering what assumptions we’re making about our future energy mix and its cost.</p>
+
+
+
+<p>One crucial measure is a metric called experience rate—the percentage by which an energy technology’s cost declines every time capacity doubles. A higher figure means a quicker price drop and better economic gains with scaling.</p>
+
+
+
+<p>Historically, the experience rate is 12% for onshore wind power, 20% for lithium-ion batteries, and 23% for solar modules. Other energy technologies haven’t gotten cheap quite as quickly—fission is at just 2%.</p>
+
+
+
+<p>In the new <a href="https://www.nature.com/articles/s41560-026-02023-8">study</a>, published in <em>Nature Energy</em>, researchers aimed to improve predictions of fusion’s future price by estimating the technology’s experience rate. The team looked at three key characteristics that can correlate with experience rate: unit size, design complexity, and the need for customization. The larger and more complex a technology is, and/or the more it needs to be customized for different use cases, the lower the experience rate.</p>
+
+
+
+<p>The researchers interviewed fusion experts, including public-sector researchers and those working at companies in the private sector. They had the experts evaluate fusion power plants on those characteristics and used that info to predict the experience rate. (One note here: The study focused only on magnetic confinement and laser inertial confinement, two of the leading fusion approaches, which together receive the vast majority of funding today. Other approaches could come with different cost benefits.)</p>
+
+
+
+<p>Fusion plants will likely be relatively large, similar to other types of facilities (like coal and fission power plants) that rely on generating heat. They will probably need less customization than fission plants—largely because regulations and safety considerations should be simpler—but more than technologies like solar panels. And as for complexity, “there was almost unanimous agreement that fusion is incredibly complex,” says Lingxi Tang, a PhD candidate in the energy and technology policy group at ETH Zurich in Switzerland and one of the authors of the study. (Some experts said it was literally off the scale the researchers gave them.)</p>
+
+
+
+<p>The final figure the researchers suggest for fusion’s experience rate is between 2% and 8%, meaning it will see a faster price reduction than nuclear power but not as dramatic an improvement as many common energy technologies being deployed today.</p>
+
+
+
+<p>That means that it would take a lot of deployment—and likely quite a long time—for the price of building a fusion reactor to drop significantly, so electricity produced by fusion plants could be expensive for a while. And it’s a much slower rate than the 8% to 20% that many modeling studies assume today.</p>
+
+
+
+<p>“On the whole, I think questions should be raised about current investment levels in fusion,” Tang says. (The US allocated over $1 billion to fusion in the 2024 fiscal year, and private-sector funding totaled $2.2 billion between July 2024 and July 2025.) “If you’re talking about decarbonization of the energy system, is this really the best use of public money?”</p>
+
+
+
+<p>But some experts say that looking to the past to understand the future of energy prices might be misleading.“It’s a good exercise, but we have to be humble about how much we don’t know,” says Egemen Kolemen, a professor at the Princeton Plasma Physics Laboratory.</p>
+
+
+
+<p>In 2000, many analysts predicted that solar power would remain expensive—but then production exploded and prices came crashing down, largely because China went all in, he says. “People weren’t exactly wrong then,” he adds. “They were just extrapolating what they saw into the future.”</p>
+
+
+
+<p>How fast prices drop depends on regulations, geopolitical dynamics, and labor cost, he says: “We haven’t built the thing yet, so we don’t know.”</p>
+
+
+
+<p><em>This article is from The Spark, </em>MIT Technology Review<em>’s weekly climate newsletter. To receive it in your inbox every Wednesday, </em><a href="https://forms.technologyreview.com/newsletters/climate-energy-the-spark/"><em>sign up here</em></a><em>.</em></p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1136329</post-id>	</item>
+		<item>
+		<title>The Download: introducing the 10 Things That Matter in AI Right Now</title>
+		<link>https://www.technologyreview.com/2026/04/22/1136310/the-download-10-things-that-matter-in-ai-right-now/</link>
+		
+		<dc:creator><![CDATA[Thomas Macaulay]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2026 12:10:00 +0000</pubDate>
+				<category><![CDATA[The Download]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1136310</guid>
+
+					<description><![CDATA[This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Introducing: 10 Things That Matter in AI Right Now What actually matters in AI right now? It’s getting harder to tell amid the constant launches, hype, and warnings. To cut through&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><em>This is today&#8217;s edition of </em><a href="https://forms.technologyreview.com/newsletters/briefing-the-download/?_ga=2.179569122.736533416.1649661040-405833893.1649413289"><em>The Download</em></a>,<em> our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology.</em><br></p>
+
+
+
+<h3 class="wp-block-heading">Introducing: 10 Things That Matter in AI Right Now</h3>
+
+
+
+<p>What actually matters in AI right now? It’s getting harder to tell amid the constant launches, hype, and warnings. To cut through the noise, <em>MIT Technology Review’s</em> reporters and editors have distilled years of analysis into a new essential guide: the <a href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">10 Things That Matter in AI Right Now</a>.</p>
+
+
+
+<p>The list builds on our annual <a href="https://www.technologyreview.com/2026/01/12/1130697/10-breakthrough-technologies-2026/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">10 Breakthrough Technologies</a>, but takes a wider view of the ideas, topics, and research shaping AI, spotlighting the trends and breakthroughs shaping the world.</p>
+
+
+
+<p>We’ll be unpacking one item from the list each day here in The Download, explaining what it means and why it matters. <a href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Read the full rundown now</a>—and stay tuned for the days ahead.</p>
+
+
+
+<h3 class="wp-block-heading">MIT Technology Review Narrated: desalination plants in the Middle East are increasingly vulnerable</h3>
+
+
+
+<p>As the conflict in Iran has escalated, a crucial resource is under fire: the desalinization technology that supplies water in the region.<br><br>President Donald Trump recently threatened to destroy “possibly all desalinization plants” in Iran if the Strait of Hormuz is not reopened. The impact on farming, industry, and—crucially—drinking in the Middle East could be severe. <a href="https://www.technologyreview.com/2026/04/07/1135235/desalination-technology-water/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Find out why</a>.</p>
+
+
+
+<p><em>—Casey Crownhart</em></p>
+
+
+
+<p><strong>This is our latest </strong><a href="https://www.technologyreview.com/2026/04/07/1135235/desalination-technology-water/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*"><strong>story</strong></a><strong> to be turned into an MIT Technology Review Narrated podcast, which we publish each week on </strong><a href="https://open.spotify.com/show/6QefEeY1IKYVn5w6nUV83Y"><strong>Spotify</strong></a><strong> and </strong><a href="https://podcasts.apple.com/gb/podcast/mit-technology-review-narrated/id1523584878"><strong>Apple Podcasts</strong></a><strong>. Just navigate to MIT Technology Review Narrated on either platform, and follow us to get all our new content as it’s released.</strong></p>
+
+
+
+<p class="has-medium-font-size"><strong>The must-reads</strong></p>
+
+
+
+<p><em>I’ve combed the internet to find you today’s most fun/important/scary/fascinating stories about technology.</em></p>
+
+
+
+<p><strong>1 An unauthorized group has reportedly accessed Anthropic’s Mythos<br></strong>Users in a private online forum may have gained access. (<a href="https://www.bloomberg.com/news/articles/2026-04-21/anthropic-s-mythos-model-is-being-accessed-by-unauthorized-users">Bloomberg</a> $)<br><em>+ Anthropic said the model was too dangerous for a full release. </em>(<a href="https://www.axios.com/2026/04/08/anthropic-mythos-model-ai-cyberattack-warning">Axios</a>)<br>+ <em>Mozilla used it to find 271 security vulnerabilities in Firefox.</em> (<a href="https://www.wired.com/story/mozilla-used-anthropics-mythos-to-find-271-bugs-in-firefox/">Wired</a> $)<br><br><strong>2 Meta will track workers’ clicks and keystrokes for AI training<br></strong>Tracking software is being installed on workers’ computers.(<a href="https://www.reuters.com/sustainability/boards-policy-regulation/meta-start-capturing-employee-mouse-movements-keystrokes-ai-training-data-2026-04-21/">Reuters</a> $)<br><em>+ Employees are up in arms about the program.</em> (<a href="https://www.businessinsider.com/meta-new-ai-tool-tracks-staff-activity-sparks-concern-2026-4">Business Insider</a>)<br><em>+ LLMs could supercharge mass surveillance in the US.</em> (<a href="https://www.technologyreview.com/2026/04/21/1135919/ai-surveillance-privacy-llms-bulk-data/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)<br><br><strong>3 ChatGPT allegedly advised the Florida State shooter<br></strong>About when and where to strike, and which ammunition to use. (<a href="https://www.washingtonpost.com/technology/2026/04/21/chatgpt-fsu-shooting-openai/">Washington Post</a> $)<br><em>+ Florida’s attorney general is probing ChatGPT’s role in the shooting.</em> (<a href="https://arstechnica.com/tech-policy/2026/04/florida-probes-chatgpt-role-in-mass-shooting-openai-says-bot-not-responsible/">Ars Technica</a>)<br><em>+ Does AI cause delusions or just amplify them?</em> (<a href="https://www.technologyreview.com/2026/03/23/1134527/the-hardest-question-to-answer-about-ai-fueled-delusions/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)</p>
+
+
+
+<p><strong>4 SpaceX has secured the option to buy AI startup Cursor for $60 billion<br></strong>Or pay $10 billion for the work they’re doing together. (<a href="https://www.theverge.com/science/916427/spacex-cursor-potential-deal-acquisition">The Verge</a>)<br><em>+ SpaceX made the deal as it prepares to go public.</em> (<a href="https://www.nytimes.com/2026/04/21/business/spacex-cursor-deal.html">NYT</a> $)<br><em>+ Musk’s endgame for the company may be a land grab in space. </em>(<a href="https://www.washingtonpost.com/technology/2026/04/21/chatgpt-fsu-shooting-openai/">The Atlantic</a> $)<strong><br></strong><br><strong>5 The Pentagon wants $54 billion for drones<br></strong>That would rank among the top 10 military budgets for entire nations. (<a href="https://arstechnica.com/ai/2026/04/pentagon-wants-54b-for-drones-more-than-most-nations-military-budgets/">Ars Technica</a>)<br><em>+ Shoplifters could soon be chased down by drones.</em> (<a href="https://www.technologyreview.com/2025/09/25/1124088/shoplifters-could-soon-be-chased-down-by-drones/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)</p>
+
+
+
+<p><strong>6 Apple’s new chief hardware officer signals a sprint to build in-house chips<br></strong>Apple silicon lead Johny Srouji has been promoted to the role. (<a href="https://www.cnbc.com/2026/04/21/apple-promotes-chip-lead-srouji-as-it-corners-silicon-in-iphones-macs.html">CNBC</a>)<br><br><strong>7 China’s government is tightening its grip on AI firms that try to leave<br></strong>It’s doing all it can to stop firms like Manus sending talent and research overseas. (<a href="https://www.washingtonpost.com/world/2026/04/21/china-ai-competition-manus-meta/">Washington Post</a> $)<strong><br><br>8 The FBI is probing the deaths of scientists tied to sensitive research</strong><br>Including a nuclear physicist and MIT professor shot outside his home. (<a href="https://edition.cnn.com/2026/04/21/us/deaths-disappearances-scientists-investigation">CNN</a>)</p>
+
+
+
+<p><strong>9 The US is accelerating research into psychedelic medical treatment</strong><br>Including the mysterious ibogaine. (<a href="https://www.nature.com/articles/d41586-026-01286-1">Nature</a>)<br><em>+ But psychedelics are (still) falling short in clinical trials.</em> (<a href="https://www.technologyreview.com/2026/03/20/1134419/psychedelics-overhyped-psilocybin-depression-placebo/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">MIT Technology Review</a>)</p>
+
+
+
+<p><strong>10 The first retail boutique run by an AI agent has opened—and it’s chaos</strong><br>The San Francisco shop is reassuringly mismanaged. (<a href="https://www.nytimes.com/2026/04/21/us/san-francisco-store-managed-ai-agent.html">NYT</a> $)<br><br><br></p>
+
+
+
+<p class="has-medium-font-size"><strong>Quote of the day</strong></p>
+
+
+
+<h2 class="wp-block-heading"><strong>“I was very impressed with myself to have the head of Apple calling to ‘kiss my ass’.”&nbsp;</strong></h2>
+
+
+
+<p>—Donald Trump pays a classy tribute to Tim Cook on <a href="https://truthsocial.com/@realDonaldTrump/posts/116442276577696798">Truth Social</a>.</p>
+
+
+
+<p class="has-medium-font-size"><strong>One More Thing</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="wp-block-image size-large"><img decoding="async" width="2127" height="1192" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/09_20_JFM_MIT_TheDownload.webp?w=2127" alt="" class="wp-image-1136311" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/09_20_JFM_MIT_TheDownload.webp 2127w, https://wp.technologyreview.com/wp-content/uploads/2026/04/09_20_JFM_MIT_TheDownload.webp?resize=300,168 300w, https://wp.technologyreview.com/wp-content/uploads/2026/04/09_20_JFM_MIT_TheDownload.webp?resize=768,430 768w, https://wp.technologyreview.com/wp-content/uploads/2026/04/09_20_JFM_MIT_TheDownload.webp?resize=1536,861 1536w, https://wp.technologyreview.com/wp-content/uploads/2026/04/09_20_JFM_MIT_TheDownload.webp?resize=2048,1148 2048w" sizes="(max-width: 2127px) 100vw, 2127px" /><div class="image-credit">JOHN F. MALTA</div>
+</figure>
+</div>
+
+
+<h4 class="wp-block-heading"><strong><br></strong><strong>This researcher wants to replace your brain, little by little</strong></h4>
+
+
+
+<p>A US agency pursuing moonshot health breakthroughs has hired a researcher advocating an extremely radical plan for defeating death. His idea? Replace your body parts. All of them. Even your brain.&nbsp;</p>
+
+
+
+<p>Jean Hébert, a program manager at the US Advanced Research Projects Agency for Health (ARPA-H), believes we can beat aging by adding youthful tissue to people’s brains. <a href="https://www.technologyreview.com/2024/08/16/1096808/arpa-h-jean-hebert-wants-to-replace-your-brain/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=*%7CSUBCLASS%7C*&amp;utm_content=*%7CDATE:m-d-Y%7C*">Read the full story on his futuristic plan to extend human life</a>.&nbsp;</p>
+
+
+
+<p><strong><br></strong><em>—Antonio Regalado</em></p>
+
+
+
+<p class="has-medium-font-size"><strong>We can still have nice things</strong></p>
+
+
+
+<p><em>A place for comfort, fun and distraction to brighten up your day. (Got any ideas? </em><a href="mailto:thomas.macaulay@technologyreview.com"><em>Drop me a line</em></a><em>.)</em></p>
+
+
+
+<p>+ A Lego set was <a href="https://www.youtube.com/watch?v=H7J9WO7swBo">sent to the edge of space</a>—and survived.<br>+ Go<a href="https://www.nytimes.com/2026/04/03/style/werner-herzog-workshop-filmmakers.html"> behind the scenes with Werner Herzog</a> as he guides a new generation of filmmakers.<br>+ This<a href="https://www.youtube.com/watch?v=T4Upf_B9RLQ"> video about enshittification</a> perfectly captures the frustration of the degrading internet.<br>+ NASA’s<a href="https://esawebb.org/images/potm2603a/"> latest deep-space capture</a> offers a rare view of planetary systems in their absolute infancy.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1136310</post-id>	</item>
+		<item>
+		<title>AI needs a strong data fabric to deliver business value</title>
+		<link>https://www.technologyreview.com/2026/04/22/1135295/ai-needs-a-strong-data-fabric-to-deliver-business-value/</link>
+		
+		<dc:creator><![CDATA[MIT Technology Review Insights]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2026 10:05:06 +0000</pubDate>
+				<category><![CDATA[Artificial intelligence]]></category>
+		<category><![CDATA[sponsored]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1135295</guid>
+
+					<description><![CDATA[Artificial intelligence is moving quickly in the enterprise, from experimentation to everyday use. Organizations are deploying copilots, agents, and predictive systems across finance, supply chains, human resources, and customer operations. By the end of 2025, half of companies used AI in at least three business functions, according to a recent survey. But as AI becomes&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Artificial intelligence is moving quickly in the enterprise, from experimentation to everyday use. Organizations are deploying copilots, agents, and predictive systems across finance, supply chains, human resources, and customer operations. By the end of 2025, half of companies used AI <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noreferrer noopener">in at least three business functions</a>, according to a recent survey.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="1200" height="675" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/SAP-article-iStock-480794780.jpg" alt="" class="wp-image-1135302" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/SAP-article-iStock-480794780.jpg 1200w, https://wp.technologyreview.com/wp-content/uploads/2026/04/SAP-article-iStock-480794780.jpg?resize=300,169 300w, https://wp.technologyreview.com/wp-content/uploads/2026/04/SAP-article-iStock-480794780.jpg?resize=768,432 768w" sizes="(max-width: 1200px) 100vw, 1200px" /></figure>
+
+
+
+<p>But as AI becomes embedded in core workflows, business leaders are discovering that the biggest obstacle is not model performance or computing power but the quality and the context of the data on which those systems rely. AI essentially introduces a new requirement: Systems must not only access data — they must understand the business context behind it.&nbsp;</p>
+
+
+
+<p>Without that context, AI can generate answers quickly but still make the wrong decision, says Irfan Khan, president and chief product officer of SAP Data &amp; Analytics.&nbsp;</p>
+
+
+
+<p>&#8220;AI is incredibly good at producing results,&#8221; he says. &#8220;It moves fast, but without context it can&#8217;t exercise good judgment, and good judgment is what creates a return on investment for the business. Speed without judgment doesn&#8217;t help. It can actually hurt us.&#8221;</p>
+
+
+
+<p>In the emerging era of autonomous systems and intelligent applications, that context layer is becoming essential. To provide context, companies need a well-designed data fabric that does more than just integrate data, Khan says. The right data fabric allows organizations to scale AI safely, coordinate decisions across systems and agents, and ensure that automation reflects real business priorities rather than making decisions in isolation.&nbsp;</p>
+
+
+
+<p>Recognizing this, many organizations are rethinking their data architecture. Instead of simply moving data into a single repository, they are looking for ways to connect information across applications, clouds, and operational systems while preserving the semantics that describe how the business works. That shift is driving growing interest in data fabric as a foundation for AI infrastructure.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Losing context is a critical AI problem</strong></h3>
+
+
+
+<p>Traditional data strategies have largely focused on aggregation. Over the past two decades, organizations have invested heavily in extracting information from operational systems and loading it into centralized warehouses, lakes, and dashboards. This approach makes it easier to run reports, monitor performance, and generate insights across the business, but in the process, much of the meaning attached to that data — how it relates to policies, processes, and real-world decisions — is lost.&nbsp;</p>
+
+
+
+<p>Take two companies using AI to manage supply-chain disruptions. If one uses raw signals such as inventory levels, lead times, and supply scores, while the other adds context across business processes, policies, and metadata, both systems will rapidly analyze the data but likely come up with different conclusions.&nbsp;</p>
+
+
+
+<p>Information such as which customers are strategic accounts, what tradeoffs are acceptable during shortages, and the status of extended supply chains will allow one AI system to make strategic decisions, while the other will not have the proper context, Khan says.&nbsp;</p>
+
+
+
+<p>&#8220;Both systems move very quickly, but only one moves in the right direction,&#8221; he says. &#8220;This is the context premium and the advantage you gain when your data foundation preserves context across processes, policies and data by design.&#8221;</p>
+
+
+
+<p>In the past, companies implicitly managed a lack of context because human experts provided the missing information, but with AI, there is a shortfall and that creates serious limitations. AI systems do not just display information; they act on it. If a system does not explain why data matters, an AI model may optimize for the wrong outcome. Inventory numbers, payment histories, or demand signals might be accurate, but they do not necessarily reveal which customers must be prioritized, which contractual obligations apply, or which products are strategically important. As a result, the system can produce answers that are technically correct but operationally flawed.</p>
+
+
+
+<p>This realization is changing how companies think about AI readiness. Most acknowledge that they do not have the mature data processes and infrastructure in place to trust their data and their AI systems. Only one in five organizations consider their approach to data to be highly mature, and <a href="https://www.capgemini.com/wp-content/uploads/2025/07/Final-Web-Version-Report-AI-Agents.pdf" target="_blank" rel="noreferrer noopener">only 9% feel fully prepared</a> to integrate and interoperate with their data systems.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Don&#8217;t consolidate, integrate</strong></h3>
+
+
+
+<p>The emerging solution is a data fabric: An abstraction layer that spans infrastructure, architecture, and logical organization. For agentic AI, the fabric becomes the primary interface, allowing agents to interact with business knowledge rather than raw storage systems. Knowledge graphs play a central role, enabling agents to query enterprise data using natural language and business logic.</p>
+
+
+
+<p>The value of the data fabric relies on three components: Intelligent compute to provide speed, a knowledge pool to provide business understanding and context, and agents to provide autonomous action are grounded in that understanding. What makes this powerful is how these capabilities work together, says Khan.&nbsp;</p>
+
+
+
+<p>The technology provides the architecture — a foundation that makes agent-to-agent communication and coordination possible. The process will define how businesses and IT share ownership, and establish governance and a culture in which people trust enough to adopt it. Now all three things must work together for a business data fabric to truly be successful.</p>
+
+
+
+<p>&#8220;It empowers confident, consistent decisions, and when these elements all come together, AI just doesn&#8217;t analyze and interpret the data — it drives smarter, faster decisions that really create business impact,&#8221; he says. &#8220;This is the promise of a thoughtfully designed business data fabric, where every part reinforces the other, and every insight is grounded in trust and clarity.&#8221;</p>
+
+
+
+<p>Technically, building a data-fabric layer requires several capabilities. Data must be accessible across multiple environments through federation rather than forced consolidation. A semantic or knowledge layer is needed to harmonize meaning across systems, often supported by knowledge graphs and catalog-driven metadata. Governance and policy enforcement must also operate across the fabric so that AI systems can access data securely and consistently.</p>
+
+
+
+<p>Together, these elements create a foundation where AI interacts with business knowledge instead of raw storage systems — an essential step for moving from experimentation to real enterprise automation.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Beyond data isolation and dashboards</strong></h3>
+
+
+
+<p>In the emerging era of agentic AI, the responsibility for monitoring, analyzing, and making decisions based on data increasingly shifts to software. AI agents can monitor events, trigger workflows, and make decisions in real time, often without direct human intervention. That speed creates new opportunities, but it also raises the stakes. When multiple agents operate across finance, supply chain, procurement, or customer operations, they must be guided by the same understanding of business priorities.</p>
+
+
+
+<p>Without a common knowledge layer connecting disparate data together, coordination between systems quickly breaks down. One system might optimize for margin, another for liquidity, and another for compliance, each working from a different slice of data.&nbsp;</p>
+
+
+
+<p>Importantly, most enterprises already possess much of the knowledge needed to make this work, says Khan. Years of operational data, master data, workflows, and policy logic already exist across business applications — companies just need to make it accessible. Companies that <a href="https://barc.com/news/ai-in-data-management-falls-short-of-expectations-barc-survey/" target="_blank" rel="noreferrer noopener">deploy data fabrics gain greater trust</a> in their data, with more than two thirds of enterprises seeing improved data accessibility, data visibility, and exerting more control over their data. </p>
+
+
+
+<p>&#8220;The opportunity isn&#8217;t just inventing context from scratch, it&#8217;s activating and connecting the context across your business that already exists,&#8221; he continues, adding that a data fabric is the &#8220;architecture that ensures data semantics, business processes and policies are connected as a unified system across all the clouds.&#8221;</p>
+
+
+
+<p><em>This content was produced by Insights, the custom content arm of MIT Technology Review. It was not written by MIT Technology Review’s editorial staff. It was researched, designed, and written by human writers, editors, analysts, and illustrators. This includes the writing of surveys and collection of data for surveys. AI tools that may have been used were limited to secondary production processes that passed thorough human review.</em></p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1135295</post-id>	</item>
+		<item>
+		<title>3 things Michelle Kim is into right now</title>
+		<link>https://www.technologyreview.com/2026/04/22/1135423/3-things-michelle-kim/</link>
+		
+		<dc:creator><![CDATA[Michelle Kim]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2026 10:00:00 +0000</pubDate>
+				<category><![CDATA[Culture]]></category>
+		<category><![CDATA[App]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1135423</guid>
+
+					<description><![CDATA[Isegye Idol If you thought K-pop was weird, virtual idols—humans who perform as anime-style digital characters via motion capture—will blow your mind. My favorite is a girl group called Isegye Idol, created by Woowakgood, a Korean VTuber (a streamer who likewise performs as a digital persona). Isegye Idol’s six members are anonymous, which seems to&#8230;]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading">Isegye Idol</h3>
+
+
+
+<p>If you thought K-pop was weird, virtual idols<em>—</em>humans who perform as anime-style digital characters via motion capture<em>—</em>will blow your mind. My favorite is a girl group called <a href="https://www.youtube.com/watch?v=euZvZOapmx4&amp;list=RDeuZvZOapmx4&amp;start_radio=1">Isegye Idol</a>, created by <a href="https://www.youtube.com/watch?v=D96oa_VD1P8">Woowakgood</a>, a Korean VTuber (a streamer who likewise performs as a digital persona). Isegye Idol’s six members are anonymous, which seems to let them deploy a rare breed of honesty and humor. They play games (<a href="https://www.youtube.com/watch?v=GCHgEqIYFLc">League of Legends</a>, <a href="https://www.youtube.com/watch?v=DCotbAIg7PY">Go</a>, <a href="https://www.youtube.com/watch?v=w9i5E5HRbXw">Minecraft</a>), chitchat, and perform kitschy <a href="https://www.youtube.com/watch?v=fff8P0kYexQ&amp;list=RDfff8P0kYexQ&amp;start_radio=1">music</a> that’s somewhere between anime soundtrack and video-­game score. It’s very DIY<em>—</em>and very intimate. And the group’s wild popularity speaks to the mood of Gen Z South Koreans, famously lonely and culturally adrift<em>—</em>struggling to find work, giving up on dating, trying to find friendships online. Isegye Idol shows what a magical online universe people can build when reality stops working for them.</p>
+
+
+
+<h3 class="wp-block-heading"><em>Mr. Nobody Against Putin</em></h3>
+
+
+
+<p>Pavel Talankin didn’t have the easiest life as a schoolteacher in the copper-­smelting town of Karabash, Russia; UNESCO once called it the most toxic place on Earth. But video he shot, partially in secret, makes it clear he loved it<em>—</em>the smokestacks, the cold, the ice mustache he’d get walking around outside, and, most of all, his bright-eyed students. That makes it all the more painful when a distant, grinding war and state propaganda change the town. An antiwar progressive with a democracy flag in his classroom, Talankin had to deal with a new patriotic curriculum, mandatory parades, visits from mercenaries<em>—</em>and the loss of the creative space he’d built with his students. Talankin’s footage tells his story in this <a href="https://www.justwatch.com/us/movie/mr-nobody-against-putin">Oscar-winning documentary</a> from director David Borenstein, and what struck me most is how strange it is being an adult around kids. We shape them in profound ways we might not even recognize.</p>
+
+
+
+<h3 class="wp-block-heading"><em>Repertoire</em> by James Acaster</h3>
+
+
+
+<p>I am the kind of person who will pay $150 to watch a comedian in a smelly theater in San Francisco that charges $20 for a can of water<em>—</em>because I am crazy enough to hope that standup will not die. In February, I saw the British comedian James Acaster perform live … and it was a mediocre show. But <em><a href="https://www.netflix.com/title/80213803">Repertoire</a></em>, his 2018 miniseries on Netflix, is gold. Shot shortly after Acaster went through a breakup, the four-part show features him portraying, among other characters, a cop who goes undercover as a standup comedian, forgets who he is, and gets divorced. And then things get weird. “What if every relationship you’ve ever been in,” Acaster asks, “is somebody slowly figuring out they didn’t like you as much as they hoped they would?” If the best comedy comes from paying attention to the hellhole that you’re in, I wish Acaster many more pitfalls.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1135423</post-id>	</item>
+		<item>
+		<title>One town’s scheme to get rid of its geese</title>
+		<link>https://www.technologyreview.com/2026/04/22/1135430/california-town-scheme-get-rid-geese/</link>
+		
+		<dc:creator><![CDATA[Annika Hom]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2026 10:00:00 +0000</pubDate>
+				<category><![CDATA[Culture]]></category>
+		<category><![CDATA[App]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1135430</guid>
+
+					<description><![CDATA[“Pull over!” I order my brother one sunny February afternoon. Our target is in sight: a gaggle of Canada geese, pecking at grass near the dog park. As I approach, tiptoeing over their grayish-white poop, I notice that one bird wears a white cuff around its slender black neck. It’s a GPS tracker—part of a&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>“Pull over!” I order my brother one sunny February afternoon. Our target is in sight: a gaggle of Canada geese, pecking at grass near the dog park. As I approach, tiptoeing over their grayish-white poop, I notice that one bird wears a white cuff around its slender black neck. It’s a GPS tracker—part of a new tech-centered campaign to drive the geese out of my hometown of Foster City, California.&nbsp;</p>
+
+
+
+<figure class="wp-block-image alignleft size-large is-resized"><img loading="lazy" decoding="async" width="636" height="604" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/MJ26-front-dl_dispatch.png?w=636" alt="the United States with a dot on the California coast line" class="wp-image-1135587" style="width:auto;height:150px" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/MJ26-front-dl_dispatch.png 636w, https://wp.technologyreview.com/wp-content/uploads/2026/04/MJ26-front-dl_dispatch.png?resize=300,285 300w" sizes="auto, (max-width: 636px) 100vw, 636px" /><figcaption class="wp-element-caption">__________________________<br><strong>THE PLACE</strong><br>Foster City, CA<br>USA</figcaption></figure>
+
+
+
+<p>About 300 geese live in this sleepy Bay Area suburb, equal to nearly 1% of our human population—and some say this town isn’t big enough for the both of us. Goose poop notoriously blanketed our middle school’s lawn, and the birds have hassled residents for generations. My own grandmother remembers when geese took over her garage for five whole minutes before waddling out. She says, “I wanted to kill them, but I thought I’d get in trouble.”</p>
+
+
+
+<p>Indeed, that idea doesn’t fly here. City officials backed out of a previous plan to kill 100 geese following uproar from local environmentalists. Still, the poop creates a <a href="https://www.fostercity.org/community/page/lagoon-water-testing-and-quality">public health hazard</a>; the birds need to go.&nbsp;</p>
+
+
+
+<p>So the city paid nearly $400,000—roughly $1,300 per goose—to Wildlife Innovations, a company that resolves conflicts between humans and wildlife, to haze the geese with gadgets. The company’s approach is “basically, making the geese less comfortable,” Dan Biteman, head of the goose management plan and senior wildlife biologist at Wildlife Innovations, tells me.</p>
+
+
+
+
+
+<p>The need for such conflict resolution <a href="https://www.nature.com/articles/s41558-023-01608-5">is on the rise</a> as land development collides with changes in animal behavior. Though overpopulation of Canada geese is a national nuisance in the US, such tensions also surface with other species in this country and elsewhere, including <a href="https://www.umt.edu/news/2025/09/092325dron.php">grizzlies</a> on the Montana prairies, <a href="https://vcresearch.berkeley.edu/news/fostering-coexistence-san-franciscos-urban-coyotes">coyotes</a> on San Francisco streets, and <a href="https://www.cambridge.org/core/journals/oryx/article/unmanned-aerial-vehicles-mitigate-humanelephant-conflict-on-the-borders-of-tanzanian-parks-a-case-study/3BFA919F001CC117888833DE8448FEC4">savanna elephants</a> in Tanzania parks.&nbsp;</p>
+
+
+
+<p>So the people whose job it is to deal with recalcitrant critters are bringing on the gadgets.</p>
+
+
+
+<p>Back in Foster City, I spot a black camera mounted to a tree trunk at Gull Park by the lagoon. They’re in seven parks around town, programmed to snap photos every 15 minutes and transmit them back to Wildlife Innovations HQ. If they detect geese, a biologist immediately drives over to disperse the birds. One team member uses devices like lasers or drones; another brings along a goose-hating border collie named Rocky.&nbsp;</p>
+
+
+<div class="wp-block-image">
+<figure class="wp-block-image alignleft size-large"><img loading="lazy" decoding="async" width="2968" height="1791" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/GoosinatorCo.jpg?w=2968" alt="An orange foam pontoon boat with yellow eyes and sharp-looking jagged teeth" class="wp-image-1135274" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/GoosinatorCo.jpg 2968w, https://wp.technologyreview.com/wp-content/uploads/2026/04/GoosinatorCo.jpg?resize=300,181 300w, https://wp.technologyreview.com/wp-content/uploads/2026/04/GoosinatorCo.jpg?resize=768,463 768w, https://wp.technologyreview.com/wp-content/uploads/2026/04/GoosinatorCo.jpg?resize=1536,927 1536w, https://wp.technologyreview.com/wp-content/uploads/2026/04/GoosinatorCo.jpg?resize=2048,1236 2048w" sizes="auto, (max-width: 2968px) 100vw, 2968px" /><figcaption class="wp-element-caption">Belligerent birds must grapple with the Goosinator.</figcaption><div class="image-credit">ANNIKA HOM</div>
+</figure>
+</div>
+
+
+<p>As a special measure, staff deploy the “Goosinator,” a small, remote-controlled neon-orange pontoon boat with a fearsome dog-like mouth painted on its bow, meant to evoke geese’s fear of coyotes and bright colors. It comes with attachable wheels and can zoom around on land or water to chase birds away. Biteman tells me the company is thinking about mounting speakers on trees and flying drones that will screech the calls of goose predators like red-tailed hawks or golden eagles.&nbsp;</p>
+
+
+
+<p>The company received federal permits required by the Migratory Bird Treaty Act to stick GPS trackers on 10 geese, too. This way, staff can surveil the geese and research their behavior and movements<strong>.</strong>&nbsp;</p>
+
+
+
+<p>At local goose hangouts, signs that look like “Wanted” posters alert the public to the new plan. As I watch some culprits graze (and defecate) on a church lawn, I think to myself: <em>Enjoy it while it lasts.&nbsp;</em></p>
+
+
+
+<p><em>Annika Hom is an award-winning independent journalist. She’s written for </em>National Geographic<em>, </em>Wired<em>, and more.</em></p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1135430</post-id>	</item>
+		<item>
+		<title>There is no nature anymore</title>
+		<link>https://www.technologyreview.com/2026/04/22/1135440/editors-letter-may-2026/</link>
+		
+		<dc:creator><![CDATA[Mat Honan]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2026 10:00:00 +0000</pubDate>
+				<category><![CDATA[Culture]]></category>
+		<category><![CDATA[App]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1135440</guid>
+
+					<description><![CDATA[When people talk about “nature,” they’re generally talking about things that aren’t made by human beings. Rocks. Reefs. Red wolves. But while there is plenty of God’s creation to go around, it is hard to think of anything on Earth that human hands haven’t affected. In the Brazilian rainforest, scientists have found microplastics in the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>When people talk about “nature,” they’re generally talking about things that aren’t made by human beings. Rocks. Reefs. Red wolves. But while there is plenty of God’s creation to go around, it is hard to think of anything on Earth that human hands haven’t affected.</p>
+
+
+
+<figure class="wp-block-image alignright size-large is-resized"><img loading="lazy" decoding="async" width="1012" height="1350" src="https://wp.technologyreview.com/wp-content/uploads/2025/06/mat_debrief.png?w=1012" alt="Mat Honan" class="wp-image-1119107" style="width:200px" srcset="https://wp.technologyreview.com/wp-content/uploads/2025/06/mat_debrief.png 1012w, https://wp.technologyreview.com/wp-content/uploads/2025/06/mat_debrief.png?resize=225,300 225w, https://wp.technologyreview.com/wp-content/uploads/2025/06/mat_debrief.png?resize=768,1025 768w" sizes="auto, (max-width: 1012px) 100vw, 1012px" /></figure>
+
+
+
+<p>In the Brazilian rainforest, scientists have found microplastics in the bellies of animals ranging from red howler monkeys to manatees. In remotest Yakutia, where much of the earth remains untrodden by human feet, the carbon in the sky above melts the permafrost below. In the Arctic Ocean, artificial light from ship traffic—on the rise as the polar ice cap melts away—now disrupts the nightly journey of zooplankton to the ocean surface, one of the largest animal migrations on the planet. The remote mountain lakes of the Alps are contaminated with all kinds of synthetic chemicals. Polar bears are full of flame retardants. Cesium-137, fallout from nuclear bomb explosions, lightly rimes the entire planet.&nbsp;</p>
+
+
+
+<p>These examples are mostly pollution—nuclear, carbon, chemical, light—but I raise them not to highlight the ways human industry and technology degrade the environment but to note how the things humans build <em>change</em> it. Nobody really knows what the exact effects of all that will be, but my point is that no part of the globe is free of human fingerprints. We have literally changed the world.&nbsp;&nbsp;</p>
+
+
+
+<p>We’ve changed ourselves as well. Humans are especially adept at bending human nature. Everything about us is up for grabs—appearance, health, our very thoughts. Pharmaceuticals, surgeries, vaccines, and hormones give us longer lives, take away our pain, ease our anxiety and depression, make us faster, stronger, more resilient. We’re getting glimpses of technologies that will let us change who our children will become before they’re even born. Electrodes implanted in people’s brains let them control computers and translate thoughts into speech. Prosthetics and exoskeletons straight out of comic books restore and enhance physical abilities, while gene-­editing technologies like CRISPR are rewriting our very DNA. And meanwhile, people have taken the sum total of all the information we have ever written down and poured it into vast calculating machines in an effort—at least by some—to build an intelligence greater than our own.&nbsp;</p>
+
+
+
+<p>So what even is nature, or natural, in this context? Is it “environmentalist,” in the conventional sense, to try to preserve what one could argue no longer exists? Should we employ technology to try to make the world more “natural”?&nbsp;&nbsp;</p>
+
+
+
+<p>Those questions led us to approach this Nature issue with humility. We try to grapple with them all the time—<em>MIT Technology Review</em> is, after all, a review of how people have altered and built upon nature.</p>
+
+
+
+<p>And it’s a place to think about how we might repair it. Take solar geoengineering, for example—a subject we have covered with increasing frequency over the past few years. The basic idea of geoengineering is to find a technological fix for a problem technology caused: Burning ­petrochemicals to fuel the Industrial Revolution turned Earth’s atmosphere into a heat sink, fundamentally breaking the climate. Some geoengineers think that releasing particulate matter into the stratosphere would reflect sunlight back into space, thus reducing global temperatures. After years of theoretical discussions, some companies have begun to actively experiment with such technologies. This might seem like a great way to restore the world to a more natural state. It’s also fraught with controversy and peril. It could, for example, benefit some nations while harming others. It may give us license to continue burning fossil fuels and releasing greenhouse gases. The list goes on.&nbsp;</p>
+
+
+
+<p>Nature isn’t easy.&nbsp;</p>
+
+
+
+<p>In our May/June issue, we have attempted to take a hard look at nature in our unnatural world. We have stories about birds that can’t sing, wolves that aren’t wolves, and grass that isn’t grass. We look for the meaning of life under Arctic ice and within ourselves—and in the far future, on a distant world, courtesy of new fiction by the renowned author Jeff VanderMeer. I don’t know if any of that will answer the questions I’ve been asking here—but we can’t help but try. It’s in our nature.&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1135440</post-id>	</item>
+		<item>
+		<title>Los Angeles is finally going underground</title>
+		<link>https://www.technologyreview.com/2026/04/22/1135449/los-angeles-subway-going-underground/</link>
+		
+		<dc:creator><![CDATA[Adam Rogers]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2026 10:00:00 +0000</pubDate>
+				<category><![CDATA[Policy]]></category>
+		<category><![CDATA[App]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1135449</guid>
+
+					<description><![CDATA[Los Angeles deserves its reputation as the quintessential car city—the rhythms of its 2,200 square miles are dictated by wide boulevards and concrete arcs of freeways. But it once had a world-class rail transit system, and for the last three decades, the city has been rebuilding a network of trolleys and subways. In May, a&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Los Angeles deserves its reputation as the quintessential car city—the rhythms of its 2,200 square miles are dictated by wide boulevards and concrete arcs of freeways. But it once had a world-class rail transit system, and for the last three decades, the city has been rebuilding a network of trolleys and subways. In May, a new four-mile segment with three new subway stations will open along Wilshire Boulevard, a key east-west corridor that connects downtown LA to the Pacific Ocean. What today can be an hours-long drive through a busy, museum-­packed stretch of the city will be, if all goes well, a 25-minute train ride.</p>
+
+
+
+
+
+<p>The existence of subway stops in this part of town—known as Miracle Mile—is a technological triumph over geography and geology. The ground underneath it is literally a disaster waiting to happen—it’s tarry and full of methane. One of those methane deposits actually exploded in 1985, destroying a department store in the neighborhood. In response, the city pushed its new train routes to other parts of town.</p>
+
+
+
+<p>These days, dirt full of flammable goo is no longer a problem. “The technology finally caught up with the concerns,” says LA Metro’s James Cohen, a longtime manager of the engineering for this stretch of subway. The key was an earth-pressure-­balance tunnel-boring machine, an automated digger that is designed to chew through ground packed with explosive gas. It sends removed dirt topside via conveyor belts and slides precast concrete liner segments into the tunnel, which are joined together with gaskets to create a gas- and waterproof tube. All that let the machine dig about 50 feet every day.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="3000" height="2001" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/D-Line-Section-1__40-1.jpg?w=2999" alt="a car on the D line track" class="wp-image-1135798" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/D-Line-Section-1__40-1.jpg 3000w, https://wp.technologyreview.com/wp-content/uploads/2026/04/D-Line-Section-1__40-1.jpg?resize=300,200 300w, https://wp.technologyreview.com/wp-content/uploads/2026/04/D-Line-Section-1__40-1.jpg?resize=768,512 768w, https://wp.technologyreview.com/wp-content/uploads/2026/04/D-Line-Section-1__40-1.jpg?resize=1536,1025 1536w, https://wp.technologyreview.com/wp-content/uploads/2026/04/D-Line-Section-1__40-1.jpg?resize=2048,1366 2048w" sizes="auto, (max-width: 3000px) 100vw, 3000px" /><figcaption class="wp-element-caption">A Metro train pulls into La Cienega station</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1224" height="816" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-9976_mod_ac501d.jpg?w=1224" alt="Fairfax Station" class="wp-image-1135797" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-9976_mod_ac501d.jpg 1224w, https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-9976_mod_ac501d.jpg?resize=300,200 300w, https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-9976_mod_ac501d.jpg?resize=768,512 768w" sizes="auto, (max-width: 1224px) 100vw, 1224px" /><figcaption class="wp-element-caption">Art by Susan Silton at the Fairfax station</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" height="2000" width="2930" src="https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-2240_c1ba50.jpg?w=2930" alt="Eamon Ore-Giron - LA Metro D Line - La Brea Station" class="wp-image-1135796" srcset="https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-2240_c1ba50.jpg 3000w, https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-2240_c1ba50.jpg?resize=300,205 300w, https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-2240_c1ba50.jpg?resize=768,524 768w, https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-2240_c1ba50.jpg?resize=1536,1049 1536w, https://wp.technologyreview.com/wp-content/uploads/2026/04/2005-2240_c1ba50.jpg?resize=2048,1398 2048w" sizes="auto, (max-width: 2930px) 100vw, 2930px" /><figcaption class="wp-element-caption">Art by Eamon Ore-Giron at the La Brea station</figcaption></figure>
+
+
+
+<p>Meanwhile, engineers excavated the stations from the street level down. They worked mostly on weekends, digging out a space and then decking it with concrete so that work could go on underneath while LA drivers continued to exercise their God-given right to get around by car above.</p>
+
+
+
+<p>Did the project finish on time? No. Did it come in under budget? Also no; this segment alone cost nearly $4 billion. Is the city now racing to build housing and walkable areas to take full advantage of the extension? Oh, please. Yet the new stations still manage to feel, in the end, transformative—as if Los Angeles’s train has finally come in.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1135449</post-id>	</item>
+		<item>
+		<title>Roundtables: Unveiling The 10 Things That Matter in AI Right Now</title>
+		<link>https://www.technologyreview.com/2026/04/21/1135486/roundtables-unveiling-the-10-things-that-matter-in-ai-right-now/</link>
+		
+		<dc:creator><![CDATA[MIT Technology Review]]></dc:creator>
+		<pubDate>Tue, 21 Apr 2026 22:09:25 +0000</pubDate>
+				<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Roundtables]]></category>
+		<category><![CDATA[Subscriber-Only Stories]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1135486</guid>
+
+					<description><![CDATA[Listen to the session or watch below Subscribers saw a special edition of Roundtables simulcast live from EmTech AI, MIT Technology Review’s signature conference for AI leadership. Subscribers got an exclusive first look at a new list capturing 10 key technologies, emerging trends, bold ideas, and powerful movements in AI that you need to know&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><strong><strong>Listen to the session or watch below</strong></strong></p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://wp.technologyreview.com/wp-content/uploads/2026/04/GMT20260421-203418_Recording.cutfile.20260421214845005.m4a"></audio></figure>
+
+
+
+<p>Subscribers saw a special edition of Roundtables simulcast live from EmTech AI, MIT Technology Review’s signature conference for AI leadership. Subscribers got an exclusive first look at a new list capturing 10 key technologies, emerging trends, bold ideas, and powerful movements in AI that you need to know about in 2026.</p>
+
+
+
+<p><strong>Speakers: </strong>Grace Huckins, AI reporter, hosted this session as Amy Nordrum and Niall Firth, executive editors, unveiled the list onstage.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Roundtables: Unveiling The 10 Things That Matter in AI Right Now" src="https://player.vimeo.com/video/1185314722?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div></figure>
+
+
+
+<p><strong><em><strong>Recorded on April 21, 2026<br></strong></em></strong></p>
+
+
+
+<p><strong>Related Stories:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/">10 things that matter in AI right now</a></li>
+
+
+
+<li><a href="https://www.technologyreview.com/2026/04/21/1135919/ai-surveillance-privacy-llms-bulk-data/">How LLMs could supercharge mass surveillance in the US</a></li>
+
+
+
+<li><a href="https://www.technologyreview.com/2026/04/21/1135921/ai-malaise-artificial-intelligence-public-sentiment/">The era of AI malaise</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1135486</post-id>	</item>
+		<item>
+		<title>The new word in home construction could be “plastics”</title>
+		<link>https://www.technologyreview.com/2026/04/21/1134856/the-new-word-in-home-construction-could-be-plastics/</link>
+		
+		<dc:creator><![CDATA[Jennifer Chu]]></dc:creator>
+		<pubDate>Tue, 21 Apr 2026 21:00:00 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[MIT Alumni News]]></category>
+		<guid isPermaLink="false">https://www.technologyreview.com/?p=1134856</guid>
+
+					<description><![CDATA[Single-use plastics are a persistent source of environmental pollution, and the need to house a growing global population puts increasing pressure on resources such as timber. MIT engineers have an idea that could make a dent in both problems at once. In a recent study, a team led by mechanical engineering professor David Hardt, SM&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Single-use plastics are a persistent source of environmental pollution, and the need to house a growing global population puts increasing pressure on resources such as timber. MIT engineers have an idea that could make a dent in both problems at once.</p>
+
+
+
+<p>In a recent study, a team led by mechanical engineering professor David Hardt, SM ’74, PhD ’79, and lecturer and research scientist AJ Perez ’13, MEng ’14, PhD ’23, laid out a plan for using recycled plastic to 3D-print construction-grade beams, trusses, and other structures that could one day offer lighter, more sustainable alternatives to traditional wood-based framing. Although some companies are working on using large-scale additive manufacturing to create walls, they’re mainly using concrete or clay, whose production typically has a large negative environmental impact. These engineers are among the first to explore printing structural framing elements—and to do so using recycled plastic.</p>
+
+
+
+<p>The design they came up with is similar in shape to the traditional wooden trusses that support flooring, with beams that connect in a pattern resembling a ladder with diagonal rungs. To test it, they obtained pellets made of recycled PET polymers and glass fibers from an aerospace materials company and fed them into a room-size 3D printer as “ink.” When they printed four long trusses with this material and configured them into a conventional plywood-topped floor frame, the result had a load-bearing capacity of over 4,000 pounds, far exceeding key building standards set by the US Department of Housing and Urban Development.</p>
+
+
+
+<p>The plastic-printed trusses weigh about 13 pounds each, light enough to transport without a flatbed truck. An industrial printer can crank one out in under 13 minutes. Crucially, the researchers are developing the process to work with “dirty” plastic that hasn’t been cleaned or preprocessed. In addition to floor trusses, they are working on printing other elements and combining them into a full frame for a modest-size house.</p>
+
+
+
+<p>“We’ve estimated that the&nbsp;world needs about 1 billion new homes by 2050. If we try to make that many homes using wood, we would need to clear-cut the equivalent of the Amazon rainforest three times over,” says Perez. “The key here is: We recycle dirty plastic into building products for homes that are lighter, more durable, and sustainable.”</p>
+
+
+
+<p>The researchers envision that one day, trash like used bottles and food containers could be sent directly into a shredder, turned into pellets, and fed into a large-scale additive manufacturing machine to become structural composite construction components. At the construction site, the elements could be quickly fitted into a lightweight yet sturdy home frame.</p>
+
+
+
+<p>“The idea is to bring shipping containers close to where you know you’ll have a lot of plastic, like next to a football stadium,” Perez says. “Then you could use off-the-shelf shredding technology and feed that dirty shredded plastic into a large-scale additive manufacturing system, which could exist in micro-factories, just like bottling centers, around the world. You could print the parts for entire buildings that would be light enough to transport on a moped or pickup truck to where homes are most needed.”&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1134856</post-id>	</item>
+	</channel>
+</rss>

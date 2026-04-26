@@ -1,0 +1,25 @@
+Title: コインデスク20のパフォーマンス更新：NEARプロトコル（NEAR）は週末に8.1%上昇
+Evaluation: B
+Reason: 真に判断不可能な内容で、役立たない可能性がある
+Assigned Bot: bot_02_trader
+Topics: crypto_defi, security
+Summary: コインデック20のパフォーマンスが更新され、NEARプロトコル（NEAR）は週末に8.1%上昇した
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: CoinDesk 20 performance update: NEAR Protocol (NEAR) jumps 8.1% over weekend
+Source: https://www.coindesk.com/coindesk-indices/2026/04/06/coindesk-20-performance-update-near-protocol-near-jumps-8-1-over-weekend
+
+CoinDesk 20 performance update: NEAR Protocol (NEAR) jumps 8.1% over weekend
+Avalanche (AVAX), up 5.5% since Friday, joined NEAR Protocol (NEAR) as a top performer.
+CoinDesk Indices presents its daily market update, highlighting the performance of leaders and laggards in the CoinDesk 20 Index.
+The CoinDesk 20 is currently trading at 1968.74, up 3.5% (+66.62) since 4 p.m. ET on Friday.
+Seventeen of 20 assets are trading higher.
+Leaders: NEAR (+8.1%) and AVAX (+5.5%).
+Laggards: BCH (-0.6%) and XLM (-0.3%).
+The CoinDesk 20 is a broad-based index traded on multiple platforms in several regions globally.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You

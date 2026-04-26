@@ -1,0 +1,57 @@
+Title: AIがスマートコントラクトのセキュリティ競争を再構築している
+Evaluation: A
+Reason: AIとスマートコントラクトのセキュリティという最先端のテーマで、専門的な議論と未来への示唆がある。
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security, crypto_defi
+Summary: AIコーディングエージェントがスマートコントラクトのセキュリティ構築、監査、攻撃の方法を再構築していることについて解説する。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: AI Is Reshaping the Smart Contract Security Arms Race
+Source: https://blog.sui.io/ai-reshaping-smart-contract-security-arms-race/
+
+AI Is Reshaping the Smart Contract Security Arms Race
+What security researchers see coming as AI reshapes the way smart contracts are built, audited, and attacked
+Main Takeaways:
+- Sam Blackshear, CTO of Mysten Labs, hosted a livestream panel with four security experts on how AI coding agents are reshaping smart contract security.
+- The panel agreed that crypto sits on the front lines of the AI security arms race because smart contracts are public and directly tied to real value.
+- As AI improves for both attackers and defenders, the answer is not more secrecy, but stronger verification, clearer processes, and more resilient security practices.
+Overview
+AI coding agents have improved quickly over the past year. Tools like Claude Code and Codex are no longer just autocomplete assistants. They are getting meaningfully better at reading, writing, and reasoning about code with far less human guidance. That matters especially for smart contracts, which are public by default, and manage real money. Any improvement in AI code analysis helps defenders and attackers at the same time.
+To unpack what this means, Sam Blackshear, co-founder and CTO of Mysten Labs and creator of the Move programming language, hosted a livestream with four leading security researchers:
+- Ben Samuels, Blockchain Engineering Director at Trail of Bits, a cybersecurity research and consulting firm
+- Cosmin Radoi (Cos), CEO and co-founder of Asymptotic, which focuses on formal verification for Sui
+- Seth Hallem, CEO of Certora, a leading formal verification company
+- Robert Chen, founder of OtterSec, a multi-chain security firm
+The turning point
+Sam opened by asking each panelist to share a moment that made them realize something had fundamentally changed.
+Ben (Trail of Bits): Slither meets LLMs
+Ben described trying to combine Slither (a static analysis tool for smart contracts) with LLM-based semantic analysis. Earlier models struggled with basic tool calls, often failing outright. The recent model updates changed that. “A couple months ago models hated calling tools. They would never call tools and they would never use them properly,” Ben said. “To finally see that work correctly was absolutely incredible.”
+Sam (Mysten Labs): Porting a static analyzer to Move
+Sam shared his own moment: porting a static analysis tool he’d built at Facebook, written in a language called OCaml-Java, over to Move, the programming language used to build smart contracts on Sui. He asked Claude to do the translation, run it across the full corpus of Move programs on Sui, and flag potential vulnerabilities.. “It just did it,” he said. “This is a new world that we’re in in terms of speed and capabilities.”
+Seth (Certora): When AI finds what humans can’t
+Seth’s moment was more sobering. A Certora researcher was working with a client who had dismissed most of a long list of AI-generated vulnerability reports as noise. When the researcher asked the model to prioritize what remained, it surfaced seven legitimate steal-funds issues. “Three of those intersected with his own findings, but four did not,” Seth said. The researcher had independently found seven critical bugs. The AI had found seven too. They only overlapped on three.
+Cos (Asymptotic): The agent that modified the compiler
+Cos described an agent working through a difficult verification problem, then going upstream into the Sui compiler to add debugging output and propagate the information it needed to solve the task. The specifics were technical, but the takeaway was simple: the agent wasn’t just answering prompts, it was instrumenting the system to reason better about the problem. "Considering the complexity, it's very impressive," Cos said.
+Taken together, these stories pointed to the same conclusion: the question is no longer whether AI can meaningfully assist security work, but how quickly that changes the balance between attackers and defenders.
+Rethinking closed source
+If AI is getting better at understanding code, one key question follows: does keeping code closed still offer meaningful protection? The traditional argument for closed source is obscurity. If attackers can’t read your code, they can’t exploit it, or so the argument goes.
+Seth from Certora came down firmly on the open-source side, however. His argument: closed source is a mirage. Attackers can reverse-engineer deployed contracts from their bytecode, and AI has made that reverse engineering superhuman. The false sense of security closed source provides is more dangerous than the code being public.
+Mysten’s Sam Blackshear agreed, and added another layer: if your project is open source and prominent, the people training frontier models may actually be running early versions on your code and flagging issues before release. "If you’re a prominent project and closed source, I think you’re definitely less safe than a prominent project that’s open."
+Open code does not mean open everything
+But the panel didn’t argue for openness across the board. There’s a difference between making your code public and making your entire security posture visible, and that distinction becomes more important as AI gets better at reasoning about both.
+Cos from Asymptotic mostly agreed on the code itself. Reverse engineering has gotten so good that hiding the source doesn't provide meaningful protection. But specifications are a different matter.
+For teams doing formal verification, the specs describe exactly what the code is supposed to do, and, by implication, where the edges of what’s been verified sit. Cos said his firm used to plan to publish specs openly. That position has changed.
+“We've seen agents do really well reasoning about specs,” he said. “If we publish them, we are essentially giving attackers a way to build upon our work and see the edges that are not yet super well verified.”
+The takeaway: open source code is increasingly defensible, but there are parts of a team’s security posture, like specs and notes about areas of concern, that may be safer kept private, at least for now.
+The job of the auditor is changing
+If AI can find a growing share of bugs on its own, what's the job of a human auditor? The panelists agreed that the answer isn't “finding more bugs.” It’s about process and resilience. That shift matters because the threat isn’t static.
+As AI improves for attackers, the goal can’t be to out-find the next model. It has to be building development practices that hold up regardless of what that model can do. As Ben at Trail of Bits put it: “The job of an audit isn't to be better than the white hats with the next model. It’s to make sure the development process produces code that’s resilient to whatever comes next.”
+Seth at Certora agreed, framing audits as a matter of end-to-end process rather than bug discovery. “An audit in the traditional sense in the financial world is an audit of process and numbers,” he said. Robert at OtterSec pushed that further: some of the biggest recent exploits weren’t smart contract bugs at all, but failures in key management and operational security.
+As AI gets better at one kind of security work, the attack surface shifts. Protecting a protocol now means thinking about the code, the keys, and the humans around them, not just any single piece.
+Will AI find all the bugs in a year?
+Everyone said no, but for different reasons.
+Seth (Certora) argued that future exploits will include unknown unknowns that no model can be assumed to anticipate. Ben (Trail of Bits) focused on coverage: even a strong model is only as useful as the code it actually examines. Cos (Asymptotic) pointed to formal verification as the likelier path, with agents helping prove the absence of more bug classes over time. Robert (OtterSec) questioned whether “finding all bugs” is even the right goal when some of the biggest failures are no longer code bugs at all.
+The race continues
+The conversation didn’t produce tidy answers, but that was the point. AI is changing smart contract security in real time, and the experts doing the work are still figuring out what it means. What came through clearly is that the advantage is no longer in secrecy. As code agents improve for both attackers and defenders, the more defensible path is rigorous engineering: open review where appropriate, stronger verification, continuous red teaming, and processes built to withstand whatever comes next.
+Watch the full conversation here.

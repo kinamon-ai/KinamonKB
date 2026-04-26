@@ -1,101 +1,175 @@
-[2026/4/5 9:36:32] --- Start Processing Queue (8 items) ---
-[2026/4/5 9:36:32] ACTION [B]: 20260404_Schwab_plans_spot_bitcoin_ether_trading_launch_in_.txt -> Remaining in candidates
-[2026/4/5 9:36:32] ACTION [A]: 20260404_Five_data_sources_say_the_same_thing_about_bitcoin.txt -> Starting Pipeline
-Processing: 20260404_Five_data_sources_say_the_same_thing_about_bitcoin.txt for Bot: bot_01_observer (ギーク・フォックス) using local (lmstudio)...
+[2026/4/24 13:49:30] --- Start Processing Queue (28 items) ---
+[2026/4/24 13:49:30] ACTION [A]: 20260424_Bret_Taylors_Sierra_buys_YC-backed_AI_startup_Frag.txt -> Starting Pipeline
+Processing: 20260424_Bret_Taylors_Sierra_buys_YC-backed_AI_startup_Frag.txt for Bot: bot_01_observer (ギーク・フォックス) using local (lmstudio)...
   [Step 5a] Generating structured brief...
   [Step 5a] Brief saved.
   [Step 5b] Generating opinion from brief...
-    - Sending Request to LMStudio (Model: gemma-2-2b-it, System Prompt Size: 7310 chars, User Prompt Size: 612 chars)
-    - Estimated Total Tokens: ~2640 (Limit: Check your LMStudio n_ctx)
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4730 chars, User Prompt Size: 598 chars)
+    - Estimated Total Tokens: ~1776 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
 ------------------------------------------------
 ✅ Successfully generated opinion for ギーク・フォックス.
-Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-04_bot_01_observer_20260404_Five_data_sources_say_the_same_thing_about_bitcoin.md
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-24_bot_01_observer_20260424_Bret_Taylors_Sierra_buys_YCbacked_AI_startup_Frag.md
 ------------------------------------------------
-[2026/4/5 9:38:21] DONE: 20260404_Five_data_sources_say_the_same_thing_about_bitcoin.txt processed successfully.
-[2026/4/5 9:38:21] ACTION [B]: 20260404_ENIACs_Architects_Wove_Stories_Through_Computing.txt -> Remaining in candidates
-[2026/4/5 9:38:21] ACTION [B]: 20260404_Display_V2_How_Sui_Objects_Present_Themselves_to_t.txt -> Remaining in candidates
-[2026/4/5 9:38:21] ACTION [B]: 20260404_Circle_under_fire_after_285_million_Drift_hack_ove.txt -> Remaining in candidates
-[2026/4/5 9:38:21] ACTION [B]: 20260404_Anthropic_buys_biotech_startup_Coefficient_Bio_in_.txt -> Remaining in candidates
-[2026/4/5 9:38:21] ACTION [B]: 20260403_Erebor_Bank_NA_Adds_Support_for_Sui_Expanding_Regu.txt -> Remaining in candidates
-[2026/4/5 9:38:21] ACTION [B]: 20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_auto-lo.txt -> Remaining in candidates
-[2026/4/5 9:38:21] --- Queue Processing Completed ---
-
-[2026/4/5 9:51:49] --- Start Processing Queue (7 items) ---
-[2026/4/5 9:51:49] ACTION [B]: 20260404_Schwab_plans_spot_bitcoin_ether_trading_launch_in_.txt -> Remaining in candidates
-[2026/4/5 9:51:49] ACTION [A]: 20260404_ENIACs_Architects_Wove_Stories_Through_Computing.txt -> Starting Pipeline
-Processing: 20260404_ENIACs_Architects_Wove_Stories_Through_Computing.txt for Bot: bot_04_auditor (ロジカル・オウル) using local (lmstudio)...
+[2026/4/24 13:50:23] DONE: 20260424_Bret_Taylors_Sierra_buys_YC-backed_AI_startup_Frag.txt processed successfully.
+[2026/4/24 13:50:23] ACTION [A]: 20260412_Crypto_perpetuals_predict_the_direction_of_Wall_St.txt -> Starting Pipeline
+Processing: 20260412_Crypto_perpetuals_predict_the_direction_of_Wall_St.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
   [Step 5a] Generating structured brief...
   [Step 5a] Brief saved.
   [Step 5b] Generating opinion from brief...
-    - Sending Request to LMStudio (Model: gemma-2-2b-it, System Prompt Size: 3413 chars, User Prompt Size: 639 chars)
-    - Estimated Total Tokens: ~1350 (Limit: Check your LMStudio n_ctx)
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4177 chars, User Prompt Size: 597 chars)
+    - Estimated Total Tokens: ~1591 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for アセット・イーグル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-12_bot_02_trader_20260412_Crypto_perpetuals_predict_the_direction_of_Wall_St.md
+------------------------------------------------
+[2026/4/24 13:51:16] DONE: 20260412_Crypto_perpetuals_predict_the_direction_of_Wall_St.txt processed successfully.
+[2026/4/24 13:51:16] ACTION [C]: 20260411_Working_With_More_Experienced_Engineers_Can_Fast-T.txt -> DeletingCandidate
+[2026/4/24 13:51:16] ACTION [A]: 20260411_Whats_in_a_name_Modernas_vaccine_vs_therapy_dilemm.txt -> Starting Pipeline
+Processing: 20260411_Whats_in_a_name_Modernas_vaccine_vs_therapy_dilemm.txt for Bot: bot_04_auditor (ロジカル・オウル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4165 chars, User Prompt Size: 574 chars)
+    - Estimated Total Tokens: ~1579 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
 ------------------------------------------------
 ✅ Successfully generated opinion for ロジカル・オウル.
-Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-04_bot_04_auditor_20260404_ENIACs_Architects_Wove_Stories_Through_Computing.md
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_04_auditor_20260411_Whats_in_a_name_Modernas_vaccine_vs_therapy_dilemm.md
 ------------------------------------------------
-[2026/4/5 9:53:42] DONE: 20260404_ENIACs_Architects_Wove_Stories_Through_Computing.txt processed successfully.
-[2026/4/5 9:53:42] ACTION [B]: 20260404_Display_V2_How_Sui_Objects_Present_Themselves_to_t.txt -> Remaining in candidates
-[2026/4/5 9:53:42] ACTION [B]: 20260404_Circle_under_fire_after_285_million_Drift_hack_ove.txt -> Remaining in candidates
-[2026/4/5 9:53:42] ACTION [B]: 20260404_Anthropic_buys_biotech_startup_Coefficient_Bio_in_.txt -> Remaining in candidates
-[2026/4/5 9:53:42] ACTION [B]: 20260403_Erebor_Bank_NA_Adds_Support_for_Sui_Expanding_Regu.txt -> Remaining in candidates
-[2026/4/5 9:53:42] ACTION [B]: 20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_auto-lo.txt -> Remaining in candidates
-[2026/4/5 9:53:42] --- Queue Processing Completed ---
-
-[2026/4/5 10:02:32] --- Start Processing Queue (10 items) ---
-[2026/4/5 10:02:32] ACTION [C]: 20260405_Ex-UK_Chancellor_backs_bitcoin_as_alternative_to_f.txt -> DeletingCandidate
-[2026/4/5 10:02:32] ACTION [A]: 20260405_Digital_asset_treasuries_must_now_earn_their_keep.txt -> Starting Pipeline
-Processing: 20260405_Digital_asset_treasuries_must_now_earn_their_keep.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
+[2026/4/24 13:52:07] DONE: 20260411_Whats_in_a_name_Modernas_vaccine_vs_therapy_dilemm.txt processed successfully.
+[2026/4/24 13:52:07] ACTION [A]: 20260411_The_Sui_Monthly_March_2026.txt -> Starting Pipeline
+Processing: 20260411_The_Sui_Monthly_March_2026.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
   [Step 5a] Generating structured brief...
   [Step 5a] Brief saved.
   [Step 5b] Generating opinion from brief...
-    - Sending Request to LMStudio (Model: gemma-2-2b-it, System Prompt Size: 3310 chars, User Prompt Size: 601 chars)
-    - Estimated Total Tokens: ~1303 (Limit: Check your LMStudio n_ctx)
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4080 chars, User Prompt Size: 612 chars)
+    - Estimated Total Tokens: ~1564 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
 ------------------------------------------------
 ✅ Successfully generated opinion for アセット・イーグル.
-Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-05_bot_02_trader_20260405_Digital_asset_treasuries_must_now_earn_their_keep.md
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_02_trader_20260411_The_Sui_Monthly_March_2026.md
 ------------------------------------------------
-[2026/4/5 10:04:11] DONE: 20260405_Digital_asset_treasuries_must_now_earn_their_keep.txt processed successfully.
-[2026/4/5 10:04:11] ACTION [A]: 20260405_Bitcoin_tends_to_outperform_gold_and_stocks_after_.txt -> Starting Pipeline
-Processing: 20260405_Bitcoin_tends_to_outperform_gold_and_stocks_after_.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
+[2026/4/24 13:52:56] DONE: 20260411_The_Sui_Monthly_March_2026.txt processed successfully.
+[2026/4/24 13:52:56] ACTION [B]: 20260411_The_Download_an_exclusive_Jeff_VanderMeer_story_an.txt -> Remaining in candidates
+[2026/4/24 13:52:56] ACTION [A]: 20260411_TechCrunch_is_heading_to_Tokyo__and_bringing_the_S.txt -> Starting Pipeline
+Processing: 20260411_TechCrunch_is_heading_to_Tokyo__and_bringing_the_S.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
   [Step 5a] Generating structured brief...
   [Step 5a] Brief saved.
   [Step 5b] Generating opinion from brief...
-    - Sending Request to LMStudio (Model: gemma-2-2b-it, System Prompt Size: 3310 chars, User Prompt Size: 549 chars)
-    - Estimated Total Tokens: ~1286 (Limit: Check your LMStudio n_ctx)
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4147 chars, User Prompt Size: 676 chars)
+    - Estimated Total Tokens: ~1607 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
 ------------------------------------------------
 ✅ Successfully generated opinion for アセット・イーグル.
-Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-05_bot_02_trader_20260405_Bitcoin_tends_to_outperform_gold_and_stocks_after_.md
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_02_trader_20260411_TechCrunch_is_heading_to_Tokyo__and_bringing_the_S.md
 ------------------------------------------------
-[2026/4/5 10:05:40] DONE: 20260405_Bitcoin_tends_to_outperform_gold_and_stocks_after_.txt processed successfully.
-[2026/4/5 10:05:40] ACTION [B]: 20260405_Anthropic_says_Claude_Code_subscribers_will_need_t.txt -> Remaining in candidates
-[2026/4/5 10:05:40] ACTION [B]: 20260404_Schwab_plans_spot_bitcoin_ether_trading_launch_in_.txt -> Remaining in candidates
-[2026/4/5 10:05:40] ACTION [B]: 20260404_Display_V2_How_Sui_Objects_Present_Themselves_to_t.txt -> Remaining in candidates
-[2026/4/5 10:05:40] ACTION [B]: 20260404_Circle_under_fire_after_285_million_Drift_hack_ove.txt -> Remaining in candidates
-[2026/4/5 10:05:40] ACTION [B]: 20260404_Anthropic_buys_biotech_startup_Coefficient_Bio_in_.txt -> Remaining in candidates
-[2026/4/5 10:05:40] ACTION [B]: 20260403_Erebor_Bank_NA_Adds_Support_for_Sui_Expanding_Regu.txt -> Remaining in candidates
-[2026/4/5 10:05:40] ACTION [B]: 20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_auto-lo.txt -> Remaining in candidates
-[2026/4/5 10:05:40] --- Queue Processing Completed ---
-
-[2026/4/5 10:22:30] --- Start Processing Queue (7 items) ---
-[2026/4/5 10:22:30] ACTION [B]: 20260405_Anthropic_says_Claude_Code_subscribers_will_need_t.txt -> Remaining in candidates
-[2026/4/5 10:22:30] ACTION [B]: 20260404_Schwab_plans_spot_bitcoin_ether_trading_launch_in_.txt -> Remaining in candidates
-[2026/4/5 10:22:30] ACTION [B]: 20260404_Display_V2_How_Sui_Objects_Present_Themselves_to_t.txt -> Remaining in candidates
-[2026/4/5 10:22:30] ACTION [B]: 20260404_Circle_under_fire_after_285_million_Drift_hack_ove.txt -> Remaining in candidates
-[2026/4/5 10:22:30] ACTION [B]: 20260404_Anthropic_buys_biotech_startup_Coefficient_Bio_in_.txt -> Remaining in candidates
-[2026/4/5 10:22:30] ACTION [C]: 20260403_Erebor_Bank_NA_Adds_Support_for_Sui_Expanding_Regu.txt -> DeletingCandidate
-[2026/4/5 10:22:30] ACTION [A]: 20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_auto-lo.txt -> Starting Pipeline
-Processing: 20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_auto-lo.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
+[2026/4/24 13:53:50] DONE: 20260411_TechCrunch_is_heading_to_Tokyo__and_bringing_the_S.txt processed successfully.
+[2026/4/24 13:53:50] ACTION [A]: 20260411_Star_Xu_calls_CZ_a_liar_as_founders_of_worlds_larg.txt -> Starting Pipeline
+Processing: 20260411_Star_Xu_calls_CZ_a_liar_as_founders_of_worlds_larg.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
   [Step 5a] Generating structured brief...
   [Step 5a] Brief saved.
   [Step 5b] Generating opinion from brief...
-    - Sending Request to LMStudio (Model: gemma-2-2b-it, System Prompt Size: 3310 chars, User Prompt Size: 623 chars)
-    - Estimated Total Tokens: ~1311 (Limit: Check your LMStudio n_ctx)
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4181 chars, User Prompt Size: 562 chars)
+    - Estimated Total Tokens: ~1581 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
 ------------------------------------------------
 ✅ Successfully generated opinion for アセット・イーグル.
-Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-03_bot_02_trader_20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_autolo.md
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_02_trader_20260411_Star_Xu_calls_CZ_a_liar_as_founders_of_worlds_larg.md
 ------------------------------------------------
-[2026/4/5 10:24:05] DONE: 20260403_Elon_Musks_X_to_deploy_scam_kill_switch_by_auto-lo.txt processed successfully.
-[2026/4/5 10:24:05] --- Queue Processing Completed ---
+[2026/4/24 13:54:45] DONE: 20260411_Star_Xu_calls_CZ_a_liar_as_founders_of_worlds_larg.txt processed successfully.
+[2026/4/24 13:54:45] ACTION [A]: 20260411_Stalking_victim_sues_OpenAI_claims_ChatGPT_fueled_.txt -> Starting Pipeline
+Processing: 20260411_Stalking_victim_sues_OpenAI_claims_ChatGPT_fueled_.txt for Bot: bot_04_auditor (ロジカル・オウル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4192 chars, User Prompt Size: 572 chars)
+    - Estimated Total Tokens: ~1588 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for ロジカル・オウル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_04_auditor_20260411_Stalking_victim_sues_OpenAI_claims_ChatGPT_fueled_.md
+------------------------------------------------
+[2026/4/24 13:55:41] DONE: 20260411_Stalking_victim_sues_OpenAI_claims_ChatGPT_fueled_.txt processed successfully.
+[2026/4/24 13:55:41] ACTION [C]: 20260411_Remembering_Gus_Gaynor_A_Devoted_IEEE_Volunteer.txt -> DeletingCandidate
+[2026/4/24 13:55:41] ACTION [A]: 20260411_Guest_Post_The_Strong_Legal_Case_That_Hashi_Transa.txt -> Starting Pipeline
+Processing: 20260411_Guest_Post_The_Strong_Legal_Case_That_Hashi_Transa.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4115 chars, User Prompt Size: 564 chars)
+    - Estimated Total Tokens: ~1559 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for アセット・イーグル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_02_trader_20260411_Guest_Post_The_Strong_Legal_Case_That_Hashi_Transa.md
+------------------------------------------------
+[2026/4/24 13:56:34] DONE: 20260411_Guest_Post_The_Strong_Legal_Case_That_Hashi_Transa.txt processed successfully.
+[2026/4/24 13:56:34] ACTION [A]: 20260411_GoZTASP_A_Zero-Trust_Platform_for_Governing_Autono.txt -> Starting Pipeline
+Processing: 20260411_GoZTASP_A_Zero-Trust_Platform_for_Governing_Autono.txt for Bot: bot_04_auditor (ロジカル・オウル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4180 chars, User Prompt Size: 610 chars)
+    - Estimated Total Tokens: ~1596 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for ロジカル・オウル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_04_auditor_20260411_GoZTASP_A_ZeroTrust_Platform_for_Governing_Autono.md
+------------------------------------------------
+[2026/4/24 13:57:29] DONE: 20260411_GoZTASP_A_Zero-Trust_Platform_for_Governing_Autono.txt processed successfully.
+[2026/4/24 13:57:29] ACTION [A]: 20260411_Federal_judge_blocks_Arizona_from_bringing_crimina.txt -> Starting Pipeline
+Processing: 20260411_Federal_judge_blocks_Arizona_from_bringing_crimina.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4154 chars, User Prompt Size: 530 chars)
+    - Estimated Total Tokens: ~1561 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for アセット・イーグル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_02_trader_20260411_Federal_judge_blocks_Arizona_from_bringing_crimina.md
+------------------------------------------------
+[2026/4/24 13:58:20] DONE: 20260411_Federal_judge_blocks_Arizona_from_bringing_crimina.txt processed successfully.
+[2026/4/24 13:58:20] ACTION [C]: 20260411_Constellations.txt -> DeletingCandidate
+[2026/4/24 13:58:20] ACTION [A]: 20260411_Bhutan_has_sold_70_of_its_bitcoin_in_18_months_It_.txt -> Starting Pipeline
+Processing: 20260411_Bhutan_has_sold_70_of_its_bitcoin_in_18_months_It_.txt for Bot: bot_02_trader (アセット・イーグル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4162 chars, User Prompt Size: 592 chars)
+    - Estimated Total Tokens: ~1584 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for アセット・イーグル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_02_trader_20260411_Bhutan_has_sold_70_of_its_bitcoin_in_18_months_It_.md
+------------------------------------------------
+[2026/4/24 13:59:14] DONE: 20260411_Bhutan_has_sold_70_of_its_bitcoin_in_18_months_It_.txt processed successfully.
+[2026/4/24 13:59:14] ACTION [B]: 20260411_Anthropic_temporarily_banned_OpenClaws_creator_fro.txt -> Remaining in candidates
+[2026/4/24 13:59:14] ACTION [A]: 20260411_AI_Is_Reshaping_the_Smart_Contract_Security_Arms_R.txt -> Starting Pipeline
+Processing: 20260411_AI_Is_Reshaping_the_Smart_Contract_Security_Arms_R.txt for Bot: bot_04_auditor (ロジカル・オウル) using local (lmstudio)...
+  [Step 5a] Generating structured brief...
+  [Step 5a] Brief saved.
+  [Step 5b] Generating opinion from brief...
+    - Sending Request to LMStudio (Model: gemma-4-e2b-it, System Prompt Size: 4128 chars, User Prompt Size: 598 chars)
+    - Estimated Total Tokens: ~1575 (Limit: Check your LMStudio n_ctx)
+    - Received response from LMStudio.
+------------------------------------------------
+✅ Successfully generated opinion for ロジカル・オウル.
+Dest: kinamon_kb/03_opinion_gate/_pending/2026-04-11_bot_04_auditor_20260411_AI_Is_Reshaping_the_Smart_Contract_Security_Arms_R.md
+------------------------------------------------
+[2026/4/24 14:00:06] DONE: 20260411_AI_Is_Reshaping_the_Smart_Contract_Security_Arms_R.txt processed successfully.
+[2026/4/24 14:00:06] ACTION [B]: 20260408_The_Download_AIs_impact_on_jobs_and_data_centres_i.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260408_Stablecoin_issuers_get_closer_to_US_federal_rules_.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260408_Firmus_the_Southgate_AI_data_center_builder_backed.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260408_Enabling_agent-first_process_redesign.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260408_Decentralized_Training_Can_Help_Solve_AIs_Energy_W.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260406_CoinDesk_20_performance_update_NEAR_Protocol_NEAR_.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260406_Bitmines_ether_treasury_hits_48_million_ETH_as_sto.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260404_Schwab_plans_spot_bitcoin_ether_trading_launch_in_.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260404_Display_V2_How_Sui_Objects_Present_Themselves_to_t.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260404_Circle_under_fire_after_285_million_Drift_hack_ove.txt -> Remaining in candidates
+[2026/4/24 14:00:06] ACTION [B]: 20260404_Anthropic_buys_biotech_startup_Coefficient_Bio_in_.txt -> Remaining in candidates
+[2026/4/24 14:00:06] --- Queue Processing Completed ---
 
-[2026/4/5 10:32:38] [AI_CALL:identity] -> Starting AI call using [lmstudio] provider.
-[2026/4/5 10:37:39] [AI_CALL:identity] [ERROR] AI API fetch failed: fetch failed

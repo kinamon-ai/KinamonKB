@@ -1,0 +1,4 @@
+- What: トランプと関連するWorld Liberty FinancialがAB DAOとのパートナーシップについて調査を受けている。
+- Who: Trump、World Liberty Financial、AB DAO、CambodiaのPrince Group
+- Impact: World Liberty Financialのガバナンスとパートナー選択に対する懸念が深まる。また、UAEからの投資も問題視される。
+- Key Tension: AB DAOが制裁対象人物に関連していたにもかかわらず、World Liberty Financialがそれを知らなかったことへの批判と、会社のガバナンスと信頼性に対する質問。

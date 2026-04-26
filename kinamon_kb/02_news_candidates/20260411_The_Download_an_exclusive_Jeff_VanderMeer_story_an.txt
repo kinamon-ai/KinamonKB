@@ -1,0 +1,84 @@
+Title: ダウンロード：独占のジェフ・ヴァンダーミール作品と、公開するにはあまりにも恐ろしいAIモデル
+Evaluation: B
+Reason: コンテンツはエンターテイメント性はあるが、技術的な深掘りや持続可能性への貢献は見られないため保留とする。
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security, web_culture
+Summary: ジェフ・ヴァンダーミールの作品と、AIモデルの公開を巡るセキュリティ上の懸念について取り上げた技術ニュース。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: The Download: an exclusive Jeff VanderMeer story and AI models too scary to release
+Source: https://www.technologyreview.com/2026/04/10/1135618/the-download-jeff-vandermeer-short-story-and-ai-models-too-danger-to-release/
+
+The Download: an exclusive Jeff VanderMeer story and AI models too scary to release
+Plus: OpenAI has joined Anthropic in restricting the release of an AI model over security fears.
+This is today's edition of The Download, our weekday newsletter that provides a daily dose of what's going on in the world of technology.
+Constellations
+—Constellations is a short story by Jeff VanderMeer, the author of the critically acclaimed, bestselling Southern Reach series.
+A spacecraft has crash-landed on a hostile planet. The only survivors are three members of the exploration team and the ship’s AI mind.
+Little exists on the planet except deserts of snow. But alien artifacts lie nearby, in the form of 13 domes, spread across the terrain. Linked by cables threaded through metal posts, the domes form a series of paths—the only hope for life support.
+As the team treks across the frozen hellscape, they discover the remains of countless astronauts from unknown species who followed the same route before them. Is their trail a path to salvation, or a cosmic trap?
+Read the rest of this short story in full.
+This story is from the next issue of our print magazine, packed with stories all about nature. Subscribe now to read the full thing when it lands on Wednesday, April 22.
+The must-reads
+I’ve combed the internet to find you today’s most fun/important/scary/fascinating stories about technology.
+1 OpenAI has joined Anthropic in curbing an AI release over security fears
+Only select partners will get its new cybersecurity tool. (Axios)
++ Anthropic said only yesterday that its new AI is too dangerous for the public. (NBC News)
++ Top models may not be so public going forward. (Bloomberg $)
++ The US has summoned bank CEOs to discuss the risks. (FT $)
+2 Florida is investigating OpenAI over an alleged role in a shooting
+ChatGPT may have helped someone plan a mass shooting in Florida. (WSJ $)
++ OpenAI has backed a bill that would limit AI liability for deaths. (Wired $)
++ The family of a victim plans to sue the company. (Guardian)
++ AI’s role in delusions is dividing opinion. (MIT Technology Review)
+3 Volkswagen is ditching EV production for more gasoline models
+The carmaker will stop making its top electric vehicle in the US. (NYT $)
++ Instead, it will concentrate on developing a new SUV. (Ars Technica)
++ Western carmakers are retreating from electric vehicles. (Guardian)
+4 Elon Musk's xAI has sued Colorado over an AI anti-discrimination law
+It’s the first state bill of its kind. (Bloomberg $)
++ xAI says it will force the firm to “promote the state’s ideological views.” (FT $)
+5 A fifth of US employees say AI now does parts of their job
+The survey found half of US adults used AI in the past week. (NBC News)
++ Missing data could shed light on AI’s job impact. (MIT Technology Review)
+6 Google DeepMind’s CEO wants to automate drug design
+He hopes to develop AI capable of curing all diseases. (The Economist)
++ A scientist is using AI to hunt for antibiotics. (MIT Technology Review)
+7 China's Unitree is launching a viral robot on the international market
+R1, its cheapest humanoid, will go on sale outside China next week. (SCMP)
++ Gig workers are training humanoids at home. (MIT Technology Review)
+8 An experiment on Artemis II astronauts could reshape space medicine
+Chips containing their cells will model spaceflight's effects. (WP $)
+9 A pro-Iran meme machine is trolling Trump with AI Lego cartoons
+The videos have racked up millions of views. (Wired $)
++ You can learn to love AI slop. (MIT Technology Review)
+10 Short breaks could erase 10 years of social media brain damage
+Studies show that a two-week detox could have a dramatic benefit. (WP $)
+Quote of the day
+“AI should advance mankind, not destroy it. We're demanding answers on OpenAI's activities that have hurt kids, endangered Americans, and facilitated the recent FSU mass shooting.”
+—Florida Attorney General James Uthmeier explains on X why he’s probing OpenAI.
+One More Thing
+It’s time to retire the term “user”
+People have been called “users” for a long time. Often, it’s the right word to describe people who use software. But “users” is also unspecific enough to refer to just about everyone. It can accommodate almost any big idea or long-term vision.
+We use—and are used by—computers and platforms and companies. The label "user" suggests these interactions are deeply transactional, but they’re frequently quite personal. Is it time for a more human vocabulary? Read the full story.
+—Taylor Majewski
+We can still have nice things
+A place for comfort, fun and distraction to brighten up your day. (Got any ideas? Drop me a line.)
++ This flawless levitation trick will leave you questioning the laws of physics.
++ The World Press Photo winners expose the beauty (and brutality) of our planet.
++ Over 3 million pink flamingos gathered to create a stunning pink horizon.
++ Behold the galaxy's enormity in this comparison of its largest known star to Earth
+Deep Dive
+The Download
+The Download: AI-enhanced cybercrime, and secure AI assistants
+Plus: Instagram's CEO Adam Mosseri has denied claims that social media is “clinically addictive”
+The Download: 10 things that matter in AI, plus Anthropic’s plan to sue the Pentagon
+Plus: The US DoD has been secretly testing OpenAI models for years
+The Download: Quantum computing for health, and why the world doesn’t recycle more nuclear waste
+The Download: protesting AI, and what’s floating in space
+Plus: The US government wanted to use Anthropic's AI to analyze bulk data collected from Americans
+Stay connected
+Get the latest updates from
+MIT Technology Review
+Discover special offers, top stories, upcoming events, and more.

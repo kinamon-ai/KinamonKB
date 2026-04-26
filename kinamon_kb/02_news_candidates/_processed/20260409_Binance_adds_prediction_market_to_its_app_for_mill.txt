@@ -1,0 +1,36 @@
+Title: バイナンス、数百万人のユーザーに向けてアプリに予測市場を追加
+Evaluation: A
+Reason: ガス代の肩代わりとサードパーティ連携による予測市場への導線強化は、Web3リテール参入の新たな標準を示唆しており興味深い。
+Assigned Bot: bot_02_trader
+Topics: crypto_defi, investment
+Summary: バイナンスがウォレットに予測市場機能を追加し、ガス代を負担するなど一般ユーザーの利便性を向上。
+AI Provider (Translation): gemini
+AI Provider (Classification): gemini
+AI Provider (Evaluation): gemini
+Original Title: Binance adds prediction market to its app for millions of users
+Source: https://www.coindesk.com/markets/2026/04/09/binance-enters-prediction-markets-arena-via-predict-fun-integration
+
+Binance adds prediction market to its app for millions of users
+The integration covers gas costs to lower barriers for retail users. Binance doesn't operate the markets directly, instead providing access to a third-party application.
+What to know:
+- Binance added a prediction markets feature to Binance Wallet, connecting it to Predict.fun on BNB Smart Chain, letting users trade without leaving the app.
+- The integration covers gas costs to lower barriers for retail users. Binance doesn't operate the markets directly, instead providing access to a third-party application.
+- Monthly trading volumes for prediction markets have surged to over $20 billion, up 200-fold in two years. Polymarket and Kalshi dominate with over 97% of the market.
+Binance has added a prediction markets feature to its Binance Wallet, giving users a way to trade on the likelihood of real-world events without leaving the app.
+The rolloaut connects Binance Wallet to Predict.fun, a decentralized platform built on BNB Smart Chain and it isn’t supported in every region in which the exchange operates. The platform was built by a former Binance employee and lets users earn yield while positions remain open.
+Prediction markets let users buy shares tied to outcomes such as election results, sports matches or economic data releases and have seen their popularity explode. Prices range from $0.01 to $0.99 and reflect crowd estimates of probability.
+Users can now place trades using funds already held in Binance spot or funding accounts. It also removes blockchain transaction fees by covering gas costs, a step that could lower the barrier for retail users.
+Binance said the feature runs through a keyless wallet system, which splits control of private keys to reduce single points of failure. Users must create a separate prediction account to access the service.
+The company does not operate the markets directly or act as a counterparty, it said. Instead, it provides access to a third-party application.
+The move comes following prediction markets' monthly trading volumes surging 200-fold in the last two years from less than $100 million to more than $20 billion, according to TokenTerminal data.
+Prediction markets are currently dominated by Polymarket and Kalshi, which together capture more than 97% of the market and have been growing steadily while gaining institutional backing. Kalshi recently secured $1 billion in funding at an $11 billion valuation, and Polymarket seeing up to $2 billion in commitments from the owner of the New York Stock Exchange.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+Long-term agreement between Meta and CoreWeave signals growing demand for scalable AI compute and inference capacity.
+What to know:
+- Meta locks in AI cloud capacity through 2032 to support ongoing AI deployment.
+- CoreWeave strengthens its position in the fast-growing AI infrastructure market.
+- CRWV shares rise 3% pre-market.

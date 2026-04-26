@@ -1,0 +1,388 @@
+<!-- Source: https://www.coindesk.com/arc/outboundfeeds/rss/ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data</title>
+    <link>https://www.coindesk.com/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.coindesk.com/arc/outboundfeeds/rss"/>
+    <atom:link rel="hub" href="true"/>
+    <description>Leader in cryptocurrency, Bitcoin, Ethereum, XRP, blockchain, DeFi, digital finance and Web 3.0 news with analysis, video and live price updates.</description>
+    <lastBuildDate>Sat, 11 Apr 2026 14:48:56 +0000</lastBuildDate>
+    <language>en-US</language>
+    <copyright>© 2026 CoinDesk, Inc.</copyright>
+    <generator>CoinDesk</generator>
+    <ttl>5</ttl>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <image>
+      <url>https://downloads.coindesk.com/arc/failsafe/feeds/coindesk-feed-logo.png</url>
+      <title>CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data</title>
+      <link>https://www.coindesk.com/</link>
+    </image>
+    <item>
+      <title><![CDATA[Crypto perpetuals predict the direction of Wall Street’s Monday open with 89% accuracy, data shows]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/11/crypto-perpetuals-predict-the-direction-of-wall-street-s-monday-open-with-89-accuracy-data-shows</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/83ada520132c533b438a7a871347a3c8553f3ccf-1920x1442.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">39319bc4-942f-4ee1-88c6-b5e7cd99f8f3</guid>
+      <pubDate>Sat, 11 Apr 2026 14:46:55 +0000</pubDate>
+      <description><![CDATA[Over half (57%) of Monday market opens is s already reflected in crypto markets' perpetual futures products. ]]></description>
+      <dc:creator>Francisco Rodrigues</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Crypto Trading]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Crypto Clarity bill has 30% chance of passing this year, Wintermute’s Hammond says]]></title>
+      <link>https://www.coindesk.com/policy/2026/04/11/crypto-clarity-bill-has-30-chance-of-passing-this-year-wintermute-s-hammond-says</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/4dec48a4de02d9c1920873e81c7ebfddd5b66bd1-3228x1816.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">159573a1-b794-455c-8db4-590d2b105353</guid>
+      <pubDate>Sat, 11 Apr 2026 14:00:00 +0000</pubDate>
+      <description><![CDATA[Wintermute’s head of policy Ron Hammond pegs chances at 30%, citing political friction, stalled negotiations and shifting timelines despite signs of progress.]]></description>
+      <dc:creator>Will Canny</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[Consensus Miami 2026]]></category>
+      <category domain="tag"><![CDATA[Exclusive]]></category>
+      <category domain="tag"><![CDATA[Wintermute]]></category>
+      <category domain="tag"><![CDATA[Regulation]]></category>
+      <category domain="tag"><![CDATA[Clarity Act]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitwise files updated S-1 for Hyperliquid ETF as HYPE fund race heats up]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/11/bitwise-files-updated-s-1-for-hyperliquid-etf-as-hype-fund-race-heats-up</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/cd95fb32b7390b1a2fcb4ba5b3f712c2f2d9b4ca-1195x799.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">bc0dae29-290f-4665-9ebf-a72d948a5493</guid>
+      <pubDate>Sat, 11 Apr 2026 13:59:18 +0000</pubDate>
+      <description><![CDATA[HYPE has surged around 200% over the last 12 months. Other asset managers including Grayscale, 21Shares, and VanEck are also eyeing  HYPE-linked ETFs.]]></description>
+      <dc:creator>Francisco Rodrigues</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[ETFs]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[The bitcoin market is splitting in two. Here's who is buying and selling amid the war]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/the-bitcoin-market-is-splitting-in-two-here-s-who-is-buying-and-selling-amid-the-war</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/61a9559ef27c28600826f6691b0424ccfd776182-1500x1000.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">dc0ce56e-8789-4947-880a-5d01df69a007</guid>
+      <pubDate>Sat, 11 Apr 2026 12:02:00 +0000</pubDate>
+      <description><![CDATA[Six weeks of war have revealed that bitcoin's floor depends entirely on a handful of mandated buyers absorbing what everyone else is trying to get rid of.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bhutan has sold 70% of its bitcoin in 18 months. It may have stopped BTC mining too.]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/11/bhutan-has-sold-70-of-its-bitcoin-in-18-months-it-may-have-stopped-btc-mining-too</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/850c38128aa8b785d3e9dcb693fdf3c390bde105-1920x1440.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">b00d933e-1144-459a-a2c3-06842a71050f</guid>
+      <pubDate>Sat, 11 Apr 2026 02:30:00 +0000</pubDate>
+      <description><![CDATA[The kingdom's holdings have dropped from 13,000 BTC to 3,954 since October 2024, with $215.7 million moved out this year alone. Its last mining inflow over $100,000 was recorded more than a year ago.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Bitcoin Mining]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Federal judge blocks Arizona from bringing criminal charges against Kalshi]]></title>
+      <link>https://www.coindesk.com/policy/2026/04/10/federal-judge-blocks-arizona-from-bringing-criminal-charges-against-kalshi</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/53ba714148121088a1e649cc7fccbd1eef261f0d-6000x3376.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">28a22ea7-5bac-4107-a061-62cf629cebfd</guid>
+      <pubDate>Fri, 10 Apr 2026 23:31:34 +0000</pubDate>
+      <description><![CDATA[Judge Michael Liburdi ordered Arizona not to bring any enforcement actions under state law against Kalshi, at least temporarily.]]></description>
+      <dc:creator>Nikhilesh De</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[CFTC]]></category>
+      <category domain="tag"><![CDATA[Prediction Markets]]></category>
+      <category domain="tag"><![CDATA[Breaking News]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Star Xu calls CZ a ‘liar’ as founders of world’s largest crypto exchanges argue over past allegations]]></title>
+      <link>https://www.coindesk.com/business/2026/04/10/star-xu-calls-cz-a-liar-as-founders-of-world-s-largest-crypto-exchanges-argue-over-past-allegations</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/d9828d5a1dcf4e1f9551968a3a6c2c75a4fc3166-3657x2057.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">a8a45672-532d-4e7a-aa99-3f7cbe80708d</guid>
+      <pubDate>Fri, 10 Apr 2026 15:38:47 +0000</pubDate>
+      <description><![CDATA[The dispute between the crypto exchange founders, which included a $1 billion wager from CZ, revives allegations dating back 11 years to Zhao’s time at OKCoin.]]></description>
+      <dc:creator>Olivier Acuna</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[The magic word for digital assets adoption and success: choice]]></title>
+      <link>https://www.coindesk.com/opinion/2026/04/10/the-magic-word-for-digital-assets-adoption-and-success-choice</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/4e0a2487290de80168580a561cf40241d5232f1a-1000x592.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">877694a2-f939-417e-99bd-c0ce1557f528</guid>
+      <pubDate>Fri, 10 Apr 2026 15:30:00 +0000</pubDate>
+      <description><![CDATA[For the digital asset ecosystem of the future to flourish, investors need options, explains Sullivan.
+]]></description>
+      <dc:creator>Tom Sullivan</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/opinion"><![CDATA[Opinion]]></category>
+      <category domain="tag"><![CDATA[Tokenization]]></category>
+      <category domain="https://www.coindesk.com/">Opinion</category>
+    </item>
+    <item>
+      <title><![CDATA[CoinDesk 20 performance update: Hedera (HBAR) drops 1.9%, leading index lower ]]></title>
+      <link>https://www.coindesk.com/coindesk-indices/2026/04/10/coindesk-20-performance-update-hedera-hbar-drops-1-9-leading-index-lower</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/821ab57bfbfd02c7f746e9ad769ef57bf601b5c5-360x270.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">9f7a2e3f-780a-41a5-83db-50f3dfcfc8ed</guid>
+      <pubDate>Fri, 10 Apr 2026 13:14:07 +0000</pubDate>
+      <description><![CDATA[Cardando (ADA), down 1.3% from Thursday, was also among the underperformers.]]></description>
+      <dc:creator>CoinDesk Indices</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/coindesk-indices"><![CDATA[CoinDesk Indices]]></category>
+      <category domain="tag"><![CDATA[CoinDesk Indices]]></category>
+      <category domain="tag"><![CDATA[CoinDesk 20]]></category>
+      <category domain="tag"><![CDATA[charts]]></category>
+      <category domain="tag"><![CDATA[Prices]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Trump-backed WLFI token drops 12% to record lows after team defends multi-million lending position ]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/trump-backed-wlfi-token-drops-12-to-record-lows-after-team-defends-multi-million-lending-position</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/a6462c7e6b84bc721cb6296d10cf50ccf716cbb5-1600x1067.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">0d11036c-c4d9-4901-a58f-304a846fb847</guid>
+      <pubDate>Fri, 10 Apr 2026 13:14:03 +0000</pubDate>
+      <description><![CDATA[World Liberty Financial responded to CoinDesk's reporting by saying it would "simply supply more collateral" if markets moved against it, a statement that did not reassure holders.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Binance offers UAE staff temporary relocation as Middle East conflict disrupts region]]></title>
+      <link>https://www.coindesk.com/business/2026/04/10/binance-offers-uae-staff-temporary-relocation-as-middle-east-conflict-disrupts-region</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/1ee17e1310c5c6829bf97b25a87741f3300a9b59-3200x2133.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">bbe0635d-6bd7-4062-8dd6-6323f5f12d6f</guid>
+      <pubDate>Fri, 10 Apr 2026 12:48:41 +0000</pubDate>
+      <description><![CDATA[The crypto exchange said its operations in the United Arab Emirates remain unchanged and that many employees have chosen to remain]]></description>
+      <dc:creator>Olivier Acuna</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin gains after core CPI rose a less-than-forecast 0.2% in March.]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/bitcoin-rises-after-core-cpi-rose-a-less-than-forecast-0-2-in-march</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/d687b13ec3ef7b92cad7c07ff5ad6c8a603ecb40-3999x2666.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">839f9ec9-9881-4e46-af68-d2e93f22825b</guid>
+      <pubDate>Fri, 10 Apr 2026 12:33:23 +0000</pubDate>
+      <description><![CDATA[Headline inflation rose 0.9% last month, driven by the sharp rise in energy costs due to the Iran war.]]></description>
+      <dc:creator>James Van Straten</dc:creator>
+      <dc:creator>Stephen Alpher</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Inflation]]></category>
+      <category domain="tag"><![CDATA[Bitcoin News]]></category>
+      <category domain="tag"><![CDATA[Top Stories]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Institutions' bitcoin positioning lacks conviction; CPI, Iran talks might help]]></title>
+      <link>https://www.coindesk.com/daybook-us/2026/04/10/institutions-bitcoin-positioning-lacks-conviction-cpi-iran-talks-might-help</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/177293196d1f1a2e6bdf7bb9984e72e3943ef8a6-6000x4000.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">17b5ccb2-d516-47cf-a817-33d7e1ae9fdf</guid>
+      <pubDate>Fri, 10 Apr 2026 11:29:59 +0000</pubDate>
+      <description><![CDATA[Institutions are betting on the bitcoin price hitting $80,000 through call options, but they are also buying downside protection.]]></description>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/daybook-us"><![CDATA[Crypto Daybook Americas]]></category>
+      <category domain="tag"><![CDATA[Crypto Daybook Americas]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin holds steady as inflation data looms, bittensor drama unfolds]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/bitcoin-flatlines-as-inflation-data-looms-bittensor-drama-unfolds</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/6a4cddb4bc43320a03dab22ed611582c9443d589-2094x1100.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">185cca33-ab5a-43b5-9d5c-1d26c5df7b4e</guid>
+      <pubDate>Fri, 10 Apr 2026 10:34:25 +0000</pubDate>
+      <description><![CDATA[Traders face a pivotal Friday as narrowing volatility on bitcoin's chart hints at a massive price move while bittensor faces a high-profile developer exit.]]></description>
+      <dc:creator>Oliver Knight</dc:creator>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Crypto Markets Today]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[HSBC and Standard Chartered-led group land Hong Kong’s first stablecoin licenses]]></title>
+      <link>https://www.coindesk.com/policy/2026/03/24/hong-kong-awards-first-stablecoin-licenses-to-hsbc-standard-chartered-led-group</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/a0c808e41eda490bc80af522867b52a2671d7cf1-5925x3956.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">93bb852f-603f-47c0-99bf-61a7a249dc92</guid>
+      <pubDate>Fri, 10 Apr 2026 09:19:49 +0000</pubDate>
+      <description><![CDATA[The approvals by the Hong Kong Monetary Authority, the territory's central bank, mark the first batch under the Stablecoins Ordinance, which took effect in August 2025.]]></description>
+      <dc:creator>Sam Reynolds</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[Hong Kong]]></category>
+      <category domain="tag"><![CDATA[Stablecoins]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[XRP adjacent Flare proposes protocol-level MEV capture and 40% inflation cut]]></title>
+      <link>https://www.coindesk.com/tech/2026/04/10/xrp-adjacent-flare-proposes-protocol-level-mev-capture-and-40-inflation-cut</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/86730016f67edf241b9325799d95bf55d73781f9-1500x1000.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">c04f7c93-3e44-4932-9a11-856758f384d5</guid>
+      <pubDate>Fri, 10 Apr 2026 09:04:27 +0000</pubDate>
+      <description><![CDATA[The proposal would move block building away from individual validators, create a revenue entity called FIRE to buy and burn FLR, and reduce annual token inflation to 3%.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/tech"><![CDATA[Tech]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[David Bailey’s bitcoin holder Nakamoto is trying to stay on Nasdaq with a reverse stock split]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/david-bailey-s-nakamoto-is-trying-to-stay-on-nasdaq-and-it-s-turning-to-a-reverse-stock-split</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/3e653e6039ba6c6faf851d6e0638d3b242e6345b-1920x1080.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">e9d98282-1a72-4464-aa03-973085e63ef8</guid>
+      <pubDate>Fri, 10 Apr 2026 08:58:48 +0000</pubDate>
+      <description><![CDATA[The stock has plunged roughly 99% from its May 2025 peak as pressure builds on the bitcoin treasury firm.]]></description>
+      <dc:creator>James Van Straten</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Bitcoin News]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Japan moves to classify cryptocurrencies as financial products]]></title>
+      <link>https://www.coindesk.com/policy/2026/04/10/japan-moves-to-classify-cryptocurrencies-as-financial-products</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/9a12f071722174853c9625a894931ff37321e344-1920x1080.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">6ae27458-cc19-47d8-b72d-f6a1949bbe6e</guid>
+      <pubDate>Fri, 10 Apr 2026 08:58:19 +0000</pubDate>
+      <description><![CDATA[The new rules ban insider trading, require issuers to publish annual disclosures, and impose stricter penalties: up to 10 years in prison and 10 million yen in fines for operating without registration.]]></description>
+      <dc:creator>Francisco Rodrigues</dc:creator>
+      <dc:creator>AI Boost</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[Cryptocurrency]]></category>
+      <category domain="tag"><![CDATA[Regulation]]></category>
+      <category domain="tag"><![CDATA[Japan]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[XRP may be less exposed to quantum computer threats than bitcoin, experts say]]></title>
+      <link>https://www.coindesk.com/tech/2026/04/10/xrp-may-be-less-exposed-to-quantum-threats-than-bitcoin-experts-say</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/6d294555fa46239cab430e649b407b22ab988f42-1000x660.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">1c20c884-0d8a-4f1f-af09-e5fae4407182</guid>
+      <pubDate>Fri, 10 Apr 2026 06:24:28 +0000</pubDate>
+      <description><![CDATA[XRP’s design leaves a smaller share of its supply exposed to future quantum attacks than Bitcoin’s, experts said, pointing to additional XRPL features that stand out.]]></description>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/tech"><![CDATA[Tech]]></category>
+      <category domain="tag"><![CDATA[XRP News]]></category>
+      <category domain="tag"><![CDATA[quantum computing]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[XRP edges higher to $1.35 on breakout, but bullish momentum still lacks]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/xrp-edges-higher-to-usd1-35-on-breakout-but-bullish-momentum-still-lacks</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/5f7526e1f11fb00a6dcbd0a634fedc70df3b710f-1188x734.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">d3019cd6-9446-4604-9070-02383e0fdb8e</guid>
+      <pubDate>Fri, 10 Apr 2026 05:01:38 +0000</pubDate>
+      <description><![CDATA[Strong volume pushed price above $1.34, though weak fundamentals and overhead resistance continue to cap follow-through.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[ETH, SOL, DOGE slide as Bitcoin fails to break $73,000 for the third time since the ceasefire]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/eth-sol-doge-slide-as-bitcoin-fails-to-break-usd73-000-for-the-third-time-since-the-ceasefire</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/f456c8ffc9ab2b603ddbba9f8613cb0a168723e2-1280x853.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">5f77f89e-a5ae-4cc8-b836-8835a925b355</guid>
+      <pubDate>Fri, 10 Apr 2026 04:55:41 +0000</pubDate>
+      <description><![CDATA[The level that has capped every rally during the six-week war remains intact, with analysts saying $75,000 needs to break before the market enters a genuine bullish phase.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Quantum-safe bitcoin now possible without a soft fork, but costs $200 a pop, new research shows]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/quantum-safe-bitcoin-now-possible-without-a-soft-fork-but-costs-usd200-a-pop</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/ecfe1c9a91435e545a466715bbc0457d2e3a48f4-5105x3403.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">be097094-4375-452d-9275-60e7aa67075b</guid>
+      <pubDate>Fri, 10 Apr 2026 03:54:27 +0000</pubDate>
+      <description><![CDATA[A new scheme from a StarkWare researcher works under existing consensus rules, offering an emergency fallback while BIP-360 awaits activation.]]></description>
+      <dc:creator>Sam Reynolds</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[quantum computing]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[OKX and HashKey invest in new Vietnam exchange ahead of crypto licensing push]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/okx-hashkey-back-usd380-million-vietnam-crypto-push-as-new-rules-near-rollout</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/e6efdc3c14cfbc04d11ff5c1f248f2b87afdc852-1920x1280.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">e63f3b37-fbfe-4a84-92bb-98ab8807877f</guid>
+      <pubDate>Fri, 10 Apr 2026 02:35:25 +0000</pubDate>
+      <description><![CDATA[The partnership will help the exchange meet Vietnam's $380 million capital requirement to enter a government pilot program aimed at licensing local platforms and curbing offshore trading. ]]></description>
+      <dc:creator>Sam Reynolds</dc:creator>
+      <dc:creator>AI Boost</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Mythos AI threat prompts Bessent, Powell to convene bank CEOs for urgent talks]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/10/mythos-ai-threat-sees-bessent-powell-call-urgent-meeting-with-bank-ceos</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/b1d6ea7b7aec491803836b0fa81e4742ba3b8285-1280x854.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">aa5c8030-db0f-429e-9545-6d853d23d700</guid>
+      <pubDate>Fri, 10 Apr 2026 02:03:54 +0000</pubDate>
+      <description><![CDATA[Mythos can rapidly spot software flaws and craft sophisticated exploits, raising fears of systemic risks in the banking system. ]]></description>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <dc:creator>AI Boost</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Artificial Intelligence]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin tops $72,000, but Circle and Bullish drop sharply after downgrades]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/09/bitcoin-tops-usd72-000-but-circle-and-bullish-drop-sharply-after-downgrades</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/c391210413507106167d1e67fdc9532b0d842878-5688x3792.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">e24cca70-2faf-4cb1-a537-c10c7a827e17</guid>
+      <pubDate>Thu, 09 Apr 2026 21:10:46 +0000</pubDate>
+      <description><![CDATA[Eased Middle East tensions pushed crypto prices and U.S. stocks sizable hjigher.]]></description>
+      <dc:creator>Helene Braun</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Bitcoin News]]></category>
+      <category domain="tag"><![CDATA[Bullish]]></category>
+      <category domain="tag"><![CDATA[Circle]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+Title: Sui Monthly：2026年3月号
+Evaluation: A
+Reason: ビットコイン金融の新しいプリミティブや開発者インフラの進展など、専門的で深い情報が含まれている。
+Assigned Bot: bot_02_trader
+Topics: crypto_defi, ai_llm
+Summary: Suiの最新情報として、ビットコインネイティブな金融プリミティブのローンチやSui Dollarの導入、ステーブルコイン送金の増加など、開発者インフラと金融面での進展が報告されている。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: The Sui Monthly: March 2026
+Source: https://blog.sui.io/sui-monthly-march-2026/
+
+The Sui Monthly: March 2026
+From Bitcoin finance and $1T in stablecoin transfers to sharper developer infrastructure, March pushed Sui forward on multiple fronts
+Main Takeaways
+- Hashi launched on devnet, introducing a Bitcoin-native financial primitive designed to unlock more productive BTC use, with support from major institutional participants.
+- Sui’s financial rails expanded with the launch of Sui Dollar, $1T in stablecoin transfers, and new access points like SUI staking on Revolut.
+- GraphQL RPC and Archival Store became generally available, OpenZeppelin’s smart contract library landed on Sui, and Chainalysis added full SUI support.
+Overview
+Welcome to the Sui recap: your monthly look at the launches, milestones, and ecosystem momentum shaping the network.
+March had two clear fronts. On the finance side, Hashi launched on devnet as a new Bitcoin finance primitive, Sui Dollar went live as a native digital dollar, and stablecoin transfers on the network crossed $1T.
+On the infrastructure side, developer tooling, compliance coverage, and security primitives all moved meaningfully forward, making it easier to build on Sui and harder to ignore. Here’s a look at what shipped in March.
+A New Era of Bitcoin Finance on Sui
+March’s biggest news was the introduction of Hashi, a new Bitcoin finance primitive that launched on devnet with support from industry leaders, including BitGo, Bullish, Erebor Bank, FalconX, Fordefi, and Ledger.
+Bitcoin is the largest asset in crypto, but only a fraction of it is actively used in DeFi. Hashi is built to change that, bringing a developer-friendly primitive for Bitcoin-backed finance on Sui. This opens the door to compliant, institutionally relevant use cases, such as credit origination, with lending and borrowing done natively on the Bitcoin network, and without the use of synthetics.
+The launch drew significant attention. On Unchained, Laura Shin spoke with Adeniyi Abiodun, CPO and co-founder of Mysten Labs, about how Hashi differs from wrapped BTC models and why institutional participation is central to its design from the start.
+Cointelegraph covered the institutional backing behind the launch, and what it reported underscored how seriously the market is taking Hashi. With 20+ committed day one partners spanning custodians, exchanges, trading firms, and security infrastructure providers, the breadth of support before Hashi has even gone live speaks for itself.
+Sui’s Financial Rails Expanded
+March brought three developments that added real weight to Sui's financial stack.
+Sui Dollar (USDsui) went live as a native digital dollar on Sui, issued by Bridge, a Stripe company. Built for scalable finance and global payments, it adds another significant and well-credentialed piece to the ecosystem's growing stablecoin base.
+That base also hit a landmark milestone: Sui surpassed $1T in stablecoin transfers. The number matters because it reflects more than supply. Stablecoins aren’t just arriving on Sui, they’re being actively used at scale.
+Access broadened beyond the protocol layer too. SUI staking went live in the Revolut app, giving a mainstream fintech audience a direct and straightforward way to participate in the network, no crypto-native setup required.
+These updates all point in the same direction: Sui’s financial rails are getting broader, more usable, and more visible to both crypto and mainstream audiences.
+Infrastructure and Developer Tooling Levelled Up
+On the developer side, GraphQL RPC and Archival Store became generally available, joining gRPC as live offerings for builders and infrastructure providers. Better data access and more production-ready tooling help make it easier to build serious products on Sui.
+A dedicated @SuiDevelopers account also launched on X, giving the developer community a clearer home for updates and resources.
+The network’s execution layer moved forward too. Sui’s new VM branch went live for testing, bringing faster performance, per-package caching, and support for next-gen Move features, while opening the door to broader testing and bug bounty participation.
+Security and trust infrastructure advanced as well. Chainalysis added support for SUI and all fungible tokens on the network, enabling monitoring, investigations, and fund tracing.
+OpenZeppelin’s industry-standard smart contract library landed on Sui in a purpose-built form, giving builders access to a widely trusted set of tools. And the decentralized Seal Key Server, powered by MPC, went live on testnet with a stronger trust model.
+Ecosystem Momentum Continued
+Beyond finance and infrastructure, the broader ecosystem had a strong month too.
+Current became the first team selected for the DeFi Moonshots Program, a signal that the program has moved from announcement to execution. Current is building a capital efficiency and leverage layer on Sui. It’s exactly the kind of protocol Moonshots exists for: one that doesn't compete within an existing category, but creates a new one.
+Walrus marked its one-year anniversary on Mainnet, crossing 467TB of stored data to become the second-largest decentralized storage protocol by total data stored. Enterprise partners across gaming, adtech, and institutional finance are already building on it, and the protocol’s second year looks set to scale what the first year proved.
+EVE Frontier, from CCP Games, completed its first step migrating to Sui, opening its programmable layer to outside builders. Developers can now write code that runs directly inside the live game universe, adding a new dimension to what gets built on Sui.

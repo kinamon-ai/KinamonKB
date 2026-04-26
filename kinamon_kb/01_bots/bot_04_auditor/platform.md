@@ -1,3 +1,0 @@
-# platform.md
-
-(TBD)

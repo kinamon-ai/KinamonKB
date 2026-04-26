@@ -1,0 +1,4 @@
+- What: Arceeは400BパラメータのオープンソースLLMを26人で構成する小さなU.S.スタートアップが新しい思考モデルTrinity Large Thinkingをリリースした。
+- Who: Arcee CEO Mark McQuade, Anthropic, OpenAI
+- Impact: U.S.と西側企業に中国ベースのモデルを使用する理由を与え、データや権力のリスクを回避できる。
+- Key Tension: 中国ベースのモデルとの競合と、オープンソースモデルの能力と安全性。

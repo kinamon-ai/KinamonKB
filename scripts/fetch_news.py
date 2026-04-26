@@ -58,7 +58,7 @@ def call_llm(prompt, system_content=None, timeout=120, action_key=None):
             
     elif provider == "lmstudio":
         url = settings.get("lmstudio_url", "http://localhost:1234/v1/chat/completions")
-        model = settings.get("lmstudio_model", "gemma-2-2b-it")
+        model = settings.get("lmstudio_model", "gemma-4-e2b-it")
         
         messages = []
         if system_content:
@@ -261,10 +261,28 @@ def fetch_and_extract():
     # Phase 1: Collect all articles first (fast)
     collected = []
 
+    RSS_SOURCES_DIR = os.path.join(os.path.dirname(__file__), "../kinamon_kb/05_rss_sources")
+    os.makedirs(RSS_SOURCES_DIR, exist_ok=True)
+    
     for feed_url in rss_feeds:
         print(f"Checking feed: {feed_url}")
         try:
-            feed = feedparser.parse(feed_url)
+            # 1. Fetch raw XML and save it
+            response = requests.get(feed_url, timeout=30)
+            response.raise_for_status()
+            raw_xml = response.text
+            
+            feed_hash = hashlib.md5(feed_url.encode()).hexdigest()[:8]
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            xml_filename = f"{timestamp}_{feed_hash}.xml"
+            xml_path = os.path.join(RSS_SOURCES_DIR, xml_filename)
+            
+            with open(xml_path, 'w', encoding='utf-8') as f:
+                f.write(f"<!-- Source: {feed_url} -->\n")
+                f.write(raw_xml)
+            
+            # 2. Parse from the fetched text
+            feed = feedparser.parse(raw_xml)
 
             # Skip invalid feeds that produced no entries or had parse errors
             if feed.bozo and len(feed.entries) == 0:
@@ -334,53 +352,35 @@ def fetch_and_extract():
             evaluation, reason, eval_provider = evaluate_relevance(jp_title, article['content'])
             print(f"    3c Eval: {evaluation} - {reason[:50]}... [{eval_provider}]")
             
-            pipeline_results.append({
-                'article': article,
-                'jp_title': jp_title,
-                'topics': topics,
-                'summary_jp': summary_jp,
-                'assigned_bot': assigned_bot,
-                'evaluation': evaluation,
-                'reason': reason,
-                'classify_provider': classify_provider,
-                'eval_provider': eval_provider,
-                'translation_provider': translation_provider,
-            })
+            # Phase 4: Save article immediately [NEW: Incremental Saving]
+            print(f"    💾 Saving: {article['title']} [{evaluation}]")
+            
+            title_slug = "".join(x for x in article['title'] if x.isalnum() or x in " -_").strip().replace(" ", "_")
+            if not title_slug:
+                title_slug = hashlib.md5(article['url'].encode()).hexdigest()
+            
+            filename = f"{datetime.now().strftime('%Y%m%d')}_{title_slug[:50]}.txt"
+            filepath = os.path.join(TMP_DIR, filename)
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(f"Title: {jp_title}\n")
+                f.write(f"Evaluation: {evaluation}\n")
+                f.write(f"Reason: {reason}\n")
+                f.write(f"Assigned Bot: {assigned_bot}\n")
+                f.write(f"Topics: {', '.join(topics)}\n")
+                f.write(f"Summary: {summary_jp}\n")
+                f.write(f"AI Provider (Translation): {translation_provider}\n")
+                f.write(f"AI Provider (Classification): {classify_provider}\n")
+                f.write(f"AI Provider (Evaluation): {eval_provider}\n")
+                f.write(f"Original Title: {article['title']}\n")
+                f.write(f"Source: {article['url']}\n\n")
+                f.write(article['content'])
+            
+            new_articles.append(filepath)
+            # Output for auto_patrol.sh to pick up immediately (if we fix auto_patrol.sh)
+            print(f"FILE_PATH:{filepath}")
     else:
         jp_titles = []
-        pipeline_results = []
-
-    # Phase 4: Save articles
-    new_articles = []
-    for result in pipeline_results:
-        article = result['article']
-        jp_title = result['jp_title']
-        
-        print(f"\nSaving: {article['title']}")
-        print(f"  → {jp_title} [{result['evaluation']}] [Bot: {result['assigned_bot']}]")
-
-        title_slug = "".join(x for x in article['title'] if x.isalnum() or x in " -_").strip().replace(" ", "_")
-        if not title_slug:
-            title_slug = hashlib.md5(article['url'].encode()).hexdigest()
-        
-        filename = f"{datetime.now().strftime('%Y%m%d')}_{title_slug[:50]}.txt"
-        filepath = os.path.join(TMP_DIR, filename)
-        
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(f"Title: {jp_title}\n")
-            f.write(f"Evaluation: {result['evaluation']}\n")
-            f.write(f"Reason: {result['reason']}\n")
-            f.write(f"Assigned Bot: {result['assigned_bot']}\n")
-            f.write(f"Topics: {', '.join(result['topics'])}\n")
-            f.write(f"Summary: {result['summary_jp']}\n")
-            f.write(f"AI Provider (Translation): {result['translation_provider']}\n")
-            f.write(f"AI Provider (Classification): {result['classify_provider']}\n")
-            f.write(f"AI Provider (Evaluation): {result['eval_provider']}\n")
-            f.write(f"Original Title: {article['title']}\n")
-            f.write(f"Source: {article['url']}\n\n")
-            f.write(article['content'])
-        
-        new_articles.append(filepath)
 
     return new_articles
 

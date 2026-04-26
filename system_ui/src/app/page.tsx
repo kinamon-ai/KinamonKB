@@ -11,10 +11,11 @@ import NewsFeed from '@/components/NewsFeed';
 import BotsView from '@/components/BotsView';
 import AISettingsView from '@/components/AISettingsView';
 import SystemActivityView from '@/components/SystemActivityView';
+import RSSView from '@/components/RSSView';
 import AIToggle from '@/components/AIToggle';
-import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles, Users, Settings, Terminal } from 'lucide-react';
+import { LayoutDashboard, Inbox, CheckCircle, Clock, Radar, Send, Menu, ChevronLeft, Brain, Sparkles, Users, Settings, Terminal, Database } from 'lucide-react';
 
-type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity' | 'bots' | 'settings' | 'activity';
+type ViewMode = 'feed' | 'pending' | 'held' | 'queue' | 'history' | 'health' | 'identity' | 'bots' | 'settings' | 'activity' | 'rss';
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -38,7 +39,7 @@ export default function Home() {
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['feed', 'pending', 'held', 'queue', 'history', 'health', 'identity', 'bots', 'settings', 'activity'].includes(hash)) {
+      if (['feed', 'pending', 'held', 'queue', 'history', 'health', 'identity', 'bots', 'settings', 'activity', 'rss'].includes(hash)) {
         setViewMode(hash as ViewMode);
       }
     };
@@ -48,7 +49,7 @@ export default function Home() {
   }, []);
 
   const fetchTasks = async (mode: ViewMode = viewMode) => {
-    if (mode === 'identity' || mode === 'history' || mode === 'health' || mode === 'bots' || mode === 'settings' || mode === 'activity') {
+    if (['identity', 'history', 'health', 'bots', 'settings', 'activity', 'rss'].includes(mode)) {
       setIsLoading(false);
       return;
     }
@@ -124,7 +125,7 @@ export default function Home() {
     setTimeout(() => setAnalyzeMsg(null), 6000);
   };
 
-  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : viewMode === 'bots' ? 'Bots Status' : viewMode === 'settings' ? 'AI Configuration' : viewMode === 'activity' ? 'Runtime Activity' : 'Approval Gate';
+  const modeLabel = viewMode === 'feed' ? 'News Feed' : viewMode === 'held' ? 'Held Tasks' : viewMode === 'queue' ? 'Post Queue' : viewMode === 'identity' ? 'Bot Identity' : viewMode === 'history' ? 'History' : viewMode === 'health' ? 'System Health' : viewMode === 'bots' ? 'Bots Status' : viewMode === 'settings' ? 'AI Configuration' : viewMode === 'activity' ? 'Runtime Activity' : viewMode === 'rss' ? 'RSS Sources' : 'Approval Gate';
   const modeSubtitle = viewMode === 'feed'
     ? 'Stage 1: Browse RSS news and pick the most relevant ones to process.'
     : viewMode === 'held'
@@ -141,8 +142,8 @@ export default function Home() {
                 ? 'Manage and monitor all active bot personalities.'
                 : viewMode === 'settings'
                   ? 'Fine-tune AI processing depth and LLM routing.'
-                  : viewMode === 'activity'
-                    ? 'Watch the pulse in real-time. Script logs and AI payloads.'
+                  : viewMode === 'rss'
+                    ? 'Raw data store. Browse the original XML sources collected by bots.'
                     : 'Identify the pulse. Shape the persona.';
 
   return (
@@ -208,6 +209,12 @@ export default function Home() {
             onClick={() => switchMode('health')}
           >
             <LayoutDashboard size={16} /> System Health
+          </div>
+          <div
+            className={`nav-item ${viewMode === 'rss' ? 'active rss-active' : ''}`}
+            onClick={() => switchMode('rss')}
+          >
+            <Database size={16} /> RSS Sources
           </div>
 
           <div
@@ -297,7 +304,7 @@ export default function Home() {
                  ${viewMode === 'queue' ? 'queue-title-count' : ''}
                  ${viewMode === 'bots' || viewMode === 'identity' || viewMode === 'history' || viewMode === 'health' || viewMode === 'feed' ? 'hide' : ''}
                `}>
-                {isLoading ? '…' : tasks.length}
+                {isLoading ? '…' : (viewMode === 'rss' ? '' : tasks.length)}
               </span>
             </h1>
           </div>
@@ -333,6 +340,10 @@ export default function Home() {
           ) : viewMode === 'activity' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
               <SystemActivityView isBusy={isBusy} />
+            </section>
+          ) : viewMode === 'rss' ? (
+            <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
+              <RSSView />
             </section>
           ) : viewMode === 'settings' ? (
             <section className="detail-area" style={{ gridColumn: '1 / -1' }}>
@@ -541,6 +552,11 @@ export default function Home() {
           background: rgba(16, 185, 129, 0.08);
           color: #10b981;
         }
+        .nav-item.rss-active {
+          background: rgba(16, 185, 129, 0.1);
+          color: #10b981;
+          border-left: 3px solid #10b981;
+        }
         .nav-item.disabled {
           opacity: 0.35;
           cursor: default;
@@ -605,6 +621,11 @@ export default function Home() {
         .nav-item.settings-active {
           background: rgba(148, 163, 184, 0.1);
           color: #94a3b8;
+        }
+        .nav-item.rss-active {
+          background: rgba(16, 185, 129, 0.1);
+          color: #10b981;
+          border-left: 3px solid #10b981;
         }
         .analyze-btn {
           display: flex;

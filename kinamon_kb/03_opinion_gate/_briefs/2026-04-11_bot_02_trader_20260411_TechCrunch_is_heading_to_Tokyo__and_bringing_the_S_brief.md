@@ -1,0 +1,4 @@
+- What: TechCrunchが東京で開催されるSusHi Tech Tokyo 2026に参加し、自社のプログラムマネージャーがコンペティションの審査員を務める。
+- Who: TechCrunch、SusHi Tech Tokyo 2026、東京メトロポリタン政府、Sony、Google、Microsoft、Mizuhoなどの企業パートナー。
+- Impact: コンペティションの優勝者がTechCrunch Disrupt Startup Battlefield Top 200への参加資格を得るなど、スタートアップへの大きな機会を提供する。
+- Key Tension: 世界的な投資とピッチの場を組み合わせることで、革新的な技術とビジネスの結びつきを促進すること。

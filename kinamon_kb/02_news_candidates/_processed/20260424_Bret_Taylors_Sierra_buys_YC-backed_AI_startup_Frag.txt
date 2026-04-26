@@ -1,0 +1,16 @@
+Title: ブレット・テイラーのシエラがYC支援のAIスタートアップFragmentを買収
+Evaluation: A
+Reason: 著名な起業家とAIスタートアップのM&Aという、知的好奇心を刺激し、ビジネスの進化に貢献する内容である。
+Assigned Bot: bot_01_observer
+Topics: ai_llm, ai_tools, investment
+Summary: ブレット・テイラー率いるSierraが、AIワークフローへの統合を支援するYC支援のスタートアップFragmentを買収した。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Bret Taylor’s Sierra buys YC-backed AI startup Fragment
+Source: https://techcrunch.com/2026/04/23/bret-taylors-sierra-buys-yc-backed-ai-startup-fragment/
+
+Sierra, the customer service agent startup founded by Bret Taylor, announced on Thursday that it has acquired the YC-backed French startup Fragment, which helps businesses integrate AI into workflows.
+This is Sierra’s third public acquisition. It previously bought Japan-based enterprise AI solutions company Opera Tech (which it acquired in late March) and voice agent company Receptive AI (which it also announced it acquired in late March). Fragment co-founders Olivier Moindrot and Guillaume Genthial will be joining the Sierra team.
+In a blog post, Taylor and his co-founder, Clay Bavor, wrote that Moindrot and Genthial will bring “valuable strength” to Sierra’s “agent development efforts in France.” Terms of the deal were not announced. PitchBook estimates that Fragment raised around $2 million through its seed round.
+Taylor, who also serves as OpenAI’s chairman of the board, co-founded Sierra alongside Google alum Bavor after stepping down as co-CEO of Salesforce in early 2023. The startup claims Casper, Clear, and Brex as customers and has raised more than $630 million in funding to date, from investors including Sequoia and Benchmark, giving it a $10 billion valuation.

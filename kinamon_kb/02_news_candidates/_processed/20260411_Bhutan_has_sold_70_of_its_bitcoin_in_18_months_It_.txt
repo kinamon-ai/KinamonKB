@@ -1,0 +1,44 @@
+Title: ブータンが18ヶ月でビットコインの70%を売却。BTCマイニングも停止したかもしれない
+Evaluation: A
+Reason: 政府の資産動向とマイニング停止という独自の視点を提供しており、深い分析が期待できる。
+Assigned Bot: bot_02_trader
+Topics: crypto_defi, investment, security
+Summary: ブータンがビットコインの大部分を売却し、マイニング活動を停止した可能性について。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Bhutan has sold 70% of its bitcoin in 18 months. It may have stopped BTC mining too.
+Source: https://www.coindesk.com/markets/2026/04/11/bhutan-has-sold-70-of-its-bitcoin-in-18-months-it-may-have-stopped-btc-mining-too
+
+Bhutan has sold 70% of its bitcoin in 18 months. It may have stopped BTC mining too.
+The kingdom's holdings have dropped from 13,000 BTC to 3,954 since October 2024, with $215.7 million moved out this year alone. Its last mining inflow over $100,000 was recorded more than a year ago.
+What to know:
+- Bhutan has quietly sold about 70 percent of the roughly 13,000 bitcoin it held in October 2024, reducing its stash to 3,954 BTC worth about $280.6 million.
+- The kingdom appears to have slowed or halted its hydropower-backed bitcoin mining, with no major new inflows recorded in more than a year and no public comment from its sovereign wealth fund, Druk Holding and Investments.
+- Bhutan’s liquidation contrasts with other major institutional and sovereign players that are adding to crypto and gold holdings, underscoring the economic strain on small-scale state bitcoin mining as prices, difficulty and halving pressures squeeze margins.
+Bhutan is quietly unwinding one of the most unusual bitcoin experiments any government has ever run.
+The Royal Government of Bhutan transferred roughly 319.7 BTC worth $22.68 million to two addresses on Thursday, according to Arkham Intelligence data. Roughly 250 BTC went to a wallet previously used to route funds for sale via Galaxy Digital and OKX. Another 69.7 BTC was sent to a new, unmarked address.
+The transaction is part of a series of ongoing sales that have been going on for a while.
+Bhutan held approximately 13,000 BTC in October 2024, accumulated through a hydropower-backed mining operation run by Druk Holding and Investments, the kingdom's sovereign wealth fund.
+That was the proof-of-concept for sovereign bitcoin mining. A tiny, landlocked country with cheap renewable energy, no legacy financial infrastructure to protect, and a sovereign wealth fund willing to experiment.
+Since then, it has sold steadily. Holdings now stand at 3,954 BTC worth roughly $280.6 million, a 70% reduction in 18 months. Arkham data shows $215.7 million in bitcoin has moved out of Bhutan's holding addresses this year alone, with $162.6 million of that going to unlabeled wallets.
+The selling has accelerated into a market where virtually every other major holder is doing the opposite.
+Strategy bought 4,871 BTC for $330 million last weekend, bringing its total to 766,970. U.S. spot ETFs absorbed approximately 50,000 BTC in March. The Ethereum Foundation staked $93 million of ether in a single day rather than sell. Even gold-backed sovereign funds have been adding to positions during the Iran conflict.
+Bhutan is the only sovereign-level holder visibly liquidating. But there is also a question about whether the mining operation itself is still running.
+Arkham data shows Bhutan's last bitcoin inflow exceeding $100,000 was recorded over a year ago. A government that once generated bitcoin from power harnessed from its own rivers may now simply be spending down what it accumulated, with no new supply coming in to replace what it sells.
+Druk Holdings has not responded to several emails and calls from CoinDesk over the past week, the latest of which was sent in the Asian morning hours on Friday. It has not publicly commented on the transfers or the status of its mining operation.
+The economics may explain the shift, however.
+Bhutan's mining operation was viable when difficulty was lower, and bitcoin traded above $90,000. At current levels near $71,000, with network difficulty at all-time highs and the post-halving block reward reduced to 3.125 BTC, the margins on small-scale sovereign mining have compressed significantly.
+The same hydropower that made Bhutan's operation novel may now generate more revenue from electricity sold to neighboring India than from bitcoin mining, as mining hardware depreciates with every difficulty adjustment.
+Choosing to sell rather than hold or mine is a data point about the gap between bitcoin's narrative appeal to nation-states and the operational reality of maintaining a position through a prolonged drawdown.
+Bhutan's remaining 3,954 BTC is now smaller than what Strategy purchases in a typical week. The kingdom that once held 13,000 bitcoin mined from its own mountains is watching a single company in Virginia accumulate more in five days than Bhutan has left.
+Read more: Bhutan moves another 500 bitcoin to exchanges as 2026 outflows top $150 million
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+World Liberty Financial responded to CoinDesk's reporting by saying it would "simply supply more collateral" if markets moved against it, a statement that did not reassure holders.
+What to know:
+- World Liberty Financial's WLFI token fell 12 percent to its lowest level since its 2025 launch, after the Trump-linked crypto venture defended a controversial lending strategy on the Dolomite DeFi platform.
+- The firm acknowledged using its own governance token as collateral to borrow stablecoins and drain Dolomite's USD1 pool, arguing...

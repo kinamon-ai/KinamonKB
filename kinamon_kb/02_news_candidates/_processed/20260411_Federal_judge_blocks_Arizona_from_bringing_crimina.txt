@@ -1,0 +1,38 @@
+Title: 連邦裁判所、アリゾナ州によるKalshiに対する刑事訴追を阻止
+Evaluation: A
+Reason: 連邦裁判所の介入という専門的な法的論点と、規制市場における予言市場の法的枠組みに関する独自の視点がある。
+Assigned Bot: bot_02_trader
+Topics: crypto_regulation, security
+Summary: 連邦裁判所が、アリゾナ州によるKalshiに対する刑事訴追を一時的に阻止した。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Federal judge blocks Arizona from bringing criminal charges against Kalshi
+Source: https://www.coindesk.com/policy/2026/04/10/federal-judge-blocks-arizona-from-bringing-criminal-charges-against-kalshi
+
+Federal judge blocks Arizona from bringing criminal charges against Kalshi
+Judge Michael Liburdi ordered Arizona not to bring any enforcement actions under state law against Kalshi, at least temporarily.
+A federal judge has blocked the state of Arizona from bringing criminal charges against prediction market provider Kalshi, at least temporarily, in response to a motion from the Commodity Futures Trading Commission.
+District Judge Michael Liburdi, in the District of Arizona, ruled Friday that Arizona cannot hold an arraignment of Kalshi as scheduled on Monday, April 13. Arizona announced last month it would file 20 criminal charges against Kalshi for offering what the state claimed were betting products in violation of Arizona law.
+"The Court finds that the CFTC has made a clear showing that it is likely to succeed on the merits of its claim that Arizona’s gambling laws are preempted by the Commodity Exchange Act," the ruling said.
+Arizona proceeding with a state action might violate the Supremacy Clause, the judge said, granting the temporary restraining order for two weeks. He noted that there is also a pending motion for a preliminary injunction (which, if granted, would extend the temporary restraining order).
+"Defendants are temporarily restrained and enjoined from enforcing AZ's gambling laws in any criminal or civil enforcement actions to any contracts listed on CFTC-regulated [designated contract markets]," the judge ruled in the temporary restraining order, according to Paradigm senior regulatory counsel Stefan Schropp.
+In a statement Friday, CFTC Chair Michael Selig said the regulator "appreciated" the judge's decision.
+"Arizona’s decision to weaponize state criminal law against companies that comply with federal law sets a dangerous precedent, and the court’s order today sends a clear message that intimidation is not an acceptable tactic to circumvent federal law," he said.
+The CFTC sued Arizona and two other states arguing that prediction markets, otherwise known as event contracts, are swaps subject to the federal agency's supervision, and that its role preempts state law.
+It's a view that's seen largely mixed results in court; state courts have often sided with states, such as when a Nevada state court ruled that the Gaming Control Board could temporarily block Kalshi while a broader case moves forward.
+Federal courts have had different results; the Third Circuit Court of Appeals ruled earlier this week that prediction markets are subject to CFTC rule, and it was up to the CFTC's discretion on if it wanted to block providers from offering sports-related products or not.
+The Ninth Circuit Court of Appeals declined to weigh in on the aforementioned Nevada action, allowing that state court to block Kalshi, but it will hold a hearing on a consolidated case next week allowing various providers and other parties to argue.
+Judge Liburdi of Arizona granted the CFTC's motion to block the Arizona state action against Kalshi two days after denying Kalshi's own motion for a preliminary injunction against the state (although the parties argued on different grounds).
+UPDATE (April 11, 2026, 01:16 UTC): Adds context.
+UPDATE (April 11, 2026, 04:21 UTC): Adds link to judge's ruling.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+The approvals by the Hong Kong Monetary Authority, the territory's central bank, mark the first batch under the Stablecoins Ordinance, which took effect in August 2025.
+What to know:
+- Hong Kong granted its first two stablecoin issuer licenses to HSBC and Anchrpoint Financial, a Standard Chartered-led group that includes Animoca Brands.
+- The HKMA assessed 36 applications and had signaled that the initial round would be limited.
+- The decision to license the city's note-issuing banks first appears to be deliberate.

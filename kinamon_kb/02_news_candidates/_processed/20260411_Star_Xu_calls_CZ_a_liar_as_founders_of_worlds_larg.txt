@@ -1,0 +1,38 @@
+Title: Star Xu氏、世界最大の暗号資産取引所の創設者たちが過去の疑惑について議論する中でCZを嘘つきと呼ぶ
+Evaluation: A
+Reason: 著名な人物間の過去の論争を掘り下げ、業界の人間関係と信頼性に深い洞察を与える。
+Assigned Bot: bot_02_trader
+Topics: crypto_regulation, security
+Summary: Star Xu氏とCZ氏の間で、過去の契約紛争や発言に関する対立が再燃し、暗号資産取引所の創設者たちが議論している。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Star Xu calls CZ a ‘liar’ as founders of world’s largest crypto exchanges argue over past allegations
+Source: https://www.coindesk.com/business/2026/04/10/star-xu-calls-cz-a-liar-as-founders-of-world-s-largest-crypto-exchanges-argue-over-past-allegations
+
+Star Xu calls CZ a ‘liar’ as founders of world’s largest crypto exchanges argue over past allegations
+The dispute between the crypto exchange founders, which included a $1 billion wager from CZ, revives allegations dating back 11 years to Zhao’s time at OKCoin.
+What to know:
+- A long-simmering feud between OKX founder Star Xu and Binance founder Changpeng Zhao has reignited after the release of Zhao’s memoir, prompting Xu to again accuse Zhao of lying about a decade-old contract dispute.
+- Xu has resurfaced allegations from Zhao’s 2015 stint at OKCoin, sharing a video he says shows conflicting contract versions and calling Zhao a "habitual liar" who misled the public about the controversy.
+- The clash has expanded beyond business disputes to personal matters, with Xu questioning Zhao’s marital disclosures and Binance stake in the context of his divorce, and Zhao responding that he is officially divorced while rejecting Xu’s inquiries as irrelevant.
+A long-running dispute between OKX founder Star Xu and Binance founder Changpeng “CZ” Zhao resurfaced Thursday, with Xu calling CZ a “habitual liar” in a series of posts on X that revisit allegations dating back more than a decade.
+The clash traces back to Zhao’s brief tenure at OKCoin, founded by Xu, when he was accused in 2015 of “harmful acts of conduct” and misleading statements tied to a contract dispute involving Roger Ver, claims Zhao has previously disputed.
+This latest flare-up also follows an earlier public disagreement in January, when Xu blamed Binance-linked market dynamics for amplifying the Oct. 10 crypto crash, a claim Binance and other market participants disputed. The latest flare-up was triggered by CZ's memoir, published earlier this week, Xu said.
+He revived the decade-old issues, saying he had no “intention of revisiting these old issues involving CZ [..] but since I’ve been dragged into this again because of the book, let’s restate the facts,” he wrote.
+"Out of the blue, Star [Xu] said that I had somehow forged a contract when working there [at OKCoin]," CZ said in his book. "... In May 2015, I got annoyed and made a public post on Reddit, obviously denying forging any contracts … while I was at it, I detailed a few problems I saw at OKCoin."
+Xu, in his recent posts, pointed to a video he said shows evidence of conflicting contract versions and reiterating that Zhao had misled the public about the matter.
+“After spending four months in prison, he continues to make false statements to the world,” Xu wrote, adding that “a habitual liar never changes their nature.”
+The dispute escalated when Xu questioned whether Zhao had misrepresented his marital status, referencing earlier CoinDesk reporting in which Zhao’s spouse was described as his “wife” in a letter submitted to a judge. Xu said he would apologize if Zhao could produce a divorce agreement signed by both parties.
+Zhao responded that he is “officially divorced” and challenged Xu to a $1 billion bet or any amount Xu chose, that the divorce had been finalized, saying lawyers could verify the agreement while declining to publish documents.
+Xu rejected the wager, citing compliance considerations tied to running a regulated exchange, and instead pressed Zhao on whether his Binance stake had been legally separated as part of any divorce.
+Zhao dismissed the line of questioning, saying his Binance stake was “none of your business” and accused Xu of deflecting.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+The crypto exchange said its operations in the United Arab Emirates remain unchanged and that many employees have chosen to remain
+What to know:
+- Binance has offered its roughly 1,000 United Arab Emirates-based employees the option to temporarily relocate to Hong Kong, Tokyo, Kuala Lumpur or Bangkok amid ongoing regional tensions.
+- The crypto exchange says its UAE operations remain unchanged, many staff have chosen to stay, and it continues to serve users globally without...

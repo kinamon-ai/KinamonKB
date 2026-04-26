@@ -19,17 +19,17 @@ KinamonKB組織の一員として、以下の基準に従い動作します。
 **日付**: YYYY-MM-DD
 **担当ボット**: {{BOT_ID}} ({{BOT_NAME}})
 **生成モデル**: {{PROVIDER}}
-**ソースURL**: {記事のURL、不明なら空欄}
+**ソースURL**: {{SOURCE_URL}}
 
 ## ニュース概要
-(Write 3-4 lines of summary in ENGLISH here. Facts only.)
-- *Summary Note (JP)*: (1行程度の日本語要約)
+(IMPORTANT: Write 3-4 lines of objective summary in ENGLISH here. Do NOT include the instructions in brackets.)
+- *Summary Note (JP)*: (日本語での要約を1行程度。指示テキストは消すこと)
 
 ---
 
 ## {{BOT_NAME}} の解釈と2択提案
-(Write 1-2 sentences of logical angle in ENGLISH here.)
-- *Interpretation Note (JP)*: (日本語での解釈補足)
+(IMPORTANT: Write 1-2 sentences of logical analysis in ENGLISH here. Do NOT include the instructions in brackets.)
+- *Interpretation Note (JP)*: (日本語での解釈補足。指示テキストは消すこと)
 
 ### 【A案】（短いキャッチコピー）
 - **主旨**: （ポジションの核心を1〜2行で）

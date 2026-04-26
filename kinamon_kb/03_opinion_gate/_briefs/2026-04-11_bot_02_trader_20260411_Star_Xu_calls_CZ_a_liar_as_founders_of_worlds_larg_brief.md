@@ -1,0 +1,4 @@
+- What: OKX創設者であるStar Xu氏が、Binance創設者であるCZ氏を「嘘つき」と呼び、過去の契約紛争に関する疑惑を再燃させた。
+- Who: Star Xu氏、Changpeng Zhao（CZ）、OKX、Binance
+- Impact: 業界の創設者間の対立が再燃し、過去の疑惑や個人的な問題が公に議論されることになった。
+- Key Tension: 過去の契約紛争に関する事実認定と、それに対する当事者間の主張の真偽を巡る対立。

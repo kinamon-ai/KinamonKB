@@ -1,0 +1,35 @@
+Title: トランプと関連するWorld Libertyは制裁対象ネットワークとのつながりについて調査を受けます:The Times
+Evaluation: A
+Reason: 記事はトランプ関連の企業と制裁対象ネットワークとの関係を深掘りしており、独自の視点から問題提起している。
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security
+Summary: トランプと関連するWorld Libertyは、最近の制裁対象ネットワークとのつながりについて調査を受けている。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Trump-linked World Liberty faces scrutiny over ties to sanctioned network: The Times
+Source: https://www.coindesk.com/business/2026/04/07/trump-linked-world-liberty-faces-scrutiny-over-ties-to-sanctioned-network-the-times
+
+Trump-linked World Liberty faces scrutiny over ties to sanctioned network: The Times
+A deal with an Asia-based blockchain project followed recent links to individuals later sanctioned over alleged ties to a major fraud network
+What to know:
+- A Trump-linked cryptocurrency venture, World Liberty Financial, is under renewed scrutiny after partnering with AB DAO, whose recent flagship project involved individuals later sanctioned by the United States and Britain.
+- World Liberty Financial says it conducted due diligence and has no relationship with sanctioned figures, but The Times found it was unaware AB DAO had promoted a resort tied to Cambodia’s Prince Group, which U.S. authorities call a major transnational criminal network.
+- The episode deepens concerns about World Liberty Financial’s governance and vetting of partners, coming on top of a $500 million deal giving a UAE security adviser–backed firm a 49 percent stake in the company shortly before Mr. Trump returned to office.
+A cryptocurrency venture tied to U.S. President Donald Trump is facing fresh scrutiny after partnering with a firm whose “flagship project” had recently involved individuals later sanctioned by the U.S. and U.K.
+However, a Times investigation released on Monday found the company was unaware that AB DAO had, until weeks earlier, promoted a resort project linked to figures associated with Cambodia’s Prince Group, an organization U.S. authorities have described as a major transnational criminal network.
+The partnership was announced in November, shortly after coordinated U.S. and U.K. sanctions targeting Prince Group founder Chen Zhi and associates for alleged involvement in large-scale fraud. Individuals connected to the group had been involved in AB DAO’s promoted resort project before being removed following sanctions.
+CoinDesk has contacted WLFI, launched in September 2024, for comment, but the company had not responded at the time of publication. However, WLFI told The Times it has “no association or relationship with the sanctioned individuals.”
+The developments add to broader questions around World Liberty’s governance and external relationships. Reporting by The Wall Street Journal in January revealed that a company backed by United Arab Emirates (UAE) national security adviser Sheik Tahnoon bin Zayed Al Nahyan quietly agreed to acquire a 49% stake in WLFI for $500 million shortly before Trump returned to office.
+The deal marked “something unprecedented in American politics,” according to the Wall Street Journal, which cited legal experts raising potential conflict-of-interest concerns. The White House has denied any impropriety.
+There is no suggestion that WLFI had any direct connection to the Prince Group, according to The Times. However, the report raises questions about the effectiveness of due diligence around its partnerships.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+DeFi yields have collapsed below TradFi rates, forcing investors to face higher smart contract risks for lower returns as regulation and exploits mount.
+What to know:
+- Flagship DeFi rates have fallen below traditional finance (TradFi), with Aave’s 2.61% APY on USDC trailing the 3.14% offered by Interactive Brokers.
+- Investors are absorbing high risks—including a $2.47 billion spike in 2025 exploits—for returns that no longer offer a "risk premium" over "risk-free" government rates.
+- Organic on-chain yield has...

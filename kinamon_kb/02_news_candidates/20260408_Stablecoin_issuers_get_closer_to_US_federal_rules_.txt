@@ -1,0 +1,38 @@
+Title: 安定化通貨発行者はFDICの新しい提案により連邦規則に近づいています
+Evaluation: B
+Reason: 記事内容が真に判断不可能な部分が多い
+Assigned Bot: bot_02_trader
+Topics: crypto_regulation, ai_llm
+Summary: FDICが新しい提案を発表し、ステビアンコインの規制に近づく可能性がある。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Stablecoin issuers get closer to U.S. federal rules with FDIC's new proposal
+Source: https://www.coindesk.com/policy/2026/04/07/stablecoin-issuers-get-closer-to-u-s-federal-rules-with-fdic-s-new-proposal
+
+Stablecoin issuers get closer to U.S. federal rules with FDIC's new proposal
+The Federal Deposit Insurance Corp. approved a proposed rule to govern the issuers, even as the Senate continues to debate GENIUS Act details.
+What to know:
+- The Federal Deposit Insurance Corp. followed the Office of the Comptroller of the Currency in proposing how to regulate stablecoin issuers under last year's GENIUS Act.
+- This is the second FDIC proposal on GENIUS Act implementation, but it emerges as lawmakers in the Senate are discussing potential changes to the law's treatment of stablecoin yield.
+The U.S. Federal Deposit Insurance Corp. formally proposed its approach to stablecoin issuers as one of the federal financial regulators required to write and oversee rules under last year's Guiding and Establishing National Innovation for U.S. Stablecoins (GENIUS) Act.
+The FDIC's proposal —meant to align closely with what its sister banking agency, the Office of the Comptroller of the Currency, proposed in February — will be open for a 60-day public comment period on the lengthy list of 144 questions posed Tuesday by the agency.
+The FDIC's job is to police U.S. depository institutions, and under the GENIUS Act, its role is to regulate such institutions issuing stablecoins from their subsidiaries. To that end, it posed capital, liquidity and custody standards for those firms, though the details won't be set in stone until the rule is finalized — not likely to occur until the agency spends further months reviewing input and writing the final language. This is the second GENIUS Act proposal from the banking agency after its December pitch on the issuer application process.
+As expected under the law, stablecoins won't enjoy the deposit insurance that the banks maintain on traditional banking accounts, according to the proposal.
+The OCC's earlier proposal had a section that caused some initial concern among crypto policy experts wondering how the agency would allow for rewards programs managed by third-party stablecoin relationships, such as exchanges. In the same vein, the FDIC said that issuers wouldn't be able to represent that their tokens pay interest or yield "simply for holding or using a payment stablecoin," according to the staff presentation, including via arrangements with third parties. But crypto insiders have grown comfortable that properly tailored rewards programs shouldn't run afoul of the rules.
+The FDIC's Tuesday proposal also suggested the capital that issuers will need to maintain to manage the risk of the business, plus "an operational backstop, separate from the capital requirement," based on the previous year's operating expenses.
+The agency also addressed "the applicability of pass-through insurance to deposits held as reserves backing payment stablecoins," proposing that "tokenized deposits that satisfy the statutory definition of 'deposit' would be treated no differently" than other deposits.
+While the regulators work to implement GENIUS, some of its details are potentially already being overhauled by the work on the Senate's Digital Asset Market Clarity Act. A clash between the banking and crypto industries over yield-bearing stablecoin holdings turned into a months-long debate that lawmakers have said they're close to resolving, though the bill hasn't yet advanced to a needed hearing. Congress comes back from a break later this week.
+The OCC, FDIC and other agencies involved in implementing the rule, including the Treasury Department and the markets regulators, have few impediments in crafting regulations the way the Republican appointees want it. President Donald Trump's White House has broken with past practice and declined to name any Democrat appointees to the many vacancies across the agencies, so there are no Democrats to raise objections to regulatory language.
+But the GENIUS Act itself had drawn significant bipartisan support in both chambers of Congress when it was passed into law.
+Read More: U.S. FDIC proposes first U.S. stablecoin rule to emerge from GENIUS Act
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+The Securities and Exchange Commission will address fundraising and startup exemptions in this proposal, Paul Atkins told a crowd Monday.
+What to know:
+- The U.S. Securities and Exchange Commission will publish a "Reg Crypto" proposal soon, after it receives a White House signoff, Chairman Paul Atkins said Monday.
+- This proposal will address startup exemptions and fundraising questions.
+- Atkins also urged attendees at the crypto event to engage with the 2026 midterm election to...

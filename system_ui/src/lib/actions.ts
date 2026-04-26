@@ -377,12 +377,18 @@ async function generateFeedback(taskContent: string, choice: 'A' | 'B', userFeed
 export async function runPatrol(): Promise<{ success: boolean; message: string }> {
     const { exec } = require('child_process');
     const scriptPath = path.resolve(process.cwd(), '../scripts/auto_patrol.sh');
+    const logPath = path.join(KB_ROOT, 'system.log');
 
+    const log = (msg: string) => fs.appendFile(logPath, `[${new Date().toLocaleString()}] [UI] ${msg}\n`);
+
+    log("ACTION: runPatrol started");
     return new Promise((resolve) => {
         exec(scriptPath, { cwd: path.resolve(process.cwd(), '..'), timeout: 600000 }, (error: Error | null, stdout: string, stderr: string) => {
             if (error) {
+                log(`ERROR: runPatrol failed: ${error.message}`);
                 resolve({ success: false, message: `Error: ${error.message}\n${stderr}` });
             } else {
+                log("DONE: runPatrol completed");
                 resolve({ success: true, message: stdout });
             }
         });
@@ -590,12 +596,18 @@ export async function fetchRSSAction() {
     const { exec } = require('child_process');
     const pythonPath = path.resolve(process.cwd(), '../venv/bin/python');
     const scriptPath = path.resolve(process.cwd(), '../scripts/fetch_news.py');
+    const logPath = path.join(KB_ROOT, 'system.log');
 
+    const log = (msg: string) => fs.appendFile(logPath, `[${new Date().toLocaleString()}] [UI] ${msg}\n`);
+
+    log("ACTION: fetchRSSAction started");
     return new Promise<{ success: boolean; message: string }>((resolve) => {
         exec(`${pythonPath} ${scriptPath}`, { cwd: path.resolve(process.cwd(), '..'), timeout: 300000 }, (error: Error | null, stdout: string, stderr: string) => {
             if (error) {
+                log(`ERROR: fetchRSSAction failed: ${error.message}`);
                 resolve({ success: false, message: `${error.message}${stderr ? '\n' + stderr : ''}` });
             } else {
+                log("DONE: fetchRSSAction completed successfully");
                 resolve({ success: true, message: stdout });
             }
         });
@@ -790,7 +802,7 @@ export async function getAISettings() {
         return {
             active_provider: 'gemini',
             lmstudio_url: 'http://localhost:1234/v1/chat/completions',
-            lmstudio_model: 'gemma-2-2b-it'
+            lmstudio_model: 'gemma-4-e2b-it'
         };
     }
 }
@@ -856,7 +868,7 @@ async function callAI(prompt: string, systemMdPath?: string, actionKey?: string)
         });
     } else {
         const url = settings.lmstudio_url || 'http://localhost:1234/v1/chat/completions';
-        const model = settings.lmstudio_model || 'gemma-2-2b-it';
+        const model = settings.lmstudio_model || 'gemma-4-e2b-it';
         
         const projectRoot = path.resolve(process.cwd(), '..');
         let systemContent = '';
@@ -1069,19 +1081,9 @@ export async function regenerateTask(taskId: string, forcedProvider?: 'gemini' |
                     // If the script generated a NEW filename (e.g. today's date),
                     // the old file (taskPath) might still be there.
                     try {
-                        const filesAfter = await fs.readdir(pendingDir);
-                        // If we are sure it succeeded and we have new content, the old one can go
-                        if (filesAfter.length > 0) {
-                            // Find the 'most likely' new filename based on slug?
-                            // For simplicity, let's just delete the old taskPath if it's still there.
-                            // If it WAS overwritten, unlink might fail (or it might have same name).
-                            // But unlink is safer AFTER checking success.
-                            if (await fs.access(taskPath).then(() => true).catch(() => false)) {
-                                // If the old file exists, check if its content is still the old one?
-                                // Let's just delete it to be sure we only have one task for this link.
-                                await fs.unlink(taskPath).catch(() => {});
-                            }
-                        }
+                        // We rely on generate_opinion.sh to overwrite the file if the name stays consistent.
+                        // If it changed, we'd have a duplicate, but better than losing the task.
+                        // We will avoid force-unlinking here to prevent deleting exactly what we just made.
                     } catch (e) {}
 
                     resolve({ success: true });
@@ -1096,3 +1098,68 @@ export async function regenerateTask(taskId: string, forcedProvider?: 'gemini' |
     }
 }
 
+// ──────────────────────────────────────────────
+// RSS Source System
+// ──────────────────────────────────────────────
+
+export type RSSSourceFile = {
+    id: string;
+    filename: string;
+    date: string;
+    time: string;
+    feedUrl: string;
+    size: number;
+};
+
+export async function getRSSSources(): Promise<RSSSourceFile[]> {
+    const dir = path.join(KB_ROOT, '05_rss_sources');
+    let files: string[] = [];
+    try {
+        files = await fs.readdir(dir);
+    } catch {
+        return [];
+    }
+
+    const sources: RSSSourceFile[] = [];
+    for (const file of files) {
+        if (!file.endsWith('.xml')) continue;
+        const filePath = path.join(dir, file);
+        const stats = await fs.stat(filePath);
+        
+        // Expected format: YYYYMMDD_HHMMSS_hash.xml
+        const parts = file.split('_');
+        const dateStr = parts[0] || '';
+        const timeStr = parts[1] || '';
+        
+        let feedUrl = 'Unknown';
+        try {
+            const content = await fs.readFile(filePath, 'utf-8');
+            const match = content.match(/<!-- Source: (.*) -->/);
+            if (match) feedUrl = match[1];
+        } catch {}
+
+        sources.push({
+            id: file,
+            filename: file,
+            date: dateStr,
+            time: timeStr,
+            feedUrl,
+            size: stats.size,
+        });
+    }
+
+    // Sort by date/time descending
+    return sources.sort((a, b) => b.id.localeCompare(a.id));
+}
+
+export async function getRSSSourceContent(filename: string) {
+    const filePath = path.join(KB_ROOT, '05_rss_sources', filename);
+    const raw = await fs.readFile(filePath, 'utf-8');
+    return raw;
+}
+
+export async function deleteRSSSource(filename: string) {
+    const filePath = path.join(KB_ROOT, '05_rss_sources', filename);
+    await fs.unlink(filePath);
+    return { success: true };
+}

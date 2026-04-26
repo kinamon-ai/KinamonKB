@@ -1,0 +1,47 @@
+Title: テンプレル大学学生がIEEE会員の利点を強調しました
+Evaluation: A
+Reason: 専門的な深掘り・独自の視点がある
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security
+Summary: テンプレル大学の学生が、IEEE会員の利点を強調しました。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Temple University Student Highlights IEEE Membership Perks
+Source: https://spectrum.ieee.org/temple-university-student-membership-perks
+
+Kyle McGinley graduated from high school in 2018 and, like many teenagers, he was unsure what career he wanted to pursue. Recuperating from a sports injury led him to consider becoming a physical therapist for athletes. But he was skilled at repairing cars and fixing things around the house, so he thought about becoming an engineer, like his father.
+McGinley, who lives in Sellersville, Pa., took some classes at Montgomery County Community College in Blue Bell, while also working. During his years at the college, he took a variety of courses and was drawn to electrical engineering and computing, he says. He left to pursue a bachelor’s degree in electrical and computer engineering in Philadelphia at Temple University, where he is currently a junior.
+Kyle McGinley
+MEMBER GRADE
+Student member
+UNIVERSITY
+Temple, in Philadelphia
+MAJOR
+Electrical and computer engineering
+The 26-year-old is also a teaching assistant and a research assistant at Temple. His research focuses on applying artificial intelligence to electrical hardware and robotics. He helped build an AI-integrated android companion to assist in-home caregivers.
+Temple recognized McGinley’s efforts last year with its Butz scholarship, which is awarded annually to an electrical and computer engineering undergraduate with an interest in software development, AI development systems, health education software, or a similar field.
+An IEEE student member, he is active within the university’s student branch.
+“My career ambition after I graduate is to gain real-world experience in the engineering industry to learn skills outside of academia,” he says. “Long term, I want to do project management or work in a technical lead role, with the primary goal of creating impactful projects that I can be proud of.”
+Building a robot aide
+McGinley is a teaching assistant for his digital circuit design course. In a class of 35 students, it can be a struggle for some to digest the professor’s words, he says.
+“My job is to answer students’ questions if they are having problems following the professor’s lecture or are confused about any of the topics,” he says. “In the lab, I help students debug code or with hardware issues they have on the FPGA [field-programmable gate array] boards.”
+He also conducts research for the university’s Computer Fusion Lab under the supervision of IEEE Senior Member Li Bai, a professor of electrical and computer engineering. McGinley writes software programs at the lab.
+“In school, they don’t teach you how to communicate with people. They only teach you how to remember stuff. Working well with people is one of the most underrated skills that a lot of students don’t understand is important.”
+One such assignment was working with the Temple School of Social Work at the Barnett College of Public Health to build a robot companion integrated with AI to assist individuals with Parkinson’s disease and their caregivers.
+“I realized the need for this with my grandmother, when she was taking care of my grandfather,” he says. “It was a lot for her, trying to remember everything.”
+Using the latest software and hardware, he and three classmates rebuilt an older lab robot. They installed an operating system and used Python and C++ for its control, perception, and behavior, he says. The students also incorporated Google’s Gemini AI to help with routine tasks such as scheduling medication reminders and setting alarms for upcoming doctor visits.
+Kyle McGinley helped build an AI-integrated android to assist individuals with Parkinson’s disease and their caregivers.Temple University of Public Health
+The AI-integrated android was intended to assist, not replace, the caregivers by handling the mental load of remembering tasks, he says.
+“This was one of the cool things that drew me to working in the robotics field,” he says. “Something where AI could be used to help caregivers do simple tasks.”
+The benefits of a student branch
+McGinley joined Temple’s IEEE student branch last year after one of his professors offered extra credit to students who did so. After attending meetings and participating in a few workshops, he found he really liked the club, he says, adding that he made new friends and enjoyed the camaraderie with other engineering students.
+After the student branch’s board members got to know McGinley better, they asked him to become the club’s historian and manage its social media account. He also helps with event planning, creating and posting fliers, taking pictures, and shooting videos of the gatherings.
+The branch has benefited from McGinley’s involvement, but he says it’s a two-way street.
+“The biggest things I’ve learned are being held accountable and being reliable,” he says. “I am responsible for other people knowing what’s going on.”
+Being an active volunteer has improved his communication skills, he says.
+“Learning to clearly communicate with other people to make sure everyone is on the same page is important,” he says. “In school, they don’t teach you how to communicate with people. They only teach you how to remember stuff. Working well with people is one of the most underrated skills that a lot of students don’t understand is important.”
+He encourages students to join their university’s IEEE branch.
+“I know it can be scary because you might not know anyone, but it honestly can’t hurt you; it could actually benefit you,” he says. “Being active is going to help you with a lot of skills that you need.
+“You’ll definitely get opportunities that you would have never known about, like a scholarship or working in the research lab. I would have never gotten these opportunities if I hadn’t shown up. Joining IEEE and being active is the best thing you can do for your career.”
+Kathy Pretz is editor in chief for The Institute, which covers all aspects of IEEE, its members, and the technology they're involved in. She has a bachelor's degree in applied communication from Rider University, in Lawrenceville, N.J., and holds a master's degree in corporate and public communication from Monmouth University, in West Long Branch, N.J.

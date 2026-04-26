@@ -1,0 +1,65 @@
+Title: ビットコインの$1.3兆のセキュリティ競争：世界最大のブロックチェーンを量子証明するための重要な取り組み
+Evaluation: A
+Reason: 専門的な深掘り・独自の視点がある
+Assigned Bot: bot_02_trader
+Topics: security, crypto_defi
+Summary: ビットコインの開発者たちが、量子コンピュータによる脅威に対抗するための防御策を検討しています。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Bitcoin's $1.3 trillion security race: Key initiatives aimed at quantum-proofing the world's largest blockchain
+Source: https://www.coindesk.com/tech/2026/04/04/bitcoin-s-usd1-3-trillion-security-race-key-initiatives-aimed-at-quantum-proofing-the-world-s-largest-blockchain
+
+Bitcoin's $1.3 trillion security race: Key initiatives aimed at quantum-proofing the world's largest blockchain
+Developers are considering ways to quantum-proof the world's oldest cryptocurrency as the threat of this computing moves beyond a hypothetical.
+What to know:
+- Google researchers say a sufficiently powerful quantum computer could break Bitcoin's core cryptography in under nine minutes, raising concerns that such a threat could emerge as soon as 2029.
+- Developers are exploring multiple defenses, including removing on-chain public keys (BIP 360), adopting hash-based post-quantum signatures like SPHINCS+, and using a commit/reveal scheme to shield mempool transactions.
+- Additional proposals such as Hourglass V2 would slow the spending of about 1.7 million already-exposed bitcoins, including Satoshi Nakamoto's, though any changes face debate and slow adoption in Bitcoin's decentralized governance system.
+Quantum computers capable of breaking the Bitcoin blockchain do not exist today. Developers, however, are already considering a wave of upgrades to build defenses against the potential threat, and rightfully so, as the threat is no longer hypothetical.
+This week, Google published research suggesting that a sufficiently powerful quantum computer could crack Bitcoin's core cryptography in under nine minutes — one minute faster than the average Bitcoin block settlement time. Some analysts believe such a threat could become a reality by 2029.
+Stakes are high: About 6.5 million bitcoin tokens, worth hundreds of billions of dollars, sit in addresses a quantum computer could directly target. Some of these coins belong to Bitcoin's pseudonymous creator, Satoshi Nakamoto. Besides, the potential compromise would damage Bitcoin's core tenets – "trust the code "and "sound money."
+Here's what the threat looks like, along with proposals under consideration to mitigate it.
+Two ways a quantum machine could attack Bitcoin
+Let's first understand the vulnerability before discussing the proposals.
+Bitcoin's security is built on a one-way mathematical relationship. When you create a wallet, a private key and a secret number are generated, from which a public key is derived.
+Spending bitcoin tokens requires proving ownership of a private key, not by revealing it, but by using it to generate a cryptographic signature that the network can verify.
+This system is foolproof because modern computers would take billions of years to break elliptic curve cryptography — specifically the Elliptic Curve Digital Signature Algorithm (ECDSA) — to reverse-engineer the private key from the public key. So, the blockchain is said to be computationally impossible to compromise.
+But a future quantum computer can change this one-way street into a two-way street by deriving your private key from the public key and draining your coins.
+The public key is exposed in two ways: From coins sitting idle onchain (the long-exposure attack) or coins in motion or transactions waiting in the memory pool (short-exposure attack).
+Pay-to-public key (P2PK) addresses (used by Satoshi and early miners) and Taproot (P2TR), the current address format activated in 2021, are vulnerable to the long exposure attack. Coins in these addresses do not need to move to reveal their public keys; the exposure has already happened and is readable by anyone on earth, including a future quantum attacker. Roughly 1.7 million BTC sits in old P2PK addresses — including Satoshi's coins.
+The short exposure is tied to the mempool — the waiting room of unconfirmed transactions. While transactions sit there awaiting inclusion in a block, your public key and signature are visible to the entire network.
+A quantum computer could access that data, but it would have only a brief window — before the transaction is confirmed and buried under additional blocks — to derive the corresponding private key and act on it.
+Initiatives
+BIP 360: Removing public key
+As noted earlier, every new Bitcoin address created using Taproot today permanently exposes a public key onchain, giving a future quantum computer a target that never goes away.
+The Bitcoin Improvement Proposal (BIP) 360 removes the public key permanently embedded on-chain and visible to everyone by introducing a new output type called Pay-to-Merkle-Root (P2MR).
+Recall that a quantum computer studies the public key, reverse-engineers the exact shape of the private key and forges a working copy. If we remove the public key, the attack has nothing to work from. Meanwhile, everything else, including Lightning payments, multi-signature setups and other Bitcoin features, remains the same.
+However, if implemented, this proposal protects only new coins going forward. The 1.7 million BTC already sitting in old exposed addresses is a separate problem, addressed by other proposals below.
+SPHINCS+ / SLH-DSA: Hash-based post-quantum signatures
+SPHINCS+ is a post-quantum signature scheme built on hash functions, avoiding the quantum risks facing elliptic curve cryptography used by Bitcoin. While Shor's algorithm threatens ECDSA, hash-based designs like SPHINCS+ are not seen as similarly vulnerable.
+The scheme was standardized by the National Institute of Standards and Technology (NIST) in August 2024 as FIPS 205 (SLH-DSA) after years of public review.
+The tradeoff for security is size. While current bitcoin signatures are 64 bytes, SLH-DSA are 8 kilobytes (KB) or more in size. As such, adopting SLH-DSA would sharply increase block space demand and raise transaction fees.
+As a result, proposals such as SHRIMPS (another hash-based post-quantum signature scheme) and SHRINCS have already been introduced to reduce signature sizes without sacrificing post-quantum security. Both build on SHPINCS+ while aiming to retain its security guarantees in a more practical, space-efficient form suitable for blockchain use.
+Tadge Dryja's Commit/Reveal Scheme: An Emergency Brake for the Mempool
+This proposal, a soft fork suggested by Lightning Network co-creator Tadge Dryja, aims to protect transactions in the mempool from a future quantum attacker. It does so by separating transaction execution into two phases: Commit and Reveal.
+Imagine informing a counterparty that you will email them, then actually sending an email. The former is the commit phase, and the latter is the reveal.
+On the blockchain, this means you first publish a sealed fingerprint of your intention — just a hash, which reveals nothing about the transaction. The blockchain timestamps that fingerprint permanently. Later, when you broadcast the actual transaction, your public key becomes visible — and yes, a quantum computer watching the network could derive your private key from it and forge a competing transaction to steal your funds.
+But that forged transaction is immediately rejected. The network checks: does this spend have a prior commitment registered on-chain? Yours does. The attacker's does not — they created it moments ago. Your pre-registered fingerprint is your alibi.
+The issue, however, is the increased cost due to the transaction being broken into two phases. So, it's described as an interim bridge, practical to deploy while the community works on building quantum defences.
+Hourglass V2: Slowing the spending of old coins
+Proposed by developer Hunter Beast, Hourglass V2 targets the quantum vulnerability tied to roughly 1.7 million BTC held in older, already-exposed addresses.
+The proposal accepts that these coins could be stolen in a future quantum attack and seeks to slow the bleeding by limiting sales to one bitcoin per block, to avoid a catastrophic overnight mass liquidation that could crater the market.
+The analogy is a bank run: you cannot stop people from withdrawing, but you can limit the pace of withdrawals to prevent the system from collapsing overnight. The proposal is controversial because even this limited restriction is seen by some in the Bitcoin community as a violation of the principle that no external party can ever interfere with your right to spend your coins.
+Conclusion
+These proposals are not yet activated, and Bitcoin’s decentralized governance, spanning developers, miners and node operators, means any upgrade is likely to take time to materialize.
+Still, the steady flow of proposals predating this week’s Google report suggests the issue has long been on developers’ radar, which may help temper market concerns.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+While Bitcoin developers scramble to find a solution and Ethereum prepares for 'Q-day,' Solana is trying to get ahead of that scenario.
+What to know:
+- The Solana Foundation is working with Project Eleven to test quantum-resistant cryptography as concerns grow that future quantum computers could break current blockchain security.
+- Early tests show major tradeoffs: quantum-safe signatures are up to 40x larger and made the network roughly 90% slower, raising questions about scalability.

@@ -1,0 +1,24 @@
+Title: GoZTASP：ミッション規模の自律システムを統治するためのゼロトラストプラットフォーム
+Evaluation: A
+Reason: ミッション規模の自律システム統治という専門的かつ未来志向のテーマであり、深い知的好奇心を刺激する。
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security, hardware
+Summary: 自律システムを統治するためのゼロトラストプラットフォームに関する技術解説と実証について。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: GoZTASP: A Zero-Trust Platform for Governing Autonomous Systems at Mission Scale
+Source: https://content.knowledgehub.wiley.com/goztasp-a-zero-trust-platform-for-governing-autonomous-systems-at-mission-scale/
+
+Register now free-of-charge to explore this white paper
+A chip-to-cloud assurance architecture enabling secure, resilient, and safe autonomy across robots, sensors, and humans.
+ZTASP is a mission-scale assurance and governance platform designed for autonomous systems operating in real-world environments. It integrates heterogeneous systems—including drones, robots, sensors, and human operators—into a unified zero-trust architecture. Through Secure Runtime Assurance (SRTA) and Secure Spatio-Temporal Reasoning (SSTR), ZTASP continuously verifies system integrity, enforces safety constraints, and enables resilient operation even under degraded conditions.
+ZTASP has progressed beyond conceptual design, with operational validation at Technology Readiness Level (TRL) 7 in mission critical environments. Core components, including Saluki secure flight controllers, have reached TRL8 and are deployed in customer systems. While initially developed for high-consequence mission environments, the same assurance challenges are increasingly present across domains such as healthcare, transportation, and critical infrastructure.
+Learning Outcomes for Audience
+- Explain the limitations of perimeter-based security models in governing distributed autonomous systems, and articulate why zero trust principles—particularly continuous verification and least-privilege access—are essential for multi-agent environments operating at the edge.
+- Describe the role of Secure Runtime Assurance (SRTA) in enforcing safety constraints on autonomous agents in real time, drawing on approaches from runtime monitoring, formal verification, and safety-wrapper architectures.
+- Evaluate how Secure Spatio-Temporal Reasoning (SSTR) enables context-aware decision-making across heterogeneous systems such as drones, ground robots, sensors, and human operators, and compare this with conventional coordination approaches.
+- Identify the key engineering trade-offs involved in designing chip-to-cloud assurance architectures—including latency, computational constraints on edge devices, communication resilience under degraded conditions, and trust propagation across distributed networks.
+Click on the cover to download the white paper PDF and explore how continuous assurance enables trusted autonomy at mission scale.
+IEEE Spectrum and Wiley are proud to bring you this white paper, sponsored by Technology Innovation Institute.
+Sponsored by

@@ -1,0 +1,38 @@
+Title: ビットマイナーのエレート財庫は4,800万ETHとなり、NYSEへの株式上場が進みます
+Evaluation: B
+Reason: 記事内容が詳細度と具体的性に乏しく、3点チェックの全ての基準を満たしていないため
+Assigned Bot: bot_02_trader
+Topics: crypto_defi, security
+Summary: ビットマイナーの財庫に4,800万ETHが入ったため、NYSEへの株式上場が進めば、その価値は約1兆円になる。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Bitmine's ether treasury hits 4.8 million ETH as stock listing moves to NYSE
+Source: https://www.coindesk.com/markets/2026/04/06/bitmine-s-ether-treasury-hits-4-8-million-eth-as-stock-listing-moves-to-nyse
+
+Bitmine's ether treasury hits 4.8 million ETH as stock listing moves to NYSE
+The company now holds 3.98% of all ether in circulation, has staked $7.1 billion of it, and says it is generating $196 million in annualized staking revenue.
+What to know:
+- Bitmine Immersion Technologies now holds 4.8 million ether, or 3.98% of the circulating supply, and is nearing its goal of controlling 5% of all ETH.
+- The company moved its listing to the New York Stock Exchange from NYSE American while expanding its Mavan staking network, which currently stakes 3.33 million ETH and generates about $196 million in annualized revenue.
+- Bitmine projects up to $282 million in annual staking rewards at full deployment and is positioning ETH as a "wartime store of value" as its stock becomes one of the most heavily traded in the U.S.
+Bitmine Immersion Technologies (BMNR) said it now holds 4.8 million ether (ETH) worth roughly $10.2 billion at current prices, putting the company within reach of its stated goal of accumulating 5% of the total ether supply.
+In a Monday statement, the company also said its shares will start trading on the New York Stock Exchange, uplisted from NYSE American, starting April 9.
+Bitmine holds 3.98% of ether's 120.7 million circulating supply, compared with Strategy's 3.8% of bitcoin's
+Bitmine acquired 71,252 ETH in the past week, its highest pace of purchases since late December, according to Chairman Tom Lee, who framed the buying as a bet that ether is in "the final stages of the mini-crypto winter."
+Total crypto and cash holdings are now $11.4 billion, including $864 million in cash, 198 BTC, and smaller positions in Beast Industries and Eightco Holdings.
+Bitmine's model diverges from Strategy when it comes to staking, or depositing tokens to help secure the Ethereum blockchain in exchange for a reward. Of the 4.8 million ETH held, 3.33 million are staked through Mavan, the company's institutional-grade validator network that started operating Monday.
+That staked position is worth roughly $7.1 billion and generates $196 million in annualized staking revenue at a 2.78% yield, giving Bitmine a recurring income stream that Strategy's bitcoin treasury does not have.
+At full deployment, when all of Bitmine's ETH is staked, the company projects $282 million in annual staking rewards.
+Lee made a wartime case for ether in the announcement, noting that ETH has gained 6.8% since the Iran conflict began, outperforming the S&P 500 by 1,130 basis points and gold by 1,840 basis points. "ETH is the wartime store of value," Lee said, a framing that would have been difficult to argue six months ago but has data behind it now.
+Bitmine is now the 96th most traded stock in the U.S. with average daily volume of $987 million, ranking between Schlumberger and Adobe. The investor base includes ARK Invest, Founders Fund, Pantera, Galaxy Digital, and Kraken.
+More For You
+Most crypto privacy models weaken as blockchain data grows. Encryption-based models like Zcash strengthen. CoinDesk Research maps the five privacy approaches and examines the widening gap.
+Why it matters:
+As blockchain adoption scales, the metadata available to machine learning models scales with it. Obfuscation-based privacy approaches are structurally degrading as a result. This report provides a comprehensive comparison of all five major crypto privacy architectures and a framework for evaluating which models remain durable as AI capabilities improve.
+More For You
+Last week's purchases were mostly funded via sales of the company's STRC preferred stock.
+What to know:
+- Strategy bought 4,871 bitcoin for about $329.9 million last week at an average price of $67,718 per coin.
+- The company has spent roughly $58.02 billion on its bitcoin at an average cost of $75,644 per coin, leaving it with about $5 billion in unrealized losses at current prices.
+- With 766,970...

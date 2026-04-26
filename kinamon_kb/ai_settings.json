@@ -8,7 +8,7 @@
     "identity": "lmstudio"
   },
   "lmstudio_url": "http://localhost:1234/v1/chat/completions",
-  "lmstudio_model": "gemma-2-2b-it",
+  "lmstudio_model": "gemma-4-e2b-it",
   "context_lengths": {
     "classify": 1000,
     "evaluate": 1500,

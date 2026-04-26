@@ -56,7 +56,12 @@ echo -e "\n---\n" >> "$TMP_SYSTEM_MD"
 
 # ボット個別の Persona と Tone を追加
 if [ -f "$BOT_DIR/persona.md" ]; then
-    cat "$BOT_DIR/persona.md" >> "$TMP_SYSTEM_MD"
+    if [ "$PROVIDER" = "lmstudio" ]; then
+        # ローカルAIの場合はコンテキスト節約のため「成長記録」以前（最新の基本設定のみ）を使用
+        sed '/## 成長記録/q' "$BOT_DIR/persona.md" | head -n -1 >> "$TMP_SYSTEM_MD"
+    else
+        cat "$BOT_DIR/persona.md" >> "$TMP_SYSTEM_MD"
+    fi
     echo -e "\n---\n" >> "$TMP_SYSTEM_MD"
 fi
 if [ -f "$BOT_DIR/tone_and_voice.md" ]; then
@@ -72,7 +77,8 @@ else
 fi
 
 # フォーマット用テンプレートを追加し、プレースホルダーを置換
-sed "s/{{BOT_ID}}/$BOT_ID/g; s/{{BOT_NAME}}/$BOT_NAME/g; s/{{PROVIDER}}/$PROVIDER_DESC/g" ".gemini/opinion-system-template.md" >> "$TMP_SYSTEM_MD"
+SAFE_URL=$(echo "$TARGET_URL" | sed 's/&/\\&/g')
+sed "s/{{BOT_ID}}/$BOT_ID/g; s/{{BOT_NAME}}/$BOT_NAME/g; s/{{PROVIDER}}/$PROVIDER_DESC/g; s|{{SOURCE_URL}}|$SAFE_URL|g" ".gemini/opinion-system-template.md" >> "$TMP_SYSTEM_MD"
 
 echo "Processing: $(basename "$INPUT_FILE") for Bot: $BOT_ID ($BOT_NAME) using $PROVIDER_DESC..."
 
@@ -96,7 +102,7 @@ BRIEF_INPUT=$(echo "$CONTENT" | head -c "$CTX_LEN")
 echo "  [Step 5a] Generating structured brief..."
 if [ "$PROVIDER" = "lmstudio" ]; then
     BRIEF_URL=$(jq -r '.lmstudio_url // "http://localhost:1234/v1/chat/completions"' "$SETTINGS_FILE")
-    BRIEF_MODEL=$(jq -r '.lmstudio_model // "gemma-2-2b-it"' "$SETTINGS_FILE")
+    BRIEF_MODEL=$(jq -r '.lmstudio_model // "gemma-4-e2b-it"' "$SETTINGS_FILE")
     BRIEF_PAYLOAD=$(jq -n \
         --arg model "$BRIEF_MODEL" \
         --arg system "$BRIEF_SYSTEM" \
@@ -107,7 +113,9 @@ if [ "$PROVIDER" = "lmstudio" ]; then
 else
     BRIEF_TMP_SYS="/tmp/brief_sys_${BOT_ID}.md"
     echo "$BRIEF_SYSTEM" > "$BRIEF_TMP_SYS"
-    BRIEF=$(echo "$BRIEF_INPUT" | GEMINI_SYSTEM_MD="$BRIEF_TMP_SYS" gemini -p "この記事の構造化ブリーフを作成してください。" --yolo 2>/dev/null)
+    echo "    - Sending Request to Gemini (for structured brief)..."
+    BRIEF=$(echo "$BRIEF_INPUT" | GEMINI_SYSTEM_MD="$BRIEF_TMP_SYS" gemini -p "この記事の構造化ブリーフを作成してください。" --yolo)
+    echo "    - Received response from Gemini."
     rm -f "$BRIEF_TMP_SYS"
 fi
 
@@ -145,7 +153,7 @@ $BRIEF
 
 if [ "$PROVIDER" = "lmstudio" ]; then
     URL=$(jq -r '.lmstudio_url // "http://localhost:1234/v1/chat/completions"' "$SETTINGS_FILE")
-    MODEL=$(jq -r '.lmstudio_model // "gemma-2-2b-it"' "$SETTINGS_FILE")
+    MODEL=$(jq -r '.lmstudio_model // "gemma-4-e2b-it"' "$SETTINGS_FILE")
     SYSTEM_CONTENT=$(cat "$TMP_SYSTEM_MD")
     
     PAYLOAD=$(jq -n \
@@ -161,6 +169,7 @@ if [ "$PROVIDER" = "lmstudio" ]; then
     echo "    - Estimated Total Tokens: ~$EST_TOKENS (Limit: Check your LMStudio n_ctx)"
     
     RESPONSE_JSON_RAW=$(curl -s -X POST "$URL" -H "Content-Type: application/json" -d "$PAYLOAD")
+    echo "    - Received response from LMStudio."
     if [ $? -ne 0 ] || [ -z "$RESPONSE_JSON_RAW" ]; then
         echo "Error: Failed to connect to LMStudio at $URL" >&2
         exit 1
@@ -171,11 +180,23 @@ if [ "$PROVIDER" = "lmstudio" ]; then
         echo "Error: Invalid response from LMStudio. Raw response: $RESPONSE_JSON_RAW" >&2
         exit 1
     fi
+    # LMStudioからのレスポンスを整形
     RESPONSE_JSON=$(jq -n --arg resp "$CONTENT_RESPONSE" '{response: $resp}')
 else
+    echo "    - Sending Request to Gemini (for opinion draft)..."
     RESPONSE_JSON=$(GEMINI_SYSTEM_MD="$TMP_SYSTEM_MD" gemini -p "$PROMPT" --output-format json --yolo)
-    if [ $? -ne 0 ] || [ -z "$RESPONSE_JSON" ] || [ "$(echo "$RESPONSE_JSON" | jq -r '.response')" = "null" ]; then
-        echo "Error: Gemini generation failed or returned invalid JSON." >&2
+    RET_CODE=$?
+    echo "    - Received response from Gemini."
+    
+    # 成功確認（Geminiの戻り値とレスポンスの中身をチェック）
+    if [ $RET_CODE -ne 0 ] || [ -z "$RESPONSE_JSON" ]; then
+        echo "Error: Gemini generation failed (Code: $RET_CODE)." >&2
+        exit 1
+    fi
+    
+    IS_NULL=$(echo "$RESPONSE_JSON" | jq -r '.response')
+    if [ "$IS_NULL" = "null" ] || [ -z "$IS_NULL" ]; then
+        echo "Error: Gemini returned invalid or empty JSON response." >&2
         exit 1
     fi
 fi
@@ -213,14 +234,13 @@ fi
 
 echo "$FINAL_MD" > "$OUT_FILE"
 
-# URLの埋め込み (AIが書き損ねた場合に備えて強制置換)
-if [ -n "$TARGET_URL" ] && [ "$TARGET_URL" != "Unknown" ] && [ "$TARGET_URL" != "null" ]; then
-    # シンプルに置換
-    sed -i "s|\*\*ソースURL\*\*:.*|\*\*ソースURL\*\*: $TARGET_URL|g" "$OUT_FILE"
-    # 万が一 {記事のURL...} という文字列が含まれていたらそれも消す
-    sed -i "s|{記事のURL、不明なら空欄}|$TARGET_URL|g" "$OUT_FILE"
+# 万が一 echo が失敗したか、ファイルが空の場合のチェック
+if [ ! -s "$OUT_FILE" ]; then
+    echo "Error: Failed to write to $OUT_FILE or file is empty." >&2
+    exit 1
 fi
 
+# 常にソースファイルのメタデータを追記
 echo -e "\n\n<!-- SOURCE_FILE: $(basename "$INPUT_FILE") -->" >> "$OUT_FILE"
 
 echo "------------------------------------------------"

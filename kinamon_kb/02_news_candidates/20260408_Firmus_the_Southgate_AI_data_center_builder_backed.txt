@@ -1,0 +1,16 @@
+Title: Semus、Nvidiaが後援する南ゲストAIデータセンター建設会社が550億ドルの評価に到達しました
+Evaluation: B
+Reason: 記事内容が詳細な評価を下すための情報が不足している
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security
+Summary: データセンター企業Firmusが550億ドルの評価に到達し、Nvidiaなどから資金調達を受ける
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: Firmus, the ‘Southgate’ AI data center builder backed by Nvidia, hits $5.5B valuation
+Source: https://techcrunch.com/2026/04/07/firmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation/
+
+Asia AI data center provider Firmus on Monday announced a fresh $505 million raise led by Coatue at a $5.5 billion post-money valuation. With this round, Firmus has raised $1.35 billion in six months, it says.
+The Singapore-based data center company previously raised AU$330 million (approximately $215 million) at an AU$1.85 billion ($1.2 billion) valuation from investors, including Nvidia.
+Firmus is developing an energy-efficient “AI factory” network of data centers in Australia and Tasmania, a project it dubs Project Southgate. It is using Nvidia’s reference designs for building these efficient data centers. These new data centers will use Nvidia’s Vera Rubin platform — the chip giant’s next-gen AI computing system succeeding its Blackwell architecture, expected to ship in the second half of 2026.
+Firmus originally provided cooling technologies for Bitcoin mining and has become yet another crypto-roots-turned-AI provider company that investors love.

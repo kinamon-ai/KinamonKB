@@ -1,0 +1,398 @@
+<!-- Source: https://www.coindesk.com/arc/outboundfeeds/rss/ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data</title>
+    <link>https://www.coindesk.com/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.coindesk.com/arc/outboundfeeds/rss"/>
+    <atom:link rel="hub" href="true"/>
+    <description>Leader in cryptocurrency, Bitcoin, Ethereum, XRP, blockchain, DeFi, digital finance and Web 3.0 news with analysis, video and live price updates.</description>
+    <lastBuildDate>Fri, 24 Apr 2026 04:46:31 +0000</lastBuildDate>
+    <language>en-US</language>
+    <copyright>© 2026 CoinDesk, Inc.</copyright>
+    <generator>CoinDesk</generator>
+    <ttl>5</ttl>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <image>
+      <url>https://downloads.coindesk.com/arc/failsafe/feeds/coindesk-feed-logo.png</url>
+      <title>CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data</title>
+      <link>https://www.coindesk.com/</link>
+    </image>
+    <item>
+      <title><![CDATA[U.S. arrests Army green beret for $400,000 Polymarket bets on Venezuela raid he was in]]></title>
+      <link>https://www.coindesk.com/policy/2026/04/23/u-s-arrests-soldier-for-polymarket-bets-on-nicolas-maduro-raid-he-participated-in</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/27b96c6c1b4d62877fa046b952e8e056ae5939ce-1500x969.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">a7fdad1e-5b0a-48e4-b465-ab6a17c76c79</guid>
+      <pubDate>Thu, 23 Apr 2026 22:11:37 +0000</pubDate>
+      <description><![CDATA[Master Sergeant Gannon Ken Van Dyke allegedly tried to conceal his bets about the raid on Venezuela that led to Nicolas Maduro's arrest. ]]></description>
+      <dc:creator>Nikhilesh De</dc:creator>
+      <dc:creator>Jesse Hamilton</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[Polymarket]]></category>
+      <category domain="tag"><![CDATA[Insider Trading]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Aave rallies DeFi partners to contain fallout from $292 million KelpDAO hack]]></title>
+      <link>https://www.coindesk.com/business/2026/04/23/aave-rallies-defi-partners-to-contain-fallout-from-usd292-million-kelpdao-hack</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/82158473d25dfc1e497238ce9ec7bab456594b00-4000x3000.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">f9f113fe-24da-401e-83c5-3a5d8c28c245</guid>
+      <pubDate>Thu, 23 Apr 2026 20:52:33 +0000</pubDate>
+      <description><![CDATA[Industry players are coordinating a recovery effort as the year's biggest crypto theft rattled Aave, with Lido and EtherFi being firsts to offer aid.]]></description>
+      <dc:creator>Krisztian Sandor</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="tag"><![CDATA[Hack]]></category>
+      <category domain="tag"><![CDATA[DeFi]]></category>
+      <category domain="tag"><![CDATA[Ethereum News]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Inside the $71 million freeze on Arbitrum that has the crypto world questioning what decentralization really means]]></title>
+      <link>https://www.coindesk.com/tech/2026/04/22/inside-the-usd71-million-freeze-on-arbitrum-that-has-the-crypto-world-questioning-what-decentralization-really-means</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/0bde814078cca64ba4c715580c7dd36d1d6ba0ce-1500x997.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">894f0c9f-2271-4178-a8ee-12c64b8afc4d</guid>
+      <pubDate>Thu, 23 Apr 2026 18:35:32 +0000</pubDate>
+      <description><![CDATA[The emergency response prevented stolen funds from moving, but sparked debate over governance, control and the limits of decentralization on Layer 2s.]]></description>
+      <dc:creator>Margaux Nijkerk</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/tech"><![CDATA[Tech]]></category>
+      <category domain="tag"><![CDATA[Ethereum News]]></category>
+      <category domain="tag"><![CDATA[Hack]]></category>
+      <category domain="tag"><![CDATA[Top Stories]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[The market repriced DeFi in just 48 hours]]></title>
+      <link>https://www.coindesk.com/opinion/2026/04/23/the-market-repriced-defi-in-just-48-hours</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/0bc3f2bbd979f1ce05d3e61121752990a9818ae2-5092x3395.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">596efc8b-6380-42fc-a29d-0dc19a1e1f83</guid>
+      <pubDate>Thu, 23 Apr 2026 16:30:00 +0000</pubDate>
+      <description><![CDATA[Di Bartolomeo argues that last weekend the market achieved – in real time – a notable feat that no regulator, auditor or commentator has ever done. ]]></description>
+      <dc:creator>Mauricio  Di Bartolomeo</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/opinion"><![CDATA[Opinion]]></category>
+      <category domain="tag"><![CDATA[DeFi]]></category>
+      <category domain="https://www.coindesk.com/">Opinion</category>
+    </item>
+    <item>
+      <title><![CDATA[Crypto for Advisors: AI Agents Using Crypto]]></title>
+      <link>https://www.coindesk.com/coindesk-indices/2026/04/22/crypto-for-advisors-ai-agents-using-crypto</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/191311db5b166d50fc091151a69de73f89b6cb12-7680x4320.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">2acb6af5-c028-48c1-b716-953ef168e13d</guid>
+      <pubDate>Thu, 23 Apr 2026 15:00:00 +0000</pubDate>
+      <description><![CDATA[AI agents are executing transactions, forming “agentic finance.” Crypto is the financial backend for these autonomous systems. Learn use cases, risks, and what experts say.]]></description>
+      <dc:creator>Vincent Chok</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/coindesk-indices"><![CDATA[CoinDesk Indices]]></category>
+      <category domain="tag"><![CDATA[CoinDesk Indices]]></category>
+      <category domain="tag"><![CDATA[Crypto for Advisors]]></category>
+      <category domain="tag"><![CDATA[Financial Advisors]]></category>
+      <category domain="tag"><![CDATA[Artificial Intelligence]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Tether freezes $344 million in USDT on Tron tied to 'illicit activity']]></title>
+      <link>https://www.coindesk.com/business/2026/04/23/tether-freezes-usd344-million-in-usdt-on-tron-tied-to-illicit-activity</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/bfd80702a660a5deef3d056a315228038910dde5-1405x790.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">aa87ab05-69d5-4b08-a7f1-7926b0b39914</guid>
+      <pubDate>Thu, 23 Apr 2026 14:53:38 +0000</pubDate>
+      <description><![CDATA[The stablecoin issuer said the action followed U.S. law enforcement requests as global watchdog FATF warned of growing role of digital dollars in illicit money flows.]]></description>
+      <dc:creator>Krisztian Sandor</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="tag"><![CDATA[Stablecoins]]></category>
+      <category domain="tag"><![CDATA[Tether]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[JPMorgan says persistent security flaws curb DeFi’s institutional appeal]]></title>
+      <link>https://www.coindesk.com/tech/2026/04/23/jpmorgan-says-persistent-security-flaws-curb-defi-s-institutional-appeal</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/10a17f9ee8cafcb8de431c8eca60c18cd342814c-1440x810.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">228cefdf-648e-46f6-8ed6-45cc4f208402</guid>
+      <pubDate>Thu, 23 Apr 2026 14:38:42 +0000</pubDate>
+      <description><![CDATA[A $20 billion hit from the KelpDAO exploit highlights systemic risks, while flat ETH-denominated growth and a shift to stablecoins point to ongoing fragility in DeFi.]]></description>
+      <dc:creator>Will Canny</dc:creator>
+      <dc:creator>AI Boost</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/tech"><![CDATA[Tech]]></category>
+      <category domain="tag"><![CDATA[DeFi]]></category>
+      <category domain="tag"><![CDATA[Hack]]></category>
+      <category domain="tag"><![CDATA[JPMorgan]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[BIS warns cryptocurrency exchanges are becoming ‘shadow banks,’ and why that's a risk]]></title>
+      <link>https://www.coindesk.com/business/2026/04/23/bis-warns-cryptocurrency-exchanges-are-becoming-shadow-banks-and-why-that-s-a-risk</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/a0d1eab26806ca6cf5904f2bb10357df3f285ddc-699x466.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">8bc113c9-5807-408b-864e-57b557b8977d</guid>
+      <pubDate>Thu, 23 Apr 2026 14:35:19 +0000</pubDate>
+      <description><![CDATA[The Bank for International Settlements (BIS) released a report warning stablecoin yields and other DeFi “earn” products are bank-like services without the safeguards or insurance.]]></description>
+      <dc:creator>Olivier Acuna</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="tag"><![CDATA[Cryptocurrency]]></category>
+      <category domain="tag"><![CDATA[banks]]></category>
+      <category domain="tag"><![CDATA[DeFi]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[The $145 billion math: Why bitcoin’s quantum threat is manageable, not existential]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/the-usd145-billion-math-why-bitcoin-s-quantum-threat-is-manageable-not-existential</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/b6cf357fb126fcb4ee02fb7e9768bfb8014dd883-1456x707.webp?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">e0d4feb9-ffae-47c8-b47d-7429637f9ade</guid>
+      <pubDate>Thu, 23 Apr 2026 13:48:38 +0000</pubDate>
+      <description><![CDATA[Quantum fears focus on vulnerable early wallets, but market data suggests even a worst case sell-off would be large, not catastrophic.]]></description>
+      <dc:creator>James Van Straten</dc:creator>
+      <dc:creator>AI Boost</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Bitcoin News]]></category>
+      <category domain="tag"><![CDATA[quantum computing]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Ripple-linked XRP slips amid bitcoin profit-taking, ETF delay]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/ripple-linked-xrp-slips-amid-bitcoin-profit-taking-etf-delay</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/08086cd0d86ea829b9adbb3a5265720e7f1d7aac-1194x724.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">6644fba8-30e2-4d86-982f-8f09afbbc342</guid>
+      <pubDate>Thu, 23 Apr 2026 13:46:21 +0000</pubDate>
+      <description><![CDATA[Token falls 2.5% after rejection near $1.44 as leveraged ETF launch pushback adds to mixed sentiment.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[CoinDesk 20 performance update: Uniswap (UNI) drops 3.9%, leading index lower]]></title>
+      <link>https://www.coindesk.com/coindesk-indices/2026/04/23/coindesk-20-performance-update-uniswap-uni-drops-3-9-leading-index-lower</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/c49e8516815afc727bc317b6f26d41b63be6e5a8-640x480.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">058371a2-20f5-40ba-b7b3-0cd158a52a78</guid>
+      <pubDate>Thu, 23 Apr 2026 13:15:46 +0000</pubDate>
+      <description><![CDATA[Ethereum (ETH), down 2.9% since Wednesday, was also an underperformer.]]></description>
+      <dc:creator>CoinDesk Indices</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/coindesk-indices"><![CDATA[CoinDesk Indices]]></category>
+      <category domain="tag"><![CDATA[CoinDesk Indices]]></category>
+      <category domain="tag"><![CDATA[CoinDesk 20]]></category>
+      <category domain="tag"><![CDATA[charts]]></category>
+      <category domain="tag"><![CDATA[Prices]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[More than 90% of Web3 games failed after $15 billion boom as gamers never showed up: Caladan]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/more-than-90-of-web3-games-failed-after-usd15-billion-boom-as-gamers-never-showed-up-caladan</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/daee0693d0ec6877323441aa9052e281e3a128c2-2121x1414.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">2479cf3b-c8b2-4764-875c-12a71db81568</guid>
+      <pubDate>Thu, 23 Apr 2026 13:02:32 +0000</pubDate>
+      <description><![CDATA[Gaming took 63% of all Web3 venture funding in 2022, but by 2025 its share had fallen to single digits as capital rotated into AI, real-world assets and layer-2 infrastructure.]]></description>
+      <dc:creator>Sam Reynolds</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Web3]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[U.S. military runs Bitcoin node, sees crypto as power projection versus China]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/us-military-runs-bitcoin-node-sees-crypto-as-power-projection-vs-china</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/0b6b7100ed4eae8f6d21f97c9f6a99293be82dab-6048x4024.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">1c3c7330-2b3a-4614-a387-9e08922f281f</guid>
+      <pubDate>Thu, 23 Apr 2026 11:52:19 +0000</pubDate>
+      <description><![CDATA[Admiral Samuel Paparo, head of US Indo-Pacific Command, told two congressional panels this week that the military is running a live Bitcoin node for cybersecurity testing and views the protocol as a tool of national power in competition with China.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <dc:creator>Olivier Acuna</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Sam Bankman-Fried withdraws retrial motion. He believes he would not get a fair trial.]]></title>
+      <link>https://www.coindesk.com/policy/2026/04/23/sam-bankman-fried-withdraws-retrial-motion-he-believes-he-would-not-get-a-fair-trial</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/fe6a32a5be3ab32d7b475a0d392f5d01cea78d07-4352x3264.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">e14ac921-0989-436b-a63f-d9acb4db3d51</guid>
+      <pubDate>Thu, 23 Apr 2026 11:26:59 +0000</pubDate>
+      <description><![CDATA[The founder of the collapsed crypto exchange FTX said he might file for a retrial after a decision on his appeal is ruled upon.]]></description>
+      <dc:creator>Olivier Acuna</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[Sam Bankman-Fried]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin's bullish momentum runs into Pentagon-backed inflation warning]]></title>
+      <link>https://www.coindesk.com/daybook-us/2026/04/23/bitcoin-s-bullish-momentum-runs-into-pentagon-backed-inflation-warning</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/5e2a5a2e0135a1d12ca66c4ae4522abd274b58a5-1440x1080.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">38bac4b4-505e-4ad6-9f30-5f756d94741c</guid>
+      <pubDate>Thu, 23 Apr 2026 11:14:28 +0000</pubDate>
+      <description><![CDATA[What you need to know for April 23, 2026]]></description>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/daybook-us"><![CDATA[Crypto Daybook Americas]]></category>
+      <category domain="tag"><![CDATA[Crypto Daybook Americas]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin slips from near $80,000 as oil price increase weighs on risk assets]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/bitcoin-slips-from-near-usd80-000-as-oil-price-increase-weighs-on-risk-assets</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/18c2ce6ba9fae4e30f5be00becaab7c189a7ba93-1874x982.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">51eb9909-e9f3-4ab7-b621-8c2128b9cb72</guid>
+      <pubDate>Thu, 23 Apr 2026 10:38:53 +0000</pubDate>
+      <description><![CDATA[Bitcoin dips after testing $80,000 as oil surges and traders stay bearish, even though a breakout hints the rally could accelerate on short squeezes.]]></description>
+      <dc:creator>Oliver Knight</dc:creator>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Crypto Markets Today]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[More than 100 crypto firms urge Senate to move on U.S. market structure bill]]></title>
+      <link>https://www.coindesk.com/policy/2026/04/23/more-than-100-crypto-firms-urge-senate-to-move-on-u-s-market-structure-bill</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/7e6d998102c0708adee44e1652629019bce94a43-1920x1264.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">b1095b78-24a6-4d6a-a1d7-fdd6ec8a3ab2</guid>
+      <pubDate>Thu, 23 Apr 2026 10:30:00 +0000</pubDate>
+      <description><![CDATA[Key priorities include defining clear SEC and CFTC oversight roles, protecting non-custodial developers, simplifying disclosure rules, and avoiding a patchwork of state laws.]]></description>
+      <dc:creator>Francisco Rodrigues</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/policy"><![CDATA[Policy]]></category>
+      <category domain="tag"><![CDATA[Clarity Act]]></category>
+      <category domain="tag"><![CDATA[Regulation]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[The DAT collapse: Pantera wants Satsuma to dump its bitcoin as shares crash 99%]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/pantera-wants-satsuma-to-dump-its-bitcoin-as-shares-crash-99</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/838b328aa2e2930c1dcbb657893e5806017e6e39-1200x675.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">0a024dde-5d31-4a94-a239-f45d8144baa6</guid>
+      <pubDate>Thu, 23 Apr 2026 10:21:46 +0000</pubDate>
+      <description><![CDATA[Pantera Capital is urging London-listed Satsuma Technology to liquidate its remaining bitcoin holdings and return cash to shareholders.]]></description>
+      <dc:creator>James Van Straten</dc:creator>
+      <dc:creator>AI Boost</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Bitcoin News]]></category>
+      <category domain="tag"><![CDATA[Digital Asset Treasury]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Coinbase backer Blockchain Capital hunts $700 million for new funds]]></title>
+      <link>https://www.coindesk.com/business/2026/04/23/blockchain-capital-is-seeking-usd700-million-for-new-funds</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/a4ce88d02ff7e4f1c81c1d4aa43ea8d446d8b3d6-2000x1125.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">c73958aa-8043-460d-9758-b5f8548dea7b</guid>
+      <pubDate>Thu, 23 Apr 2026 09:59:50 +0000</pubDate>
+      <description><![CDATA[The San Francisco-based firm is raising for its seventh early-stage fund and second growth fund, which are expected to be completed in the next five to six months.]]></description>
+      <dc:creator>Jamie Crawley</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="tag"><![CDATA[Funding Rounds]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[OpenAI appears to be poaching Coinbase’s marketing team]]></title>
+      <link>https://www.coindesk.com/business/2026/04/23/openai-appears-to-be-poaching-coinbase-s-marketing-team</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/d2b4b82edc6ff0637b37466e20cadf90ebe36839-1920x1280.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">ad648471-641e-4e1e-b7c7-8d492f955228</guid>
+      <pubDate>Thu, 23 Apr 2026 07:49:03 +0000</pubDate>
+      <description><![CDATA[Six Coinbase senior marketing executives, including the exchange's former chief marketing officer, have jumped to OpenAI in the past year and a half.]]></description>
+      <dc:creator>Ian Allison</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="tag"><![CDATA[Coinbase]]></category>
+      <category domain="tag"><![CDATA[Artificial Intelligence]]></category>
+      <category domain="tag"><![CDATA[Exclusive]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin's bull score index just left bear territory. There's a warning attached. ]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/bitcoin-s-bull-score-index-just-left-bear-territory-there-s-a-warning-attached</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/bae1d58f43c095cfb79f98b8450c52638bd941d4-3840x2160.png?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">ee78e683-f0c5-4a0d-abfc-f9c381f076e6</guid>
+      <pubDate>Thu, 23 Apr 2026 06:26:03 +0000</pubDate>
+      <description><![CDATA[The index has returned to neutral territory, a rare milestone that has historically marked market turning points, but not always correctly.]]></description>
+      <dc:creator>Omkar Godbole</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Bitcoin News]]></category>
+      <category domain="tag"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[FTX sold its Cursor stake for $200,000 in 2023. It would be worth $3 billion today]]></title>
+      <link>https://www.coindesk.com/business/2026/04/23/ftx-sold-its-cursor-stake-for-usd200-000-in-2023-it-would-be-worth-usd3-billion-today</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/8cf3e566882fef4720d01dae680933cfd4ff6b9b-1440x1080.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">c0220e72-5544-4a76-8593-13368efe3b49</guid>
+      <pubDate>Thu, 23 Apr 2026 06:18:19 +0000</pubDate>
+      <description><![CDATA[SpaceX's agreement to acquire AI coding startup Cursor at a $60 billion valuation has retroactively turned a routine bankruptcy asset sale by FTX's estate into one of the largest missed recoveries in crypto history.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/business"><![CDATA[Finance]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Cardano builder seeks smaller funding slice of $46.8 million for scaling and Bitcoin DeFi]]></title>
+      <link>https://www.coindesk.com/tech/2026/04/23/input-output-seeks-usd46-8-million-to-bring-bitcoin-defi-scaling-upgrade-to-cardano</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/d97fe6c631cbff5b963bc203ee4bb54cd4f85fd9-4000x2667.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">023cbb53-c472-4302-b438-cee54fd907d8</guid>
+      <pubDate>Thu, 23 Apr 2026 05:08:13 +0000</pubDate>
+      <description><![CDATA[The engineering organization behind Cardano submitted nine proposals totaling $46.8 million for the 2026 voting cycle, down from $97.5 million last year.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/tech"><![CDATA[Tech]]></category>
+      <category domain="tag"><![CDATA[Cardano]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[Bitcoin loses grip near $80,000 as ETH, SOL, DOGE fade on profit-taking]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/bitcoin-loses-grip-near-usd80-000-as-eth-sol-doge-fade-on-profit-taking</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/e61567760017dab7c353b3cf145595e263dfc0fb-1440x1080.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">0c72f8e3-297c-49ab-8c63-c4f342de39bc</guid>
+      <pubDate>Thu, 23 Apr 2026 04:36:37 +0000</pubDate>
+      <description><![CDATA[Bitcoin traded at $77,794 on Thursday morning, up 0.4% over 24 hours but well off the $79,388 high hit Wednesday evening, with ether, XRP and Solana all closing red.]]></description>
+      <dc:creator>Shaurya Malwa</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+    <item>
+      <title><![CDATA[World Liberty accuses Justin Sun of 'misconduct' in response to Tron founder's defamation claims]]></title>
+      <link>https://www.coindesk.com/markets/2026/04/23/world-liberty-accuses-justin-sun-of-misconduct-in-response-to-tron-founder-s-defamation-claims</link>
+      <media:content url="https://cdn.sanity.io/images/s3y3vcno/production/0b437d3834df2f3b3dde5ced6f1bd53689384626-3265x1837.jpg?fm=jpg&amp;w=1920&amp;h=1080&amp;crop=focalpoint&amp;fit=clip" type="image/*" medium="image"/>
+      <guid isPermaLink="false">c1451e4b-7b3e-4f4a-9b0c-262e233111e4</guid>
+      <pubDate>Thu, 23 Apr 2026 03:47:46 +0000</pubDate>
+      <description><![CDATA[Co-founder Eric Trump went further, saying the only thing more 'ridiculous' than Sun's lawsuit is a $6 million banana duct-taped to a wall. ]]></description>
+      <dc:creator>Sam Reynolds</dc:creator>
+      <content:encoded/>
+      <dc:description/>
+      <category domain="https://www.coindesk.com/markets"><![CDATA[Markets]]></category>
+      <category domain="tag"><![CDATA[Trump]]></category>
+      <category domain="tag"><![CDATA[Tron]]></category>
+      <category domain="https://www.coindesk.com/">News</category>
+    </item>
+  </channel>
+</rss>

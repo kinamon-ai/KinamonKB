@@ -1,0 +1,87 @@
+Title: The Download: AIが職場への影響、そして宇宙のデータセンター
+Evaluation: B
+Reason: 記事内容が真に判断不可能であり、専門的な深掘りや独自の視点がない。
+Assigned Bot: bot_04_auditor
+Topics: ai_llm, security
+Summary: AIの影響について議論され、価格の弾力性に関するデータが重要であると提言。また、宇宙にデータセンターを設置するためには何が必要かについても触れている。
+AI Provider (Translation): lmstudio
+AI Provider (Classification): lmstudio
+AI Provider (Evaluation): lmstudio
+Original Title: The Download: AI’s impact on jobs, and data centres in space
+Source: https://www.technologyreview.com/2026/04/07/1135208/the-download-ai-impact-jobs-data-centres-space/
+
+The Download: AI’s impact on jobs, and data centres in space
+Plus: Trump wants to slash science and tech spending again.
+This is today's edition of The Download, our weekday newsletter that provides a daily dose of what's going on in the world of technology.
+The one piece of data that could actually shed light on your job and AI
+Within Silicon Valley’s orbit, an AI-fueled jobs apocalypse is spoken about as a given. Now even economists who have downplayed the threat are coming around to the idea.
+Alex Imas, based at the University of Chicago, is one of them. He believes that any plan to address AI’s impact will depend on collecting one vital piece of data: price elasticity.
+Imas argues that “we need a Manhattan Project” for this. Read the full story to find out why.
+—James O'Donnell
+This article is from The Algorithm, our weekly newsletter giving you the inside track on all things AI. Sign up to receive it in your inbox every Monday.
+Four things we’d need to put data centers in space
+In January, Elon Musk’s SpaceX applied to launch up to 1 million data centers into Earth’s orbit. The goal? To fully unleash the potential of AI—without triggering an environmental crisis on Earth.
+SpaceX is among a growing list of tech firms pursuing orbital computing infrastructure. But can their plans really work? Here are four must-haves for making space-based data centers a reality.
+—Tereza Pultarova
+This story is part of MIT Technology Review Explains, our series untangling the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here.
+The must-reads
+I’ve combed the internet to find you today’s most fun/important/scary/fascinating stories about technology.
+1 Trump has again proposed major cuts to US science and tech spending
+He wants to slash nearly every science-focused agency. (Ars Technica)
++ If Trump gets his way, the US could face a costly brain drain. (NYT $)
++ Top research talent is already fleeing the country. (Guardian)
++ Basic science deserves our boldest investment. (MIT Technology Review)
+2 Sam Altman lobbied against AI regulations he publicly welcomed
+A bombshell report reveals many OpenAI insiders don’t trust him. (The New Yorker $)
++ Some have called him a sociopath. (Futurism)
++ OpenAI's CFO fears it won’t be IPO-ready this year. (The Information $)
++ A war over AI regulation is brewing in the US. (MIT Technology Review)
+3 NASA’s Artemis II has broken humanity's all-time distance record
+The astronauts have flown farther than any humans before them. (BBC)
++ Their mission includes MIT-developed technology. (Axios)
+4 Chinese tech firms are selling intel “exposing” US forces
+It comes from combining AI with open-source data.. (WP $)
++ AI is turning the Iran conflict into theater. (MIT Technology Review)
+5 War is pushing countries to ditch hyperscalers
+Driven by Iran naming tech giants as military targets. (Rest of World)
++ No one wants a data center in their backyard. (MIT Technology Review)
+6 OpenAI, Anthropic, and Google have united against China's AI copying
+They’re sharing information on “adversarial distillation” (Bloomberg $)
+7 Anduril and Impulse Space are working on Trump’s “Golden Dome”
+They’re developing space-based missile tracking for the project. (Gizmodo)
+8 OpenAI has urged California to probe Elon Musk’s “anti-competitive behavior.”
+It accuses Musk of trying to “take control of the future of AGI.” (Reuters $)
++ And claims he coordinated attacks with Mark Zuckerberg. (CNBC)
++ A former Tesla president has revealed how he survived working for Musk. (WP $)
+9 DeepSeek’s new AI model will run on Huawei chips
+It’s expected to launch in the next few weeks. (The Information $)
+10 Memes have nuked our culture
+Internet “brain rot” has escaped our phones to take over everything. (NYT $)
+Quote of the day
+“I must say, it was actually quite nice.”
+—Astronaut Victor Glover tells President Donald Trump what it was like when Artemis II was out of communication with the rest of humanity, The New York Times reports.
+One More Thing
+Inside the controversial tree farms powering Apple’s carbon-neutral goal
+In 2020, Apple set a goal to become net zero by the end of the decade. To hit that target, the company is offsetting its emissions by planting millions of eucalyptus trees in Brazil.
+Apple is betting that the strategy will lead to a greener future. But critics warn that the industrial tree farms will do more harm than good.
+Find out why the plans have sparked a backlash.
+—Gregory Barber
+We can still have nice things
+A place for comfort, fun and distraction to brighten up your day. (Got any ideas? Drop me a line.)
++ Japan’s automated bike garage is a cyclist’s dream come true.
++ This deep dive into bird behavior reveals the secrets of their dining habits. (Big thanks to reader Terry Gordon for the find!)
++ The first photo from the Artemis astronauts vividly captures the glow of our atmosphere.
++ There’s a new contender for the world’s most gorgeous website: RobertDeNiro.com.
+Deep Dive
+The Download
+The Download: AI-enhanced cybercrime, and secure AI assistants
+Plus: Instagram's CEO Adam Mosseri has denied claims that social media is “clinically addictive”
+The Download: 10 things that matter in AI, plus Anthropic’s plan to sue the Pentagon
+Plus: The US DoD has been secretly testing OpenAI models for years
+The Download: Quantum computing for health, and why the world doesn’t recycle more nuclear waste
+The Download: protesting AI, and what’s floating in space
+Plus: The US government wanted to use Anthropic's AI to analyze bulk data collected from Americans
+Stay connected
+Get the latest updates from
+MIT Technology Review
+Discover special offers, top stories, upcoming events, and more.
